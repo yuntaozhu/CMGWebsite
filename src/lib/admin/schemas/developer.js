@@ -71,9 +71,7 @@ export default defineType({
             title: "Personal Bio",
             type: "text",
             validation: (Rule) => [
-                Rule.required()
-                    .min(50)
-                    .error("Personal Bio must be at least 50 characters long."),
+                Rule.required().error("Kindly indicate a Personal Bio."),
                 Rule.max(150).error(
                     "Personal Bio must not exceed 150 characters."
                 ),
