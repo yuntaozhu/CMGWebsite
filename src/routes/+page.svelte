@@ -1,6 +1,8 @@
 <script>
     import { Button } from "$components";
-    let string = "", buttonVisible = true;
+    import Navbar from "./Navbar.svelte";
+    let string = "",
+        buttonVisible = true;
 
     function handleClick() {
         string = "You wasted a second of your life :D";
@@ -9,9 +11,14 @@
 </script>
 
 <head>
-    <title>Home</title>
+    <title>Project Face</title>
 </head>
-<div class="h-screen flex items-center justify-center bg-base-dark-2 text-base-white">
+
+<Navbar />
+
+<div
+    class="h-screen flex items-center justify-center bg-base-dark-2 text-base-white"
+>
     <div class="w-full flex flex-col items-center gap-4 px-5">
         <img
             src="/logo.webp"
@@ -28,7 +35,7 @@
             We are currently developing the new look of ACSS. See you soon!
         </p>
         {#if buttonVisible}
-        <Button onClick={handleClick}>Click Me</Button>
+            <Button onClick={handleClick}>Click Me</Button>
         {/if}
         <p class="text-base-blue">{string}</p>
     </div>
