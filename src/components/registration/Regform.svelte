@@ -2,13 +2,32 @@
   This is the registration form where you can add different input components (check the list below).
 
   Input Components:
-    1. TextInputComponent(required attributes: label)
-    2. NumberInputComponent(required attributes: label)
-    3. DropdownComponent(required attributes: label, options)
-    4. RadioInputComponent(required attributes: label, options)
+    1. TextInputComponent (required attributes: label)
+    2. NumberInputComponent (required attributes: label)
+    3. DropdownComponent (required attributes: label, options)
+    4. RadioInputComponent (required attributes: label, options)
+    4. SubmitButton
 -->
 
 <script>
+    // Dropdown input options
+    let colleges = [
+        "College of Arts and Sciences",
+        "College of Economics and Management",
+        "College of Forestry and Natural Resources",
+        "College of Development Communication",
+        "Collegee of Agriculture and Food Science",
+        "College of Engineering and Agro-industrial Technology",
+        "College of Human Ecology",
+        "College of Veterinary Medicine",
+        "College of Public Affairs and Development",
+        "School of Environmental Science and Management",
+    ];
+
+    // Radio input options
+    let howYouHear = ["ACSS Social Media Post", "Shared Post of a Friend"];
+
+    // Import statements
     import TextInputComponent from "./registration-components/TextInputComponent.svelte";
     import NumberInputComponent from "./registration-components/NumberInputComponent.svelte";
     import DropdownInputComponent from "./registration-components/DropdownInputComponent.svelte";
@@ -17,7 +36,7 @@
     import SubmitButton from "./registration-components/SubmitButton.svelte";
     import { onMount } from "svelte";
 
-    // functions
+    // Functions (for ui)
     let windowWidth = 0;
     let windowHeight = 0;
     let illusPosY = 0;
@@ -25,6 +44,7 @@
     let formPosStart = 0;
     let formPosStarted = false;
 
+    // Modifies the size of form section according to viewport
     function updateSize() {
         windowWidth = document.documentElement.clientWidth;
         windowHeight = document.documentElement.clientHeight;
@@ -40,6 +60,7 @@
         }
     }
 
+    // Makes the illustration beside the form to scroll along
     function updateIllusPos() {
         let illus = document.getElementById("reg-form-illus-photo");
         let illusPos = document
@@ -87,22 +108,6 @@
         window.addEventListener("scroll", updateIllusPos); // Add event listener for resize
     });
 
-    // dropdown input options
-    let colleges = [
-        "College of Arts and Sciences",
-        "College of Economics and Management",
-        "College of Forestry and Natural Resources",
-        "College of Development Communication",
-        "Collegee of Agriculture and Food Science",
-        "College of Engineering and Agro-industrial Technology",
-        "College of Human Ecology",
-        "College of Veterinary Medicine",
-        "College of Public Affairs and Development",
-        "School of Environmental Science and Management",
-    ];
-
-    // radio input options
-    let howYouHear = ["ACSS Social Media Post", "Shared Post of a Friend"];
 </script>
 
 <div id="form" class="mr-[10%] ml-[10%] mt-7 flex">
@@ -110,6 +115,7 @@
         id="input-section"
         class="glassmorphic-rectangle bg-slate-700 flex-col"
     >
+        <!-- Input Components -->
         <TextInputComponent label="Name" />
         <TextInputComponent label="Nickname" />
         <TextInputComponent label="Email" />
@@ -126,6 +132,7 @@
 
     {#if windowWidth * 0.75 > windowHeight}
         <div id="reg-form-illus" class="w-7/12">
+            <!-- Illustration -->
             <RegFormIllus />
         </div>
     {/if}
