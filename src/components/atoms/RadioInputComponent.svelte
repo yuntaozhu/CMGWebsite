@@ -9,11 +9,15 @@
      export let options;
 </script>
 
-<div id="input-component" class="flex-column mb-7  text-left">
+<div id={"FormRadioACSS-" + label} class="flex-column mb-7  text-left">
     <label for={label} class="font-bold mb-2">{label}</label>
-    {#each options as item}
+    {#each options as item, i}
         <div class="flex gap-3">
-            <input type="radio" name={label} />
+            {#if i == 0}
+                <input type="radio" name={label} value={item} checked/>
+            {:else}
+                <input type="radio" name={label} value={item}/>
+            {/if}
             <div>{item}</div>
         </div>
     {/each}

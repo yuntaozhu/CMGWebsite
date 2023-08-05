@@ -42,9 +42,9 @@
             <BackButton/>
             <div class="flex flex-wrap items-center gap-3 break-word overflow-hidden">
                 <div class="flex-column">
-                    <div id="title" class="font-bold text-3xl">
+                    <h5 id="title" class="font-bold">
                         {eventName}
-                    </div>
+                    </h5>
                     <svg
                         id="svgLine"
                         height="10"
@@ -89,7 +89,7 @@
             {eventDescription}
         </div>
         <div id="form-dpa" class="mt-6 glassmorphic-rectangle overflow-hidden">
-            <h6 class="mb-4 font-bold text-1xl">Data Privacy Act of 2012</h6>
+            <h6 class="mb-4 font-bold">Data Privacy Act of 2012</h6>
             <p>
                 In accordance with RA No. 10173 or the Data Privacy Act of 2012,
                 all your provided information shall only be used for

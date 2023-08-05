@@ -1,7 +1,12 @@
 <script>
-    
+    function goBack(){
+        // to be improved...
+        // window.history.previous.href
+        history.back()
+    }
 </script>
 
+<div on:click={goBack}>
 <svg id="button"
     width="14"
     height="28"
@@ -28,6 +33,7 @@
         </linearGradient>
     </defs>
 </svg>
+</div>
 
 <style>
     #button{

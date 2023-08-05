@@ -7,18 +7,40 @@
     import RadioInputComponent from "$components/atoms/RadioInputComponent.svelte";
     import SubmitButton from "$components/atoms/SubmitButton.svelte";
 
-    // CUSTOMIZATION: Add the list of dropdown and radio selection here
-    let dropdown = ["Option 1", "Option 2", "Option 3"]; 
+    // CUSTOMIZE THIS: Add the list of dropdown options and radio options here
+    let dropdown = ["Option 1", "Option 2", "Option 3"];
     let radio = ["Option 1", "Option 2"];
     // END OF CUSTOMIZATION
 
     // Form submission
     function submitForm() {
+        let formValues = {};
+        
+        // @ts-ignore
         let components = document.getElementById("components")?.children;
-        let formValues = [];
-        for(let component in components){
-            // @ts-ignore
-            console.log(component);
+        if (components) {
+            for (let component of components) {
+                if (
+                    component.id.substring(0, 14) === "FormRadioACSS-"
+                ) {
+                    let name = component.id.replace("FormRadioACSS-", "");
+                    console.log(component.id);
+                    const radio = document.querySelectorAll(
+                        `input[name="${name}"]`
+                    );
+                    for (const f of radio) {
+                        // @ts-ignore
+                        if (f.checked) {
+                            // @ts-ignore
+                            formValues[name] = f.value;
+                        }
+                    }
+                }else{
+                    // @ts-ignore
+                    formValues[component.id] = document.getElementById(`Form${component.id}`).value;
+                }
+            }
+            console.log(formValues);
         }
     }
 </script>
@@ -29,7 +51,7 @@
         class="h-[100%] flex flex-col justify-between"
     >
         <div id="components">
-            <!-- CUSTOMIZATION: Add The Input Components Here -->
+            <!-- CUSTOMIZE THIS: Add the input components here -->
             <TextInputComponent label="Text" />
             <NumberInputComponent label="Number" />
             <TextInputComponent label="Email" />

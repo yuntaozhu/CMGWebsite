@@ -9,9 +9,10 @@
     export let options;
 </script>
 
-<div class="text-left">
+<div id={label} class="text-left">
     <label for={label} class="font-bold">{label}</label>
     <select
+        id={"Form" + label}
         class="w-full mt-2 rounded-md text-black h-8 pl-2 pr-2 bg-white/[0.9] mb-7"
         name={label}
     >

@@ -4,14 +4,15 @@
     2. Event Name
     3. Event Description
 
-  Go to routes/RegistrationForms/'the-form-component' to modify or add your own form form 
+  Go to routes/RegistrationForms/'the-form-component' to modify or add your own form 
 -->
 
 <script>
   import { NavBar, Footer } from "$components";
-  import ACSSOrientation from "./ACSSOrientation.svelte"; // your own form component (double check the import statement)
   import RegistrationTemplate from "$components/organisms/RegistrationForms/RegistrationTemplate.svelte"; // registration template component
 
+  // CUSTOMIZE THIS: This is where you can modify the header photo, event name, and event description
+  import ACSSOrientation from "./ACSSOrientation.svelte"; // // Form Component: import your form component (double check the import statement)
   let headerPhotoURL = "../sample-reg-header.png"; // Header Photo: a file from static folder
   let eventName = "ACSS Orientation"; // Event Name
   let eventDescription = `
@@ -22,11 +23,13 @@
                 out this form. Orientation details and updates will be sent through
                 the email used in answering this form.
                 `; // Event Description
+  // END OF CUSTOMIZATION
 </script>
 
-  <NavBar />
-  <RegistrationTemplate {headerPhotoURL} {eventName} {eventDescription}>
-    <!-- Insert here your form component with an attribute slot="form" -->
-    <ACSSOrientation slot="form" />
-  </RegistrationTemplate>
-  <Footer />
+<NavBar />
+<RegistrationTemplate {headerPhotoURL} {eventName} {eventDescription}>
+  <!-- CUSTOMIZE THIS: Insert here your form component with an attribute slot="form" -->
+  <ACSSOrientation slot="form" />
+  <!-- END OF CUSTOMIZATION -->
+</RegistrationTemplate>
+<Footer />
