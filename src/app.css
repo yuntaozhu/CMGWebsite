@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,6 +7,181 @@
 html,
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-dark-3);
+    color: var(--color-white);
+}
+
+h1 {
+    font-size: 95.37px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+h2 {
+    font-size: 76.29px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+h3 {
+    font-size: 61.04px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+h4 {
+    font-size: 48.83px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+h5 {
+    font-size: 39.06px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+.ws-large-bold {
+    font-size: 25px;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+.ws-regular-bold {
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+.ws-small-bold {
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+.ws-large {
+    font-size: 25px;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+.ws-regular {
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+.ws-small {
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+.ws-tiny {
+    font-size: 12px;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+.i-large-bold {
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+.i-regular-bold {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+.i-small-bold {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+.i-large {
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+.i-regular {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+.i-small {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+.i-tiny {
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+.glass-effect {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%);
+    backdrop-filter: blur(21px);
+}
+
+
+
+
+:root {
+    --color-white: #F4F1FF;
+    --color-gray-1: #9593A4;
+    --color-gray-2: #83828C;
+    --color-gray-3: #3E3B4C;
+    --color-dark-1: #1E0E37;
+    --color-dark-2: #0A041F;
+    --color-dark-3: #060217;
+
+    --color-purple: #5E35DA;
+    --color-dark-purple: #3D338D;
+    --color-blue: #3B7FEF;
+    --color-dark-blue: #2E3792;
+    --color-sky-blue: #00F5F1;
+    --color-dark-sky-blue: #30CAF2;
+
+    --font-family-work-sans: 'Work Sans';
+    --font-family-inter: 'Inter';
+
     /* background-color: #060217; */
     color: white;
 }

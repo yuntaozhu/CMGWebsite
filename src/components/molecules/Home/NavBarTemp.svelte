@@ -1,4 +1,5 @@
-<!-- Navbar.svelte -->
+<!-- TEMPORARY NAVBAR from Tailwind CSS (Not Fully Working) -->
+
 <script>
     import { onMount } from "svelte";
 
@@ -7,11 +8,10 @@
 
     // Array of tab items
     let tabs = [
-        { text: "Project Face", url: "/" },
-        { text: "Home", url: "/home" },
-        { text: "About", url: "/about" },
-        { text: "Showcase", url: "/showcase" },
-        { text: "Developers", url: "/developers" },
+        { text: "Home", url: "/" },
+        { text: "About", url: "/About" },
+        { text: "Showcase", url: "/Showcase" },
+        { text: "Developers", url: "/Developers" },
     ];
 
     // Function to set the initial active tab based on the current URL

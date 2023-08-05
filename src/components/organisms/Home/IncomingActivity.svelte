@@ -4,7 +4,7 @@
   let eventDescription = "Get to know more about the organization.";
   let eventImage = "/home/event-image.svg";
   let eventDateTime = "September 00, 2023 7:00 PM";
-  import { Button } from "$components";
+  import Button from "../../atoms/Button.svelte";
 </script>
 
 <section class="p-10">

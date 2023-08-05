@@ -1,10 +1,13 @@
 <script>
-    import Navbar from "../Navbar.svelte";
-    import Home from "../../components/home/Home.svelte";
+  import { Hero, Summary, IncomingActivity } from "$components";
+  import NavBarTemp from "../../components/molecules/Home/NavBarTemp.svelte";
+  import GradientBlur from "../../components/molecules/Home/GradientBlur.svelte";
 </script>
 
-<head>
-    <title>Home</title>
-</head>
-<Navbar />
-<Home />
+<NavBarTemp />
+<div class="overflow-hidden w-full h-full bg-base-black px-10 pb-10">
+  <GradientBlur />
+  <Hero />
+  <Summary />
+  <IncomingActivity />
+</div>
