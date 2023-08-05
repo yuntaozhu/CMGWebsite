@@ -6,7 +6,7 @@
     /**
      * @type {any}
      */
-     export let photoHeaderURL;
+     export let headerPhotoURL;
     /**
      * @type {any}
      */
@@ -34,10 +34,10 @@
 </script>
 
 <div class="flex-column">
-    <div id="photo-header" class="w-full h-1/4" style="background-image: url({photoHeaderURL})">
+    <div id="photo-header" class="w-full h-1/4" style="background-image: url({headerPhotoURL})">
         <div id="gradient" />
     </div>
-    <div id="form-header" class="mr-[10%] ml-[10%] flex flex-wrap items-center">
+    <div id="form-header" class="mr-[10%] ml-[10%] flex flex-col">
         <div id="header-title" class="flex gap-3 items-center mb-1">
             <BackButton/>
             <div class="flex flex-wrap items-center gap-3">
@@ -85,10 +85,10 @@
                 <div id="regformtitle">Registration Form</div>
             </div>
         </div>
-        <div id="form-info" class="mt-4 text-base glassmorphic-rectangle">
+        <div id="form-info" class="mt-4 text-base glassmorphic-rectangle overflow-hidden">
             {eventDescription}
         </div>
-        <div id="form-dpa" class="mt-6 glassmorphic-rectangle">
+        <div id="form-dpa" class="mt-6 glassmorphic-rectangle overflow-hidden">
             <h1 class="mb-4 font-bold text-1xl">Data Privacy Act of 2012</h1>
             <p>
                 In accordance with RA No. 10173 or the Data Privacy Act of 2012,

@@ -1,5 +1,13 @@
+<script>
+    /**
+     * @type {any}
+     */
+     export let submit;
+</script>
+
 <svg
     id="submit-button"
+    on:click={submit}
     height="40"
     viewBox="0 0 208 52"
     fill="none"

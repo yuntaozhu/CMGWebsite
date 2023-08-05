@@ -6,34 +6,12 @@
     2. NumberInputComponent (required attributes: label)
     3. DropdownComponent (required attributes: label, options)
     4. RadioInputComponent (required attributes: label, options)
-    4. SubmitButton
+    5. SubmitButton
 -->
 
 <script>
-    // Dropdown input options
-    let colleges = [
-        "College of Arts and Sciences",
-        "College of Economics and Management",
-        "College of Forestry and Natural Resources",
-        "College of Development Communication",
-        "Collegee of Agriculture and Food Science",
-        "College of Engineering and Agro-industrial Technology",
-        "College of Human Ecology",
-        "College of Veterinary Medicine",
-        "College of Public Affairs and Development",
-        "School of Environmental Science and Management",
-    ];
-
-    // Radio input options
-    let howYouHear = ["ACSS Social Media Post", "Shared Post of a Friend"];
-
     // Import statements
-    import TextInputComponent from "./registration-components/TextInputComponent.svelte";
-    import NumberInputComponent from "./registration-components/NumberInputComponent.svelte";
-    import DropdownInputComponent from "./registration-components/DropdownInputComponent.svelte";
-    import RegFormIllus from "./registration-components/RegFormIllus.svelte";
-    import RadioInputComponent from "./registration-components/RadioInputComponent.svelte";
-    import SubmitButton from "./registration-components/SubmitButton.svelte";
+    import RegFormIllus from "./RegFormIllus.svelte";
     import { onMount } from "svelte";
 
     // Functions (for ui)
@@ -57,6 +35,15 @@
             if (a) {
                 a.style.width = "41.67%";
             }
+        }
+
+        // Updates the size of illustration photo according to the form's height
+        let regformillusmeasure = document.getElementById("reg-form-illus-measure");
+        let regformillus = document.getElementById("reg-form-illus");
+        if (regformillusmeasure && regformillus && regformillusmeasure?.clientWidth > regformillusmeasure?.clientHeight){
+            regformillus.style.width = regformillusmeasure.clientHeight + "px";
+        }else if(regformillus){
+            regformillus.style.width = "100%";
         }
     }
 
@@ -116,24 +103,15 @@
         class="glassmorphic-rectangle bg-slate-700 flex-col"
     >
         <!-- Input Components -->
-        <TextInputComponent label="Name" />
-        <TextInputComponent label="Nickname" />
-        <TextInputComponent label="Email" />
-        <DropdownInputComponent label="College" options={colleges} />
-        <TextInputComponent label="Degree Program" />
-        <NumberInputComponent label="Batch" />
-        <TextInputComponent label="Facebook Profile Link" />
-        <RadioInputComponent
-            label="How did you hear about this event?"
-            options={howYouHear}
-        />
-        <SubmitButton />
+        <slot name="registration-form"/>
     </div>
 
-    {#if windowWidth * 0.75 > windowHeight}
-        <div id="reg-form-illus" class="w-7/12">
-            <!-- Illustration -->
-            <RegFormIllus />
+    {#if windowWidth * 0.75 > windowHeight} 
+        <div id="reg-form-illus-measure" class="w-7/12 flex justify-center overflow-hidden">
+            <div id="reg-form-illus" class="w-full">
+                <!-- Illustration -->
+                <RegFormIllus />
+            </div>
         </div>
     {/if}
 </div>

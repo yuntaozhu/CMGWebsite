@@ -19,13 +19,11 @@
 
 <style>
     #reg-form-illus-photo{
-        /* background-color: red; */
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        transition: 0.3s;
-        /* width="530" height="488"  */
+        transition: 0.1s ease;
     }
 </style>
     
