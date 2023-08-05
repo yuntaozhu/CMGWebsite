@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import BackButton from "./BackButton.svelte";
+    import BackButton from "$components/atoms/BackButton.svelte";
 
     let titleWidth = 0;
     /**
@@ -40,7 +40,7 @@
     <div id="form-header" class="mr-[10%] ml-[10%] flex flex-col">
         <div id="header-title" class="flex gap-3 items-center mb-1">
             <BackButton/>
-            <div class="flex flex-wrap items-center gap-3">
+            <div class="flex flex-wrap items-center gap-3 break-word overflow-hidden">
                 <div class="flex-column">
                     <div id="title" class="font-bold text-3xl">
                         {eventName}
@@ -89,7 +89,7 @@
             {eventDescription}
         </div>
         <div id="form-dpa" class="mt-6 glassmorphic-rectangle overflow-hidden">
-            <h1 class="mb-4 font-bold text-1xl">Data Privacy Act of 2012</h1>
+            <h6 class="mb-4 font-bold text-1xl">Data Privacy Act of 2012</h6>
             <p>
                 In accordance with RA No. 10173 or the Data Privacy Act of 2012,
                 all your provided information shall only be used for

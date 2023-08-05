@@ -30,6 +30,10 @@
 </svg>
 
 <style>
+    #button{
+        min-width: 14px;
+        min-height: 28px;
+    }
     #button:hover{
         opacity: 50%;
         transition: 0.2s;

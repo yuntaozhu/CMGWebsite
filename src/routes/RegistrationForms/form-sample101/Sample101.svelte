@@ -1,11 +1,11 @@
 <script>
     // Import statements
-    import RegSectionBody from "./forms-components/RegSectionBody.svelte";
-    import TextInputComponent from "./forms-components/TextInputComponent.svelte";
-    import NumberInputComponent from "./forms-components/NumberInputComponent.svelte";
-    import DropdownInputComponent from "./forms-components/DropdownInputComponent.svelte";
-    import RadioInputComponent from "./forms-components/RadioInputComponent.svelte";
-    import SubmitButton from "./forms-components/SubmitButton.svelte";
+    import RegSectionBody from "$components/organisms/RegistrationForms/RegSectionBody.svelte";
+    import TextInputComponent from "$components/atoms/TextInputComponent.svelte";
+    import NumberInputComponent from "$components/atoms/NumberInputComponent.svelte";
+    import DropdownInputComponent from "$components/atoms/DropdownInputComponent.svelte";
+    import RadioInputComponent from "$components/atoms/RadioInputComponent.svelte";
+    import SubmitButton from "$components/atoms/SubmitButton.svelte";
 
     // CUSTOMIZATION: Add the list of dropdown and radio selection here
     let dropdown = ["Option 1", "Option 2", "Option 3"]; 
@@ -14,8 +14,12 @@
 
     // Form submission
     function submitForm() {
-        let formValues = {};
-        console.log(formValues);
+        let components = document.getElementById("components")?.children;
+        let formValues = [];
+        for(let component in components){
+            // @ts-ignore
+            console.log(component);
+        }
     }
 </script>
 
@@ -24,7 +28,7 @@
         slot="registration-form"
         class="h-[100%] flex flex-col justify-between"
     >
-        <div>
+        <div id="components">
             <!-- CUSTOMIZATION: Add The Input Components Here -->
             <TextInputComponent label="Text" />
             <NumberInputComponent label="Number" />

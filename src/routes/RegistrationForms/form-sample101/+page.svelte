@@ -8,8 +8,9 @@
 -->
 
 <script>
-    import Sample101 from "$components/forms/Sample101.svelte"; // your own form component
-    import RegistrationTemplate from "$components/forms/forms-components/RegistrationTemplate.svelte"; // registration template component
+    import { NavBar, Footer } from "$components";
+    import Sample101 from "./Sample101.svelte"; // your own form component (double check the import statement)
+    import RegistrationTemplate from "$components/organisms/RegistrationForms/RegistrationTemplate.svelte"; // registration template component
   
     let headerPhotoURL = "https://wallpapercave.com/wp/wp5787527.jpg"; // Header Photo: a file from static folder
     let eventName = "Sample 101"; // Event Name
@@ -18,8 +19,9 @@
                 `; // Event Description
   </script>
   
+  <NavBar />
   <RegistrationTemplate headerPhotoURL={headerPhotoURL} eventName={eventName} eventDescription={eventDescription}>
     <!-- Insert here your form component with an attribute slot="form" -->
     <Sample101 slot=form/>
   </RegistrationTemplate>
-  
+  <Footer />
