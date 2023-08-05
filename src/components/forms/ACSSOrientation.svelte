@@ -7,7 +7,7 @@
     import RadioInputComponent from "./forms-components/RadioInputComponent.svelte";
     import SubmitButton from "./forms-components/SubmitButton.svelte";
 
-    // Dropdown input options
+    // CUSTOMIZATION: Add the list of dropdown and radio selection here
     let colleges = [
         "College of Arts and Sciences",
         "College of Economics and Management",
@@ -21,8 +21,8 @@
         "School of Environmental Science and Management",
     ];
 
-    // Radio input options
     let howYouHear = ["ACSS Social Media Post", "Shared Post of a Friend"];
+    // END OF CUSTOMIZATION
 
     // Form submission
     function submitForm() {
@@ -32,19 +32,27 @@
 </script>
 
 <RegSectionBody>
-    <div slot="registration-form">
-        <!-- Add The Input Components Here -->
-        <TextInputComponent label="Name" />
-        <TextInputComponent label="Nickname" />
-        <TextInputComponent label="Email" />
-        <DropdownInputComponent label="College" options={colleges} />
-        <TextInputComponent label="Degree Program" />
-        <NumberInputComponent label="Batch" />
-        <TextInputComponent label="Facebook Profile Link" />
-        <RadioInputComponent
-            label="How did you hear about this event?"
-            options={howYouHear}
-        />
-        <SubmitButton submit={submitForm} />
+    <div
+        slot="registration-form"
+        class="h-[100%] flex flex-col justify-between"
+    >
+        <div>
+            <!-- CUSTOMIZATION: Add The Input Components Here -->
+            <TextInputComponent label="Name" />
+            <TextInputComponent label="Nickname" />
+            <TextInputComponent label="Email" />
+            <DropdownInputComponent label="College" options={colleges} />
+            <TextInputComponent label="Degree Program" />
+            <NumberInputComponent label="Batch" />
+            <TextInputComponent label="Facebook Profile Link" />
+            <RadioInputComponent
+                label="How did you hear about this event?"
+                options={howYouHear}
+            />
+            <!-- END OF CUSTOMIZATION -->
+        </div>
+        <div class="overflow-hidden">
+            <SubmitButton submit={submitForm} />
+        </div>
     </div>
 </RegSectionBody>

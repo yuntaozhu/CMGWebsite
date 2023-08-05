@@ -4,16 +4,16 @@
     2. Event Name
     3. Event Description
 
-  Go to src/components/forms/'the-form-component' to modify a form 
+  Go to src/components/forms/'the-form-component' to modify or add your own form form 
 -->
 
 <script>
-    import RegistrationTemplate from "$components/forms/forms-components/RegistrationTemplate.svelte"; // registration template component
-    import ACSSOrientation from "$components/forms/ACSSOrientation.svelte"; // form component
-  
-    let headerPhotoURL = "sample-reg-header.png"; // Header Photo: a file from static folder
-    let eventName = "ACSS Orientation"; // Event Name
-    let eventDescription = `
+  import ACSSOrientation from "$components/forms/ACSSOrientation.svelte"; // your own form component (double check the import statement)
+  import RegistrationTemplate from "$components/forms/forms-components/RegistrationTemplate.svelte"; // registration template component
+
+  let headerPhotoURL = "sample-reg-header.png"; // Header Photo: a file from static folder
+  let eventName = "ACSS Orientation"; // Event Name
+  let eventDescription = `
                 This is an early registration form for the incoming ACSS Orientation
                 "Insert Orientation Name" which aims to familiarize you with our
                 growing organization. The orientation will be held on September 00,
@@ -21,9 +21,9 @@
                 out this form. Orientation details and updates will be sent through
                 the email used in answering this form.
                 `; // Event Description
-  </script>
-  
-  <RegistrationTemplate headerPhotoURL={headerPhotoURL} eventName={eventName} eventDescription={eventDescription}>
-    <ACSSOrientation slot=form/>
-  </RegistrationTemplate>
-  
+</script>
+
+<RegistrationTemplate {headerPhotoURL} {eventName} {eventDescription}>
+  <!-- Insert here your form component with an attribute slot="form" -->
+  <ACSSOrientation slot="form" />
+</RegistrationTemplate>

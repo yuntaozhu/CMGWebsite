@@ -4,12 +4,12 @@
     2. Event Name
     3. Event Description
 
-  Go to src/components/forms/'the-form-component' to modify a form 
+  Go to src/components/forms/'the-form-component' to modify or add your own form form 
 -->
 
 <script>
+    import Sample101 from "$components/forms/Sample101.svelte"; // your own form component
     import RegistrationTemplate from "$components/forms/forms-components/RegistrationTemplate.svelte"; // registration template component
-    import Sample101 from "$components/forms/Sample101.svelte"; // form component
   
     let headerPhotoURL = "https://wallpapercave.com/wp/wp5787527.jpg"; // Header Photo: a file from static folder
     let eventName = "Sample 101"; // Event Name
@@ -19,6 +19,7 @@
   </script>
   
   <RegistrationTemplate headerPhotoURL={headerPhotoURL} eventName={eventName} eventDescription={eventDescription}>
+    <!-- Insert here your form component with an attribute slot="form" -->
     <Sample101 slot=form/>
   </RegistrationTemplate>
   
