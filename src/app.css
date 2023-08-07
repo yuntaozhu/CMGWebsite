@@ -185,3 +185,26 @@ h5 {
     /* background-color: #060217; */
     color: white;
 }
+
+.glassmorphic-rectangle {
+    border-radius: 16px;
+    border: 0.01rem solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.2) 100%);
+    backdrop-filter: blur(21px);
+}
+
+.gradient-line {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-image-source: linear-gradient(270deg,
+            rgba(46, 55, 146, 0) 0%,
+            #2e3792 27.6%,
+            #00f5f1 74.48%,
+            rgba(0, 245, 241, 0) 100%);
+}
