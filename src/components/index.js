@@ -1,5 +1,6 @@
 //--- Atoms ---
 import Button from './atoms/Button.svelte';
+import HamburgerMenu from './atoms/HamburgerMenu.svelte';
 
 //--- Organisms ---
 import NavBar from './organisms/NavBar.svelte';
@@ -35,7 +36,7 @@ import Workshops from './organisms/Showcase/Workshops.svelte';
 
 export {
     //Atoms
-    Button, 
+    Button, HamburgerMenu,
     //Molecules
 
     //Organisms

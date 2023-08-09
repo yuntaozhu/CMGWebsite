@@ -7,11 +7,7 @@
 html, body {
     font-family: 'Work Sans', sans-serif;
     background-color: var(--color-dark-2);
-}
-
-html, body {
-    font-family: 'Work Sans', sans-serif;
-    background-color: var(--color-dark-2);
+    color: var(--color-white);
 }
 
 h1 {
@@ -153,6 +149,13 @@ h5 {
 
 .i-tiny {
     font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+.i-super-tiny {
+    font-size: 8px;
     font-family: 'Inter', sans-serif;
     letter-spacing: 2px;
     color: var(--color-white);
