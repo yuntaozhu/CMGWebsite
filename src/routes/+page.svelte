@@ -1,10 +1,9 @@
 <script>
-  import { Hero, Summary, IncomingActivity } from "$components";
-  import NavBarTemp from "../components/molecules/Home/NavBarTemp.svelte";
+  import { Hero, Summary, IncomingActivity, NavBar } from "$components";
   import GradientBlur from "../components/molecules/Home/GradientBlur.svelte";
 </script>
 
-<NavBarTemp />
+<NavBar />
 <div class="overflow-hidden w-full h-full bg-base-black px-10 pb-10">
   <GradientBlur />
   <Hero />

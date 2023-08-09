@@ -20,7 +20,7 @@
         class="absolute top-[20%] left-[80%] ss:top-[8%] ss:left-[70%] lg:left-[36%] xl:left-[28%]"
       >
         <img
-          src="/home/white-logo-no-text.webp"
+          src="/assets/white-logo-no-text.webp"
           alt="The official seal of The Alliance of Computer Science Students"
           class="z-50 max-w-[180%] ss:max-w-[100%] w-40"
         />
@@ -42,7 +42,7 @@
       </div>
 
       <img
-        src="/home/gradient-logo-cube.svg"
+        src="/assets/gradient-logo-cube.svg"
         alt="ACSS Gradient Logo Cube"
         class="w-80 absolute left-[80%] md:left-[60%] xl:bottom-[-320px] xl:left-[56%] z-0"
       />

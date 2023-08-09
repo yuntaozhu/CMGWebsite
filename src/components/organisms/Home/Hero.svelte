@@ -9,28 +9,28 @@
 
       <!-- Top Ellipse -->
       <img
-        src="/home/ellipse-1.svg"
+        src="/assets/ellipse-1.svg"
         alt="Gradient Ellipse"
         class="absolute top-[25%] left-[80%] ss:top-[16%] ss:left-[68%] lg:left-[64%] h-20"
       />
 
       <!-- Bottom Ellipse -->
       <img
-        src="/home/ellipse-1.svg"
+        src="/assets/ellipse-1.svg"
         alt="Gradient Ellipse"
         class="absolute bottom-[22%] left-[2%] ss:bottom-[14%] ss:left-[28%] lg:bottom-[18%] lg:left-[34%] h-10"
       />
 
       <!-- Top Hexagon -->
       <img
-        src="/home/gradient-hexagon.svg"
+        src="/assets/gradient-hexagon.svg"
         alt="Gradient Hexagon"
         class="absolute top-[8%] lg:top-[4%] left-[10%] sm:left-[12%] lg:left-[10%] xl:left-[20%] h-48 lg:h-60"
       />
 
       <!-- Bottom Hexagon -->
       <img
-        src="/home/gradient-hexagon.svg"
+        src="/assets/gradient-hexagon.svg"
         alt="Gradient Hexagon"
         class="absolute bottom-[8%] md:bottom-[16%] lg:bottom-[16%] left-[60%] lg:left-[63%] h-24"
       />
@@ -41,13 +41,13 @@
       </div>
 
       <!-- <img
-                  src="/home/glassmorphic-hexagon.svg"
+                  src="/assets/glassmorphic-hexagon.svg"
                   alt="Glassmorphic Hexagon"
                   class="center-img hexagon"
               /> -->
 
       <img
-        src="/home/white-logo.webp"
+        src="/assets/white-logo.webp"
         alt="The official seal of The Alliance of Computer Science Students"
         class="center-img logo"
       />

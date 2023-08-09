@@ -2,7 +2,7 @@
 <script>
   let eventName = "ACSS Orientation";
   let eventDescription = "Get to know more about the organization.";
-  let eventImage = "/home/event-image.svg";
+  let eventImage = "/assets/event-image.svg";
   let eventDateTime = "September 00, 2023 7:00 PM";
   import Button from "../../atoms/Button.svelte";
 </script>
@@ -11,7 +11,7 @@
   <div class="grid grid-cols-1 ss:pt-20 md:pt-32">
     <div class="relative h-[40px] ss:h-[75px]">
       <img
-        src="/home/event-header.svg"
+        src="/assets/event-header.svg"
         alt="ACSS Event Header"
         class="absolute top-0 left-0 md:left-[38%]"
       />
@@ -44,7 +44,11 @@
         <div
           class="glassmorphic-rectangle flex flex-row gap-2 min-[485px]:gap-5 p-[7%] min-[485px]:p-3.5 min-[485px]:w-[325px] mt-4 mb-6 items-center"
         >
-          <img src="/home/calendar.svg" alt="Calendar Icon" class="w-[40px]" />
+          <img
+            src="/assets/calendar.svg"
+            alt="Calendar Icon"
+            class="w-[40px]"
+          />
           <p class="text-center">{eventDateTime}</p>
         </div>
         <Button text="Register Now" />
