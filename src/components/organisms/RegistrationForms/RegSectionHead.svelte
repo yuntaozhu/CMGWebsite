@@ -74,9 +74,6 @@
         font-size: 12px;
         margin-top: -8px;
     }
-    #svgLine {
-        max-width: 80vw;
-    }
     .glassmorphic-rectangle {
         background: linear-gradient(
             0deg,

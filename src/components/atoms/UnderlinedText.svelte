@@ -65,3 +65,9 @@
         </defs>
     </svg>
 </div>
+
+<style>
+    #svgLine {
+        max-width: 80vw;
+    }
+</style>

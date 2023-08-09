@@ -2,6 +2,7 @@
   import UnderlinedText from "$components/atoms/UnderlinedText.svelte";
   import { onMount } from "svelte";
   
+  // CUSTOMIZE THIS: Array of strengths
   let strengths = [
     [
       "Strength 1",
@@ -20,7 +21,9 @@
       "Strength, this is a sample sentence. Strength, this is a sample sentence. Strength, this is a sample sentence.",
     ],
   ];
+  // END OF CUSTOMIZATION
 
+  // Adds glow effect on the background
   function bgElementChange(){
     let windowHeight = document.documentElement.clientHeight;
     let bg = document.getElementById("strength-bg");
@@ -93,11 +96,6 @@
     </div>
   </div>
 </div>
-
-<!-- 
-<div class="container">
-  <h1>Strengths</h1>
-</div> -->
 
 <style>
   .container {
