@@ -1,4 +1,5 @@
 <script>
+  // Import Statements
   import UnderlinedText from "$components/atoms/UnderlinedText.svelte";
   import { onMount } from "svelte";
   
@@ -98,15 +99,6 @@
 </div>
 
 <style>
-  .container {
-    width: 100%;
-    height: 25vh;
-    display: flex;
-    padding: 2rem;
-    justify-content: center;
-    align-items: center;
-  }
-
   .strength-description {
     text-indent: 17%;
     text-align: justify;
