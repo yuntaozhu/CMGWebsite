@@ -2,6 +2,7 @@
     // Import statements
     import RegSectionBody from "$components/organisms/RegistrationForms/RegSectionBody.svelte";
     import TextInputComponent from "$components/atoms/TextInputComponent.svelte";
+    import EmailInputComponent from "$components/atoms/EmailInputComponent.svelte";
     import NumberInputComponent from "$components/atoms/NumberInputComponent.svelte";
     import DropdownInputComponent from "$components/atoms/DropdownInputComponent.svelte";
     import RadioInputComponent from "$components/atoms/RadioInputComponent.svelte";
@@ -46,21 +47,23 @@
 </script>
 
 <RegSectionBody>
-    <div
+    <form
+        id="registration-form"
         slot="registration-form"
         class="h-[100%] flex flex-col justify-between"
+        on:submit={submitForm}
     >
         <div id="components">
             <!-- CUSTOMIZE THIS: Add the input components here -->
             <TextInputComponent label="Text" />
             <NumberInputComponent label="Number" />
-            <TextInputComponent label="Email" />
+            <EmailInputComponent label="Email" />
             <DropdownInputComponent label="Dropdown" options={dropdown} />
             <RadioInputComponent label="Radio" options={radio} />
             <!-- END OF CUSTOMIZATION -->
         </div>
         <div class="overflow-hidden">
-            <SubmitButton submit={submitForm} />
+            <SubmitButton/>
         </div>
-    </div>
+    </form>
 </RegSectionBody>

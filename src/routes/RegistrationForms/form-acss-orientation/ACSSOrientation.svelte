@@ -2,6 +2,7 @@
     // Import statements
     import RegSectionBody from "$components/organisms/RegistrationForms/RegSectionBody.svelte";
     import TextInputComponent from "$components/atoms/TextInputComponent.svelte";
+    import EmailInputComponent from "$components/atoms/EmailInputComponent.svelte";
     import NumberInputComponent from "$components/atoms/NumberInputComponent.svelte";
     import DropdownInputComponent from "$components/atoms/DropdownInputComponent.svelte";
     import RadioInputComponent from "$components/atoms/RadioInputComponent.svelte";
@@ -24,7 +25,7 @@
     let howYouHear = ["ACSS Social Media Post", "Shared Post of a Friend"];
     // END OF CUSTOMIZATION
 
-    // Form submission
+    // Form submission into formValues
     function submitForm() {
         let formValues = {};
         
@@ -55,18 +56,21 @@
             console.log(formValues);
         }
     }
+    
 </script>
 
 <RegSectionBody>
-    <div
+    <form
+        id="registration-form"
         slot="registration-form"
         class="h-[100%] flex flex-col justify-between"
+        on:submit={submitForm}
     >
         <div id="components">
             <!-- CUSTOMIZE THIS: Add the input components here -->
             <TextInputComponent label="Name" />
             <TextInputComponent label="Nickname" />
-            <TextInputComponent label="Email" />
+            <EmailInputComponent label="Email" />
             <DropdownInputComponent label="College" options={colleges} />
             <TextInputComponent label="Degree Program" />
             <NumberInputComponent label="Batch" />
@@ -78,7 +82,7 @@
             <!-- END OF CUSTOMIZATION -->
         </div>
         <div class="overflow-hidden">
-            <SubmitButton submit={submitForm} />
+            <SubmitButton/>
         </div>
-    </div>
+    </form>
 </RegSectionBody>

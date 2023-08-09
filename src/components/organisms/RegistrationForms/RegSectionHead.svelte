@@ -1,6 +1,6 @@
 <script>
-    import { onMount } from "svelte";
     import BackButton from "$components/atoms/BackButton.svelte";
+    import UnderlinedText from "$components/atoms/UnderlinedText.svelte";
 
     let titleWidth = 0;
     /**
@@ -15,22 +15,6 @@
      * @type {any}
      */
      export let eventDescription;
-
-    function updateSvgWidth() {
-        const titleElement = document.getElementById("title");
-        if (titleElement) {
-            titleWidth = titleElement.clientWidth;
-        }
-    }
-
-    onMount(() => {
-        updateSvgWidth();
-        window.addEventListener("resize", updateSvgWidth);
-
-        return () => {
-            window.removeEventListener("resize", updateSvgWidth);
-        };
-    });
 </script>
 
 <div class="flex-column">
@@ -39,53 +23,13 @@
     </div>
     <div id="form-header" class="mr-[10%] ml-[10%] flex flex-col">
         <div id="header-title" class="flex gap-3 items-center mb-1">
-            <BackButton/>
+            <BackButton reference="../"/>
             <div class="flex flex-wrap items-center gap-3 break-word overflow-hidden">
-                <div class="flex-column">
-                    <h5 id="title" class="font-bold">
-                        {eventName}
-                    </h5>
-                    <svg
-                        id="svgLine"
-                        height="10"
-                        viewBox="0 0 530 4"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={titleWidth}
-                    >
-                        <line
-                            x1="-6.10352e-05"
-                            y1="2"
-                            x2="530"
-                            y2="2"
-                            stroke="url(#paint0_linear_175_58)"
-                            stroke-width="4"
-                        />
-                        <defs>
-                            <linearGradient
-                                id="paint0_linear_175_58"
-                                x1="519"
-                                y1="3.99999"
-                                x2="6.49993"
-                                y2="3.99965"
-                                gradientUnits="userSpaceOnUse"
-                            >
-                                <stop stop-color="#2E3792" stop-opacity="0" />
-                                <stop offset="0.276042" stop-color="#2E3792" />
-                                <stop offset="0.744792" stop-color="#00F5F1" />
-                                <stop
-                                    offset="1"
-                                    stop-color="#00F5F1"
-                                    stop-opacity="0"
-                                />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
+                <UnderlinedText text={eventName}/>
                 <div id="regformtitle">Registration Form</div>
             </div>
         </div>
-        <div id="form-info" class="mt-4 text-base glassmorphic-rectangle overflow-hidden">
+        <div id="form-info" class="mt-4 text-base glassmorphic-rectangle overflow-hidden break-words">
             {eventDescription}
         </div>
         <div id="form-dpa" class="mt-6 glassmorphic-rectangle overflow-hidden">

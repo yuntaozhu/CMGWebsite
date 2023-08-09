@@ -56,13 +56,21 @@
         let formPos = document
             .getElementById("input-section")
             ?.getBoundingClientRect();
-
         if (illusPos) {
             illusPosY = (illusPos.bottom - illusPos.top) / 2 + illusPos.top;
             illusPosY = Math.round(illusPosY);
         }
         if (formPos) {
             formPosY = Math.round(formPos.top);
+        }
+
+        if(illus && illusPos && formPosY + illusPos?.height/2 < windowHeight/2){
+            illus.style.marginTop = `${(formPosY) * -1}px`;
+            illus.style.marginBottom = `${formPos}px`;
+        }else if(illus){
+            illus.style.marginTop = "0px";
+            formPosStart = 0;
+            formPosStarted = false;
         }
 
         if (illusPosY < windowHeight / 2 && formPosStarted === false) {
@@ -92,7 +100,8 @@
     onMount(() => {
         updateSize(); // Initial width calculation
         window.addEventListener("resize", updateSize); // Add event listener for resize
-        window.addEventListener("scroll", updateIllusPos); // Add event listener for resize
+        window.addEventListener("resize", updateIllusPos);
+        window.addEventListener("scroll", updateIllusPos); // Add event listener for scroll
     });
 
 </script>

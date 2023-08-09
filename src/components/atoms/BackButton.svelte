@@ -1,8 +1,15 @@
 <script>
+    /**
+     * @type {string | URL}
+     */
+     export let reference;
     function goBack(){
-        // to be improved...
-        // window.history.previous.href
-        history.back()
+        let referrer = document.referrer;
+        if(referrer){
+            history.back()
+        }else{
+            window.location.assign(reference); // URL of home
+        }
     }
 </script>
 
