@@ -19,8 +19,6 @@
     let windowHeight = 0;
     let illusPosY = 0;
     let formPosY = 0;
-    let formPosStart = 0;
-    let formPosStarted = false;
 
     // Modifies the size of form section according to viewport
     function updateSize() {
@@ -64,36 +62,12 @@
             formPosY = Math.round(formPos.top);
         }
 
-        if(illus && illusPos && formPosY + illusPos?.height/2 < windowHeight/2){
-            illus.style.marginTop = `${(formPosY) * -1}px`;
-            illus.style.marginBottom = `${formPos}px`;
+        if(illus && illusPos && formPosY + illusPos?.height/2 <=windowHeight/2){
+            illus.style.marginTop = `${windowHeight/2 - (formPosY + illusPos?.height/2)}px`;
+            illus.style.marginBottom = `${(windowHeight/2 - (formPosY + illusPos?.height/2))*-1}px`;
         }else if(illus){
             illus.style.marginTop = "0px";
-            formPosStart = 0;
-            formPosStarted = false;
-        }
-
-        if (illusPosY < windowHeight / 2 && formPosStarted === false) {
-            formPosStarted = true;
-            formPosStart = formPosY;
-        }
-
-        if(formPosStart < formPosY){
-            formPosStarted = false;
-        }
-
-        if (formPosStarted) {
-            illusPosY = windowHeight / 2;
-            if (illus) {
-                illus.style.marginTop = `${(formPosY - formPosStart) * -1}px`;
-                illus.style.marginBottom = `${formPosY - formPosStart}px`;
-            }
-        }else {
-            if (illus) {
-                illus.style.marginTop = "0px";
-                formPosStart = 0;
-                formPosStarted = false;
-            }
+            illus.style.marginBottom = "0px";
         }
     }
 
