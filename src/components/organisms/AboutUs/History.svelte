@@ -1,4 +1,4 @@
-<div class="flex flex-row">
+<div class="history flex flex-row">
   <div class="flex grow justify-center items-center w-1/2">
     <p>Photo</p>
   </div>
@@ -21,6 +21,9 @@
 </div>
 
 <style>
+  .history {
+    margin-top: 5rem;
+  }
   .history-title {
     transition: color 0.5s, text-shadow 0.5s;
   }

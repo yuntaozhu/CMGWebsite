@@ -8,8 +8,8 @@ import Footer from './organisms/Footer.svelte';
 //About Us
 import CoreValues from './organisms/AboutUs/CoreValues.svelte';
 import History from './organisms/AboutUs/History.svelte';
-import Mission from './organisms/AboutUs/Mission.svelte';
-import Vision from './organisms/AboutUs/Vision.svelte';
+import MissionVision from './organisms/AboutUs/MissionVision.svelte';
+import Advisers from './organisms/AboutUs/Advisers.svelte';
 
 //Contact Us
 import ContactForm from './organisms/ContactUs/ContactForm.svelte';
@@ -41,7 +41,7 @@ export {
 
     //Organisms
     NavBar, Footer,
-    CoreValues, History, Mission, Vision,
+    CoreValues, History, MissionVision, Advisers,
     ContactForm,
     Executives, MembersRoster, ResidentMembers, 
     BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary,

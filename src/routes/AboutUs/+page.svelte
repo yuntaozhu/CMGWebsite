@@ -2,8 +2,8 @@
   import {
     CoreValues,
     History,
-    Mission,
-    Vision,
+    MissionVision,
+    Advisers,
     NavBar,
     Footer,
   } from "$components";
@@ -11,7 +11,7 @@
 
 <NavBar />
 <History />
+<MissionVision />
 <CoreValues />
-<Mission />
-<Vision />
+<Advisers />
 <Footer />
