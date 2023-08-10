@@ -1,18 +1,24 @@
 <script>
-    let clicked = false;
-
+    import { createEventDispatcher } from "svelte";
+    const dispatch = createEventDispatcher();
+    export let tabs;
+    export let activeTab;
 </script>
 
 <div class='showcase-navbar'>
     <ul class="navbar-text flex space-x-6 md:space-x-20 font-normal justify-center text-white">
-        <li><a href = "#"> Projects</a></li>
-        <li><a href = "#">Events</a></li>
-        <li><a href = "#" >Wokshops</a></li>
-        <li><a href= "#" >Activities</a></li>
+        {#each tabs as tab}
+            <li on:click={() => dispatch('tabChange', tab)}>
+                <div class:active={tab === activeTab}>{tab}</div>
+            </li>
+        {/each}
     </ul>
 </div>
 
 <style>
+    .active{
+        color:aquamarine
+    }
     @media (max-width: 640px) {
         .navbar-text {
             font-size: 16px;

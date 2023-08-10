@@ -6,10 +6,24 @@
     Workshops,
     ShowcaseNavBar,
     ShowcaseTitle,
+    ShowcaseCards,
     NavBar,
     Footer,
   } from "$components";
-  import ShowcaseCards from "$components/organisms/Showcase/ShowcaseCards.svelte";
+  
+  const showcaseComponents = {
+    Projects,
+    Events,
+    Workshops,
+    Activities,
+  };
+
+  let tabs = ["Projects", "Events", "Workshops", "Activities"]
+  let activeTab = "Projects" 
+
+  const tabChange = (e) => {
+    activeTab = e.detail;
+  }
 </script>
 
 <style>
@@ -49,9 +63,7 @@
   
 </style>
 <head>
-  <title>
-    Showcase
-  </title>
+  <title>Showcase</title>
 </head>
 
 <div class="min-h-screen  flex flex-col items-center showcase-background">
@@ -60,8 +72,13 @@
 
   <div class="showcase-container mx-4 sm:mx-8 md:mx-12 lg:mx-16 xl:mx-20 flex flex-col items-center p-5 gap-10">
     <ShowcaseTitle/>
-    <ShowcaseNavBar/>
-    <ShowcaseCards/>
+    <ShowcaseNavBar {activeTab} {tabs} on:tabChange={tabChange}/>
+    {#each tabs as tab}
+      {#if activeTab === tab}
+        <svelte:component this={showcaseComponents[tab]}/>
+      {/if}
+    {/each}
+
     
 
   </div>
