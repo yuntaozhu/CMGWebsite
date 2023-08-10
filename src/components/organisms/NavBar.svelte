@@ -73,7 +73,7 @@
     column-gap: 3rem;
   }
 
-  @media (min-width: 768px) and (max-width: 1200px) {
+  @media (min-width: 0px) and (max-width: 1200px) {
     .nav__menu {
       display: flex;
     }

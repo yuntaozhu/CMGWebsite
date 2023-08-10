@@ -2,9 +2,15 @@
 import Button from './atoms/Button.svelte';
 import HamburgerMenu from './atoms/HamburgerMenu.svelte';
 
+//--- Molecules ---
+import FooterContentOne from'./molecules/Footers/FooterContentOne.svelte';
+import FooterContentTwo from'./molecules/Footers/FooterContentTwo.svelte';
+
+
 //--- Organisms ---
 import NavBar from './organisms/NavBar.svelte';
 import Footer from './organisms/Footer.svelte';
+
 //About Us
 import CoreValues from './organisms/AboutUs/CoreValues.svelte';
 import History from './organisms/AboutUs/History.svelte';
@@ -38,7 +44,7 @@ export {
     //Atoms
     Button, HamburgerMenu,
     //Molecules
-
+    FooterContentOne, FooterContentTwo,
     //Organisms
     NavBar, Footer,
     CoreValues, History, MissionVision, Advisers,
