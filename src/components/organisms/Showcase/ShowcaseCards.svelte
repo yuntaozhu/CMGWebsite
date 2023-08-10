@@ -12,7 +12,7 @@
         
         <a href ="/Showcase/{content.title}"><div class="flex flex-col items-center gap-4 transform transition-transform hover:scale-105">
             <div class="w-full h-full rounded-2xl ">
-                <img src="/acss_uplb_website.jpg" alt="" class=" rounded-2xl  object-fit">
+                <img src="acss_uplb_website.jpg" alt="" class=" rounded-2xl  object-fit">
             </div>
             <div class="box-container w-full border border-[#3E3B4C] rounded-2xl border-solid flex items-center">
                 <div class="content-container px-10">
