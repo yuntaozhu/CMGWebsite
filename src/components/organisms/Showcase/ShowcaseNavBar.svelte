@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import { createEventDispatcher } from "svelte";
     const dispatch = createEventDispatcher();
     export let tabs;
@@ -6,9 +8,10 @@
 </script>
 
 <div class='showcase-navbar'>
+    <!-- tabs -->
     <ul class="navbar-text flex space-x-6 md:space-x-20 font-normal justify-center text-white">
         {#each tabs as tab}
-            <li on:click={() => dispatch('tabChange', tab)}>
+            <li on:click={() => dispatch('tabChange', tab)} class = "hover:cursor-pointer">
                 <div class:active={tab === activeTab}>{tab}</div>
             </li>
         {/each}

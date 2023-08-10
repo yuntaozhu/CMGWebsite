@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
   import {
     Activities,
     Events,
@@ -10,6 +12,7 @@
     NavBar,
     Footer,
   } from "$components";
+  
   
   const showcaseComponents = {
     Projects,
@@ -78,8 +81,6 @@
         <svelte:component this={showcaseComponents[tab]}/>
       {/if}
     {/each}
-
-    
 
   </div>
   <footer>
