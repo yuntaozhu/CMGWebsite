@@ -9,14 +9,14 @@
 
       <!-- Top Ellipse -->
       <img
-        src="/assets/ellipse-1.svg"
+        src="/assets/gradient-ellipse.svg"
         alt="Gradient Ellipse"
         class="absolute top-[25%] left-[80%] ss:top-[16%] ss:left-[68%] lg:left-[64%] h-20"
       />
 
       <!-- Bottom Ellipse -->
       <img
-        src="/assets/ellipse-1.svg"
+        src="/assets/gradient-ellipse.svg"
         alt="Gradient Ellipse"
         class="absolute bottom-[22%] left-[2%] ss:bottom-[14%] ss:left-[28%] lg:bottom-[18%] lg:left-[34%] h-10"
       />
