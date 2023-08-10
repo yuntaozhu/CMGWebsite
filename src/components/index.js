@@ -28,10 +28,19 @@ import Strengths from './organisms/Home/Strengths.svelte';
 import Summary from './organisms/Home/Summary.svelte';
 
 //Showcase
+import ShowcaseImage from './organisms/Showcase/ShowcaseImage.svelte'
+import ShowcaseDevs from './organisms/Showcase/ShowcaseDevs.svelte'
+import ShowcaseGallery from './organisms/Showcase/ShowcaseGallery.svelte'
+import ShowcaseDescription from './organisms/Showcase/ShowcaseDescription.svelte'
+import ShowcaseCards from './organisms/Showcase/ShowcaseCards.svelte'
+import ShowcaseHeader from './organisms/Showcase/ShowcaseHeader.svelte'
+import ShowcaseTitle from './organisms/Showcase/ShowcaseTitle.svelte'
+import ShowcaseNavBar from './organisms/Showcase/ShowcaseNavBar.svelte'
 import Activities from './organisms/Showcase/Activities.svelte';
 import Events from './organisms/Showcase/Events.svelte';
 import Projects from './organisms/Showcase/Projects.svelte';
 import Workshops from './organisms/Showcase/Workshops.svelte';
+
 
 export {
     //Atoms
@@ -43,6 +52,6 @@ export {
     CoreValues, History, Mission, Vision,
     ContactForm,
     Executives, MembersRoster, ResidentMembers, 
-    BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary,
-    Activities, Events, Projects, Workshops,
+    BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, 
+    Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs
 }
