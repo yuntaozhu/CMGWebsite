@@ -1,16 +1,34 @@
 <script>
   import { Button, HamburgerMenu } from "$components";
 
-  let string = "",
-    buttonVisible = true;
+  let pages = [
+    ["Home", "../", "false"],
+    ["About Us", "../../AboutUs", "false"],
+    ["Showcase", "../../Showcase", "false"],
+    ["Developers", "../../DevelopersPage", "false"],
+    ["ACSS Week 2023", "../../ACSSWeek", "false"],
+  ];
 
-  function handleClick() {
-    // string = "You wasted a second of your life :D";
-    // buttonVisible = false;
+  /**
+   * @param {string} _page
+   */
+  function handleClick(_page) {
+    for (let i = 0; i < pages.length; i++) {
+      if (pages[i][0] === _page) {
+        pages[i][2] = "true";
+      } else {
+        pages[i][2] = "false";
+      }
+    }
+    console.log(pages);
+  }
+
+  function handleClick2() {
+    // Do something here if needed
   }
 </script>
 
-<nav class="nav">
+<nav class="nav min-w-screen">
   <div class="grid grid-cols-4">
     <img
       src="/logo.webp"
@@ -21,24 +39,17 @@
   <ul
     class="nav__right text-lg font-light tracking-wide font-sans text-inherit"
   >
-    <li>
-      <a href="../" class="nav__link">Home</a>
-    </li>
-    <li>
-      <a href="../../AboutUs" class="nav__link">About Us</a>
-    </li>
-    <li>
-      <a href="../../Showcase" class="nav__link">Showcase</a>
-    </li>
-    <li>
-      <a href="../../DevelopersPage" class="nav__link">Developers</a>
-    </li>
-    <li>
-      <a href="../../ACSSWeek" class="nav__link">ACSS Week 2023</a>
-    </li>
-    <Button onClick={handleClick}
-      ><a href="../../ContactUs">Contact Us</a></Button
-    >
+    {#each pages as item, index}
+      <li>
+        <a href={item[1]} on:click={() => handleClick(item[0])}>{item[0]}</a>
+        {#if item[2] == "true"}
+          <div class="gradient-line mt-1 show" />
+        {/if}
+      </li>
+    {/each}
+    <a href="../../ContactUs">
+      <Button onClick={handleClick2}>Contact Us</Button>
+    </a>
   </ul>
   <div class="nav__menu hidden flex justify-start self-start">
     <HamburgerMenu />
@@ -46,6 +57,29 @@
 </nav>
 
 <style>
+  a {
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  a:hover {
+    color: var(--color-sky-blue);
+    opacity: 0.7;
+  }
+  .gradient-line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      270deg,
+      rgba(0, 245, 241, 0) 0%,
+      #00f5f1 47.92%,
+      rgba(0, 245, 241, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .show {
+    opacity: 1;
+  }
   .nav {
     position: sticky;
     top: 0;

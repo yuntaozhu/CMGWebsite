@@ -24,7 +24,6 @@
   <title>Home</title>
 </head>
 
-<NavBar />
 <Hero />
 <Summary />
 <IncomingActivity />
@@ -32,7 +31,6 @@
 <Contributions />
 <Strengths />
 <BriefShowcase />
-<Footer />
 
 <!-- <div
   class="h-screen flex items-center justify-center bg-base-dark-2 text-base-white"
