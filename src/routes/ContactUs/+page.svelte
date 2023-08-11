@@ -2,11 +2,9 @@
   import { ContactForm, NavBar, Footer } from "$components";
 </script>
 
-<div class="container">
-  <NavBar />
-  <ContactForm />
-  <Footer />
-</div>
+<NavBar />
+<ContactForm />
+<Footer />
 
 <style>
   .container {
