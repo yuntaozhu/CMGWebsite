@@ -1,37 +1,22 @@
 <script>
-  import {
-    BriefShowcase,
-    Contributions,
-    DevStories,
-    Hero,
-    IncomingActivity,
-    Strengths,
-    Summary,
-    NavBar,
-    Footer,
-  } from "$components";
-
-  // let string = "",
-  //   buttonVisible = true;
-
-  // function handleClick() {
-  //   string = "You wasted a second of your life :D";
-  //   buttonVisible = false;
-  // }
+  import { Hero, Summary, IncomingActivity, NavBar, Footer, DevStories, Contributions, Strengths, BriefShowcase } from "$components";
+  import GradientBlur from "../components/molecules/Home/GradientBlur.svelte";
 </script>
-
 <head>
   <title>Home</title>
 </head>
 
 <NavBar />
-<Hero />
-<Summary />
-<IncomingActivity />
-<DevStories />
-<Contributions />
-<Strengths />
-<BriefShowcase />
+<div class="overflow-hidden w-full h-full bg-base-black px-10 pb-10">
+  <GradientBlur />
+  <Hero />
+  <Summary />
+  <IncomingActivity />
+  <DevStories />
+  <Contributions />
+  <Strengths />
+  <BriefShowcase />
+</div>
 <Footer />
 
 <!-- <div
@@ -58,6 +43,3 @@
     <p class="text-base-blue">{string}</p>
   </div>
 </div> -->
-
-<style>
-</style>
