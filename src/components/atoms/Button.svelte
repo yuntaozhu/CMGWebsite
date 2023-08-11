@@ -4,9 +4,13 @@
      * @type {string}
      */
     export let text;
+    /**
+     * @type {() => void}
+     */
+     export let onClick;
 </script>
 
-<button class="glassmorphic-button px-7 py-3">
+<button class="glassmorphic-button px-7 py-3" on:click={onClick}>
     {text}
 </button>
 

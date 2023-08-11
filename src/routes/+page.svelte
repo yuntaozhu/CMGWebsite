@@ -1,7 +1,10 @@
 <script>
-  import { Hero, Summary, IncomingActivity, NavBar } from "$components";
+  import { Hero, Summary, IncomingActivity, NavBar, Footer, DevStories, Contributions, Strengths, BriefShowcase } from "$components";
   import GradientBlur from "../components/molecules/Home/GradientBlur.svelte";
 </script>
+<head>
+  <title>Home</title>
+</head>
 
 <NavBar />
 <div class="overflow-hidden w-full h-full bg-base-black px-10 pb-10">
@@ -9,7 +12,12 @@
   <Hero />
   <Summary />
   <IncomingActivity />
+  <DevStories />
+  <Contributions />
+  <Strengths />
+  <BriefShowcase />
 </div>
+<Footer />
 
 <!-- <div
   class="h-screen flex items-center justify-center bg-base-dark-2 text-base-white"
