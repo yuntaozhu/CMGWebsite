@@ -1,6 +1,7 @@
 //--- Atoms ---
 import Button from './atoms/Button.svelte';
 import HamburgerMenu from './atoms/HamburgerMenu.svelte';
+import ChatBot from './atoms/chatBot.svelte';
 
 //--- Molecules ---
 import FooterContentOne from'./molecules/Footers/FooterContentOne.svelte';
@@ -42,7 +43,7 @@ import Workshops from './organisms/Showcase/Workshops.svelte';
 
 export {
     //Atoms
-    Button, HamburgerMenu,
+    Button, HamburgerMenu, ChatBot,
     //Molecules
     FooterContentOne, FooterContentTwo,
     //Organisms

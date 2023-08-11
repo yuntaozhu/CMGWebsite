@@ -1,8 +1,9 @@
 <script>
   import "../app.css";
-  import { NavBar, Footer } from "$components";
+  import { NavBar, Footer, ChatBot } from "$components";
 </script>
 
 <NavBar />
+<!-- <ChatBot /> -->
 <slot />
 <Footer />
