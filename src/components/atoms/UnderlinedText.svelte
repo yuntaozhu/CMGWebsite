@@ -5,27 +5,40 @@
      * @type {any}
      */
      export let text;
+     /**
+     * @type {any}
+     */
+     export let isFixed;
+     export let width;
+
     let titleWidth = 0;
 
+    if(isFixed){
+        titleWidth = width;
+    }
+
+
     function updateSvgWidth() {
-        const titleElement = document.getElementById("title");
+        const titleElement = document.getElementById(`title-${text}`);
         if (titleElement) {
             titleWidth = titleElement.clientWidth;
         }
     }
 
     onMount(() => {
-        updateSvgWidth();
+        if(!isFixed){
+            updateSvgWidth();
         window.addEventListener("resize", updateSvgWidth);
 
         return () => {
             window.removeEventListener("resize", updateSvgWidth);
         };
+        }
     });
 </script>
 
 <div class="flex-column">
-    <h5 id="title" class="font-bold">
+    <h5 id={"title-" + text} class="font-bold">
         {text}
     </h5>
     <svg
