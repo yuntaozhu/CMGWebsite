@@ -6,11 +6,11 @@
   // CUSTOMIZE THIS: Array of strengths
   let strengths = [
     [
-      "Set",
+      "Strength 1",
       "Strength, this is a sample sentence. Strength, this is a sample sentence. Strength, this is a sample sentence.",
     ],
     [
-      "Innovation",
+      "Strength 2",
       "Strength, this is a sample sentence. Strength, this is a sample sentence. Strength, this is a sample sentence.",
     ],
     [
@@ -71,7 +71,7 @@
             <div class="flex flex-col gap-3">
               <div class="flex">
                 <div class="w-fit">
-                  <UnderlinedText text={strength[0]} isFixed=true width="250px"/>
+                  <UnderlinedText text={strength[0]} isFixed={true} width={250}/>
                 </div>
               </div>
               <div class="flex">
@@ -86,7 +86,7 @@
         {:else}
           <div class="flex flex-col gap-3">
             <div class="w-fit">
-              <UnderlinedText text={strength[0]} isFixed=true width="250px"/>
+              <UnderlinedText text={strength[0]} isFixed={true} width={250}/>
             </div>
             <div class="strength-description max-w-[400px] w-[100%] text-white">
               {strength[1]}

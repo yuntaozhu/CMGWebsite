@@ -1,39 +1,40 @@
 <script>
     import { onMount } from "svelte";
-    
+
     /**
      * @type {any}
      */
-     export let text;
-     /**
-     * @type {any}
+    export let text;
+    /**
+     * @type {boolean}
      */
      export let isFixed;
+    /**
+     * @type {any}
+     */
      export let width;
 
     let titleWidth = 0;
 
-    if(isFixed){
-        titleWidth = width;
-    }
-
-
     function updateSvgWidth() {
         const titleElement = document.getElementById(`title-${text}`);
         if (titleElement) {
-            titleWidth = titleElement.clientWidth;
+            if (isFixed) {
+                titleWidth = width;
+            } else {
+                titleWidth = titleElement.clientWidth;
+                console.log(isFixed);
+            }
         }
     }
 
     onMount(() => {
-        if(!isFixed){
-            updateSvgWidth();
+        updateSvgWidth();
         window.addEventListener("resize", updateSvgWidth);
 
         return () => {
             window.removeEventListener("resize", updateSvgWidth);
         };
-        }
     });
 </script>
 
@@ -69,11 +70,7 @@
                 <stop stop-color="#2E3792" stop-opacity="0" />
                 <stop offset="0.276042" stop-color="#2E3792" />
                 <stop offset="0.744792" stop-color="#00F5F1" />
-                <stop
-                    offset="1"
-                    stop-color="#00F5F1"
-                    stop-opacity="0"
-                />
+                <stop offset="1" stop-color="#00F5F1" stop-opacity="0" />
             </linearGradient>
         </defs>
     </svg>
@@ -82,5 +79,6 @@
 <style>
     #svgLine {
         max-width: 80vw;
+        min-width: 200px;
     }
 </style>
