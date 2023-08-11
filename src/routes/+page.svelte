@@ -6,7 +6,7 @@
   <title>The Alliance of Computer Science Students</title>
 </head>
 
-<div class="overflow-hidden w-full h-full bg-base-black px-5 lg:px-10">
+<div class="overflow-hidden w-full bg-base-black px-5 lg:px-10">
   <GradientBlur />
   <Hero />
   <Summary />
