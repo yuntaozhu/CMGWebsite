@@ -1,17 +1,14 @@
 <!-- Draft Button -->
 <script>
     /**
-     * @type {string}
-     */
-    export let text;
-    /**
      * @type {() => void}
+     * @default undefined
      */
      export let onClick;
 </script>
 
 <button class="glassmorphic-button px-7 py-3" on:click={onClick}>
-    {text}
+    <slot />
 </button>
 
 <style>
