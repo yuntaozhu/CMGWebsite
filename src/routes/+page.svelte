@@ -24,17 +24,15 @@
   <title>Home</title>
 </head>
 
-<div class="container">
-  <NavBar />
-  <Hero />
-  <Summary />
-  <IncomingActivity />
-  <DevStories />
-  <Contributions />
-  <Strengths />
-  <BriefShowcase />
-  <Footer />
-</div>
+<NavBar />
+<Hero />
+<Summary />
+<IncomingActivity />
+<DevStories />
+<Contributions />
+<Strengths />
+<BriefShowcase />
+<Footer />
 
 <!-- <div
   class="h-screen flex items-center justify-center bg-base-dark-2 text-base-white"
@@ -62,9 +60,4 @@
 </div> -->
 
 <style>
-  .container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
 </style>
