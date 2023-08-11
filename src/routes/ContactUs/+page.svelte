@@ -2,9 +2,7 @@
   import { ContactForm, NavBar, Footer } from "$components";
 </script>
 
-<NavBar />
 <ContactForm />
-<Footer />
 
 <style>
   .container {

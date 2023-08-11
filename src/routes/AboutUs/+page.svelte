@@ -9,9 +9,7 @@
   } from "$components";
 </script>
 
-<NavBar />
 <History />
 <MissionVision />
 <CoreValues />
 <Advisers />
-<Footer />

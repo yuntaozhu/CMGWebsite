@@ -1,10 +1,17 @@
 //--- Atoms ---
 import Button from './atoms/Button.svelte';
 import HamburgerMenu from './atoms/HamburgerMenu.svelte';
+import ChatBot from './atoms/chatBot.svelte';
+
+//--- Molecules ---
+import FooterContentOne from'./molecules/Footers/FooterContentOne.svelte';
+import FooterContentTwo from'./molecules/Footers/FooterContentTwo.svelte';
+
 
 //--- Organisms ---
 import NavBar from './organisms/NavBar.svelte';
 import Footer from './organisms/Footer.svelte';
+
 //About Us
 import CoreValues from './organisms/AboutUs/CoreValues.svelte';
 import History from './organisms/AboutUs/History.svelte';
@@ -29,21 +36,30 @@ import Strengths from './organisms/Home/Strengths.svelte';
 import Summary from './organisms/Home/Summary.svelte';
 
 //Showcase
+import ShowcaseImage from './organisms/Showcase/ShowcaseImage.svelte'
+import ShowcaseDevs from './organisms/Showcase/ShowcaseDevs.svelte'
+import ShowcaseGallery from './organisms/Showcase/ShowcaseGallery.svelte'
+import ShowcaseDescription from './organisms/Showcase/ShowcaseDescription.svelte'
+import ShowcaseCards from './organisms/Showcase/ShowcaseCards.svelte'
+import ShowcaseHeader from './organisms/Showcase/ShowcaseHeader.svelte'
+import ShowcaseTitle from './organisms/Showcase/ShowcaseTitle.svelte'
+import ShowcaseNavBar from './organisms/Showcase/ShowcaseNavBar.svelte'
 import Activities from './organisms/Showcase/Activities.svelte';
 import Events from './organisms/Showcase/Events.svelte';
 import Projects from './organisms/Showcase/Projects.svelte';
 import Workshops from './organisms/Showcase/Workshops.svelte';
 
+
 export {
     //Atoms
-    Button, HamburgerMenu,
+    Button, HamburgerMenu, ChatBot,
     //Molecules
-
+    FooterContentOne, FooterContentTwo,
     //Organisms
     NavBar, Footer,
     CoreValues, History, MissionVision, Advisers,
     ContactForm,
     Executives, MembersRoster, ResidentMembers, 
-    BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary,
-    Activities, Events, Projects, Workshops,
+    BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, 
+    Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs
 }
