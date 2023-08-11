@@ -1,14 +1,84 @@
-<div class="container">
-  <h1>Summary</h1>
-</div>
+<!-- Summary Section -->
+<section>
+  <div
+    class="relative flex flex-col max-[335px]:pb-[750px] max-[390px]:pb-[600px] max-ss:pb-[550px] ss:pb-[400px] sm:pb-80"
+  >
+    <div class="relative flex flex-row z-50 md:mx-[16%] xl:mx-[20%] xl:pb-2">
+      <div class="flex flex-col justify-center">
+        <p
+          class="text-2xl max-md:pl-8 md: ss:text-3xl font-bold gradient-line text-center max-ss:pl-2 pb-2"
+        >
+          Who are we?
+        </p>
+        <p
+          class="text-6xl max-md:pl-8 ss:text-7xl font-bold tracking-[7px] max-ss:pl-2 py-2 xl:pt-4"
+        >
+          ACSS
+        </p>
+      </div>
+      <div
+        class="absolute top-[20%] left-[80%] ss:top-[8%] ss:left-[70%] lg:left-[36%] xl:left-[28%]"
+      >
+        <img
+          src="/assets/white-logo-no-text.webp"
+          alt="The official seal of The Alliance of Computer Science Students"
+          class="z-50 max-w-[180%] ss:max-w-[100%] w-40"
+        />
+      </div>
+    </div>
+    <div class="relative h-fit">
+      <div
+        class="glassmorphic-rectangle absolute top-[10%] p-10 z-10 md:ml-[10%] md:mr-[20%] xl:ml-[18%] xl:mr-[40%]"
+      >
+        <p class="font-light text-justify indent-8">
+          The <span class="font-bold"
+            >Alliance of Computer Science Students</span
+          > (ACSS—UPLB) is an established academic and service-oriented organization
+          that aims to develop the skills and abilities of its members, and teach
+          them to be more worthy of the title Iskolar ng Bayan para sa Bayan. The
+          organization also aims to assist the university and the society by using
+          its acquired knowledge and sharing them to other people.
+        </p>
+      </div>
+
+      <img
+        src="/assets/gradient-logo-cube.svg"
+        alt="ACSS Gradient Logo Cube"
+        class="w-80 absolute left-[80%] md:left-[60%] xl:bottom-[-320px] xl:left-[56%] z-0"
+      />
+    </div>
+  </div>
+</section>
 
 <style>
-  .container {
-    width: 100%;
-    height: 25vh;
-    display: flex;
-    padding: 2rem;
-    justify-content: center;
-    align-items: center;
+  .gradient-line {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-image-source: linear-gradient(
+      270deg,
+      rgba(46, 55, 146, 0) 0%,
+      #2e3792 27.6%,
+      #00f5f1 74.48%,
+      rgba(0, 245, 241, 0) 100%
+    );
+  }
+
+  .glassmorphic-rectangle {
+    border-radius: 16px;
+    border: 0.01rem solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+    backdrop-filter: blur(21px);
+  }
+
+  .work-sans {
+    font-family: "Work Sans", sans-serif;
   }
 </style>
