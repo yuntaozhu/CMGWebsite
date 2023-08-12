@@ -6,9 +6,9 @@
     function goBack(){
         let referrer = document.referrer;
         if(referrer){
-            history.back()
+            history.back() // URL of referrer
         }else{
-            window.location.assign(reference); // URL of home
+            window.location.assign(reference); // URL of something
         }
     }
 </script>

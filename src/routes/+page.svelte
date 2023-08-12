@@ -12,10 +12,10 @@
   <Hero />
   <Summary />
   <IncomingActivity />
-  <!-- <DevStories />
-  <Contributions />
+  <DevStories />
   <Strengths />
-  <BriefShowcase /> -->
+  <Contributions />
+  <BriefShowcase />
 </div>
 <Footer />
 

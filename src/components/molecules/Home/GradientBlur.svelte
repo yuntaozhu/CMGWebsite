@@ -1,4 +1,4 @@
-<div class="relative">
+<!-- <div class="relative">
     <img
         src="/assets/gradient-blur-hexagon.svg"
         alt="Gradient Blur Hexagon"
@@ -18,5 +18,28 @@
         src="/assets/gradient-blur-ellipse.svg"
         alt="Gradient Blur Ellipse"
         class="fixed block top-[480px] left-[480px] h-100"
+    />
+</div> -->
+
+<div id="gradient-start" class="relative z-10">
+    <img
+        src="/assets/gradient-blur-hexagon.svg"
+        alt="Gradient Blur Hexagon"
+        class="absolute top-[-500px] left-[82%] min-h-[900px] max-h-[900px] min-w-[900px] max-w-[900px]"
+    />
+    <img
+        src="/assets/gradient-blur-ellipse.svg"
+        alt="Gradient Blur Ellipse"
+        class="absolute top-[-150px] left-[60%] min-h-[800px] max-h-[800px] min-w-[800px] max-w-[800px]"
+    />
+    <img
+        src="/assets/gradient-blur-ellipse.svg"
+        alt="Gradient Blur Ellipse"
+        class="absolute top-[-580px] left-[-320px] min-h-[800px] max-h-[800px] min-w-[800px] max-w-[800px]"
+    />
+    <img
+        src="/assets/gradient-blur-ellipse.svg"
+        alt="Gradient Blur Ellipse"
+        class="absolute top-[370px] right-[15%] min-h-[800px] max-h-[800px] min-w-[800px] max-w-[800px]"
     />
 </div>

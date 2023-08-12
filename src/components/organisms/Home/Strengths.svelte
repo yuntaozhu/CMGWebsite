@@ -58,12 +58,12 @@
   });
 </script>
 
-<div class="flex justify-center mt-[700px] mb-[700px]">
+<div class="flex justify-center mt-[40px] mb-[40px]">
   <div id="strength-bg" class="max-w-[1000px] w-[100%]">
     <div id="strength-gradient" />
     <div
       id="strength"
-      class="flex flex-col gap-10 w-[100%] pl-[10%] pr-[10%] scrollFade"
+      class="flex flex-col gap-10 w-[100%] pl-[10%] pr-[10%]"
     >
       {#each strengths as strength, i}
         {#if (i + 1) % 2 == 0}
@@ -76,9 +76,11 @@
               </div>
               <div class="flex">
                 <div
-                  class="strength-description max-w-[400px] w-[100%] text-white"
+                  class="max-w-[400px] w-[100%] text-white"
                 >
-                  {strength[1]}
+                  <p class="font-light text-justify indent-8">
+                    {strength[1]}
+                  </p>
                 </div>
               </div>
             </div>
@@ -88,8 +90,10 @@
             <div class="w-fit">
               <UnderlinedText text={strength[0]} isFixed={true} width={250}/>
             </div>
-            <div class="strength-description max-w-[400px] w-[100%] text-white">
-              {strength[1]}
+            <div class="max-w-[400px] w-[100%] text-white">
+              <p class="font-light text-justify indent-8">
+                {strength[1]}
+              </p>
             </div>
           </div>
         {/if}
@@ -99,11 +103,6 @@
 </div>
 
 <style>
-  .strength-description {
-    text-indent: 17%;
-    text-align: justify;
-  }
-
   #strength-bg {
     position: relative;
     background: url("../acss-cube.svg");
@@ -119,10 +118,10 @@
     height: 100%;
     background-image: linear-gradient(
       to left,
-      rgba(10, 4, 31, 1) 10%,
+      #060217 10%,
       rgba(0, 0, 0, 0) 30%,
       rgba(0, 0, 0, 0) 70%,
-      rgba(10, 4, 31, 1) 90%
+      #060217 90%
     );
     background-size: cover;
   }

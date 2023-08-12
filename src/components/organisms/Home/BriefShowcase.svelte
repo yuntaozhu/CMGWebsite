@@ -1,14 +1,7 @@
-<div class="container">
-  <h1>Brief Showcase</h1>
-</div>
+<script>
+  
+</script>
 
-<style>
-  .container {
-    width: 100%;
-    height: 25vh;
-    display: flex;
-    padding: 2rem;
-    justify-content: center;
-    align-items: center;
-  }
-</style>
+<div class="flex justify-center mt-[40px] mb-[40px]">
+  Brief Showcase
+</div>
