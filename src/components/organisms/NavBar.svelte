@@ -16,7 +16,7 @@
 </script>
 
 <header>
-    <nav class="py-2 fixed w-screen z-50 md:px-5 md:backdrop-blur-md">
+    <nav class="py-2 fixed w-screen z-50 xl:px-12 md:backdrop-blur-md">
         <div class="flex justify-between container mx-auto">
             <a href="/" class="hidden md:block">
                 <img

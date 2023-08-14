@@ -10,7 +10,7 @@
                 alt="The seal of ACSS placed on top of a glass object."
                 width="500"
                 height="500"
-                class="w-full max-w-xs md:max-w-lg"
+                class="w-full max-w-xs 2xl:max-w-sm 3xl:max-w-lg"
             />
         </div>
         <!-- Hero Caption -->
@@ -47,7 +47,13 @@
                 </div>
             </div>
         </div>
-        <div class="absolute w-8 h-10 border-2 rounded-full bottom-20 left-1/2 -translate-x-1/2"><div class="absolute w-1 h-3 bg-white left-3 top-2 rounded-md animate-bounce"></div></div>
+        <div
+            class="absolute w-8 h-10 border-2 rounded-full bottom-20 left-1/2 -translate-x-1/2"
+        >
+            <div
+                class="absolute w-1 h-3 bg-white left-3 top-2 rounded-md animate-bounce"
+            />
+        </div>
     </div>
 </section>
 

@@ -4,8 +4,8 @@ import HamburgerMenu from './atoms/HamburgerMenu.svelte';
 import ChatBot from './atoms/chatBot.svelte';
 
 //--- Molecules ---
-import FooterContentOne from'./molecules/Footers/FooterContentOne.svelte';
-import FooterContentTwo from'./molecules/Footers/FooterContentTwo.svelte';
+import FooterContentOne from './molecules/Footers/FooterContentOne.svelte';
+import FooterContentTwo from './molecules/Footers/FooterContentTwo.svelte';
 
 
 //--- Organisms ---
@@ -34,6 +34,9 @@ import Hero from './organisms/Home/Hero.svelte';
 import IncomingActivity from './organisms/Home/IncomingActivity.svelte';
 import Strengths from './organisms/Home/Strengths.svelte';
 import Summary from './organisms/Home/Summary.svelte';
+//Home Molecules
+import DevStoriesHeader from './molecules/Home/DevStoriesHeader.svelte';
+import DevStoriesTemplate from './molecules/Home/DevStoriesTemplate.svelte';
 
 //Showcase
 import ShowcaseImage from './organisms/Showcase/ShowcaseImage.svelte'
@@ -59,7 +62,7 @@ export {
     NavBar, Footer,
     CoreValues, History, MissionVision, Advisers,
     ContactForm,
-    Executives, MembersRoster, ResidentMembers, 
-    BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, 
+    Executives, MembersRoster, ResidentMembers,
+    BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, DevStoriesHeader, DevStoriesTemplate,
     Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs
 }

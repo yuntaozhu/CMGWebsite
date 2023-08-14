@@ -4,7 +4,10 @@
   let eventDescription = "Get to know more about the organization.";
   let eventImage = "/assets/event-image.svg";
   let eventDateTime = "September 00, 2023 7:00 PM";
-  import Button from "../../atoms/Button.svelte";
+  import { Button } from "$components";
+  function handleButton() {
+    window.location.href = "/registration/form-acss-orientation";
+  }
 </script>
 
 <section>
@@ -51,7 +54,7 @@
           />
           <p class="text-center">{eventDateTime}</p>
         </div>
-        <Button text="Register Now" />
+        <Button onClick={handleButton}>Register Now</Button>
       </div>
     </div>
   </div>
