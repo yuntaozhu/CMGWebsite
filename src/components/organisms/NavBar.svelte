@@ -11,41 +11,42 @@
     ];
 
     const isActive = (/** @type {string} */ path) => {
-        console.log(path === $page.url.pathname, $page.url.pathname, path);
         return $page.url.pathname == path;
     };
 </script>
 
-<nav class="py-2 fixed w-screen z-50 md:px-5 md:backdrop-blur-md">
-    <div class="flex justify-between container mx-auto">
-        <a href="/" class="hidden md:block">
-            <img
-                src="/logo.webp"
-                alt="The official seal of The Alliance of Computer Science Student"
-                width="50"
-                height="50"
-                class="w-14 h-14"
-            />
-        </a>
-        <ul class="hidden md:flex items-center gap-5">
-            {#each pages as { title, url }}
-                <li>
-                    <a
-                        href={url}
-                        class={`duration-300 ${
-                            isActive(url)
-                                ? "border-b-2 border-base-sky-blue"
-                                : ""
-                        } hover:text-base-sky-blue`}>{title}</a
-                    >
-                </li>
-            {/each}
-        </ul>
-        <div class="flex md:hidden justify-start self-start">
-            <HamburgerMenu />
+<header>
+    <nav class="py-2 fixed w-screen z-50 md:px-5 md:backdrop-blur-md">
+        <div class="flex justify-between container mx-auto">
+            <a href="/" class="hidden md:block">
+                <img
+                    src="/logo.webp"
+                    alt="The official seal of The Alliance of Computer Science Student"
+                    width="50"
+                    height="50"
+                    class="w-14 h-14"
+                />
+            </a>
+            <ul class="hidden md:flex items-center gap-5">
+                {#each pages as { title, url }}
+                    <li>
+                        <a
+                            href={url}
+                            class={`duration-300 ${
+                                isActive(url)
+                                    ? "border-b-2 border-base-sky-blue text-base-sky-blue hover:text-base-white"
+                                    : ""
+                            } hover:text-base-sky-blue`}>{title}</a
+                        >
+                    </li>
+                {/each}
+            </ul>
+            <div class="flex md:hidden justify-start self-start">
+                <HamburgerMenu />
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>
 
 <style>
     /* .border-gradient {
