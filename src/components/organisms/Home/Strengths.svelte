@@ -1,6 +1,7 @@
 <script>
   // Import Statements
   import UnderlinedText from "$components/atoms/UnderlinedText.svelte";
+    import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
   import { onMount } from "svelte";
   
   // CUSTOMIZE THIS: Array of strengths
@@ -60,7 +61,7 @@
 
 <div class="flex justify-center mt-[40px] mb-[40px]">
   <div id="strength-bg" class="max-w-[1000px] w-[100%]">
-    <div id="strength-gradient" />
+    <div id="strength-gradient" class="z-0" />
     <div
       id="strength"
       class="flex flex-col gap-10 w-[100%] pl-[10%] pr-[10%]"
@@ -71,7 +72,7 @@
             <div class="flex flex-col gap-3">
               <div class="flex">
                 <div class="w-fit">
-                  <UnderlinedText text={strength[0]} isFixed={true} width={250}/>
+                  <UnderlinedText text={strength[0]} isFixed={true} width={250} tailwindcustomization=""/>
                 </div>
               </div>
               <div class="flex">
@@ -88,7 +89,7 @@
         {:else}
           <div class="flex flex-col gap-3">
             <div class="w-fit">
-              <UnderlinedText text={strength[0]} isFixed={true} width={250}/>
+              <UnderlinedText text={strength[0]} isFixed={true} width={250} tailwindcustomization=""/>
             </div>
             <div class="max-w-[400px] w-[100%] text-white">
               <p class="font-light text-justify indent-8">

@@ -1,5 +1,5 @@
 <script>
-    import { onMount } from "svelte";
+    import { onMount, afterUpdate } from "svelte";
 
     /**
      * @type {any}
@@ -8,11 +8,15 @@
     /**
      * @type {boolean}
      */
-     export let isFixed;
+    export let isFixed;
     /**
      * @type {any}
      */
-     export let width;
+    export let width;
+    /**
+     * @type {any}
+     */
+    export let tailwindcustomization;
 
     let titleWidth = 0;
 
@@ -23,7 +27,6 @@
                 titleWidth = width;
             } else {
                 titleWidth = titleElement.clientWidth;
-                console.log(isFixed);
             }
         }
     }
@@ -31,15 +34,18 @@
     onMount(() => {
         updateSvgWidth();
         window.addEventListener("resize", updateSvgWidth);
-
         return () => {
             window.removeEventListener("resize", updateSvgWidth);
         };
     });
+
+    afterUpdate(() => { 
+        updateSvgWidth();
+    });
 </script>
 
-<div class="flex-column">
-    <h5 id={"title-" + text} class="font-bold">
+<div class="flex flex-col items-center">
+    <h5 id={"title-" + text} class="font-bold w-fit {tailwindcustomization}">
         {text}
     </h5>
     <svg
@@ -79,6 +85,5 @@
 <style>
     #svgLine {
         max-width: 80vw;
-        min-width: 200px;
     }
 </style>

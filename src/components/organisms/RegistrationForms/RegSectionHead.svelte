@@ -25,7 +25,7 @@
         <div id="header-title" class="flex gap-3 items-center mb-1">
             <BackButton reference="../"/>
             <div class="flex flex-wrap items-center gap-3 break-word overflow-hidden">
-                <UnderlinedText text={eventName} isFixed={false} width={0}/>
+                <UnderlinedText text={eventName} isFixed={false} width={0} tailwindcustomization=""/>
                 <div id="regformtitle">Registration Form</div>
             </div>
         </div>

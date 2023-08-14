@@ -1,5 +1,6 @@
 <script>
   import { Hero, Summary, IncomingActivity, NavBar, Footer, DevStories, Contributions, Strengths, BriefShowcase } from "$components";
+    import Partnership from "$components/organisms/Home/Partnership.svelte";
   import GradientBlur from "../components/molecules/Home/GradientBlur.svelte";
 </script>
 <head>
@@ -12,10 +13,11 @@
   <Hero />
   <Summary />
   <IncomingActivity />
-  <DevStories />
+  <!-- <DevStories /> -->
   <Strengths />
   <Contributions />
   <BriefShowcase />
+  <Partnership />
 </div>
 <Footer />
 
