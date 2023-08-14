@@ -1,20 +1,20 @@
 <!-- Hero Section -->
 <section class="container mx-auto relative">
     <div
-        class="flex flex-col h-screen gap-10 py-10 md:h-auto md:flex-row md:justify-between md:py-40 md:gap-20"
+        class="flex flex-col min-h-screen gap-5 md:flex-row md:align-center md:justify-between md:gap-20"
     >
         <!-- ACSS Logo -->
-        <div class="flex items-center justify-center">
+        <div class="flex md:flex-1 items-center justify-center">
             <img
                 src="/assets/hero-banner.webp"
                 alt="The seal of ACSS placed on top of a glass object."
                 width="500"
                 height="500"
-                class="w-full max-w-lg"
+                class="w-full max-w-xs md:max-w-lg"
             />
         </div>
         <!-- Hero Caption -->
-        <div class="flex flex-col md:justify-center flex-1 gap-10">
+        <div class="flex flex-col md:justify-center md:flex-1 gap-10">
             <div class="flex flex-col gap-1">
                 <h1
                     class="text-4xl font-bold leading-tight lg:text-5xl md:leading-snug tracking-wide text-white"
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="absolute w-8 h-10 border-2 rounded-full bottom-10 left-1/2 -translate-x-0.5"><div class="absolute w-1 h-3 bg-white left-3 top-2 rounded-md animate-bounce"></div></div>
+        <div class="absolute w-8 h-10 border-2 rounded-full bottom-20 left-1/2 -translate-x-1/2"><div class="absolute w-1 h-3 bg-white left-3 top-2 rounded-md animate-bounce"></div></div>
     </div>
 </section>
 

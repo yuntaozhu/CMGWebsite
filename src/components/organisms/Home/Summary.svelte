@@ -3,7 +3,7 @@
   <div
     class="relative flex flex-col max-[335px]:pb-[750px] max-[390px]:pb-[600px] max-ss:pb-[550px] ss:pb-[400px] sm:pb-80"
   >
-    <div class="relative flex flex-row z-50 md:mx-[16%] xl:mx-[20%] xl:pb-2">
+    <div class="relative flex flex-row z-10 md:mx-[16%] xl:mx-[20%] xl:pb-2">
       <div class="flex flex-col justify-center">
         <p
           class="text-2xl max-md:pl-8 md: ss:text-3xl font-bold gradient-line text-center max-ss:pl-2 pb-2"
@@ -76,9 +76,5 @@
       rgba(255, 255, 255, 0.2) 100%
     );
     backdrop-filter: blur(21px);
-  }
-
-  .work-sans {
-    font-family: "Work Sans", sans-serif;
   }
 </style>
