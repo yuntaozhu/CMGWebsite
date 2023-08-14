@@ -1,137 +1,68 @@
 <!-- Hero Section -->
-<section class="sm:py-28">
-  <div
-    class="grid grid-cols-1 grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-1 lg:px-20"
-  >
-    <!-- Hero ACSS Logo -->
-    <div class="relative">
-      <!-- Gradient Shapes at the Back -->
-
-      <!-- Top Ellipse -->
-      <img
-        src="/assets/gradient-ellipse.svg"
-        alt="Gradient Ellipse"
-        class="absolute top-[25%] left-[80%] ss:top-[16%] ss:left-[68%] lg:left-[64%] h-20"
-      />
-
-      <!-- Bottom Ellipse -->
-      <img
-        src="/assets/gradient-ellipse.svg"
-        alt="Gradient Ellipse"
-        class="absolute bottom-[22%] left-[2%] ss:bottom-[14%] ss:left-[28%] lg:bottom-[18%] lg:left-[34%] h-10"
-      />
-
-      <!-- Top Hexagon -->
-      <img
-        src="/assets/gradient-hexagon.svg"
-        alt="Gradient Hexagon"
-        class="absolute top-[8%] lg:top-[4%] left-[10%] sm:left-[12%] lg:left-[10%] xl:left-[20%] h-48 lg:h-60"
-      />
-
-      <!-- Bottom Hexagon -->
-      <img
-        src="/assets/gradient-hexagon.svg"
-        alt="Gradient Hexagon"
-        class="absolute bottom-[8%] md:bottom-[16%] lg:bottom-[16%] left-[60%] lg:left-[63%] h-24"
-      />
-
-      <!-- Logo in Glassmorphic -->
-      <div class="hexagon-border">
-        <div class="hexagon-bg-blur" />
-      </div>
-
-      <!-- <img
-                  src="/assets/glassmorphic-hexagon.svg"
-                  alt="Glassmorphic Hexagon"
-                  class="center-img hexagon"
-              /> -->
-
-      <img
-        src="/assets/white-logo.webp"
-        alt="The official seal of The Alliance of Computer Science Students"
-        class="center-img logo"
-      />
-    </div>
-
-    <!-- Hero Caption -->
-    <div class="flex flex-col justify-center px-8 py-16 xl:pl-[20%]">
-      <div class="gradient-circle" />
-      <p
-        class="mb-4 text-4xl font-bold leading-tight md:text-5xl md:leading-snug tracking-wide text-white"
-      >
-        Home of the Visionaries.
-      </p>
-      <p class="mb-8 font-light text-slate-200">
-        Alliance of Computer Science Students—<br />University of the
-        Philippines Los Baños
-      </p>
-      <div class="flex flex-row items-center">
-        <div
-          class="flex items-center justify-center glassmorphic-box mr-4 border-l"
-        >
-          <p class="font-bold text-lg text-slate-300">8</p>
+<section class="container mx-auto relative">
+    <div
+        class="flex flex-col h-screen gap-10 py-10 md:h-auto md:flex-row md:justify-between md:py-40 md:gap-20"
+    >
+        <!-- ACSS Logo -->
+        <div class="flex items-center justify-center">
+            <img
+                src="/assets/hero-banner.webp"
+                alt="The seal of ACSS placed on top of a glass object."
+                width="500"
+                height="500"
+                class="w-full max-w-lg"
+            />
         </div>
-        <p
-          class="font-light work-sans text-slate-400 border-l border-slate-600 py-4 px-4"
-        >
-          Years of Service
-        </p>
-      </div>
+        <!-- Hero Caption -->
+        <div class="flex flex-col md:justify-center flex-1 gap-10">
+            <div class="flex flex-col gap-1">
+                <h1
+                    class="text-4xl font-bold leading-tight lg:text-5xl md:leading-snug tracking-wide text-white"
+                >
+                    Home of the Visionaries.
+                </h1>
+                <p class="font-light text-slate-200 max-w-2xl">
+                    Within our visionary community, opportunities take shape,
+                    innovation thrives, and new horizons emerge. Join us in
+                    crafting a future where dreams find their canvas and
+                    possibilities know no bounds.
+                </p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <p class="text-slate-200 font-light">
+                    Alliance of Computer Science Students — <br />University of
+                    the Philippines Los Baños
+                </p>
+                <div class="flex flex-row items-center">
+                    <div
+                        class="flex items-center justify-center glassmorphic-box mr-4 border-l"
+                    >
+                        <p class="font-bold text-lg text-slate-300">8</p>
+                    </div>
+                    <p
+                        class="font-light work-sans text-slate-400 border-l border-slate-600 py-4 px-4"
+                    >
+                        Years of Service
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="absolute w-8 h-10 border-2 rounded-full bottom-10 left-1/2 -translate-x-0.5"><div class="absolute w-1 h-3 bg-white left-3 top-2 rounded-md animate-bounce"></div></div>
     </div>
-  </div>
 </section>
 
 <style>
-  .hexagon-border {
-    width: 340px;
-    height: 340px; /* Height is set to the same value as the width to create a regular hexagon */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -170px; /* Half the height */
-    margin-left: -170px; /* Half the width */
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    backdrop-filter: blur(20px);
-    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  }
-
-  .center-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
-
-  .logo {
-    width: 240px;
-    height: 240px;
-    margin-top: -130px; /* Half the height */
-    margin-left: -120px; /* Half the width */
-  }
-
-  @media (min-width: 1024px) {
-    .logo {
-      width: 260px;
-      height: 260px;
-      margin-top: -140px; /* Half the height */
-      margin-left: -130px; /* Half the width */
+    .glassmorphic-box {
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+        border-radius: 16px;
+        border: 0.01rem solid rgba(255, 255, 255, 0.1);
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        backdrop-filter: blur(21px);
     }
-  }
-
-  .glassmorphic-box {
-    width: 60px;
-    height: 60px;
-    flex-shrink: 0;
-    border-radius: 16px;
-    border: 0.01rem solid rgba(255, 255, 255, 0.1);
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    backdrop-filter: blur(21px);
-  }
 </style>
