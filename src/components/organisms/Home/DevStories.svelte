@@ -19,19 +19,12 @@
 <section class="py-24">
   <div class="flex flex-col items-center gap-10 md:gap-14 relative">
     <DevStoriesHeader />
-
-    <!-- <DevStoriesTemplate
-      name="Juan Dela Cruz"
-      position="Current ACSS Position"
-      story={placeholderText}
-    /> -->
-
     <!-- Gradient Shapes at the Back -->
     <!-- Ellipse Top -->
     <img
       src="/assets/gradient-ellipse.svg"
       alt="Gradient Ellipse"
-      class="absolute w-[70px] top-[-4%] md:top-[-10%] left-[75%] origin-center rotate-45"
+      class="absolute w-[70px] top-[20%] md:top-[25%] left-[75%] origin-center rotate-45"
     />
 
     <!-- Ellipse Bottom -->
@@ -45,29 +38,29 @@
     <img
       src="/assets/gradient-hexagon.svg"
       alt="Gradient Hexagon"
-      class="absolute w-[140px] top-[34%] md:top-[68%] left-[-8%] md:left-[10%] 2xl:left-[15%]"
+      class="absolute w-[140px] top-[34%] md:top-[78%] left-[-8%] md:left-[5%] 2xl:left-[15%]"
     />
 
     <!-- Hexagon Right -->
     <img
       src="/assets/gradient-hexagon-2.svg"
       alt="Gradient Hexagon"
-      class="absolute w-[70px] top-[50%] left-[90%] md:top-[84%] md:left-[70%]"
+      class="absolute w-[70px] top-[50%] left-[90%] md:top-[95%] md:left-[70%]"
     />
 
     <swiper-container
-      class="mySwiper"
+      class="mySwiper w-full h-full"
       pagination="true"
       pagination-clickable="true"
       navigation="true"
       space-between="30"
       centered-slides="true"
-      autoplay-delay="2500"
+      autoplay-delay="5500"
       autoplay-disable-on-interaction="false"
     >
       {#each stories as [name, [position, story]]}
-        <swiper-slide
-          ><div>
+        <swiper-slide class="flex justify-center items-center"
+          ><div class="block w-full h-full object-cover">
             <DevStoriesTemplate {name} {position} {story} />
           </div></swiper-slide
         >
@@ -77,23 +70,29 @@
 </section>
 
 <style>
-  swiper-container {
-    width: 100%;
-    height: 100%;
+  swiper-container::part(bullet-active) {
+    background-color: var(--color-dark-sky-blue);
   }
 
-  swiper-slide {
-    text-align: center;
-    font-size: 18px;
+  /* Style the custom navigation buttons */
+  swiper-container::part(button-prev),
+  swiper-container::part(button-next) {
+    background: transparent; /* Remove any background color */
+    color: rgba(0, 0, 0, 0); /* Set the text color to transparent */
+    width: 40px; /* Set the width of the buttons */
+    height: 40px; /* Set the height of the buttons */
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
 
-  swiper-slide div {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  swiper-container::part(button-prev) {
+    background-image: url("/assets/left-arrow.svg");
+    background-repeat: no-repeat;
+  }
+
+  swiper-container::part(button-next) {
+    background-image: url("/assets/right-arrow.svg");
+    background-repeat: no-repeat;
   }
 </style>

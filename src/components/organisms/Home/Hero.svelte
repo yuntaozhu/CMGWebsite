@@ -1,10 +1,15 @@
 <!-- Hero Section -->
+<script>
+    let statistic = ["8", "65", "90"];
+    let statisticTitle = ["Years of Service", "Active Members", "Alumni"];
+</script>
+
 <section class="container mx-auto relative">
     <div
-        class="flex flex-col min-h-screen gap-5 md:flex-row md:align-center md:justify-between md:gap-20"
+        class="flex flex-col min-h-screen mx-4 gap-5 md:flex-row md:align-center md:justify-between md:gap-10 2xl:gap-2 3xl:gap-20"
     >
         <!-- ACSS Logo -->
-        <div class="flex md:flex-1 items-center justify-center">
+        <div class="flex pt-16 md:pt-0 md:flex-1 items-center justify-center">
             <img
                 src="/assets/hero-banner.webp"
                 alt="The seal of ACSS placed on top of a glass object."
@@ -21,14 +26,14 @@
                 >
                     Home of the Visionaries.
                 </h1>
-                <p class="font-light text-slate-200 max-w-2xl">
+                <p class="font-thin text-slate-200 max-w-2xl">
                     Within our visionary community, opportunities take shape,
                     innovation thrives, and new horizons emerge. Join us in
                     crafting a future where dreams find their canvas and
                     possibilities know no bounds.
                 </p>
             </div>
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-4">
                 <p class="text-slate-200 font-light">
                     Alliance of Computer Science Students — <br />University of
                     the Philippines Los Baños
