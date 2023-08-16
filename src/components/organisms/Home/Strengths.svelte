@@ -1,7 +1,6 @@
 <script>
   // Import Statements
   import UnderlinedText from "$components/atoms/UnderlinedText.svelte";
-    import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
   import { onMount } from "svelte";
   
   // CUSTOMIZE THIS: Array of strengths
@@ -59,7 +58,7 @@
   });
 </script>
 
-<div class="flex justify-center mt-[40px] mb-[40px]">
+<div class="flex justify-center mt-[80px] mb-[40px]">
   <div id="strength-bg" class="max-w-[1000px] w-[100%]">
     <div id="strength-gradient" class="z-0" />
     <div
@@ -110,7 +109,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
+    transition-delay: 0.2s;
   }
 
   #strength-gradient {
