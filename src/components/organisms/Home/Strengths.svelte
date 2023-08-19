@@ -110,7 +110,7 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: 0.2s ease-in-out;
-    transition-delay: 0.2s;
+    transition-delay: 0.4s;
   }
 
   #strength-gradient {

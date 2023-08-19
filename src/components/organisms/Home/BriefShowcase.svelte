@@ -1,4 +1,5 @@
 <script>
+  // Import statements
   import UnderlinedText from "$components/atoms/UnderlinedText.svelte";
   import HexagonGlass from "$components/molecules/Home/HexagonGlass.svelte";
   import { onMount } from "svelte";
@@ -35,6 +36,7 @@
    */
   let interval;
 
+  // Updates the margin of gradient blur after resize
   function updateCircleBlurMargin() {
     let circleBlur = document.getElementById("circle-blur");
     let briefShowcase = document.getElementById("brief-showcase");
@@ -45,8 +47,8 @@
     }
   }
 
+  // This handles the auto-change of spotlight
   function updateCanAutoChange() {
-    // This handles the auto-change of spotlight
     canAutoChange = !canAutoChange;
   }
 
@@ -54,11 +56,11 @@
     windowWidth = document.documentElement.clientWidth;
   }
 
+  // Updates the event to be in spotlight
   /**
    * @param {number} newSpotlight
    */
   function updateSpotlight(newSpotlight) {
-    // Updates the event to be in spotlight
     spotlight = newSpotlight;
     let showcased = document.getElementById("showcased");
     if (showcased) {
@@ -66,9 +68,9 @@
     }
   }
 
+  // 4s interval of changing event
   function newInterval() {
     clearInterval(interval);
-
     interval = setInterval(() => {
       if (canAutoChange) {
         if (spotlight !== 6) {
@@ -355,16 +357,6 @@
   #showcased {
     background-size: cover;
     background-position: center;
-    -webkit-mask-image: radial-gradient(
-      circle,
-      rgba(0, 0, 0, 1) 40%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    mask-image: radial-gradient(
-      circle,
-      rgba(0, 0, 0, 1) 40%,
-      rgba(0, 0, 0, 0) 100%
-    );
   }
   #showcase-name:before {
     content: "";

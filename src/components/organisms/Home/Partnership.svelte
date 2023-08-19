@@ -1,20 +1,23 @@
 <script>
     import { onMount } from "svelte";
 
+    // CUSTOMIZE THIS: Add here the URL of logos from static folder ("./home-partnership/<logo>")
     let logos = [
         "https://www.salesforceben.com/wp-content/uploads/2021/03/google-logo-icon-PNG-Transparent-Background-2048x2048.png",
         "https://cdn.freebiesupply.com/logos/large/2x/jollibee-logo-png-transparent.png",
         "https://th.bing.com/th/id/R.20384eee41a9c9906ff9783969e634de?rik=miI7LNJq%2fSV%2bbg&riu=http%3a%2f%2ffc09.deviantart.net%2ffs71%2ff%2f2014%2f218%2ff%2fa%2fred_velvet_logo_png_render_by_classicluv-d7tz4f6.png&ehk=j5ovtz5EVdGgMfBeI8%2bsj1HzNL8jR9AvfuOkpkZXcCE%3d&risl=&pid=ImgRaw&r=0",
         "https://1000logos.net/wp-content/uploads/2022/09/Valorant-Logo.png",
-        "https://logos-world.net/wp-content/uploads/2020/03/Coca-Cola-Logo.png"
+        "https://logos-world.net/wp-content/uploads/2020/03/Coca-Cola-Logo.png",
+        "./home-partnership/sample-logo.png",
     ];
+    // END OF CUSTOMIZATION
 
-    let duration = logos.length < 10 ? 36000 : logos.length * 4000;
-    let resetDuration = logos.length < 10 ? 600 : logos.length * 60;
+    let duration = logos.length < 10 ? 36000 : logos.length * 4000; // Duration of animatiion
+    let resetDuration = logos.length < 10 ? 600 : logos.length * 60; // Duration of reset animation
     let transitionLeft =
         logos.length < 10
             ? -2120
-            : -2 * (70 * logos.length + 40 * (logos.length - 1));
+            : -2 * (70 * logos.length + 40 * (logos.length - 1)); // Computes the position of the movingDiv on the right side
     /**
      * @type {string | number | NodeJS.Timeout | undefined}
      */
@@ -24,6 +27,7 @@
      */
     let logoAnimationInterval;
 
+    // Reset animation
     function logoAnimationReset() {
         clearInterval(logoAnimationResetInterval);
 
@@ -37,18 +41,20 @@
         }, duration);
     }
 
+    // Animation
     function logoAnimation() {
         clearInterval(logoAnimationInterval);
         logoAnimationInterval = setInterval(() => {
             let movingDiv = document.getElementById("moving-div");
             if (movingDiv) {
                 movingDiv.style.transition = `${duration / 1000}s`;
-                movingDiv.style.left = "-240px";
+                movingDiv.style.left = "-180px";
             }
             clearInterval(logoAnimationInterval);
         }, resetDuration);
     }
 
+    // Starts the animation
     function startAnimation() {
         clearInterval(logoAnimationInterval);
         clearInterval(logoAnimationResetInterval);
@@ -61,7 +67,7 @@
             let movingDiv = document.getElementById("moving-div");
             if (movingDiv) {
                 movingDiv.style.transition = `${duration / 1000}s`;
-                movingDiv.style.left = "-240px";
+                movingDiv.style.left = "-180px";
             }
             clearInterval(templogoAnimationInterval);
         }, resetDuration);
