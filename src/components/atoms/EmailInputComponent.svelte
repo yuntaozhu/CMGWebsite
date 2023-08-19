@@ -7,6 +7,10 @@
      * @type {any}
      */
     export let required;
+    /**
+     * @type {any}
+     */
+     export let placeholder;
 </script>
 
 <div id={label} class="mb-7 text-left bg">
@@ -19,7 +23,8 @@
             id={"Form" + label}
             name={label}
             type="email"
-            class="w-full mt-2 rounded-lg text-black h-8 pl-2 pr-2 bg-white/[0.8]"
+            class="w-full mt-2 rounded-lg text-black h-8 pl-3 pr-3 bg-white/[0.8] placeholder:italic placeholder:text-gray-800 placeholder:font-thin"
+            placeholder={placeholder}
             required
         />
     {:else}
@@ -28,7 +33,8 @@
             id={"Form" + label}
             name={label}
             type="email"
-            class="w-full mt-2 rounded-lg text-black h-8 pl-2 pr-2 bg-white/[0.8]"
+            class="w-full mt-2 rounded-lg text-black h-8 pl-3 pr-3 bg-white/[0.8] placeholder:italic placeholder:text-gray-800 placeholder:font-thin"
+            placeholder={placeholder}
         />
     {/if}
 </div>

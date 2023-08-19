@@ -55,9 +55,9 @@
     >
         <div id="components">
             <!-- CUSTOMIZE THIS: Add the input components here -->
-            <TextInputComponent label="Text" required={true}/>
-            <NumberInputComponent label="Number" required={true}/>
-            <EmailInputComponent label="Email" required={true}/>
+            <TextInputComponent label="Text" required={false} placeholder=""/>
+            <NumberInputComponent label="Number" required={false} placeholder=""/>
+            <EmailInputComponent label="Email" required={false} placeholder=""/>
             <DropdownInputComponent label="Dropdown" options={dropdown} />
             <RadioInputComponent label="Radio" options={radio} />
             <!-- END OF CUSTOMIZATION -->

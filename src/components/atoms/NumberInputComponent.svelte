@@ -6,7 +6,11 @@
     /**
      * @type {any}
      */
-     export let required;
+    export let required;
+    /**
+     * @type {any}
+     */
+    export let placeholder;
 </script>
 
 <div id={label} class="flex-column mb-7 text-left">
@@ -19,7 +23,8 @@
             id={"Form" + label}
             name={label}
             type="number"
-            class="w-full mt-2 rounded-lg text-black h-8 pl-2 pr-2 bg-white/[0.8]"
+            class="w-full mt-2 rounded-lg text-black h-8 pl-3 pr-3 bg-white/[0.8] placeholder:italic placeholder:text-gray-800 placeholder:font-thin"
+            {placeholder}
             required
         />
     {:else}
@@ -28,7 +33,22 @@
             id={"Form" + label}
             name={label}
             type="number"
-            class="w-full mt-2 rounded-lg text-black h-8 pl-2 pr-2 bg-white/[0.8]"
+            class="w-full mt-2 rounded-lg text-black h-8 pl-3 pr-3 bg-white/[0.8] placeholder:italic placeholder:text-gray-800 placeholder:font-thin"
+            {placeholder}
         />
     {/if}
 </div>
+
+<style>
+    /* Chrome, Safari, Edge, Opera (Removes the arrow)*/
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox (Removes the arrow)*/
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+</style>

@@ -14,7 +14,7 @@
         "College of Economics and Management",
         "College of Forestry and Natural Resources",
         "College of Development Communication",
-        "Collegee of Agriculture and Food Science",
+        "College of Agriculture and Food Science",
         "College of Engineering and Agro-industrial Technology",
         "College of Human Ecology",
         "College of Veterinary Medicine",
@@ -68,13 +68,13 @@
     >
         <div id="components">
             <!-- CUSTOMIZE THIS: Add the input components here -->
-            <TextInputComponent label="Name" required={true}/>
-            <TextInputComponent label="Nickname" required={true}/>
-            <EmailInputComponent label="Email" required={true}/>
+            <TextInputComponent label="Name" required={true} placeholder="Juan Dela Cruz"/>
+            <TextInputComponent label="Nickname" required={true} placeholder=""/>
+            <EmailInputComponent label="Email" required={true} placeholder="jdelacruz@up.edu.ph"/>
             <DropdownInputComponent label="College" options={colleges} />
-            <TextInputComponent label="Degree Program" required={true}/>
-            <NumberInputComponent label="Batch" required={true}/>
-            <TextInputComponent label="Facebook Profile Link" required={true}/>
+            <TextInputComponent label="Degree Program" required={true} placeholder="BSCS"/>
+            <NumberInputComponent label="Batch" required={true} placeholder="2021"/>
+            <TextInputComponent label="Facebook Profile Link" required={true} placeholder=""/>
             <RadioInputComponent
                 label="How did you hear about this event?"
                 options={howYouHear}
