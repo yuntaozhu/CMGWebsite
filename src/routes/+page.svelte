@@ -1,15 +1,45 @@
 <script>
-  import { Hero, Summary, IncomingActivity, NavBar, Footer, DevStories, Contributions, Strengths, BriefShowcase } from "$components";
-    import Partnership from "$components/organisms/Home/Partnership.svelte";
+  import {
+    Hero,
+    Summary,
+    IncomingActivity,
+    NavBar,
+    Footer,
+    DevStories,
+    Contributions,
+    Strengths,
+    BriefShowcase,
+  } from "$components";
+  import Partnership from "$components/organisms/Home/Partnership.svelte";
   import GradientBlur from "../components/molecules/Home/GradientBlur.svelte";
+  import { onMount } from "svelte";
+
+  function scrollFadeIn() {
+    let scrollFadeInElements = document.getElementsByClassName("scrollFadeIn");
+
+    for (let element of scrollFadeInElements) {
+      if (
+        element instanceof HTMLElement &&
+        element.getBoundingClientRect().top <
+          document.documentElement.clientHeight * 0.5
+      ) {
+        element.style.opacity = "1";
+      }
+    }
+  }
+
+  onMount(() => {
+    scrollFadeIn();
+    window.addEventListener("scroll", scrollFadeIn);
+  });
 </script>
+
 <head>
   <title>Home</title>
 </head>
 
 <NavBar />
 <div class="overflow-hidden w-full h-full bg-base-black px-10 pb-10">
-  <GradientBlur />
   <Hero />
   <Summary />
   <IncomingActivity />
@@ -18,6 +48,7 @@
   <Contributions />
   <BriefShowcase />
   <Partnership />
+  <GradientBlur />
 </div>
 <Footer />
 

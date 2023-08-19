@@ -68,13 +68,13 @@
     >
         <div id="components">
             <!-- CUSTOMIZE THIS: Add the input components here -->
-            <TextInputComponent label="Name" />
-            <TextInputComponent label="Nickname" />
-            <EmailInputComponent label="Email" />
+            <TextInputComponent label="Name" required={true}/>
+            <TextInputComponent label="Nickname" required={true}/>
+            <EmailInputComponent label="Email" required={true}/>
             <DropdownInputComponent label="College" options={colleges} />
-            <TextInputComponent label="Degree Program" />
-            <NumberInputComponent label="Batch" />
-            <TextInputComponent label="Facebook Profile Link" />
+            <TextInputComponent label="Degree Program" required={true}/>
+            <NumberInputComponent label="Batch" required={true}/>
+            <TextInputComponent label="Facebook Profile Link" required={true}/>
             <RadioInputComponent
                 label="How did you hear about this event?"
                 options={howYouHear}

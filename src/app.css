@@ -177,8 +177,8 @@ h5 {
     --color-gray-3: #3E3B4C;
     --color-dark-1: #1E0E37;
     --color-dark-2: #0A041F;
-    --color-dark-3: #060217; 
-    --color-dark-4: #03010c;    
+    --color-dark-3: #060217;
+    --color-dark-4: #03010c;
 
     --color-purple: #5E35DA;
     --color-dark-purple: #3D338D;
@@ -215,4 +215,9 @@ h5 {
             #2e3792 27.6%,
             #00f5f1 74.48%,
             rgba(0, 245, 241, 0) 100%);
+}
+
+.scrollFadeIn {
+    opacity: 0;
+    transition: 0.5s;
 }

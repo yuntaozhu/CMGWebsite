@@ -58,9 +58,9 @@
   });
 </script>
 
-<div class="flex justify-center mt-[80px] mb-[40px]">
+<div class="relative flex justify-center mt-[80px] mb-[40px] z-0">
   <div id="strength-bg" class="max-w-[1000px] w-[100%]">
-    <div id="strength-gradient" class="z-0" />
+    <div id="strength-gradient" />
     <div
       id="strength"
       class="flex flex-col gap-10 w-[100%] pl-[10%] pr-[10%]"
@@ -68,7 +68,7 @@
       {#each strengths as strength, i}
         {#if (i + 1) % 2 == 0}
           <div class="flex justify-end">
-            <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-3 scrollFadeIn">
               <div class="flex">
                 <div class="w-fit">
                   <UnderlinedText text={strength[0]} isFixed={true} width={250} tailwindcustomization=""/>
@@ -86,7 +86,7 @@
             </div>
           </div>
         {:else}
-          <div class="flex flex-col gap-3">
+          <div class="flex flex-col gap-3 scrollFadeIn">
             <div class="w-fit">
               <UnderlinedText text={strength[0]} isFixed={true} width={250} tailwindcustomization=""/>
             </div>
@@ -110,7 +110,6 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: 0.2s ease-in-out;
-    transition-delay: 0.4s;
   }
 
   #strength-gradient {

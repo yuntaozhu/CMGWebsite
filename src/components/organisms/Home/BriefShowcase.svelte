@@ -43,7 +43,6 @@
     if (circleBlur && briefShowcase) {
       circleBlurMargin = circleBlur?.clientWidth * -0.08;
       circleBlur.style.top = circleBlurMargin + "px";
-      briefShowcase.style.opacity = "100%";
     }
   }
 
@@ -98,12 +97,12 @@
 </script>
 
 <div
-  class="flex flex-col gap-5 mt-[110px] mb-[40px] ml-[10%] mr-[10%] w-[80%] h-fit"
+  class="flex flex-col gap-5 mt-[110px] mb-[40px] ml-[10%] mr-[10%] w-[80%] h-fit scrollFadeIn"
 >
   <h5 class="break-words text-center">Brief Showcase</h5>
   <div
     id="brief-showcase"
-    class="flex flex-row justify-center items-center relative opacity-0 transition delay-100 w-[100%] h-[100%]"
+    class="flex flex-row justify-center items-center relative w-[100%] h-[100%]"
   >
     <div
       class="w-[100%] min-w-[8vw] max-w-[180px] h-[100%] flex flex-col items-center justify-center gap-12 mb-[5%]"
@@ -231,7 +230,7 @@
       />
       <div
         id="showcase-name"
-        class="flex items-center justify-center w-fit rounded-2xl"
+        class="flex items-center justify-center w-fit rounded-2xl z-10"
         on:click={() => {
           window.location.assign("./Showcase");
         }}
