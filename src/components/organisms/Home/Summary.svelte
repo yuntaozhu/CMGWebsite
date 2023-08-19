@@ -1,7 +1,7 @@
 <!-- Summary Section -->
-<section>
+<section class="scrollFadeIn">
   <div
-    class="relative flex flex-col mx-4 md:pt-6 max-[335px]:pb-[750px] max-[390px]:pb-[600px] max-ss:pb-[550px] ss:pb-[400px] sm:pb-80"
+    class="relative flex flex-col mx-4 md:pt-10 max-[335px]:pb-[750px] max-[390px]:pb-[600px] max-ss:pb-[550px] ss:pb-[400px] sm:pb-80"
   >
     <div class="relative flex flex-row z-10 md:mx-[16%] xl:mx-[20%] xl:pb-2">
       <div class="flex flex-col justify-center">
@@ -42,7 +42,7 @@
       </div>
 
       <img
-        src="/assets/gradient-logo-cube.svg"
+        src="/assets/gradient-logo-cube.webp"
         alt="ACSS Gradient Logo Cube"
         class="w-80 absolute left-[80%] md:left-[60%] xl:bottom-[-320px] xl:left-[56%] z-0"
       />

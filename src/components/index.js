@@ -35,6 +35,7 @@ import IncomingActivity from './organisms/Home/IncomingActivity.svelte';
 import Strengths from './organisms/Home/Strengths.svelte';
 import Summary from './organisms/Home/Summary.svelte';
 //Home Molecules
+import StatisticsTemplate from './molecules/Home/StatisticsTemplate.svelte';
 import DevStoriesHeader from './molecules/Home/DevStoriesHeader.svelte';
 import DevStoriesTemplate from './molecules/Home/DevStoriesTemplate.svelte';
 
@@ -58,11 +59,12 @@ export {
     Button, HamburgerMenu, ChatBot,
     //Molecules
     FooterContentOne, FooterContentTwo,
+    DevStoriesHeader, DevStoriesTemplate, StatisticsTemplate,
     //Organisms
     NavBar, Footer,
     CoreValues, History, MissionVision, Advisers,
     ContactForm,
     Executives, MembersRoster, ResidentMembers,
-    BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, DevStoriesHeader, DevStoriesTemplate,
+    BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary,
     Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs
 }

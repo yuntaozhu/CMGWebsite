@@ -42,7 +42,6 @@
     .glassmorphic-no-border {
         border-radius: 16px;
         background: rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(21px);
     }
 
     .no-wrap {
@@ -64,6 +63,7 @@
     }
 
     .glassmorphic-rectangle {
+        border: none;
         backdrop-filter: blur(5px);
     }
 </style>

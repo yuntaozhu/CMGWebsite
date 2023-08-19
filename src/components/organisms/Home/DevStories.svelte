@@ -16,7 +16,7 @@
   let stories = Object.entries(devStories);
 </script>
 
-<section class="py-24">
+<section class="scrollFadeIn py-32">
   <div class="flex flex-col items-center gap-10 md:gap-14 relative">
     <DevStoriesHeader />
     <!-- Gradient Shapes at the Back -->
@@ -31,7 +31,7 @@
     <img
       src="/assets/gradient-ellipse.svg"
       alt="Gradient Ellipse"
-      class="absolute w-[45px] top-[80%] sm:top-[65%] left-[35%] opacity-60"
+      class="absolute w-[45px] top-[80%] sm:top-[65%] left-[35%] opacity-40"
     />
 
     <!-- Hexagon Left -->
@@ -52,7 +52,7 @@
       class="mySwiper w-full h-full"
       pagination="true"
       pagination-clickable="true"
-      navigation="true"
+      navigation="false"
       space-between="30"
       centered-slides="true"
       autoplay-delay="5500"
@@ -94,5 +94,6 @@
   swiper-container::part(button-next) {
     background-image: url("/assets/right-arrow.svg");
     background-repeat: no-repeat;
+    background-position: top right;
   }
 </style>

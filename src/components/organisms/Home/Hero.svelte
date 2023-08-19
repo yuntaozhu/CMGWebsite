@@ -1,32 +1,43 @@
 <!-- Hero Section -->
 <script>
-    let statistic = ["8", "65", "90"];
-    let statisticTitle = ["Years of Service", "Active Members", "Alumni"];
+    let statisticsList = {
+        "8": "Years of Service",
+        "65": "Active Members",
+        "90": "Alumni",
+    };
+    let statistics = Object.entries(statisticsList);
+    import { StatisticsTemplate } from "$components";
 </script>
 
-<section class="container mx-auto relative">
+<section class="scrollFadeIn tag container mx-auto relative">
     <div
-        class="flex flex-col min-h-screen mx-4 gap-5 md:flex-row md:align-center md:justify-between md:gap-10 2xl:gap-2 3xl:gap-20"
+        class="flex flex-col min-h-[85vh] mx-4 pt-10 gap-5 md:flex-row md:align-center md:justify-evenly md:gap-10 2xl:gap-2"
     >
         <!-- ACSS Logo -->
-        <div class="flex pt-16 md:pt-0 md:flex-1 items-center justify-center">
+        <div
+            class="pt-4 ss:pt-12 md:pt-0 flex justify-center items-center md:flex-1 3xl:max-w-screen-sm floating"
+        >
             <img
                 src="/assets/hero-banner.webp"
                 alt="The seal of ACSS placed on top of a glass object."
                 width="500"
                 height="500"
-                class="w-full max-w-xs 2xl:max-w-sm 3xl:max-w-lg"
+                class="max-w-xs 2xl:max-w-sm 3xl:max-w-lg m-auto"
             />
         </div>
         <!-- Hero Caption -->
-        <div class="flex flex-col md:justify-center md:flex-1 gap-10">
+        <div
+            class="flex flex-col md:justify-center md:flex-1 gap-6 md:max-w-xl 3xl:max-w-2xl"
+        >
             <div class="flex flex-col gap-1">
                 <h1
-                    class="text-4xl font-bold leading-tight lg:text-5xl md:leading-snug tracking-wide text-white"
+                    class="text-4xl font-bold leading-tight lg:text-5xl md:leading-snug tracking-wide"
                 >
                     Home of the Visionaries.
                 </h1>
-                <p class="font-thin text-slate-200 max-w-2xl">
+                <p
+                    class="font-thin text-slate-200 md:max-w-sm text-sm 3xl:text-base 3xl:max-w-xl"
+                >
                     Within our visionary community, opportunities take shape,
                     innovation thrives, and new horizons emerge. Join us in
                     crafting a future where dreams find their canvas and
@@ -34,46 +45,78 @@
                 </p>
             </div>
             <div class="flex flex-col gap-4">
-                <p class="text-slate-200 font-light">
+                <p class="text-slate-200 font-light max-w-fit">
                     Alliance of Computer Science Students — <br />University of
                     the Philippines Los Baños
                 </p>
-                <div class="flex flex-row items-center">
-                    <div
-                        class="flex items-center justify-center glassmorphic-box mr-4 border-l"
-                    >
-                        <p class="font-bold text-lg text-slate-300">8</p>
-                    </div>
-                    <p
-                        class="font-light work-sans text-slate-400 border-l border-slate-600 py-4 px-4"
-                    >
-                        Years of Service
-                    </p>
+                <!-- <StatisticsTemplate number="8" title="Years of Service" /> -->
+                <div class="wrapper">
+                    <ul class="changing-stats">
+                        {#each statistics as [number, title]}
+                            <li><StatisticsTemplate {number} {title} /></li>
+                        {/each}
+                    </ul>
                 </div>
             </div>
         </div>
-        <div
-            class="absolute w-8 h-10 border-2 rounded-full bottom-20 left-1/2 -translate-x-1/2"
-        >
-            <div
-                class="absolute w-1 h-3 bg-white left-3 top-2 rounded-md animate-bounce"
-            />
-        </div>
+    </div>
+    <div class="w-8 h-10 border-2 rounded-full m-auto pt-2 mt-6 sm:mt-0 mb-10">
+        <div class="w-1 h-3 bg-white rounded-md animate-bounce m-auto" />
     </div>
 </section>
 
 <style>
-    .glassmorphic-box {
-        width: 60px;
+    @keyframes fade-in {
+        0%,
+        100% {
+            opacity: 0;
+        }
+        25%,
+        50%,
+        75% {
+            opacity: 1;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .wrapper .changing-stats {
+        margin-left: none;
         height: 60px;
-        flex-shrink: 0;
-        border-radius: 16px;
-        border: 0.01rem solid rgba(255, 255, 255, 0.1);
-        background: linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.2) 0%,
-            rgba(255, 255, 255, 0) 100%
-        );
-        backdrop-filter: blur(21px);
+        line-height: 25px;
+        overflow: hidden;
+    }
+    .changing-stats li {
+        list-style: none;
+        position: relative;
+        top: 0;
+        animation: switch 18s steps(3) infinite, fade-in 6s ease-out infinite;
+    }
+
+    @keyframes switch {
+        100% {
+            top: -205px;
+        }
+    }
+
+    .floating {
+        animation-name: floating;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes floating {
+        0% {
+            transform: translate(0, 0px);
+        }
+        50% {
+            transform: translate(0, 15px);
+        }
+        100% {
+            transform: translate(0, -0px);
+        }
     }
 </style>

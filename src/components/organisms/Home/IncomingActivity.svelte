@@ -11,7 +11,7 @@
   }
 </script>
 
-<section>
+<section class="scrollFadeIn">
   <div class="banner-container p-2 grid grid-cols-1 ss:mt-20 md:mt-28">
     <div class="p-10 lg:px-14 xl:px-[18%] md:grid md:grid-cols-3 md:gap-8">
       <div class="md:col-span-2 justify-self-center">
@@ -75,8 +75,8 @@
   .glassmorphic-rectangle {
     background: linear-gradient(
       135deg,
-      rgba(0, 0, 0, 0.45) 0%,
-      rgba(0, 0, 0, 0.429) 100%
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.3) 100%
     );
   }
 
@@ -86,7 +86,6 @@
       rgba(0, 245, 241, 0.1) 0%,
       rgba(255, 255, 255, 0.05) 100%
     );
-    backdrop-filter: blur(10px);
     border-radius: 10px;
   }
 
