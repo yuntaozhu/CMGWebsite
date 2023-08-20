@@ -1,3 +1,14 @@
+<!-- 
+  This is the registration form template where you can add different input components (check the list below).
+
+  Input Components:
+    1. TextInputComponent (required attributes: label)
+    2. NumberInputComponent (required attributes: label)
+    3. DropdownComponent (required attributes: label, options)
+    4. RadioInputComponent (required attributes: label, options)
+    5. CheckboxInputComponent (required attributes: label, options)
+-->
+
 <script>
     // Import statements
     import RegSectionBody from "$components/organisms/RegistrationForms/RegSectionBody.svelte";
@@ -11,7 +22,7 @@
 
     // CUSTOMIZE THIS: Add the list of dropdown options, checkbox options, and radio options here
     let dropdown = ["Option 1", "Option 2", "Option 3"];
-    let checkbox = ["Option 1", "Option 2", "Option 3", "Option 4"];
+    let checkbox = ["Option 1", "Option 2", "Option 3", "Option 4", "Option 5"];
     let radio = ["Option 1", "Option 2"];
     // END OF CUSTOMIZATION
 

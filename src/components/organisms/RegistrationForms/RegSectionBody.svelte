@@ -1,14 +1,3 @@
-<!-- 
-  This is the registration form where you can add different input components (check the list below).
-
-  Input Components:
-    1. TextInputComponent (required attributes: label)
-    2. NumberInputComponent (required attributes: label)
-    3. DropdownComponent (required attributes: label, options)
-    4. RadioInputComponent (required attributes: label, options)
-    5. SubmitButton
--->
-
 <script>
     // Import statements
     import RegFormIllus from "./RegFormIllus.svelte";

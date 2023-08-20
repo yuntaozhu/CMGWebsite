@@ -1,16 +1,22 @@
 <script>
+    // Import statements
     import { onMount } from "svelte";
 
+
+    // CUSTOMIZE THIS: Add here the statistics
     let statistics = [
         [8, "Years of Service"],
         [91, "Developers"],
     ];
+    // END OF CUSTOMIZATION
+    
     let spotlight = 0;
     /**
      * @type {string | number | NodeJS.Timeout | undefined}
      */
     let spotlightInterval;
 
+    // Manages the transition from one statistic to another
     function changeSpotlight() {
         spotlightInterval = setInterval(() => {
             let statisticElement = document.getElementById("statistics");

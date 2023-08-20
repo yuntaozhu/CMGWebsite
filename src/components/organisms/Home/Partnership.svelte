@@ -1,4 +1,5 @@
 <script>
+    // Import statements
     import { onMount } from "svelte";
 
     // CUSTOMIZE THIS: Add here the URL of logos from static folder ("./home-partnership/<logo>")
