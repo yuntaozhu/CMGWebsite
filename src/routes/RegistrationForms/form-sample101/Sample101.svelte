@@ -7,25 +7,24 @@
     import DropdownInputComponent from "$components/atoms/DropdownInputComponent.svelte";
     import RadioInputComponent from "$components/atoms/RadioInputComponent.svelte";
     import SubmitButton from "$components/atoms/SubmitButton.svelte";
+    import CheckboxInputComponent from "$components/atoms/CheckboxInputComponent.svelte";
 
-    // CUSTOMIZE THIS: Add the list of dropdown options and radio options here
+    // CUSTOMIZE THIS: Add the list of dropdown options, checkbox options, and radio options here
     let dropdown = ["Option 1", "Option 2", "Option 3"];
+    let checkbox = ["Option 1", "Option 2", "Option 3", "Option 4"];
     let radio = ["Option 1", "Option 2"];
     // END OF CUSTOMIZATION
 
     // Form submission
     function submitForm() {
         let formValues = {};
-        
+
         // @ts-ignore
         let components = document.getElementById("components")?.children;
         if (components) {
             for (let component of components) {
-                if (
-                    component.id.substring(0, 14) === "FormRadioACSS-"
-                ) {
+                if (component.id.substring(0, 14) === "FormRadioACSS-") {
                     let name = component.id.replace("FormRadioACSS-", "");
-                    console.log(component.id);
                     const radio = document.querySelectorAll(
                         `input[name="${name}"]`
                     );
@@ -36,9 +35,27 @@
                             formValues[name] = f.value;
                         }
                     }
-                }else{
+                } else if (component.id.substring(0, 14) === "FormCheckACSS-") {
+                    let name = component.id.replace("FormCheckACSS-", "");
+                    let checked = [];
+                    const checkbox = document.querySelectorAll(
+                        `input[name="${name}"]`
+                    );
+                    for (const f of checkbox) {
+                        // @ts-ignore
+                        if (f.checked) {
+                            // @ts-ignore
+                            checked.push(f.value);
+                        }
+                    }
                     // @ts-ignore
-                    formValues[component.id] = document.getElementById(`Form${component.id}`).value;
+                    formValues[name] = checked;
+                } else {
+                    // @ts-ignore
+                    formValues[component.id] = document.getElementById(
+                        `Form${component.id}`
+                        // @ts-ignore
+                    ).value;
                 }
             }
             console.log(formValues);
@@ -55,15 +72,24 @@
     >
         <div id="components">
             <!-- CUSTOMIZE THIS: Add the input components here -->
-            <TextInputComponent label="Text" required={false} placeholder=""/>
-            <NumberInputComponent label="Number" required={false} placeholder=""/>
-            <EmailInputComponent label="Email" required={false} placeholder=""/>
+            <TextInputComponent label="Text" required={false} placeholder="" />
+            <NumberInputComponent
+                label="Number"
+                required={false}
+                placeholder=""
+            />
+            <EmailInputComponent
+                label="Email"
+                required={false}
+                placeholder=""
+            />
             <DropdownInputComponent label="Dropdown" options={dropdown} />
             <RadioInputComponent label="Radio" options={radio} />
+            <CheckboxInputComponent label="Checkbox" options={checkbox} />
             <!-- END OF CUSTOMIZATION -->
         </div>
         <div class="overflow-hidden">
-            <SubmitButton/>
+            <SubmitButton />
         </div>
     </form>
 </RegSectionBody>
