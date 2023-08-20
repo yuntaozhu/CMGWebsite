@@ -28,7 +28,7 @@
   }
 </script>
 
-<nav class="nav min-w-screen">
+<nav class="nav min-w-screen z-20">
   <div class="grid grid-cols-4">
     <img
       src="/logo.webp"

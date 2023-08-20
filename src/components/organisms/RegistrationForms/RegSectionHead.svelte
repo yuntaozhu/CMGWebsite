@@ -17,7 +17,7 @@
     export let eventDescription;
 </script>
 
-<div class="flex-column">
+<div class="flex-col">
     <div
         id="photo-header"
         class="w-full h-1/4"

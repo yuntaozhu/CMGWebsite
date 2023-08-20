@@ -1,3 +1,7 @@
+<script>
+    import Statistics from "./Statistics.svelte";
+
+</script>
 <!-- Hero Section -->
 <section class="sm:py-28">
   <div
@@ -65,18 +69,7 @@
         Alliance of Computer Science Students—<br />University of the
         Philippines Los Baños
       </p>
-      <div class="flex flex-row items-center">
-        <div
-          class="flex items-center justify-center glassmorphic-box mr-4 border-l"
-        >
-          <p class="font-bold text-lg text-slate-300">8</p>
-        </div>
-        <p
-          class="font-light work-sans text-slate-400 border-l border-slate-600 py-4 px-4"
-        >
-          Years of Service
-        </p>
-      </div>
+      <Statistics />
     </div>
   </div>
 </section>
@@ -119,19 +112,5 @@
       margin-top: -140px; /* Half the height */
       margin-left: -130px; /* Half the width */
     }
-  }
-
-  .glassmorphic-box {
-    width: 60px;
-    height: 60px;
-    flex-shrink: 0;
-    border-radius: 16px;
-    border: 0.01rem solid rgba(255, 255, 255, 0.1);
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    backdrop-filter: blur(21px);
   }
 </style>

@@ -1,4 +1,4 @@
-<!-- IF SCROLLS -->
+<!-- IF SCROLLS (To be edited if background is not fixed) -->
 <!-- <div id="gradient-start" class="relative z-0">
     <img
         src="/assets/gradient-blur-hexagon.svg"
