@@ -18,13 +18,13 @@
   <div class="glassmorphic drop-shadow-md border-[1rem] rounded-2xl border-opacity-10 h-[218px] w-[172px]"></div>
 
   <!-- Inner glassmorphic rectangle -->
-  <div class="glassmorphic left-[11px] top-3 absolute rounded-2xl w-[150px] h-[150px]">
+  <div class="glassmorphic left-[11px] top-3 absolute rounded-2xl w-[150px] h-[160px]">
     <!-- Placeholder for developer image --> 
     <img src={imageSrc} alt={nickname} class="w-full h-full object-cover rounded-2xl" />
   </div>
 
   <!-- Developer nickname -->
-  <p class="absolute w-238 h-12 left-4 bottom-0 font-bold text-3xl text-white">{nickname}</p>
+  <p class="absolute w-238 h-12 left-4 bottom-[-7px] font-bold text-2xl">{nickname}</p>
 </div>
 
 <style>
@@ -40,9 +40,12 @@
 
   .grayscale {
     filter: grayscale(100%);
+    --tw-text-opacity: 1;
+    color: rgb(226 232 240 / var(--tw-text-opacity));
   }
 
   .grayscale:hover {
     filter: grayscale(0%);
+    color: white;
   }
 </style>
