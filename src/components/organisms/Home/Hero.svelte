@@ -49,14 +49,7 @@
                     Alliance of Computer Science Students — <br />University of
                     the Philippines Los Baños
                 </p>
-                <!-- <StatisticsTemplate number="8" title="Years of Service" /> -->
-                <div class="wrapper">
-                    <ul class="changing-stats">
-                        {#each statistics as [number, title]}
-                            <li><StatisticsTemplate {number} {title} /></li>
-                        {/each}
-                    </ul>
-                </div>
+                <StatisticsTemplate number="8" title="Years of Service" />
             </div>
         </div>
     </div>
@@ -66,41 +59,7 @@
 </section>
 
 <style>
-    @keyframes fade-in {
-        0%,
-        100% {
-            opacity: 0;
-        }
-        25%,
-        50%,
-        75% {
-            opacity: 1;
-        }
-    }
-
-    .wrapper {
-        display: flex;
-    }
-
-    .wrapper .changing-stats {
-        margin-left: none;
-        height: 60px;
-        line-height: 25px;
-        overflow: hidden;
-    }
-    .changing-stats li {
-        list-style: none;
-        position: relative;
-        top: 0;
-        animation: switch 18s steps(3) infinite, fade-in 6s ease-out infinite;
-    }
-
-    @keyframes switch {
-        100% {
-            top: -205px;
-        }
-    }
-
+    /* Floating Animation for Hero Logo */
     .floating {
         animation-name: floating;
         animation-duration: 8s;
