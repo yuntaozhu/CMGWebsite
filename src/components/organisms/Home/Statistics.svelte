@@ -15,6 +15,14 @@
      * @type {string | number | NodeJS.Timeout | undefined}
      */
     let spotlightInterval;
+    /**
+     * @type {string | number | NodeJS.Timeout | undefined}
+     */
+    let changeSpotlightValue;
+    /**
+     * @type {string | number | NodeJS.Timeout | undefined}
+     */
+    let opacityFullInterval;
 
     // Manages the transition from one statistic to another
     function changeSpotlight() {
@@ -24,7 +32,7 @@
                 statisticElement.style.opacity = "0";
             }
 
-            let changeSpotlightValue = setInterval(() => {
+            changeSpotlightValue = setInterval(() => {
                 if (spotlight + 1 < statistics.length) {
                     spotlight++;
                 } else {
@@ -34,7 +42,7 @@
                 clearInterval(changeSpotlightValue);
             }, 500);
 
-            let opacityFullInterval = setInterval(() => {
+            opacityFullInterval = setInterval(() => {
                 if (statisticElement) {
                     statisticElement.style.opacity = "1";
                 }
@@ -50,6 +58,8 @@
 
         return () => {
             clearInterval(spotlightInterval);
+            clearInterval(changeSpotlightValue);
+            clearInterval(opacityFullInterval);
         };
     });
 </script>
