@@ -11,7 +11,8 @@
     BriefShowcase,
   } from "$components";
   import Partnership from "$components/organisms/Home/Partnership.svelte";
-  import GradientBlur from "../components/molecules/Home/GradientBlur.svelte";
+
+  // COPY PASTE THIS ON A PAGE TO ADD A SCROLL FADE-IN ANIMATION: (class="scrollFadeIn")
   import { onMount } from "svelte";
 
   function scrollFadeIn() {
@@ -33,13 +34,13 @@
     window.addEventListener("scroll", scrollFadeIn);
     window.addEventListener("resize", scrollFadeIn);
   });
+  // END OF COPY PASTE
 </script>
 
 <head>
   <title>Home</title>
 </head>
 
-<NavBar />
 <div class="overflow-hidden w-full h-full bg-base-black px-10 pb-10">
   <Hero />
   <Summary />
@@ -49,9 +50,7 @@
   <Contributions />
   <BriefShowcase />
   <Partnership />
-  <GradientBlur />
 </div>
-<Footer />
 
 <!-- <div
   class="h-screen flex items-center justify-center bg-base-dark-2 text-base-white"

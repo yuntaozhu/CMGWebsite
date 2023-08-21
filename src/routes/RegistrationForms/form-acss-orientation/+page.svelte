@@ -8,7 +8,6 @@
 -->
 
 <script>
-  import { NavBar, Footer } from "$components";
   import RegistrationTemplate from "$components/organisms/RegistrationForms/RegistrationTemplate.svelte"; // registration template component
 
   // CUSTOMIZE THIS: This is where you can modify the header photo, event name, and event description
@@ -26,10 +25,8 @@
   // END OF CUSTOMIZATION
 </script>
 
-<NavBar />
 <RegistrationTemplate {headerPhotoURL} {eventName} {eventDescription}>
   <!-- CUSTOMIZE THIS: Insert here your form component with an attribute slot="form" -->
   <ACSSOrientation slot="form" />
   <!-- END OF CUSTOMIZATION -->
 </RegistrationTemplate>
-<Footer />

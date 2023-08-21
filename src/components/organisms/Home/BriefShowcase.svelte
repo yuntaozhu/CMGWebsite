@@ -230,7 +230,7 @@
       />
       <div
         id="showcase-name"
-        class="flex items-center justify-center w-fit rounded-2xl z-10"
+        class="flex items-center justify-center w-fit rounded-2xl"
         on:click={() => {
           window.location.assign("./Showcase");
         }}

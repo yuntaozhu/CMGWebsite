@@ -13,7 +13,7 @@
     }
 </script>
 
-<div on:click={goBack}>
+<div on:click={goBack} class="relative z-10">
 <svg id="button"
     width="14"
     height="28"

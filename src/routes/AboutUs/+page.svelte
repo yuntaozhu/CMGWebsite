@@ -14,4 +14,3 @@
 <MissionVision />
 <CoreValues />
 <Advisers />
-<Background start="0"/>

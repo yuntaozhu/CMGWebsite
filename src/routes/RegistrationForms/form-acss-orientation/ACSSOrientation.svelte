@@ -1,3 +1,15 @@
+<!-- 
+  This is the registration form template where you can add different input components (check the list below).
+
+  Input Components:
+    1. TextInputComponent (required attributes: label, required, placeholder)
+    2. NumberInputComponent (required attributes: label, required, placeholder)
+    3. EmailInputComponent (required attributes: label, required, placeholder)
+    4. DropdownComponent (required attributes: label, options)
+    5. RadioInputComponent (required attributes: label, options)
+    6. CheckboxInputComponent (required attributes: label, options)
+-->
+
 <script>
     // Import statements
     import RegSectionBody from "$components/organisms/RegistrationForms/RegSectionBody.svelte";

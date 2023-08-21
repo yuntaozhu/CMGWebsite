@@ -6,7 +6,7 @@
     // CUSTOMIZE THIS: Add here the statistics
     let statistics = [
         [8, "Years of Service"],
-        [91, "Developers"],
+        [91, "Developers"]
     ];
     // END OF CUSTOMIZATION
     

@@ -2,11 +2,12 @@
   This is the registration form template where you can add different input components (check the list below).
 
   Input Components:
-    1. TextInputComponent (required attributes: label)
-    2. NumberInputComponent (required attributes: label)
-    3. DropdownComponent (required attributes: label, options)
-    4. RadioInputComponent (required attributes: label, options)
-    5. CheckboxInputComponent (required attributes: label, options)
+    1. TextInputComponent (required attributes: label, required, placeholder)
+    2. NumberInputComponent (required attributes: label, required, placeholder)
+    3. EmailInputComponent (required attributes: label, required, placeholder)
+    4. DropdownComponent (required attributes: label, options)
+    5. RadioInputComponent (required attributes: label, options)
+    6. CheckboxInputComponent (required attributes: label, options)
 -->
 
 <script>
@@ -26,7 +27,7 @@
     let radio = ["Option 1", "Option 2"];
     // END OF CUSTOMIZATION
 
-    // Form submission
+    // Form submission into formValues
     function submitForm() {
         let formValues = {};
 

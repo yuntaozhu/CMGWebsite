@@ -20,7 +20,7 @@
   </head>
   
   <div
-    class="h-full min-h-screen flex-column bg-base-dark-2 text-base-white overflow-y-hidden overflow-x-hidden pb-20"
+    class="h-full min-h-screen flex-column text-base-white overflow-y-hidden overflow-x-hidden pb-20"
   >
     <RegSectionHead {headerPhotoURL} {eventName} {eventDescription} />
     <!-- Form Component-->

@@ -2,7 +2,6 @@
     import BackButton from "$components/atoms/BackButton.svelte";
     import UnderlinedText from "$components/atoms/UnderlinedText.svelte";
 
-    let titleWidth = 0;
     /**
      * @type {any}
      */
@@ -17,13 +16,12 @@
     export let eventDescription;
 </script>
 
-<div class="flex-col">
+<div class="flex flex-col">
     <div
-        id="photo-header"
-        class="w-full h-1/4"
+        id="photo-header" 
+        class="relative w-full h-1/4"
         style="background-image: url({headerPhotoURL})"
     >
-        <div id="gradient" />
     </div>
     <div id="form-header" class="mr-[10%] ml-[10%] flex flex-col">
         <div id="header-title" class="flex gap-3 items-center mb-1">
@@ -70,17 +68,13 @@
         background-size: cover;
         background-position: center;
         opacity: 80%;
-    }
-    #gradient {
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(
+        mask-image: linear-gradient(
             to bottom,
-            rgba(10, 4, 31, 1) 10%,
-            rgba(0, 0, 0, 0),
-            rgba(10, 4, 31, 1) 90%
+            rgba(10, 4, 31, 0) 0%,
+            rgba(0, 0, 0, 1) 30%,
+            rgba(0, 0, 0, 1) 70%,
+            rgba(10, 4, 31, 0) 100%
         );
-        background-size: cover;
     }
     #regformtitle {
         color: rgba(0, 245, 241, 1);
