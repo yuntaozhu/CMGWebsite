@@ -1,14 +1,24 @@
 <script>
   export let imageSrc;
   export let nickname;
+
+  let isHovered = false;
+
+  function handleHover() {
+    isHovered = true;
+  }
+
+  function handleUnhover() {
+    isHovered = false;
+  }
 </script>
 
-<div class="relative">
+<div class="relative transition-transform transform-gpu hover:scale-[1.1] on:mouseenter={handleHover} on:mouseleave={handleUnhover} cursor-pointer grayscale">
   <!-- Outer glassmorphic rectangle -->
-  <div class="outer-glassmorphic drop-shadow-md rounded-lg border-[1rem] border-opacity-10 backdrop-blur-[21px] h-[218px] w-[172px]"></div>
+  <div class="glassmorphic drop-shadow-md border-[1rem] rounded-2xl border-opacity-10 h-[218px] w-[172px]"></div>
 
   <!-- Inner glassmorphic rectangle -->
-  <div class="inner-glassmorphic left-3 top-3 absolute backdrop-blur-[21px] w-[150px] h-[150px]">
+  <div class="glassmorphic left-[11px] top-3 absolute rounded-2xl w-[150px] h-[150px]">
     <!-- Placeholder for developer image --> 
     <img src={imageSrc} alt={nickname} class="w-full h-full object-cover rounded-2xl" />
   </div>
@@ -18,9 +28,8 @@
 </div>
 
 <style>
-  .outer-glassmorphic {
+  .glassmorphic {
     filter: drop-shadow(0px 8px 8px #000000);
-    border-radius: 16px;
     border: 0.01rem solid rgba(255, 255, 255, 0.1);
     background: linear-gradient(
       135deg,
@@ -29,14 +38,11 @@
     );
   }
 
-  .inner-glassmorphic {
-    filter: drop-shadow(0px 4px 4px #000000);
-    border-radius: 16px;
-    border: 0.01rem solid rgba(255, 255, 255, 0.1);
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.2) 100%
-    );
+  .grayscale {
+    filter: grayscale(100%);
+  }
+
+  .grayscale:hover {
+    filter: grayscale(0%);
   }
 </style>
