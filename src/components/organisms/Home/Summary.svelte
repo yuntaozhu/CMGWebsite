@@ -1,9 +1,9 @@
 <!-- Summary Section -->
-<section>
+<section class="scrollFadeIn">
   <div
-    class="relative flex flex-col max-[335px]:pb-[750px] max-[390px]:pb-[600px] max-ss:pb-[550px] ss:pb-[400px] sm:pb-80"
+    class="relative flex flex-col mx-4 md:pt-10 max-[335px]:pb-[750px] max-[390px]:pb-[600px] max-ss:pb-[550px] ss:pb-[400px] sm:pb-80"
   >
-    <div class="relative flex flex-row z-50 md:mx-[16%] xl:mx-[20%] xl:pb-2">
+    <div class="relative flex flex-row z-10 md:mx-[16%] xl:mx-[20%] xl:pb-2">
       <div class="flex flex-col justify-center">
         <p
           class="text-2xl max-md:pl-8 md: ss:text-3xl font-bold gradient-line text-center max-ss:pl-2 pb-2"
@@ -17,18 +17,18 @@
         </p>
       </div>
       <div
-        class="absolute top-[20%] left-[80%] ss:top-[8%] ss:left-[70%] lg:left-[36%] xl:left-[28%]"
+        class="absolute z-[10] top-[20%] left-[74%] ss:top-[8%] ss:left-[70%] lg:left-[36%] xl:left-[28%]"
       >
         <img
           src="/assets/white-logo-no-text.webp"
           alt="The official seal of The Alliance of Computer Science Students"
-          class="z-50 max-w-[180%] ss:max-w-[100%] w-40"
+          class="max-w-[120px] ss:max-w-[100%] w-40"
         />
       </div>
     </div>
     <div class="relative h-fit">
       <div
-        class="glassmorphic-rectangle absolute top-[10%] p-10 z-10 md:ml-[10%] md:mr-[20%] xl:ml-[18%] xl:mr-[40%]"
+        class="glassmorphic-rectangle absolute top-[10%] p-10 z-[1] md:ml-[10%] md:mr-[20%] xl:ml-[18%] xl:mr-[40%]"
       >
         <p class="font-light text-justify indent-8">
           The <span class="font-bold"
@@ -42,7 +42,7 @@
       </div>
 
       <img
-        src="/assets/gradient-logo-cube.svg"
+        src="/assets/gradient-logo-cube.webp"
         alt="ACSS Gradient Logo Cube"
         class="w-80 absolute left-[80%] md:left-[60%] xl:bottom-[-320px] xl:left-[56%] z-0"
       />
@@ -76,9 +76,5 @@
       rgba(255, 255, 255, 0.2) 100%
     );
     backdrop-filter: blur(21px);
-  }
-
-  .work-sans {
-    font-family: "Work Sans", sans-serif;
   }
 </style>
