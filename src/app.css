@@ -216,3 +216,8 @@ h5 {
             #00f5f1 74.48%,
             rgba(0, 245, 241, 0) 100%);
 }
+
+.scrollFadeIn {
+    opacity: 0;
+    transition: 0.5s;
+}

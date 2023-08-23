@@ -1,31 +1,51 @@
 <script>
-    import { onMount } from "svelte";
-    
+    import { onMount, afterUpdate } from "svelte";
+
     /**
      * @type {any}
      */
-     export let text;
+    export let text;
+    /**
+     * @type {boolean}
+     */
+    export let isFixed;
+    /**
+     * @type {any}
+     */
+    export let width;
+    /**
+     * @type {any}
+     */
+    export let tailwindcustomization;
+
     let titleWidth = 0;
 
     function updateSvgWidth() {
-        const titleElement = document.getElementById("title");
+        const titleElement = document.getElementById(`title-${text}`);
         if (titleElement) {
-            titleWidth = titleElement.clientWidth;
+            if (isFixed) {
+                titleWidth = width;
+            } else {
+                titleWidth = titleElement.clientWidth;
+            }
         }
     }
 
     onMount(() => {
         updateSvgWidth();
         window.addEventListener("resize", updateSvgWidth);
-
         return () => {
             window.removeEventListener("resize", updateSvgWidth);
         };
     });
+
+    afterUpdate(() => { 
+        updateSvgWidth();
+    });
 </script>
 
-<div class="flex-column">
-    <h5 id="title" class="font-bold">
+<div class="flex flex-col items-center">
+    <h5 id={"title-" + text} class="font-bold w-fit {tailwindcustomization}">
         {text}
     </h5>
     <svg
@@ -56,11 +76,7 @@
                 <stop stop-color="#2E3792" stop-opacity="0" />
                 <stop offset="0.276042" stop-color="#2E3792" />
                 <stop offset="0.744792" stop-color="#00F5F1" />
-                <stop
-                    offset="1"
-                    stop-color="#00F5F1"
-                    stop-opacity="0"
-                />
+                <stop offset="1" stop-color="#00F5F1" stop-opacity="0" />
             </linearGradient>
         </defs>
     </svg>

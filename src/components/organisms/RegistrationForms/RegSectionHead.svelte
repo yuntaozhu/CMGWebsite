@@ -2,34 +2,46 @@
     import BackButton from "$components/atoms/BackButton.svelte";
     import UnderlinedText from "$components/atoms/UnderlinedText.svelte";
 
-    let titleWidth = 0;
     /**
      * @type {any}
      */
-     export let headerPhotoURL;
+    export let headerPhotoURL;
     /**
      * @type {any}
      */
-     export let eventName;
+    export let eventName;
     /**
      * @type {any}
      */
-     export let eventDescription;
+    export let eventDescription;
 </script>
 
-<div class="flex-column">
-    <div id="photo-header" class="w-full h-1/4" style="background-image: url({headerPhotoURL})">
-        <div id="gradient" />
+<div class="flex flex-col">
+    <div
+        id="photo-header" 
+        class="relative w-full h-1/4"
+        style="background-image: url({headerPhotoURL})"
+    >
     </div>
     <div id="form-header" class="mr-[10%] ml-[10%] flex flex-col">
         <div id="header-title" class="flex gap-3 items-center mb-1">
-            <BackButton reference="../"/>
-            <div class="flex flex-wrap items-center gap-3 break-word overflow-hidden">
-                <UnderlinedText text={eventName}/>
+            <BackButton reference="../" />
+            <div
+                class="flex flex-wrap items-center gap-3 break-word overflow-hidden"
+            >
+                <UnderlinedText
+                    text={eventName}
+                    isFixed={false}
+                    width={0}
+                    tailwindcustomization=""
+                />
                 <div id="regformtitle">Registration Form</div>
             </div>
         </div>
-        <div id="form-info" class="mt-4 text-base glassmorphic-rectangle overflow-hidden break-words">
+        <div
+            id="form-info"
+            class="mt-4 text-base glassmorphic-rectangle overflow-hidden break-words"
+        >
             {eventDescription}
         </div>
         <div id="form-dpa" class="mt-6 glassmorphic-rectangle overflow-hidden">
@@ -56,17 +68,13 @@
         background-size: cover;
         background-position: center;
         opacity: 80%;
-    }
-    #gradient {
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(
+        mask-image: linear-gradient(
             to bottom,
-            rgba(10, 4, 31, 1) 10%,
-            rgba(0, 0, 0, 0),
-            rgba(10, 4, 31, 1) 90%
+            rgba(10, 4, 31, 0) 0%,
+            rgba(0, 0, 0, 1) 30%,
+            rgba(0, 0, 0, 1) 70%,
+            rgba(10, 4, 31, 0) 100%
         );
-        background-size: cover;
     }
     #regformtitle {
         color: rgba(0, 245, 241, 1);
@@ -80,13 +88,11 @@
             rgba(0, 245, 241, 0.1) 0%,
             rgba(255, 255, 255, 0.05) 100%
         );
-        backdrop-filter: blur(21px);
-        border: none;
-        box-shadow: -1px 1px 1px rgba(255, 255, 255, 0.3),
-            1px -1px 1px rgba(255, 255, 255, 0.3);
         padding: 25px;
-        border-radius: 10px;
         text-align: justify;
+        border-radius: 16px;
+        border: 0.01rem solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(21px);
     }
     #form-dpa {
         background: linear-gradient(

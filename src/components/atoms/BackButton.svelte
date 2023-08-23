@@ -6,14 +6,14 @@
     function goBack(){
         let referrer = document.referrer;
         if(referrer){
-            history.back()
+            history.back() // URL of referrer
         }else{
-            window.location.assign(reference); // URL of home
+            window.location.assign(reference); // URL of something
         }
     }
 </script>
 
-<div on:click={goBack}>
+<div on:click={goBack} class="relative z-10">
 <svg id="button"
     width="14"
     height="28"

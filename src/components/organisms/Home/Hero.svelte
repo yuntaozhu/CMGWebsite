@@ -9,7 +9,7 @@
     import { StatisticsTemplate } from "$components";
 </script>
 
-<section class="scrollFadeIn tag container mx-auto relative">
+<section class="tag container mx-auto relative">
     <div
         class="flex flex-col min-h-[85vh] mx-4 pt-10 gap-5 md:flex-row md:align-center md:justify-evenly md:gap-10 2xl:gap-2"
     >

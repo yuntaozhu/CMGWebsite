@@ -1,3 +1,15 @@
+<!-- 
+  This is the registration form template where you can add different input components (check the list below).
+
+  Input Components:
+    1. TextInputComponent (required attributes: label, required, placeholder)
+    2. NumberInputComponent (required attributes: label, required, placeholder)
+    3. EmailInputComponent (required attributes: label, required, placeholder)
+    4. DropdownComponent (required attributes: label, options)
+    5. RadioInputComponent (required attributes: label, options)
+    6. CheckboxInputComponent (required attributes: label, options)
+-->
+
 <script>
     // Import statements
     import RegSectionBody from "$components/organisms/RegistrationForms/RegSectionBody.svelte";
@@ -14,7 +26,7 @@
         "College of Economics and Management",
         "College of Forestry and Natural Resources",
         "College of Development Communication",
-        "Collegee of Agriculture and Food Science",
+        "College of Agriculture and Food Science",
         "College of Engineering and Agro-industrial Technology",
         "College of Human Ecology",
         "College of Veterinary Medicine",
@@ -68,13 +80,13 @@
     >
         <div id="components">
             <!-- CUSTOMIZE THIS: Add the input components here -->
-            <TextInputComponent label="Name" />
-            <TextInputComponent label="Nickname" />
-            <EmailInputComponent label="Email" />
+            <TextInputComponent label="Name" required={true} placeholder="Juan Dela Cruz"/>
+            <TextInputComponent label="Nickname" required={true} placeholder=""/>
+            <EmailInputComponent label="Email" required={true} placeholder="jdelacruz@up.edu.ph"/>
             <DropdownInputComponent label="College" options={colleges} />
-            <TextInputComponent label="Degree Program" />
-            <NumberInputComponent label="Batch" />
-            <TextInputComponent label="Facebook Profile Link" />
+            <TextInputComponent label="Degree Program" required={true} placeholder="BSCS"/>
+            <NumberInputComponent label="Batch" required={true} placeholder="2021"/>
+            <TextInputComponent label="Facebook Profile Link" required={true} placeholder=""/>
             <RadioInputComponent
                 label="How did you hear about this event?"
                 options={howYouHear}

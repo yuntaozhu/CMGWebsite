@@ -2,10 +2,39 @@
     /**
      * @type {any}
      */
-     export let label;
+    export let label;
+    /**
+     * @type {any}
+     */
+    export let required;
+    /**
+     * @type {any}
+     */
+    export let placeholder;
 </script>
 
-<div id={label} class="flex-column mb-7  text-left">
-    <label for={label} class="font-bold">{label}</label>
-    <input id={"Form" + label} name={label} type="text" class="w-full mt-2 rounded-md text-black h-8 pl-2 pr-2 bg-white/[0.9]" required/>
+<div id={label} class="mb-7 text-left bg">
+    {#if required}
+        <div class="flex gap-1">
+            <label for={label} class="font-bold">{label}</label>
+            <div class="text-[#00f5f1]">*</div>
+        </div>
+        <input
+            id={"Form" + label}
+            name={label}
+            type="text"
+            class="w-full mt-2 rounded-lg text-black h-8 pl-3 pr-3 bg-white/[0.8] placeholder:italic placeholder:text-gray-800 placeholder:font-thin"
+            {placeholder}
+            required
+        />
+    {:else}
+        <label for={label} class="font-bold">{label}</label>
+        <input
+            id={"Form" + label}
+            name={label}
+            type="text"
+            class="w-full mt-2 rounded-lg text-black h-8 pl-3 pr-3 bg-white/[0.8] placeholder:italic placeholder:text-gray-800 placeholder:font-thin"
+            {placeholder}
+        />
+    {/if}
 </div>

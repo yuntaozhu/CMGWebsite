@@ -8,12 +8,11 @@
 -->
 
 <script>
-  import { NavBar, Footer } from "$components";
   import RegistrationTemplate from "$components/organisms/RegistrationForms/RegistrationTemplate.svelte"; // registration template component
 
   // CUSTOMIZE THIS: This is where you can modify the header photo, event name, and event description
   import ACSSOrientation from "./ACSSOrientation.svelte"; // // Form Component: import your form component (double check the import statement)
-  let headerPhotoURL = "../sample-reg-header.png"; // Header Photo: a file from static folder
+  let headerPhotoURL = "../form-headers/sample-reg-header.png"; // Header Photo: a file from static folder (URL should be ../form-headers/'your file')
   let eventName = "ACSS Orientation"; // Event Name
   let eventDescription = `
                 This is an early registration form for the incoming ACSS Orientation
@@ -26,10 +25,8 @@
   // END OF CUSTOMIZATION
 </script>
 
-<NavBar />
 <RegistrationTemplate {headerPhotoURL} {eventName} {eventDescription}>
   <!-- CUSTOMIZE THIS: Insert here your form component with an attribute slot="form" -->
   <ACSSOrientation slot="form" />
   <!-- END OF CUSTOMIZATION -->
 </RegistrationTemplate>
-<Footer />

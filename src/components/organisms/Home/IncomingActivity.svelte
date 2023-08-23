@@ -12,7 +12,7 @@
 </script>
 
 <section class="scrollFadeIn">
-  <div class="banner-container p-2 grid grid-cols-1 ss:mt-20 md:mt-28">
+  <div class="container banner-container p-2 grid grid-cols-1 ss:mt-20 md:mt-28 mx-auto">
     <div class="p-10 lg:px-14 xl:px-[18%] md:grid md:grid-cols-3 md:gap-8">
       <div class="md:col-span-2 justify-self-center">
         <div
@@ -21,13 +21,13 @@
           <img
             src="/assets/notification.svg"
             alt="Notification Vector"
-            class="w-[30px]"
+            class="w-6"
           />
 
-          <p class="font-bold text-sm ss:text-base">Incoming Event</p>
+          <p class="font-bold text-sm">Incoming Event</p>
         </div>
         <p
-          class="text-4xl lg:text-5xl content-center font-bold gradient-line py-2 max-w-fit"
+          class="text-3xl content-center font-bold gradient-line py-2 max-w-fit"
         >
           {eventName}
         </p>

@@ -3,14 +3,12 @@
     Hero,
     Summary,
     IncomingActivity,
-    NavBar,
-    Footer,
     DevStories,
     Contributions,
     Strengths,
     BriefShowcase,
   } from "$components";
-  import GradientBlur from "../components/molecules/Home/GradientBlur.svelte";
+  import Partnership from "$components/organisms/Home/Partnership.svelte";
 </script>
 
 <head>
@@ -18,11 +16,14 @@
 </head>
 
 <div
-  class="overflow-hidden w-full bg-base-black px-5 lg:px-10 flex flex-col gap-10"
+  class="overflow-hidden w-full bg-base-black px-5 lg:px-10 flex flex-col gap-10 pb-40"
 >
-  <GradientBlur />
   <Hero />
   <Summary />
   <IncomingActivity />
-  <DevStories />
+  <!-- <DevStories /> -->
+  <Strengths />
+  <Contributions />
+  <BriefShowcase />
+  <Partnership />
 </div>
