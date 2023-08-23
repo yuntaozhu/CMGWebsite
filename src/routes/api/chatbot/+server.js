@@ -1,8 +1,10 @@
 import { error, json } from "@sveltejs/kit";
 
 export async function POST ({ request }) {
+    // extract question
     let { question } = await request.json()
     try {
+        // fetch answer from Flask server
         const res = await fetch("http://127.0.0.1:5000/chatbot", {
             method: "POST",
             headers: {
@@ -11,7 +13,6 @@ export async function POST ({ request }) {
             body: JSON.stringify({ question })
         });
         const result = await res.json();
-
 
         // return new Promise((resolve) => {
         //     setTimeout(() => {
