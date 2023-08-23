@@ -4,8 +4,8 @@ import HamburgerMenu from './atoms/HamburgerMenu.svelte';
 import ChatBot from './atoms/chatBot.svelte';
 
 //--- Molecules ---
-import FooterContentOne from'./molecules/Footers/FooterContentOne.svelte';
-import FooterContentTwo from'./molecules/Footers/FooterContentTwo.svelte';
+import FooterContentOne from './molecules/Footers/FooterContentOne.svelte';
+import FooterContentTwo from './molecules/Footers/FooterContentTwo.svelte';
 
 
 //--- Organisms ---
@@ -34,6 +34,10 @@ import Hero from './organisms/Home/Hero.svelte';
 import IncomingActivity from './organisms/Home/IncomingActivity.svelte';
 import Strengths from './organisms/Home/Strengths.svelte';
 import Summary from './organisms/Home/Summary.svelte';
+//Home Molecules
+import StatisticsTemplate from './molecules/Home/StatisticsTemplate.svelte';
+import DevStoriesHeader from './molecules/Home/DevStoriesHeader.svelte';
+import DevStoriesTemplate from './molecules/Home/DevStoriesTemplate.svelte';
 
 //Showcase
 import ShowcaseImage from './organisms/Showcase/ShowcaseImage.svelte'
@@ -55,6 +59,7 @@ export {
     Button, HamburgerMenu, ChatBot,
     //Molecules
     FooterContentOne, FooterContentTwo,
+    DevStoriesHeader, DevStoriesTemplate, StatisticsTemplate,
     //Organisms
     NavBar, Footer,
     CoreValues, History, MissionVision, Advisers,
