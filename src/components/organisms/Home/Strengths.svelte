@@ -76,14 +76,14 @@
   });
 </script>
 
-<div class="relative flex justify-center mt-[80px] mb-[40px]">
+<div class="relative flex justify-center mt-[80px] mb-[40px] mx-auto px-5 container">
   <div id="strength-bg" class="max-w-[1000px] w-[100%] pl-[5%] pr-[5%]">
-    <div id="strength" class="flex flex-col gap-10 w-[100%] pl-[10%] pr-[10%]">
+    <div id="strength" class="flex flex-col gap-10 w-[100%]">
       {#each strengths as strength, i}
         {#if (i + 1) % 2 == 0}
           <div class="flex justify-end">
             <div class="flex flex-col gap-3 scrollFadeIn">
-              <div class="flex">
+              <div class="flex -ml-2">
                 <div class="w-fit">
                   <UnderlinedText
                     text={strength[0]}
@@ -104,7 +104,7 @@
           </div>
         {:else}
           <div class="flex flex-col gap-3 scrollFadeIn">
-            <div class="w-fit">
+            <div class="w-fit -ml-2">
               <UnderlinedText
                 text={strength[0]}
                 isFixed={true}
@@ -134,10 +134,10 @@
     transition: 0.2s ease-in-out;
     mask-image: linear-gradient(
       to left,
-      rgba(0, 0, 0, 0) 5%,
-      rgba(0, 0, 0, 1) 20%,
-      rgba(0, 0, 0, 1) 80%,
-      rgba(0, 0, 0, 0) 95%
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 0) 100%
     );
   }
   #strength {
