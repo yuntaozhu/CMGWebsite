@@ -7,7 +7,6 @@
     NavBar,
     Footer,
   } from "$components";
-    import Background from "$components/organisms/Background.svelte";
 </script>
 
 <History />

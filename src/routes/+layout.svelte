@@ -25,8 +25,10 @@
   });
 </script>
 
-<NavBar />
-<GradientBlur />
-<!-- <ChatBot /> -->
-<slot />
-<Footer />
+<main class="overflow-hidden">
+  <NavBar />
+  <GradientBlur />
+  <!-- <ChatBot /> -->
+  <slot />
+  <Footer />
+</main>

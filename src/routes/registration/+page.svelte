@@ -1,13 +1,18 @@
+<script>
+  import { NavBar, Footer } from "$components";
+</script>
+
 <div class="container">
-  <h1>Executives</h1>
+  <NavBar />
+  <h3>Registration Form</h3>
+  <Footer />
 </div>
 
 <style>
   .container {
     width: 100%;
-    height: 25vh;
     display: flex;
-    padding: 2rem;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }

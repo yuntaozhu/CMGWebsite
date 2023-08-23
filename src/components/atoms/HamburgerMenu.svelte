@@ -2,7 +2,7 @@
   import { Button } from "$components";
   let menuState = false;
   $: {
-    console.log(menuState);
+    // console.log(menuState);
   }
 
   function toggleMenu() {

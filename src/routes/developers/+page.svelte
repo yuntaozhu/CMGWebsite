@@ -7,6 +7,7 @@
     Footer,
   } from "$components";
   import { onMount } from 'svelte';
+  import GradientBlur from "../../components/molecules/Home/GradientBlur.svelte";
 
   let activeSection = "initial"; // To keep track of the active section
 
@@ -48,6 +49,7 @@
 </script>
 
 <div class="container">
+  <GradientBlur />
   <NavBar />
 
   <div id="initial">
