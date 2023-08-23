@@ -17,6 +17,7 @@ import CoreValues from './organisms/AboutUs/CoreValues.svelte';
 import History from './organisms/AboutUs/History.svelte';
 import MissionVision from './organisms/AboutUs/MissionVision.svelte';
 import Advisers from './organisms/AboutUs/Advisers.svelte';
+import PhotoPage from './organisms/AboutUs/PhotoPage.svelte';
 
 //Contact Us
 import ContactForm from './organisms/ContactUs/ContactForm.svelte';
@@ -62,7 +63,7 @@ export {
     DevStoriesHeader, DevStoriesTemplate, StatisticsTemplate,
     //Organisms
     NavBar, Footer,
-    CoreValues, History, MissionVision, Advisers,
+    CoreValues, History, MissionVision, Advisers, PhotoPage,
     ContactForm,
     InitialSection, ResidentMembers, MembersRoster, 
     BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, 
