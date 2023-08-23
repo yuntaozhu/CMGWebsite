@@ -28,7 +28,7 @@
 <main class="overflow-hidden">
   <NavBar />
   <GradientBlur />
-  <!-- <ChatBot /> -->
+  <ChatBot />
   <slot />
   <Footer />
 </main>
