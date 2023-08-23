@@ -4,19 +4,15 @@
      * @type {string}
      */
     export let text;
-    /**
-     * @type {() => void}
-     */
-     export let onClick;
 </script>
 
-<button class="glassmorphic-button px-7 py-3" on:click={onClick}>
+<button class="glassmorphic-button p-2">
     {text}
 </button>
 
 <style>
     .glassmorphic-button {
-        border-radius: 24px;
+        border-radius: 20px;
         border: 0.01rem solid rgba(255, 255, 255, 0.1);
         background: linear-gradient(
             315deg,
