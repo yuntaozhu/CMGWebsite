@@ -1,8 +1,9 @@
 <script>
   import {
-    Executives,
-    MembersRoster,
-    ResidentMembers,
+    Activities,
+    Events,
+    Projects,
+    Workshops,
     NavBar,
     Footer,
   } from "$components";
@@ -10,9 +11,10 @@
 
 <div class="container">
   <NavBar />
-  <Executives />
-  <MembersRoster />
-  <ResidentMembers />
+  <Activities />
+  <Events />
+  <Projects />
+  <Workshops />
   <Footer />
 </div>
 

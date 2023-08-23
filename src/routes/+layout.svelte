@@ -1,11 +1,9 @@
 <script>
-    import "../app.css";
-    import { NavBar, Footer, ChatBot } from "$components";
+  import "../app.css";
+  import { NavBar, Footer, ChatBot } from "$components";
 </script>
 
-<main class="overflow-hidden">
-    <NavBar />
-    <!-- <ChatBot /> -->
-    <slot />
-    <Footer />
-</main>
+<NavBar />
+<!-- <ChatBot /> -->
+<slot />
+<Footer />
