@@ -109,6 +109,7 @@
         let userInput = document.getElementById("user-input");
         let sendButton = document.getElementById("submit-button");
 
+        userInput.style.height = "16px";
         userInput.disabled = true;
         sendButton.disabled = true;
 
@@ -137,16 +138,16 @@
 
     // resize textarea when typing long messages
     const resizeTextarea = (e) => {
-        e.target.style.height = "15px";
+        e.target.style.height = "16px";
         e.target.style.height = e.target.scrollHeight + "px";
     }
 </script>
 
 <!-- chatbot -->
-<div class="flex flex-col items-end justify-end gap-3 fixed z-10 bottom-4 right-4 sm:bottom-7 sm:right-7 w-auto h-auto box-border">
+<div class="flex flex-col items-end justify-end gap-3 fixed z-20 bottom-0 right-0 mb-4 mr-4 sm:mb-7 sm:mr-7 max-ss:pl-4 max-ss:pt-4 box-border">
     {#if isChatbotOpen}
         <!-- chatbot block -->
-        <div class="chatbot__block flex flex-col items-start shrink-0 bg-white/10 backdrop-blur-md" in:fly={chatbotBlockIn} out:fly={chatbotBlockOut}>
+        <div class="chatbot__block w-[100%] ss:w-[335px] h-[420px] flex flex-col items-start shrink-0 bg-white/10 backdrop-blur-md" in:fly={chatbotBlockIn} out:fly={chatbotBlockOut}>
             <!-- div for containing the messages at a fixed width and height -->
             <div class="flex flex-col relative justify-end items-center h-full box-border overflow-auto">
                 <!-- messages container -->
@@ -172,7 +173,7 @@
             <!-- input area -->
             <div class="flex py-4 px-5 gap-4 self-stretch border-t border-solid border-black h-fit box-border">
                 <!-- text area -->
-                <textarea class="textarea flex self-stretch resize-none flex-[1_0_0] bg-transparent border-none outline-0 h-4 max-h-14 text-xs" id="user-input" placeholder="Type your message..." bind:value={userInputValue} on:input={resizeTextarea} required/>
+                <textarea id="user-input" class="flex self-stretch resize-none flex-[1_0_0] bg-transparent border-none outline-0 h-4 max-h-14 text-xs" placeholder="Type your message..." bind:value={userInputValue} on:input={resizeTextarea}/>
                 <!-- send button -->
                 <button id="submit-button" on:click={sendQuestion}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -188,6 +189,7 @@
                 </button>
             </div>
         </div>
+
     {/if}
     <!-- chatbot button -->
     <button class="chatbot__button flex flex-col justify-center items-center w-14 h-14 shrink-0 backdrop-blur-md bg-white/20" on:click={toggleChatbot} bind:this={chatbotButton}>
@@ -207,9 +209,6 @@
 
 <style>
     .chatbot__block {
-        width: 335px;
-        height: 420px;
-
         border-radius: 20px 0px 0px 20px;
         box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.25);
     }
