@@ -6,8 +6,6 @@
     // Functions (for ui)
     let windowWidth = 0;
     let windowHeight = 0;
-    let illusPosY = 0;
-    let formPosY = 0;
 
     // Modifies the size of form section according to viewport
     function updateSize() {
@@ -49,33 +47,23 @@
         let formPos = document
             .getElementById("input-section")
             ?.getBoundingClientRect();
-        if (illusPos) {
-            illusPosY = (illusPos.bottom - illusPos.top) / 2 + illusPos.top;
-            illusPosY = Math.round(illusPosY);
-        }
-        if (formPos) {
-            formPosY = Math.round(formPos.top);
-        }
 
         if (
             illus &&
             illusPos &&
-            formPosY + illusPos?.height / 2 <= windowHeight / 2
+            formPos &&
+            formPos.top + illusPos?.height / 2 <= windowHeight / 2 &&
+            formPos.bottom >= illusPos.height
         ) {
-            illus.style.marginTop = `${
-                windowHeight / 2 - (formPosY + illusPos?.height / 2)
+            illus.style.top = `${
+                windowHeight / 2 - (formPos.top + illusPos?.height / 2)
             }px`;
-            illus.style.marginBottom = `${
-                (windowHeight / 2 - (formPosY + illusPos?.height / 2)) * -1
-            }px`;
-        } else if (illus) {
-            illus.style.marginTop = "0px";
-            illus.style.marginBottom = "0px";
         }
     }
 
     onMount(() => {
         updateSize(); // Initial width calculation
+        updateIllusPos();
         window.addEventListener("resize", updateSize); // Add event listener for resize
         window.addEventListener("resize", updateIllusPos);
         window.addEventListener("scroll", updateIllusPos); // Add event listener for scroll
@@ -85,7 +73,7 @@
 <div id="form" class="mr-[10%] ml-[10%] mt-7 flex">
     <div
         id="input-section"
-        class="glassmorphic-rectangle bg-slate-700 flex-col"
+        class="relative glassmorphic-rectangle bg-slate-700 flex-col"
     >
         <!-- Input Components -->
         <slot name="registration-form" />
@@ -96,7 +84,7 @@
             id="reg-form-illus-measure"
             class="w-7/12 flex justify-center overflow-hidden"
         >
-            <div id="reg-form-illus" class="w-full">
+            <div id="reg-form-illus-photo" class="relative w-full h-fit">
                 <!-- Illustration -->
                 <RegFormIllus />
             </div>
@@ -110,15 +98,17 @@
             0deg,
             rgba(0, 245, 241, 0.1) 0%,
             rgba(255, 255, 255, 0.05) 100%
-        ); 
+        );
         padding: 25px;
         text-align: justify;
         border-radius: 16px;
         border: 0.01rem solid rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(21px);
     }
-    #input-section,
-    #reg-form-illus {
+    #input-section {
         transition: 0.5s;
+    }
+    #reg-form-illus-photo {
+        transition: 0.3s ease;
     }
 </style>
