@@ -5,6 +5,7 @@
   import { teams, tabs } from './data.js';
 
   let activeTab = tabs[0]; // Initial active tab
+  let lastRow = '';
 
   function tabChange(event) {
     activeTab = event.detail;
@@ -18,22 +19,28 @@
     {/if}
   {/each}
 
-  <div class="team-tabs-container overflow-x-auto">
+  <div class="overflow-x-auto">
     <TeamTabs {activeTab} {tabs} on:tabChange={tabChange} />
   </div>
 
-  <div class="flex md:flex-1 items-center justify-center">
-    {#each teams as team}
-      {#if activeTab === team.name}
-        <div class="grid grid-cols-4 gap-4">
-          {#each team.developers as developer}
-            <DeveloperCard
-              imageSrc={developer.imageSrc}
-              nickname={developer.nickname}
-            />
-          {/each}
-        </div>
-      {/if}
-    {/each}
+  <div class="flex flex-col items-center justify-center">
+      {#each teams as team}
+        {#if activeTab === team.name}
+          <div class="grid grid-cols-4 gap-4 mb-4">
+            {#each team.developers as developer, i}
+              {#if i < (team.developers.length - 1) - ((team.developers.length - 1) % 4)}
+                <DeveloperCard developer={developer} />
+              {/if}
+            {/each}
+          </div>
+          <div class="flex gap-4">
+            {#each team.developers as developer, i}
+              {#if i >= (team.developers.length - 1) - ((team.developers.length - 1) % 4)}
+                <DeveloperCard developer={developer} />
+              {/if}
+            {/each}
+          </div>
+        {/if}
+      {/each}
   </div>
 </div>

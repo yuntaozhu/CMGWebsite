@@ -38,7 +38,7 @@
 
 
 <section class="container mx-auto px-36">
-  <div class="flex flex-col min-h-screen gap-5 md:flex-row md:align-center md:justify-between md:gap-20 full-height py-28 px-4 md:px-8 lg:px-16 xl:px-20">
+  <div class="flex flex-col min-h-screen gap-5 md:flex-row md:align-center md:justify-between md:gap-20 full-height py-36 px-4 md:px-8 lg:px-16 xl:px-20">
     
       <!-- Left side: Slideshow with Fade Animation -->
       <div class="relative">
@@ -70,7 +70,6 @@
           <img src="Hexagon Gradient.svg" alt="Hexagon" class="max-w-[100%] ss:max-w-[100%] w-16"/>
         </div>
       </div>
-
 
       <!-- Right side: Text and scroll icon -->
       <div class="flex flex-col md:justify-center md:flex-1 gap-10">
