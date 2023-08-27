@@ -66,14 +66,14 @@
 
 <div id="statistics" class="flex flex-row items-center transition duration-500">
     <div
-        class="flex items-center justify-center glassmorphic-box mr-4 border-l"
+        class="relative z-10 flex items-center justify-center glassmorphic-box mr-4 border-l"
     >
-        <p class="font-bold text-lg text-slate-300">
+        <p class="font-bold text-lg">
             {statistics[spotlight][0]}
         </p>
     </div>
     <p
-        class="font-light work-sans text-slate-400 border-l border-slate-600 py-4 px-4"
+        class="relative z-10 font-light work-sans border-l border-slate-600 py-4 px-4"
     >
         {statistics[spotlight][1]}
     </p>

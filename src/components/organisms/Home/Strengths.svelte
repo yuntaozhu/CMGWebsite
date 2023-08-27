@@ -24,7 +24,7 @@
   ];
   // END OF CUSTOMIZATION
 
-  // Adds glow effect on the background
+  // Adds glow animation on the background
   function bgElementChange() {
     let windowHeight = document.documentElement.clientHeight;
     let bg = document.getElementById("strength-bg");
@@ -72,12 +72,12 @@
 
   onMount(() => {
     window.addEventListener("resize", bgElementChange);
-    window.addEventListener("scroll", bgElementChange);
+    window.addEventListener("scrollend", bgElementChange);
   });
 </script>
 
-<div class="relative flex justify-center mt-[80px] mb-[40px] mx-auto px-5 container">
-  <div id="strength-bg" class="max-w-[1000px] w-[100%] pl-[5%] pr-[5%]">
+<div class="relative flex justify-center mt-[80px] mb-[40px] mx-auto container">
+  <div id="strength-bg" class="max-w-[1000px] w-[100%] pl-[6%] pr-[6%]">
     <div id="strength" class="flex flex-col gap-10 w-[100%]">
       {#each strengths as strength, i}
         {#if (i + 1) % 2 == 0}
@@ -135,8 +135,8 @@
     mask-image: linear-gradient(
       to left,
       rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 1) 10%,
-      rgba(0, 0, 0, 1) 90%,
+      rgba(0, 0, 0, 1) 6%,
+      rgba(0, 0, 0, 1) 94%,
       rgba(0, 0, 0, 0) 100%
     );
   }

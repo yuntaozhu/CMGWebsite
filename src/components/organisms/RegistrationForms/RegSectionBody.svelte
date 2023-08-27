@@ -3,7 +3,7 @@
     import RegFormIllus from "./RegFormIllus.svelte";
     import { onMount } from "svelte";
 
-    // Functions (for ui)
+    // Variables (for ui)
     let windowWidth = 0;
     let windowHeight = 0;
 
@@ -12,7 +12,9 @@
         windowWidth = document.documentElement.clientWidth;
         windowHeight = document.documentElement.clientHeight;
         let a = document.getElementById("input-section");
-        if (windowWidth * 0.75 < windowHeight) {
+
+        // Updates the size of form section according to the screen's width
+        if (!(windowWidth * 0.75 > windowHeight && windowWidth > 720)) {
             if (a) {
                 a.style.width = "100%";
             }
@@ -22,11 +24,11 @@
             }
         }
 
-        // Updates the size of illustration photo according to the form's height
+        // Updates the size of illustration photo according to the illustration's dimension
         let regformillusmeasure = document.getElementById(
             "reg-form-illus-measure"
         );
-        let regformillus = document.getElementById("reg-form-illus");
+        let regformillus = document.getElementById("reg-form-illus-photo");
         if (
             regformillusmeasure &&
             regformillus &&
@@ -79,8 +81,8 @@
         <slot name="registration-form" />
     </div>
 
-    {#if windowWidth * 0.75 > windowHeight}
-        <div
+    {#if windowWidth * 0.75 > windowHeight && windowWidth > 720}
+        <div    
             id="reg-form-illus-measure"
             class="w-7/12 flex justify-center overflow-hidden"
         >
