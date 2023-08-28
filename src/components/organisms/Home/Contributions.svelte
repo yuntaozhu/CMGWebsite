@@ -53,7 +53,7 @@
     left: -15px;
   }
   #background{
-    transition-delay: 0.4s;
+    transition-delay: 0.5s;
   }
   #background2{
     transition-delay: 0.2s;

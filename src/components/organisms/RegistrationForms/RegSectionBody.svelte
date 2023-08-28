@@ -54,8 +54,9 @@
             illus &&
             illusPos &&
             formPos &&
-            formPos.top + illusPos?.height / 2 <= windowHeight / 2 &&
-            formPos.bottom >= illusPos.height
+            formPos.top + illusPos.height / 2 - illusPos.height * 0.05<= windowHeight / 2 &&
+            formPos.bottom - illusPos.height / 2 + illusPos.height * 0.15 >=
+                windowHeight / 2
         ) {
             illus.style.top = `${
                 windowHeight / 2 - (formPos.top + illusPos?.height / 2)
@@ -82,7 +83,7 @@
     </div>
 
     {#if windowWidth * 0.75 > windowHeight && windowWidth > 720}
-        <div    
+        <div
             id="reg-form-illus-measure"
             class="w-7/12 flex justify-center overflow-hidden"
         >
