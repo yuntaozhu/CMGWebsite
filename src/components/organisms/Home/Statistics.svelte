@@ -32,6 +32,7 @@
                 statisticElement.style.opacity = "0";
             }
 
+            // Change the spotlight
             changeSpotlightValue = setInterval(() => {
                 if (spotlight + 1 < statistics.length) {
                     spotlight++;
@@ -42,6 +43,7 @@
                 clearInterval(changeSpotlightValue);
             }, 500);
 
+            // Change the opacity from 0 to 1
             opacityFullInterval = setInterval(() => {
                 if (statisticElement) {
                     statisticElement.style.opacity = "1";
