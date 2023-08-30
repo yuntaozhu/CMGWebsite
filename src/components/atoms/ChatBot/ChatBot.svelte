@@ -124,6 +124,9 @@
             text: question
         }]
 
+        // auto scroll to bottom of messages after sending a message
+        messagesContainer.scrollTo(0, messagesContainer.scrollHeight)
+
         setTimeout(async () => {
             // add empty text from bot's side to render the Loading Dots component
             messageHistory = [...messageHistory, {
