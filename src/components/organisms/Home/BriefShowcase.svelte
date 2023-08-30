@@ -99,15 +99,15 @@
 </script>
 
 <div
-  class="flex flex-col gap-5 mt-[110px] mb-[40px] ml-[10%] mr-[10%] w-[80%] h-fit scrollFadeIn"
+  class="flex flex-col gap-8 mt-[110px] mb-[40px] ml-[10%] mr-[10%] w-[80%] h-fit scrollFadeIn"
 >
   <h5 class="break-words text-center">Brief Showcase</h5>
   <div
     id="brief-showcase"
-    class="flex flex-row justify-center items-center relative w-[100%] h-[100%]"
+    class="flex flex-row justify-center relative w-[100%] h-[100%]"
   >
     <div
-      class="w-[100%] min-w-[8vw] max-w-[180px] h-[100%] flex flex-col items-center justify-center gap-12 mb-[5%]"
+      class="w-[100%] min-w-[8vw] max-w-[180px] h-fit flex flex-col items-center justify-center gap-12 mt-10"
     >
       <!-- Left Hexagonal Photos -->
       {#if windowWidth > 1100}
@@ -217,7 +217,7 @@
       id="circle-blur"
       src="/assets/gradient-blur-ellipse.svg"
       alt="Gradient Blur Ellipse"
-      class="absolute w-[600px] h-[600px] max-w-[78vw] max-h-[78vw]"
+      class="absolute w-[600px] h-[600px] max-w-[78vw] max-h-[78vw] top-0"
       on:click={() => {
         newInterval();
         if (spotlight != 6) {
@@ -227,7 +227,7 @@
         }
       }}
     />
-    <div class="flex flex-col gap-6 justify-center items-center">
+    <div class="flex flex-col gap-6 items-center">
       <!-- Image On Spotlight -->
       <div
         id="showcased"
@@ -250,7 +250,7 @@
       </div>
     </div>
     <div
-      class="w-[100%] min-w-[8vw] max-w-[180px] h-[100%] flex flex-col items-center justify-center gap-12 mb-[5%]"
+      class="w-[100%] min-w-[8vw] max-w-[180px] h-fit flex flex-col items-center justify-center gap-12 mt-10"
     >
       <!-- Right Hexagonal Photos -->
       {#if windowWidth > 1100}

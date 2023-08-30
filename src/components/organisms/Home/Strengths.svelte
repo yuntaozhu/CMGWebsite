@@ -77,8 +77,8 @@
 </script>
 
 <div class="relative flex justify-center mt-[80px] mb-[40px] mx-auto container">
-  <div id="strength-bg" class="max-w-[1000px] w-[100%] pl-[6%] pr-[6%]">
-    <div id="strength" class="flex flex-col gap-10 w-[100%]">
+  <div id="strength-bg" class="flex justify-center max-w-[1000px] w-[100%]">
+    <div id="strength" class="flex flex-col gap-10 w-[88%]">
       {#each strengths as strength, i}
         {#if (i + 1) % 2 == 0}
           <div class="flex justify-end">
