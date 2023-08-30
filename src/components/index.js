@@ -34,6 +34,7 @@ import Hero from './organisms/Home/Hero.svelte';
 import IncomingActivity from './organisms/Home/IncomingActivity.svelte';
 import Strengths from './organisms/Home/Strengths.svelte';
 import Summary from './organisms/Home/Summary.svelte';
+import Statistics from './organisms/Home/Statistics.svelte';
 //Home Molecules
 import StatisticsTemplate from './molecules/Home/StatisticsTemplate.svelte';
 import DevStoriesHeader from './molecules/Home/DevStoriesHeader.svelte';
@@ -64,7 +65,7 @@ export {
     NavBar, Footer,
     CoreValues, History, MissionVision, Advisers,
     ContactForm,
-    InitialSection, ResidentMembers, MembersRoster, 
-    BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, 
+    InitialSection, ResidentMembers, MembersRoster,
+    BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, Statistics,
     Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs
 }

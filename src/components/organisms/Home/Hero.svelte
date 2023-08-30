@@ -1,17 +1,11 @@
 <!-- Hero Section -->
 <script>
-    let statisticsList = {
-        "8": "Years of Service",
-        "65": "Active Members",
-        "90": "Alumni",
-    };
-    let statistics = Object.entries(statisticsList);
-    import { StatisticsTemplate } from "$components";
+    import { Statistics } from "$components";
 </script>
 
 <section class="tag container mx-auto relative">
     <div
-        class="flex flex-col min-h-[85vh] mx-4 pt-10 gap-5 md:flex-row md:align-center md:justify-evenly md:gap-10 2xl:gap-2"
+        class="flex flex-col min-h-[90vh] mx-4 pt-10 gap-5 md:flex-row md:align-center md:justify-evenly md:gap-10 2xl:gap-2"
     >
         <!-- ACSS Logo -->
         <div
@@ -49,33 +43,12 @@
                     Alliance of Computer Science Students — <br />University of
                     the Philippines Los Baños
                 </p>
-                <StatisticsTemplate number="8" title="Years of Service" />
+                <Statistics />
             </div>
         </div>
     </div>
+    <!-- Scroll Down Mouse Graphic Animation -->
     <div class="w-8 h-10 border-2 rounded-full m-auto pt-2 mt-6 sm:mt-0 mb-10">
         <div class="w-1 h-3 bg-white rounded-md animate-bounce m-auto" />
     </div>
 </section>
-
-<style>
-    /* Floating Animation for Hero Logo */
-    .floating {
-        animation-name: floating;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-    }
-
-    @keyframes floating {
-        0% {
-            transform: translate(0, 0px);
-        }
-        50% {
-            transform: translate(0, 15px);
-        }
-        100% {
-            transform: translate(0, -0px);
-        }
-    }
-</style>

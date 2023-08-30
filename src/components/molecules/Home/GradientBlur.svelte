@@ -1,3 +1,4 @@
+<!-- Gradient Blurred Circle and Hexagon Moving Website Background -->
 <div class="relative">
     <img
         src="/assets/gradient-blur-hexagon.svg"
@@ -22,6 +23,7 @@
 </div>
 
 <style>
+    /* Floating Animations Random Directions */
     .floating-1 {
         animation-name: floating-1;
         animation-duration: 8s;
