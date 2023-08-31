@@ -3,8 +3,7 @@
     import LoadingDots from "./LoadingDots.svelte";
     import { fade, fly, scale } from "svelte/transition";
     import { cubicOut } from "svelte/easing"
-    import { beforeUpdate, afterUpdate } from "svelte";
-    import AcssOrientation from "../../../routes/registration/form-acss-orientation/ACSSOrientation.svelte";
+    import { afterUpdate } from "svelte";
 
     /**
      * @type {HTMLButtonElement}
@@ -22,10 +21,12 @@
      * @type {HTMLButtonElement}
      */
     let sendButton;
+
     let userInputValue = "";
+    let question = "";
     let isChatbotOpen = false;
-    let autoscroll = false;
     let buttonTransitionDuration = 200;
+    
     let messageHistory = [
         {
             isUser: false,
@@ -55,15 +56,8 @@
     opacity: 0,
     }
 
-    beforeUpdate(() => {
-        if (messagesContainer) {
-            const scrollableDistance = messagesContainer.scrollHeight - messagesContainer.offsetHeight;
-            autoscroll = messagesContainer.scrollTop > scrollableDistance - 20;
-        }
-    })
-
     afterUpdate(() => {
-        if (autoscroll && messagesContainer) {
+        if (messagesContainer) {
             messagesContainer.scrollTo(0, messagesContainer.scrollHeight)
         }
     })
@@ -78,7 +72,8 @@
         }
     }
 
-    const fetchAnswer = async (/** @type {string} */ question) => {
+    // @ts-ignore
+    const fetchAnswer = async () => {
         // send question to api
         const res = await fetch("/api/chatbot", {
             method: "POST",
@@ -123,7 +118,7 @@
         userInput.disabled = true;
         sendButton.disabled = true;
 
-        let question = userInputValue;
+        question = userInputValue;
         userInputValue = "";
         userInput.placeholder = "Waiting for response..."
 
@@ -145,7 +140,7 @@
                 text: "",
             }]
 
-            await fetchAnswer(question)
+            await fetchAnswer()
         }, 500)
     }
 
