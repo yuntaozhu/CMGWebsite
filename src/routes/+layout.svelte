@@ -11,7 +11,7 @@
       if (
         element instanceof HTMLElement &&
         element.getBoundingClientRect().top <
-          document.documentElement.clientHeight * 0.5 
+          document.documentElement.clientHeight * 0.5
       ) {
         element.style.opacity = "1";
       }

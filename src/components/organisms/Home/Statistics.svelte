@@ -2,14 +2,14 @@
     // Import statements
     import { onMount } from "svelte";
 
-
     // CUSTOMIZE THIS: Add here the statistics
     let statistics = [
         [8, "Years of Service"],
-        [91, "Developers"]
+        [65, "Active Members"],
+        [91, "Alumni"],
     ];
     // END OF CUSTOMIZATION
-    
+
     let spotlight = 0;
     /**
      * @type {string | number | NodeJS.Timeout | undefined}
@@ -32,6 +32,7 @@
                 statisticElement.style.opacity = "0";
             }
 
+            // Change the spotlight
             changeSpotlightValue = setInterval(() => {
                 if (spotlight + 1 < statistics.length) {
                     spotlight++;
@@ -42,6 +43,7 @@
                 clearInterval(changeSpotlightValue);
             }, 500);
 
+            // Change the opacity from 0 to 1
             opacityFullInterval = setInterval(() => {
                 if (statisticElement) {
                     statisticElement.style.opacity = "1";
@@ -66,14 +68,14 @@
 
 <div id="statistics" class="flex flex-row items-center transition duration-500">
     <div
-        class="flex items-center justify-center glassmorphic-box mr-4 border-l"
+        class="relative z-10 flex items-center justify-center glassmorphic-box mr-4 border-l"
     >
-        <p class="font-bold text-lg text-slate-300">
+        <p class="font-bold text-lg">
             {statistics[spotlight][0]}
         </p>
     </div>
     <p
-        class="font-light work-sans text-slate-400 border-l border-slate-600 py-4 px-4"
+        class="relative z-10 font-light work-sans border-l border-slate-600 py-4 px-4"
     >
         {statistics[spotlight][1]}
     </p>

@@ -12,26 +12,35 @@
 </script>
 
 <section class="scrollFadeIn">
-  <div class="container banner-container p-2 grid grid-cols-1 ss:mt-20 md:mt-28 mx-auto">
+  <div
+    class="banner-container p-2 grid grid-cols-1 ss:mt-20 md:mt-28 3xl:mx-40"
+  >
     <div class="p-10 lg:px-14 xl:px-[18%] md:grid md:grid-cols-3 md:gap-8">
       <div class="md:col-span-2 justify-self-center">
+        <!-- Incoming Event Header -->
         <div
           class="flex flex-row gap-2 px-4 py-2 mb-4 justify-center items-center max-w-fit incoming-event"
         >
           <img
             src="/assets/notification.svg"
             alt="Notification Vector"
-            class="w-6"
+            class="w-[30px]"
           />
 
-          <p class="font-bold text-sm">Incoming Event</p>
+          <p class="font-bold text-sm ss:text-base">Incoming Event</p>
         </div>
+
+        <!-- Event Name -->
         <p
-          class="text-3xl content-center font-bold gradient-line py-2 max-w-fit"
+          class="text-4xl lg:text-5xl content-center font-bold gradient-line py-2 max-w-fit"
         >
           {eventName}
         </p>
+
+        <!-- Event Description -->
         <p class="pt-4">{eventDescription}</p>
+
+        <!-- Date and Time -->
         <div
           class="glassmorphic-rectangle flex flex-row gap-2 min-[485px]:gap-5 p-[7%] min-[485px]:p-3.5 min-[485px]:w-[325px] my-4 items-center"
         >
@@ -42,8 +51,12 @@
           />
           <p class="text-center">{eventDateTime}</p>
         </div>
+
+        <!-- Register Button -->
         <Button onClick={handleButton}>Register Now</Button>
       </div>
+
+      <!-- Event Image -->
       <div class="justify-self-end self-center">
         <img
           src={eventImage}
@@ -56,22 +69,7 @@
 </section>
 
 <style>
-  .gradient-line {
-    border: 10px solid;
-    border-image-slice: 1;
-    border-width: 5px;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    border-image-source: linear-gradient(
-      270deg,
-      rgba(46, 55, 146, 0) 0%,
-      #2e3792 27.6%,
-      #00f5f1 74.48%,
-      rgba(0, 245, 241, 0) 100%
-    );
-  }
-
+  /* for the date and time background */
   .glassmorphic-rectangle {
     background: linear-gradient(
       135deg,
@@ -80,15 +78,17 @@
     );
   }
 
+  /* incoming event blue green gradient background */
   .banner-container {
     background: linear-gradient(
       0deg,
       rgba(0, 245, 241, 0.1) 0%,
       rgba(255, 255, 255, 0.05) 100%
     );
-    border-radius: 10px;
+    border-radius: 20px;
   }
 
+  /* incoming event header background */
   .incoming-event {
     border-radius: 60px;
     background: linear-gradient(

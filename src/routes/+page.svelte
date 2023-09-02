@@ -21,7 +21,7 @@
   <Hero />
   <Summary />
   <IncomingActivity />
-  <!-- <DevStories /> -->
+  <DevStories />
   <Strengths />
   <Contributions />
   <BriefShowcase />
