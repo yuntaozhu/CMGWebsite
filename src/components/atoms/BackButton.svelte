@@ -1,4 +1,5 @@
 <script>
+    import { goto } from '$app/navigation';
     /**
      * @type {string | URL}
      */
@@ -8,7 +9,7 @@
         if(referrer){
             history.back() // URL of referrer
         }else{
-            window.location.assign(reference); // URL of something
+            goto(reference)
         }
     }
 </script>

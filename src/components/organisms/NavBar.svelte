@@ -37,8 +37,6 @@
     <!-- {#if showComponent} -->
     <nav
       class="hovered-section"
-      on:mouseenter={handleHover}
-      on:mouseleave={handleLeave}
     >
       <div
         class="flex flex-row justify-between items-center fixed top-0 w-screen pl-10 xl:pl-20 lg:pl-20 pr-20 pb-3 pt-10 lg:pt-3 xl:pt-3 z-50 backdrop-blur-none lg:backdrop-blur-md xl:backdrop-blur-md"

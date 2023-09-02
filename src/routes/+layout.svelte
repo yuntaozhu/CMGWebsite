@@ -26,6 +26,11 @@
   });
 </script>
 
+<head>
+  <meta name="keywords" content="computer science, projects, innovation, creativity, technology, UPLB, academic organization, acss uplb, acss, the alliance of computer science students, student organization, University of the Philippines Los Baños" />
+  <meta name="author" content="The Alliance of Computer Science Students - UPLB" />
+</head>
+
 <main class="overflow-hidden">
   <NavBar />
   <GradientBlur />

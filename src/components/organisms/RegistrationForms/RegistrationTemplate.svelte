@@ -16,7 +16,8 @@
   </script>
   
   <head>
-    <title>Form / {eventName}</title>
+    <title>{eventName} Form - The Alliance of Computer Science Students UPLB</title>
+    <meta name="description" content={eventDescription} />
   </head>
   
   <div

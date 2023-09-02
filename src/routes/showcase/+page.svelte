@@ -9,8 +9,6 @@
     ShowcaseNavBar,
     ShowcaseTitle,
     ShowcaseCards,
-    NavBar,
-    Footer,
   } from "$components";
   import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
   
@@ -67,7 +65,8 @@
   
 </style>
 <head>
-  <title>Showcase</title>
+  <title>Showcasing Excellence - The Alliance of Computer Science Students UPLB</title>
+  <meta name="description" content="Explore our diverse portfolio of innovative projects, proudly presented by The Alliance of Computer Science Students - UPLB. Witness the future of technology and creativity at its best." />
 </head>
 
 <div class="overflow-hidden w-full flex flex-col bg-base-black items-center px-5 py-10" >

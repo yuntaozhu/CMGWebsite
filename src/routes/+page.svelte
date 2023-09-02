@@ -12,7 +12,8 @@
 </script>
 
 <head>
-  <title>The Alliance of Computer Science Students</title>
+  <title>The Alliance of Computer Science Students UPLB</title>
+  <meta name="description" content="Explore our diverse portfolio of innovative projects, proudly presented by The Alliance of Computer Science Students - UPLB. Witness the future of technology and creativity at its best." />
 </head>
 
 <div
