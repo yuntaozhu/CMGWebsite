@@ -1,4 +1,5 @@
 <script>
+    import { goto } from '$app/navigation';
     /**
      * @type {string | URL}
      */
@@ -8,12 +9,12 @@
         if(referrer){
             history.back() // URL of referrer
         }else{
-            window.location.assign(reference); // URL of something
+            goto(reference)
         }
     }
 </script>
 
-<div on:click={goBack} class="relative z-10">
+<div on:click={goBack} class="relative z-10 cursor-pointer">
 <svg id="button"
     width="14"
     height="28"

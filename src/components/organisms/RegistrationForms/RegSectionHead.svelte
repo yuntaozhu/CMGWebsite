@@ -17,6 +17,7 @@
 </script>
 
 <div class="flex flex-col">
+    <!-- Photo Header Of Form -->
     <div
         id="photo-header" 
         class="relative w-full h-1/4"
@@ -24,8 +25,9 @@
     >
     </div>
     <div id="form-header" class="mr-[10%] ml-[10%] flex flex-col">
+        <!-- Event Title -->
         <div id="header-title" class="flex gap-3 items-center mb-1">
-            <BackButton reference="../" />
+            <BackButton reference="/" />
             <div
                 class="flex flex-wrap items-center gap-3 break-word overflow-hidden"
             >
@@ -38,6 +40,7 @@
                 <div id="regformtitle">Registration Form</div>
             </div>
         </div>
+        <!-- Event Description -->
         <div
             id="form-info"
             class="mt-4 text-base glassmorphic-rectangle overflow-hidden break-words"

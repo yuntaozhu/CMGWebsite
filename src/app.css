@@ -204,9 +204,10 @@ h5 {
 }
 
 .gradient-line {
+    margin-top: 1px;
     border: 10px solid;
     border-image-slice: 1;
-    border-width: 5px;
+    border-width: 3px;
     border-left: 0;
     border-right: 0;
     border-top: 0;
@@ -220,4 +221,26 @@ h5 {
 .scrollFadeIn {
     opacity: 0;
     transition: 0.5s;
+}
+
+/* Floating Animation Up and Down */
+.floating {
+    animation-name: floating;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
 }

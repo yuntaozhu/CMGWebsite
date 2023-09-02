@@ -12,7 +12,25 @@
 </script>
 
 <head>
-  <title>The Alliance of Computer Science Students</title>
+  <title>The Alliance of Computer Science Students UPLB</title>
+  <meta name="title" content="The Alliance of Computer Science Students UPLB" />
+  <meta
+  property="og:title"
+  content="The Alliance of Computer Science Students UPLB"
+  />
+  <meta
+  property="twitter:title"
+  content="The Alliance of Computer Science Students UPLB"
+  />
+  <meta name="description" content="Discover boundless opportunities and innovation with The Alliance of Computer Science Students - UPLB, an official academic organization at the University of the Philippines Los Baños. Join our visionary community and help shape a future where dreams become reality." />
+  <meta
+    property="og:description"
+    content="Discover boundless opportunities and innovation with The Alliance of Computer Science Students - UPLB, an official academic organization at the University of the Philippines Los Baños. Join our visionary community and help shape a future where dreams become reality."
+  />
+  <meta
+    property="twitter:description"
+    content="Discover boundless opportunities and innovation with The Alliance of Computer Science Students - UPLB, an official academic organization at the University of the Philippines Los Baños. Join our visionary community and help shape a future where dreams become reality."
+  />
 </head>
 
 <div
@@ -21,7 +39,7 @@
   <Hero />
   <Summary />
   <IncomingActivity />
-  <!-- <DevStories /> -->
+  <DevStories />
   <Strengths />
   <Contributions />
   <BriefShowcase />
