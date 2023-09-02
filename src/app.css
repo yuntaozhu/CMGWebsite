@@ -204,9 +204,10 @@ h5 {
 }
 
 .gradient-line {
+    margin-top: 1px;
     border: 10px solid;
     border-image-slice: 1;
-    border-width: 5px;
+    border-width: 3px;
     border-left: 0;
     border-right: 0;
     border-top: 0;
