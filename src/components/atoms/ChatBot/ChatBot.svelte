@@ -1,19 +1,33 @@
 <script>
-    // @ts-nocheck
-
     import "./ChatBot.css"
     import LoadingDots from "./LoadingDots.svelte";
     import { fade, fly, scale } from "svelte/transition";
     import { cubicOut } from "svelte/easing"
-    import { beforeUpdate, afterUpdate } from "svelte";
+    import { afterUpdate } from "svelte";
 
-    let isChatbotOpen = false;
-    let buttonTransitionDuration = 200;
+    /**
+     * @type {HTMLButtonElement}
+     */
     let chatbotButton;
-    let userInputValue = "";
+    /**
+     * @type {HTMLDivElement}
+     */
     let messagesContainer;
-    let autoscroll = false;
+    /**
+     * @type {HTMLTextAreaElement}
+     */
+    let userInput;
+    /**
+     * @type {HTMLButtonElement}
+     */
+    let sendButton;
 
+    let userInputValue = "";
+    let question = "";
+    let isChatbotOpen = false;
+    let questionSent = false;
+    let buttonTransitionDuration = 200;
+    
     let messageHistory = [
         {
             isUser: false,
@@ -43,15 +57,8 @@
     opacity: 0,
     }
 
-    beforeUpdate(() => {
-        if (messagesContainer) {
-            const scrollableDistance = messagesContainer.scrollHeight - messagesContainer.offsetHeight;
-            autoscroll = messagesContainer.scrollTop > scrollableDistance - 20;
-        }
-    })
-
     afterUpdate(() => {
-        if (autoscroll && messagesContainer) {
+        if (messagesContainer) {
             messagesContainer.scrollTo(0, messagesContainer.scrollHeight)
         }
     })
@@ -66,7 +73,7 @@
         }
     }
 
-    const fetchAnswer = async (question, userInput, sendButton) => {
+    const fetchAnswer = async () => {
         // send question to api
         const res = await fetch("/api/chatbot", {
             method: "POST",
@@ -87,35 +94,26 @@
         
         // update message history
         messageHistory[messageHistory.length - 1] = {
+            ...messageHistory[messageHistory.length - 1],
             textLoaded: true,
             text: result
         }
         messageHistory = messageHistory;
 
         // reset textarea
-        userInputValue = "";
-
-        userInput.disabled = false;
-        sendButton.disabled = false;
-
-        userInput.placeholder = "Type your message..."
+        questionSent = false;
     }
 
     const sendQuestion = () => {
-        if (userInputValue == "") {
+        if (!userInputValue.trim()) {
             return;
         }
 
-        let userInput = document.getElementById("user-input");
-        let sendButton = document.getElementById("submit-button");
+        // disable textarea
+        questionSent = true;
 
+        question = userInputValue;
         userInput.style.height = "16px";
-        userInput.disabled = true;
-        sendButton.disabled = true;
-
-        let question = userInputValue;
-        userInputValue = "";
-        userInput.placeholder = "Waiting for response..."
 
         // add user's question to message history
         messageHistory = [...messageHistory, {
@@ -135,14 +133,37 @@
                 text: "",
             }]
 
-            await fetchAnswer(question, userInput, sendButton)
+            await fetchAnswer()
         }, 500)
     }
 
-    // resize textarea when typing long messages
-    const resizeTextarea = (e) => {
-        e.target.style.height = "16px";
-        e.target.style.height = e.target.scrollHeight + "px";
+    $: if (userInput) {
+        // send question if "Enter" key is pressed
+        userInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+                sendQuestion()
+            }
+        })
+
+        // reset textarea height upon input
+        if (userInputValue || !userInputValue) {
+            userInput.style.height = "16px";
+            userInput.style.height = userInput.scrollHeight + "px";
+        }
+        
+        // to make textarea disabled property persist even if chatbot is toggled
+        if (questionSent) {
+            userInput.disabled = true;
+            sendButton.disabled = true;
+
+            userInputValue = "";
+            userInput.placeholder = "Waiting for response...";
+        } else {
+            userInput.disabled = false;
+            sendButton.disabled = false;
+
+            userInput.placeholder = "Type your message..."
+        }
     }
 </script>
 
@@ -174,11 +195,11 @@
             </div>
 
             <!-- input area -->
-            <div class="flex py-4 px-5 gap-4 self-stretch border-t border-solid border-black h-fit box-border">
+            <form on:submit={sendQuestion} class="flex py-4 px-5 gap-4 self-stretch border-t border-solid border-black h-fit box-border">
                 <!-- text area -->
-                <textarea id="user-input" class="flex self-stretch resize-none flex-[1_0_0] bg-transparent border-none outline-0 h-4 max-h-14 text-xs" placeholder="Type your message..." bind:value={userInputValue} on:input={resizeTextarea}/>
+                <textarea bind:this={userInput} class="flex self-stretch resize-none flex-[1_0_0] bg-transparent border-none focus:outline-none active:outline-none h-4 max-h-14 text-xs" placeholder="Type your message..." bind:value={userInputValue}/>
                 <!-- send button -->
-                <button id="submit-button" class="disabled:opacity-50" on:click={sendQuestion}>
+                <button type="submit" bind:this={sendButton} class="disabled:opacity-50">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <g clip-path="url(#clip0_889_678)">
                             <path d="M19.4565 0.218381C19.851 0.491818 20.058 0.964474 19.9838 1.43713L17.4838 17.6871C17.4252 18.066 17.1947 18.3981 16.8588 18.5856C16.5229 18.7731 16.1205 18.7965 15.7651 18.6481L11.0932 16.7067L8.4174 19.6012C8.06974 19.9801 7.52287 20.1051 7.0424 19.9176C6.56193 19.7301 6.24943 19.2653 6.24943 18.7496V15.484C6.24943 15.3278 6.30802 15.1793 6.41349 15.066L12.9604 7.92151C13.1869 7.67541 13.1791 7.29651 12.9447 7.06213C12.7104 6.82776 12.3315 6.81213 12.0854 7.03479L4.14005 14.0934L0.690837 12.3668C0.276774 12.1598 0.011149 11.7457 -0.000569705 11.2848C-0.0122885 10.8238 0.229899 10.3942 0.628336 10.1637L18.1283 0.163693C18.5463 -0.0745882 19.0619 -0.0511507 19.4565 0.218381Z" fill="#F4F1FF"/>
@@ -190,12 +211,12 @@
                         </defs>
                     </svg>
                 </button>
-            </div>
+            </form>
         </div>
 
     {/if}
     <!-- chatbot button -->
-    <button class="chatbot__button flex flex-col justify-center items-center w-14 h-14 shrink-0 backdrop-blur-md bg-white/20" on:click={toggleChatbot} bind:this={chatbotButton}>
+    <button type="button" class="chatbot__button flex flex-col justify-center items-center w-14 h-14 shrink-0 backdrop-blur-md bg-white/20" on:click={toggleChatbot} bind:this={chatbotButton}>
         {#if !isChatbotOpen}
             <!-- chat icon -->
             <svg class="w-2/5 h-auto shrink-0 fill-white drop-shadow-xl fixed" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" transition:fade={{duration:buttonTransitionDuration}}>
@@ -237,6 +258,7 @@
     button {
         -webkit-tap-highlight-color: transparent;
     }
+
 
     ::-webkit-scrollbar-thumb {
         background-color: rgba(255, 255, 255, 0.5);
