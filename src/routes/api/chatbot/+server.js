@@ -1,4 +1,3 @@
-import { client } from "@gradio/client";
 import { error, json } from "@sveltejs/kit";
 
 export async function POST ({ request }) {
