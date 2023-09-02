@@ -13,7 +13,24 @@
 
 <head>
   <title>The Alliance of Computer Science Students UPLB</title>
-  <meta name="description" content="Explore our diverse portfolio of innovative projects, proudly presented by The Alliance of Computer Science Students - UPLB. Witness the future of technology and creativity at its best." />
+  <meta name="title" content="The Alliance of Computer Science Students UPLB" />
+  <meta
+  property="og:title"
+  content="The Alliance of Computer Science Students UPLB"
+  />
+  <meta
+  property="twitter:title"
+  content="The Alliance of Computer Science Students UPLB"
+  />
+  <meta name="description" content="Discover boundless opportunities and innovation with The Alliance of Computer Science Students - UPLB, an official academic organization at the University of the Philippines Los Baños. Join our visionary community and help shape a future where dreams become reality." />
+  <meta
+    property="og:description"
+    content="Discover boundless opportunities and innovation with The Alliance of Computer Science Students - UPLB, an official academic organization at the University of the Philippines Los Baños. Join our visionary community and help shape a future where dreams become reality."
+  />
+  <meta
+    property="twitter:description"
+    content="Discover boundless opportunities and innovation with The Alliance of Computer Science Students - UPLB, an official academic organization at the University of the Philippines Los Baños. Join our visionary community and help shape a future where dreams become reality."
+  />
 </head>
 
 <div
