@@ -3,13 +3,16 @@
   import { page } from "$app/stores";
 
   let pages = [
+    { title: "Home", url: "/" },
     { title: "About Us", url: "/about-us" },
     { title: "Showcase", url: "/showcase" },
     { title: "Developers", url: "/developers" },
   ];
 
+  $: currentPath = $page.url.pathname;
+
   const isActive = (/** @type {string} */ path) => {
-    return $page.url.pathname == path;
+    return currentPath === path;
   };
 
   function handleClick() {
@@ -46,7 +49,7 @@
             <img
               src="/logo.webp"
               alt="The official seal of The Alliance of Computer Science Student"
-              class="nav__logo"
+              class="w-12 h-12"
             />
           </a>
         </div>
@@ -56,11 +59,8 @@
               <li>
                 <a
                   href={url}
-                  class={`duration-300 ${
-                    isActive(url)
-                      ? "text-base-sky-blue hover:text-base-white gradient-line mt-1"
-                      : ""
-                  } hover:text-base-sky-blue`}>{title}</a
+                  class="duration-150 hover:text-base-sky-blue"
+                  class:active-link={currentPath === url}>{title}</a
                 >
               </li>
             {/each}
@@ -76,39 +76,23 @@
 </header>
 
 <style>
-  /* .hoverable-component .hovered-section {
-    display: none; 
-  }
-  .hoverable-component:hover .hovered-section {
-    display: block !important;
-  } */
-  .show {
-    opacity: 1;
-  }
-  .nav {
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1rem;
-    padding: 3rem;
-
-    width: 100%;
-    max-height: 5rem;
+  .active-link {
+    margin-top: 1px;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-image-source: linear-gradient(270deg,
+            rgba(46, 55, 146, 0) 0%,
+            #2e3792 27.6%,
+            #00f5f1 74.48%,
+            rgba(0, 245, 241, 0) 100%);
+    color: #00f5f1;
   }
 
-  .nav__logo {
-    max-height: 4rem;
-  }
-
-  .nav__right {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-
-    column-gap: 3rem;
+  .active-link:hover {
+    color: #F4F1FF;
   }
 </style>
