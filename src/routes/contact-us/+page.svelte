@@ -1,5 +1,5 @@
 <script>
-  import { ContactForm, NavBar, Footer } from "$components";
+  import { ContactForm } from "$components";
 </script>
 
 <ContactForm />
