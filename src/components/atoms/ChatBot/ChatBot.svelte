@@ -102,12 +102,7 @@
         messageHistory = messageHistory;
 
         // reset textarea
-        userInputValue = "";
-
-        userInput.disabled = false;
-        sendButton.disabled = false;
-
-        userInput.placeholder = "Type your message..."
+        questionSent = false;
     }
 
     const sendQuestion = () => {
@@ -115,12 +110,10 @@
             return;
         }
 
-        userInput.disabled = true;
-        sendButton.disabled = true;
+        // disable textarea
+        questionSent = true;
 
         question = userInputValue;
-        userInputValue = "";
-        userInput.placeholder = "Waiting for response...";
         userInput.style.height = "16px";
 
         // add user's question to message history
@@ -155,6 +148,19 @@
         if (userInputValue || !userInputValue) {
             userInput.style.height = "16px";
             userInput.style.height = userInput.scrollHeight + "px";
+        }
+        
+        if (questionSent) {
+            userInput.disabled = true;
+            sendButton.disabled = true;
+
+            userInputValue = "";
+            userInput.placeholder = "Waiting for response...";
+        } else {
+            userInput.disabled = false;
+            sendButton.disabled = false;
+
+            userInput.placeholder = "Type your message..."
         }
     }
 </script>
