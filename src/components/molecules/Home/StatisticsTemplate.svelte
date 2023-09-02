@@ -24,6 +24,7 @@
 </div>
 
 <style>
+    /* style for the  */
     .glassmorphic-box {
         width: 60px;
         height: 60px;

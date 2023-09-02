@@ -9,10 +9,8 @@
     ShowcaseNavBar,
     ShowcaseTitle,
     ShowcaseCards,
-    NavBar,
-    Footer,
   } from "$components";
-  
+  import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
   
   const showcaseComponents = {
     Projects,
@@ -20,6 +18,7 @@
     Workshops,
     Activities,
   };
+
 
   let tabs = ["Projects", "Events", "Workshops", "Activities"]
   let activeTab = "Projects" 
@@ -66,28 +65,28 @@
   
 </style>
 <head>
-  <title>Showcase</title>
+  <title>Showcasing Excellence - The Alliance of Computer Science Students UPLB</title>
+  <meta name="description" content="Explore our diverse portfolio of innovative projects, proudly presented by The Alliance of Computer Science Students - UPLB. Witness the future of technology and creativity at its best." />
 </head>
 
-<div class="min-h-screen  flex flex-col items-center showcase-background">
-  <NavBar />
- 
+<div class="overflow-hidden w-full flex flex-col bg-base-black items-center px-5 py-10" >
+  <GradientBlur />
+  <ShowcaseTitle/>
+  <ShowcaseNavBar {activeTab} {tabs} on:tabChange={tabChange}/>
 
-  <div class="showcase-container mx-4 sm:mx-8 md:mx-12 lg:mx-16 xl:mx-20 flex flex-col items-center p-5 gap-10">
-    <ShowcaseTitle/>
-    <ShowcaseNavBar {activeTab} {tabs} on:tabChange={tabChange}/>
-    {#each tabs as tab}
-      {#if activeTab === tab}
-        <svelte:component this={showcaseComponents[tab]}/>
-      {/if}
-    {/each}
+  
+  {#each tabs as tab}
 
-  </div>
-  <footer>
-    <Footer />
-  </footer>
+    {#if activeTab === tab}
+      <svelte:component this={showcaseComponents[tab]}/>
+    {/if}
+  {/each}
+  <!-- <div class="showcase-container  flex flex-col items-center  ">
+
+    
 
 
+  </div> -->
 </div>
 
 

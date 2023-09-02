@@ -17,6 +17,7 @@
 </div>
 
 <style>
+    /* background for dev story header */
     .glassmorphic-rounded {
         border-radius: 50px;
         border: 0.01rem solid rgba(255, 255, 255, 0.1);

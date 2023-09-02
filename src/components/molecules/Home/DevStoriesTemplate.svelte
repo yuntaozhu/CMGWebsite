@@ -11,30 +11,38 @@
      * @type {string}
      */
     let story;
-    export { name, position, story };
+    /**
+     * @type {string}
+     */
+    let imageUrl;
+    /**
+     * @type {number}
+     */
+    let index;
+    export { name, position, story, imageUrl, index };
 </script>
 
-<div class="relative">
-    <div
-        class="glassmorphic-rectangle m-auto px-4 py-8 md:px-8 xl:px-12 flex flex-col items-center md:flex-row xl:gap-4 lg:w-[80%] xl:w-[75%] 2xl:w-[65%]"
-    >
-        <div class="flex flex-col justify-center items-center p-4">
-            <div class="circular-photo">
-                <img src="/assets/profile-picture.webp" alt="Developer" />
-            </div>
-            <div class="text-center mt-4 mb-6">
-                <h1 class="text-lg font-bold no-wrap">{name}</h1>
-                <p class="text-sm italic font-thin no-wrap">
-                    {position}
-                </p>
-            </div>
+<div
+    class="glassmorphic-rectangle px-4 py-8 md:px-8 xl:px-12 flex flex-col items-center md:flex-row xl:gap-4 h-[100%]"
+>
+    <div class="flex flex-col justify-center items-center p-4">
+        <div class="circular-photo">
+            <img src={imageUrl} alt="Developer {index}" />
         </div>
-
-        <div class="glassmorphic-no-border p-4 mx-4">
-            <p class="text-base text-justify indent-8">
-                {story}
+        <div class="text-center mt-4 mb-6">
+            <h1 class="text-lg max-ss:text-base font-bold">
+                {name}
+            </h1>
+            <p class="text-sm italic font-thin leading-6 h-12 w-64">
+                {position}
             </p>
         </div>
+    </div>
+
+    <div class="glassmorphic-no-border p-4 sm:p-8 mx-4">
+        <p class="text-base text-justify indent-8">
+            {story}
+        </p>
     </div>
 </div>
 
@@ -44,10 +52,7 @@
         background: rgba(0, 0, 0, 0.15);
     }
 
-    .no-wrap {
-        white-space: nowrap;
-    }
-
+    /* make square image into a circle */
     .circular-photo {
         display: inline-block;
         position: relative;
@@ -62,6 +67,7 @@
         height: 100%;
     }
 
+    /* lessen backdrop filter blur */
     .glassmorphic-rectangle {
         border: none;
         backdrop-filter: blur(5px);
