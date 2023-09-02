@@ -17,7 +17,24 @@
   
   <head>
     <title>{eventName} Form - The Alliance of Computer Science Students UPLB</title>
-    <meta name="description" content={eventDescription} />
+    <meta name="title" content="{eventName} Form - The Alliance of Computer Science Students UPLB" />
+    <meta
+    property="og:title"
+    content="{eventName} Form - The Alliance of Computer Science Students UPLB"
+    />
+    <meta
+    property="twitter:title"
+    content="{eventName} Form - The Alliance of Computer Science Students UPLB"
+    />
+    <meta name="description" content="{eventDescription}" />
+    <meta
+      property="og:description"
+      content="{eventDescription}"
+    />
+    <meta
+      property="twitter:description"
+      content="{eventDescription}"
+    />
   </head>
   
   <div
