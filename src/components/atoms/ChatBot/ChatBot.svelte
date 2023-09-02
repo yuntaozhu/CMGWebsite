@@ -73,7 +73,6 @@
         }
     }
 
-    // @ts-ignore
     const fetchAnswer = async () => {
         // send question to api
         const res = await fetch("/api/chatbot", {
@@ -139,17 +138,20 @@
     }
 
     $: if (userInput) {
+        // send question if "Enter" key is pressed
         userInput.addEventListener("keypress", (e) => {
             if (e.key === "Enter" && !e.shiftKey) {
                 sendQuestion()
             }
         })
 
+        // reset textarea height upon input
         if (userInputValue || !userInputValue) {
             userInput.style.height = "16px";
             userInput.style.height = userInput.scrollHeight + "px";
         }
         
+        // to make textarea disabled property persist even if chatbot is toggled
         if (questionSent) {
             userInput.disabled = true;
             sendButton.disabled = true;
