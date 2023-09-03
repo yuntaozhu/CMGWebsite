@@ -4,15 +4,15 @@
     2. Event Name
     3. Event Description
 
-  Go to routes/RegistrationForms/'the-form-component' to modify or add your own form 
+  Go to src > components > organisms > RegistrationForms to modify or add your own form 
 -->
 
 <script>
-  import RegistrationTemplate from "$components/organisms/RegistrationForms/RegistrationTemplate.svelte"; // registration template component
+  import RegistrationTemplate from "$components/molecules/Form/RegistrationTemplate.svelte"; // registration template component
 
   // CUSTOMIZE THIS: This is where you can modify the header photo, event name, and event description
-  import ACSSOrientation from "./ACSSOrientation.svelte"; // // Form Component: import your form component (double check the import statement)
-  let headerPhotoURL = "../form-headers/sample-reg-header.png"; // Header Photo: a file from static folder (URL should be ../form-headers/'your file')
+  import ACSSOrientation from "../../../components/organisms/RegistrationForms/ACSSOrientation.svelte"; // Form Component: a file from src > components > organisms > RegistrationForms (URL should be ../../../components/organisms/RegistrationForms/'your form component)
+  let headerPhotoURL = "../form-headers/sample-reg-header.webp"; // Header Photo: a file from src > static (URL should be ../form-headers/'your file')
   let eventName = "ACSS Orientation"; // Event Name
   let eventDescription = `
                 This is an early registration form for the incoming ACSS Orientation

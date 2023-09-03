@@ -8,32 +8,32 @@
   let events = [
     [
       "ACSS Week: Company Talks",
-      "../home-briefshowcase/briefshowcase-1.jpg",
+      "../home-briefshowcase/briefshowcase-1.webp",
       "Showcases diverse fields in Computer Science through invited speakers from different companies. Here you can gain invaluable industry insights and a competitive edge for your future career.",
     ],
     [
       "ACSS Week: Exhibit",
-      "../home-briefshowcase/briefshowcase-2.jpg",
+      "../home-briefshowcase/briefshowcase-2.webp",
       "Serves as a platform to highlight the organization, its members, and details related to the year's chosen theme. Its objectives include offering extra insights into computer science, introducing the ACSS organization, motivating students to engage in ACSS Week activities, and fostering additional opportunities.",
     ],
     [
       "ACSS Week: Game of Codes",
-      "../home-briefshowcase/briefshowcase-3.jpg",
+      "../home-briefshowcase/briefshowcase-3.webp",
       "Aims to ignite passion for Computer Science and IT careers through an ACM ICPC-style competition. It enhance students' field awareness, technical skills, and critical thinking. A contest to unleash your coding prowess, solve real-life problems, and make programming exciting.",
     ],
     [
       "ACSS Week: Sublimed",
-      "../home-briefshowcase/briefshowcase-4.jpg",
+      "../home-briefshowcase/briefshowcase-4.webp",
       "One of the highly anticipated events in ACSS week. An annual general quiz competition featuring sports, music, food, and more. Beyond education, we offer entertainment for students and to explore knowledge beyond computer science.",
     ],
     [
       "ACSS Orientation",
-      "../home-briefshowcase/briefshowcase-5.jpg",
+      "../home-briefshowcase/briefshowcase-5.webp",
       "A way of connecting with computer science enthusiasts. A means to introduce ACSS and our team to the UPLB community, fostering a deeper understanding of our organization.",
     ],
     [
       "Team Building Activity",
-      "../home-briefshowcase/briefshowcase-6.jpg",
+      "../home-briefshowcase/briefshowcase-6.webp",
       "An internal event to strengthen bonds among members, enhance collaboration, and develop essential skills like communication and problem-solving. Boost morale, foster a positive work environment, and propel our organization to greater heights.",
     ],
   ];

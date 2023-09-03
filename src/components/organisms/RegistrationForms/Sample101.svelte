@@ -12,44 +12,31 @@
 
 <script>
     // Import statements
-    import RegSectionBody from "$components/organisms/RegistrationForms/RegSectionBody.svelte";
+    import RegSectionBody from "$components/molecules/Form/RegSectionBody.svelte";
     import TextInputComponent from "$components/atoms/TextInputComponent.svelte";
     import EmailInputComponent from "$components/atoms/EmailInputComponent.svelte";
     import NumberInputComponent from "$components/atoms/NumberInputComponent.svelte";
     import DropdownInputComponent from "$components/atoms/DropdownInputComponent.svelte";
     import RadioInputComponent from "$components/atoms/RadioInputComponent.svelte";
     import SubmitButton from "$components/atoms/SubmitButton.svelte";
+    import CheckboxInputComponent from "$components/atoms/CheckboxInputComponent.svelte";
 
-    // CUSTOMIZE THIS: Add the list of dropdown options and radio options here
-    let colleges = [
-        "College of Arts and Sciences",
-        "College of Economics and Management",
-        "College of Forestry and Natural Resources",
-        "College of Development Communication",
-        "College of Agriculture and Food Science",
-        "College of Engineering and Agro-industrial Technology",
-        "College of Human Ecology",
-        "College of Veterinary Medicine",
-        "College of Public Affairs and Development",
-        "School of Environmental Science and Management",
-    ];
-
-    let howYouHear = ["ACSS Social Media Post", "Shared Post of a Friend"];
+    // CUSTOMIZE THIS: Add the list of dropdown options, checkbox options, and radio options here
+    let dropdown = ["Option 1", "Option 2", "Option 3"];
+    let checkbox = ["Option 1", "Option 2", "Option 3", "Option 4", "Option 5"];
+    let radio = ["Option 1", "Option 2"];
     // END OF CUSTOMIZATION
 
     // Form submission into formValues
     function submitForm() {
         let formValues = {};
-        
+
         // @ts-ignore
         let components = document.getElementById("components")?.children;
         if (components) {
             for (let component of components) {
-                if (
-                    component.id.substring(0, 14) === "FormRadioACSS-"
-                ) {
+                if (component.id.substring(0, 14) === "FormRadioACSS-") {
                     let name = component.id.replace("FormRadioACSS-", "");
-                    console.log(component.id);
                     const radio = document.querySelectorAll(
                         `input[name="${name}"]`
                     );
@@ -60,15 +47,32 @@
                             formValues[name] = f.value;
                         }
                     }
-                }else{
+                } else if (component.id.substring(0, 14) === "FormCheckACSS-") {
+                    let name = component.id.replace("FormCheckACSS-", "");
+                    let checked = [];
+                    const checkbox = document.querySelectorAll(
+                        `input[name="${name}"]`
+                    );
+                    for (const f of checkbox) {
+                        // @ts-ignore
+                        if (f.checked) {
+                            // @ts-ignore
+                            checked.push(f.value);
+                        }
+                    }
                     // @ts-ignore
-                    formValues[component.id] = document.getElementById(`Form${component.id}`).value;
+                    formValues[name] = checked;
+                } else {
+                    // @ts-ignore
+                    formValues[component.id] = document.getElementById(
+                        `Form${component.id}`
+                        // @ts-ignore
+                    ).value;
                 }
             }
             console.log(formValues);
         }
     }
-    
 </script>
 
 <RegSectionBody>
@@ -80,21 +84,24 @@
     >
         <div id="components">
             <!-- CUSTOMIZE THIS: Add the input components here -->
-            <TextInputComponent label="Name" required={true} placeholder="Juan Dela Cruz"/>
-            <TextInputComponent label="Nickname" required={true} placeholder=""/>
-            <EmailInputComponent label="Email" required={true} placeholder="jdelacruz@up.edu.ph"/>
-            <DropdownInputComponent label="College" options={colleges} />
-            <TextInputComponent label="Degree Program" required={true} placeholder="BSCS"/>
-            <NumberInputComponent label="Batch" required={true} placeholder="2021"/>
-            <TextInputComponent label="Facebook Profile Link" required={true} placeholder=""/>
-            <RadioInputComponent
-                label="How did you hear about this event?"
-                options={howYouHear}
+            <TextInputComponent label="Text" required={false} placeholder="" />
+            <NumberInputComponent
+                label="Number"
+                required={false}
+                placeholder=""
             />
+            <EmailInputComponent
+                label="Email"
+                required={false}
+                placeholder=""
+            />
+            <DropdownInputComponent label="Dropdown" options={dropdown} />
+            <RadioInputComponent label="Radio" options={radio} />
+            <CheckboxInputComponent label="Checkbox" options={checkbox} />
             <!-- END OF CUSTOMIZATION -->
         </div>
         <div class="overflow-hidden">
-            <SubmitButton/>
+            <SubmitButton />
         </div>
     </form>
 </RegSectionBody>

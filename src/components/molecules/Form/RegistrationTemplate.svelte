@@ -1,5 +1,5 @@
 <script>
-    import RegSectionHead from "$components/organisms/RegistrationForms/RegSectionHead.svelte"; // head component
+    import RegSectionHead from "$components/molecules/Form/RegSectionHead.svelte"; // head component
   
     /**
      * @type {any}
