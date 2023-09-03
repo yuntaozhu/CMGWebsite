@@ -195,7 +195,7 @@
             </div>
 
             <!-- input area -->
-            <form on:submit={sendQuestion} class="flex py-4 px-5 gap-4 self-stretch border-t border-solid border-black h-fit box-border">
+            <form on:submit|preventDefault={sendQuestion} class="flex py-4 px-5 gap-4 self-stretch border-t border-solid border-black h-fit box-border">
                 <!-- text area -->
                 <textarea bind:this={userInput} class="flex self-stretch resize-none flex-[1_0_0] bg-transparent border-none focus:outline-none active:outline-none h-4 max-h-14 text-xs" placeholder="Type your message..." bind:value={userInputValue}/>
                 <!-- send button -->
