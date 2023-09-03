@@ -5,7 +5,7 @@
   onMount(() => {});
 </script>
 
-<div class="container mx-auto">
+<div id="contributions" class="container mx-auto">
   <div
     class="flex flex-col first-letter:justify-center mt-[110px] mb-[40px] md:ml-[10%] md:mr-[10%] xl:ml-[16%] xl:mr-[40%] ss:ml-[6%] ss:mr-[6%] scrollFadeIn"
   >

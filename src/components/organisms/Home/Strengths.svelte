@@ -83,6 +83,7 @@
 </script>
 
 <div
+  id="strengths"
   class="relative flex justify-center mt-[80px] mb-[40px] mx-auto container min-h-[700px]"
 >
   <div

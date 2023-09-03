@@ -3,7 +3,7 @@
   import UnderlinedText from "$components/atoms/UnderlinedText.svelte";
   import HexagonGlass from "$components/molecules/Home/HexagonGlass.svelte";
   import { onMount } from "svelte";
-  import { goto } from '$app/navigation';
+  import { goto } from "$app/navigation";
 
   // CUSTOMIZE THIS: This is where you can modify the brief showcase ([1] Event Name, [2] URL of the event photo from static folder)
   let events = [
@@ -72,6 +72,7 @@
       .getElementById("showcased-description")
       ?.getBoundingClientRect();
 
+    if (windowWidth <= 1100) {
       if (
         showcasedDescription &&
         showcasedDescriptionPos &&
@@ -86,6 +87,20 @@
         canAutoChange = true;
         showcasedDescription.style.opacity = "50%";
       }
+    } else if (showcasedDescription) {
+      showcasedDescription.style.opacity = "1";
+      if (
+        showcasedDescriptionPos &&
+        showcasedDescriptionPos.top <=
+          document.documentElement.clientHeight / 2 &&
+        showcasedDescriptionPos.bottom >=
+          document.documentElement.clientHeight / 2
+      ) {
+        canAutoChange = false;
+      } else if (showcasedDescription) {
+        canAutoChange = true;
+      }
+    }
   }
 
   // Updates the windowWidth variable
@@ -137,6 +152,7 @@
 </script>
 
 <div
+  id="briefshowcase"
   class="flex flex-col gap-8 mt-[110px] mb-[40px] ml-[10%] mr-[10%] w-[80%] h-fit scrollFadeIn"
 >
   <h5 class="break-words text-center">Brief Showcase</h5>
@@ -399,7 +415,7 @@
   <div class="flex justify-center h-fit z-0">
     <div
       id="showcased-description"
-      class="max-w-[700px] text-justify h-fit pt-20 pb-20 -mt-20 break-words indent-8 transition duration-700"
+      class="max-w-[500px] text-justify h-fit pt-20 pb-20 -mt-20 break-words indent-8 transition duration-700"
     >
       {events[spotlight - 1][2]}
     </div>

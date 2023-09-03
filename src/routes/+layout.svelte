@@ -27,10 +27,12 @@
     });
 </script>
 
-<main class="overflow-hidden">
+<main class="overflow-hidden bg-base-black">
     <NavBar />
     <GradientBlur />
     <!-- <ChatBot /> -->
-    <slot />
+    <div class="relative z-20">
+        <slot />
+    </div>
     <Footer />
 </main>

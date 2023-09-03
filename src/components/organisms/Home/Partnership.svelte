@@ -4,16 +4,16 @@
 
     // CUSTOMIZE THIS: Add here the URL of logos from static folder ("./home-partnership/<logo>")
     let logos = [
-        "./home-partnership/Amihan.png",
-        "./home-partnership/Azeus.png",
-        "./home-partnership/Breta Consulting.png",
-        "./home-partnership/Coding Girls Manila.png",
-        "./home-partnership/Cognizant.jpeg",
-        "./home-partnership/Drupal.png",
-        "./home-partnership/Freelancer.png",
-        "./home-partnership/Intelimina.png",
-        "./home-partnership/OpenText.jpg",
-        "./home-partnership/Secret6.png",
+        ["./home-partnership/Amihan.png", "Amihan Global Strategies Phils. Inc."],
+        ["./home-partnership/Azeus.png", "Azeus Systems Philippines Limited"],
+        ["./home-partnership/Breta Consulting.png", "Breta Consulting"],
+        ["./home-partnership/Coding Girls Manila.png", "Coding Girls Manila"],
+        ["./home-partnership/Cognizant.jpeg", "Cognizant"],
+        ["./home-partnership/Drupal.png", "Drupal Pilipinas"],
+        ["./home-partnership/Freelancer.png", "Freelancer.com Philippines"],
+        ["./home-partnership/Intelimina.png", "Intelimina System Inc."],
+        ["./home-partnership/OpenText.jpg", "OpenText Philippines"],
+        ["./home-partnership/Secret6.png", "Secret 6"],
     ];
     // END OF CUSTOMIZATION
 
@@ -103,7 +103,7 @@
     </h6>
     <div
         id="logos"
-        class="absolute top-[80px] z-10 w-[900px] h-[900px] max-w-[150vw] max-h-[150vw] rounded-full"
+        class="absolute top-[80px] z-20 w-[900px] h-[900px] max-w-[150vw] max-h-[150vw] rounded-full"
     >
         <div
             id="moving-div"
@@ -113,15 +113,19 @@
                 <div id="logos{j}" class="flex gap-20 relative">
                     {#each Array(logos.length * 2) as logo, i}
                         <img
-                            src={logos[i % logos.length]}
+                            src={logos[i % logos.length][0]}
+                            title={logos[i % logos.length][1]}  
                             class="relative top-0 left-[100px] max-w-[80px] max-h-[80px] object-contain"
+                            alt={logos[i % logos.length][1]}
                         />
                     {/each}
                     {#if logos.length < 10}
                         {#each Array((10 - logos.length) * 2) as logo, i}
                             <img
-                                src={logos[i % logos.length]}
+                                src={logos[i % logos.length][0]}
+                                title={logos[i % logos.length][1]}
                                 class="relative top-0 left-[100px] max-w-[80px] max-h-[80px] object-contain"
+                                alt={logos[i % logos.length][1]}
                             />
                         {/each}
                     {/if}
@@ -133,7 +137,7 @@
         id="circle-blur"
         src="/assets/gradient-blur-ellipse.svg"
         alt="Gradient Blur Ellipse"
-        class="absolute top-[70px] z-0 w-[900px] h-[900px] max-w-[155vw] max-h-[155vw]"
+        class="absolute top-[70px] z-10 w-[900px] h-[900px] max-w-[155vw] max-h-[155vw]"
     />
     <div />
 </div>
