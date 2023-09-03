@@ -70,6 +70,7 @@
     } else {
       if (bg) {
         bg.style.opacity = "0";
+        bg.style.backgroundImage = "none";
       }
     }
   }

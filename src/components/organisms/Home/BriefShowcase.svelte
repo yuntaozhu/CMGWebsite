@@ -3,6 +3,7 @@
   import UnderlinedText from "$components/atoms/UnderlinedText.svelte";
   import HexagonGlass from "$components/molecules/Home/HexagonGlass.svelte";
   import { onMount } from "svelte";
+  import { goto } from '$app/navigation';
 
   // CUSTOMIZE THIS: This is where you can modify the brief showcase ([1] Event Name, [2] URL of the event photo from static folder)
   let events = [
@@ -64,13 +65,13 @@
     canAutoChange = !canAutoChange;
   }
 
+  // Adds reading efficiency in mobile view
   function mobileReactivity() {
     let showcasedDescription = document.getElementById("showcased-description");
     let showcasedDescriptionPos = document
       .getElementById("showcased-description")
       ?.getBoundingClientRect();
 
-    if (windowWidth <= 1100) {
       if (
         showcasedDescription &&
         showcasedDescriptionPos &&
@@ -85,9 +86,6 @@
         canAutoChange = true;
         showcasedDescription.style.opacity = "50%";
       }
-    }else if(showcasedDescription){
-      showcasedDescription.style.opacity = "1";
-    }
   }
 
   // Updates the windowWidth variable
@@ -278,7 +276,7 @@
         id="showcase-name"
         class="flex items-center justify-center w-fit rounded-2xl cursor-pointer"
         on:click={() => {
-          window.location.assign("./Showcase");
+          goto("./showcase");
         }}
       >
         <UnderlinedText
@@ -401,7 +399,7 @@
   <div class="flex justify-center h-fit z-0">
     <div
       id="showcased-description"
-      class="max-w-[700px] text-justify h-fit pt-20 pb-20 -mt-20 break-words indent-8 transition duration-500"
+      class="max-w-[700px] text-justify h-fit pt-20 pb-20 -mt-20 break-words indent-8 transition duration-700"
     >
       {events[spotlight - 1][2]}
     </div>
