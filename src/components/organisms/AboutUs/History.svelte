@@ -1,4 +1,5 @@
 <div
+  id="history"
   class="flex justify-center items-center p-5 pt-0 pb-0 text-justify w-100 h-screen"
 >
   <div

@@ -1,4 +1,7 @@
-<div class="mission-vision flex flex-row gap-8 p-20 w-full h-fit">
+<div
+  id="mission-vision"
+  class="mission-vision flex flex-row gap-8 p-20 w-full h-fit"
+>
   <div
     class="mission-container flex grow justify-start items-start w-1/2 h-fit"
   >

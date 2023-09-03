@@ -74,7 +74,10 @@
   }
 </script>
 
-<div class="mt-20 flex flex-col w-100 h-fit p-20 justify-center items-center">
+<div
+  id="core-values"
+  class="mt-20 flex flex-col w-100 h-fit p-20 justify-center items-center"
+>
   <div class="flex flex-col justify-center items-center text-center w-100">
     <h3 class="mission-title">Core Values</h3>
     <p class="title text-lg font-extralight">
