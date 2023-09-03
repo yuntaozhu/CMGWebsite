@@ -6,7 +6,7 @@
     let statistics = [
         [8, "Years of Service"],
         [65, "Active Members"],
-        [91, "Alumni"],
+        [90, "Alumni"],
     ];
     // END OF CUSTOMIZATION
 

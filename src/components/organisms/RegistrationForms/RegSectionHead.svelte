@@ -35,7 +35,8 @@
                     text={eventName}
                     isFixed={false}
                     width={0}
-                    tailwindcustomization=""
+                    textcustomization=""
+                    textboxcustomization="min-w-[150px]"
                 />
                 <div id="regformtitle">Registration Form</div>
             </div>

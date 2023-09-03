@@ -6,19 +6,19 @@
   // CUSTOMIZE THIS: Array of strengths
   let strengths = [
     [
-      "Strength 1",
+      "Technology Proficiency",
       "Strength, this is a sample sentence. Strength, this is a sample sentence. Strength, this is a sample sentence.",
     ],
     [
-      "Strength 2",
+      "Competitive Workforce",
       "Strength, this is a sample sentence. Strength, this is a sample sentence. Strength, this is a sample sentence.",
     ],
     [
-      "Strength 3",
+      "Effective Research and Development Aptitude",
       "Strength, this is a sample sentence. Strength, this is a sample sentence. Strength, this is a sample sentence.",
     ],
     [
-      "Strength 4",
+      "Agile Development",
       "Strength, this is a sample sentence. Strength, this is a sample sentence. Strength, this is a sample sentence.",
     ],
   ];
@@ -27,9 +27,9 @@
   // Adds glow animation on the background
   function bgElementChange() {
     let windowHeight = document.documentElement.clientHeight;
-    let bg = document.getElementById("strength-bg");
+    let bg = document.getElementById("strength-glow");
     let bgelement = document
-      .getElementById("strength-bg")
+      .getElementById("strength-glow")
       ?.getBoundingClientRect();
     if (
       bgelement &&
@@ -37,6 +37,7 @@
       windowHeight / 2 < bgelement.top + bgelement.height * 0.25
     ) {
       if (bg) {
+        bg.style.opacity = "1";
         bg.style.backgroundImage = "url(acss-cube-1.svg)";
       }
     } else if (
@@ -45,6 +46,7 @@
       windowHeight / 2 < bgelement.top + bgelement.height * 0.5
     ) {
       if (bg) {
+        bg.style.opacity = "1";
         bg.style.backgroundImage = "url(acss-cube-2.svg)";
       }
     } else if (
@@ -53,6 +55,7 @@
       windowHeight / 2 < bgelement.top + bgelement.height * 0.75
     ) {
       if (bg) {
+        bg.style.opacity = "1";
         bg.style.backgroundImage = "url(acss-cube-3.svg)";
       }
     } else if (
@@ -61,35 +64,44 @@
       windowHeight / 2 < bgelement.top + bgelement.height
     ) {
       if (bg) {
+        bg.style.opacity = "1";
         bg.style.backgroundImage = "url(acss-cube-4.svg)";
       }
     } else {
       if (bg) {
-        bg.style.backgroundImage = "url(acss-cube.svg)";
+        bg.style.opacity = "0";
       }
     }
   }
 
   onMount(() => {
+    bgElementChange();
     window.addEventListener("resize", bgElementChange);
     window.addEventListener("scrollend", bgElementChange);
   });
 </script>
 
-<div class="relative flex justify-center mt-[80px] mb-[40px] mx-auto container">
-  <div id="strength-bg" class="flex justify-center max-w-[1000px] w-[100%]">
+<div
+  class="relative flex justify-center mt-[80px] mb-[40px] mx-auto container min-h-[700px]"
+>
+  <div
+    id="strength-bg"
+    class="relative flex justify-center items-center w-full min-h-full max-w-[1000px]"
+  >
+    <div id="strength-glow" class="w-full h-full" />
     <div id="strength" class="flex flex-col gap-10 w-[88%]">
       {#each strengths as strength, i}
         {#if (i + 1) % 2 == 0}
           <div class="flex justify-end">
-            <div class="flex flex-col gap-3 scrollFadeIn">
-              <div class="flex -ml-2">
+            <div class="flex flex-col gap-3 scrollFadeIn max-w-full">
+              <div class="flex">
                 <div class="w-fit">
                   <UnderlinedText
                     text={strength[0]}
                     isFixed={true}
                     width={250}
-                    tailwindcustomization=""
+                    textcustomization="text-2xl font-extrabold"
+                    textboxcustomization=""
                   />
                 </div>
               </div>
@@ -103,13 +115,14 @@
             </div>
           </div>
         {:else}
-          <div class="flex flex-col gap-3 scrollFadeIn">
-            <div class="w-fit -ml-2">
+          <div class="flex flex-col gap-3 scrollFadeIn max-w-[400px]">
+            <div class="w-fit">
               <UnderlinedText
                 text={strength[0]}
                 isFixed={true}
                 width={250}
-                tailwindcustomization=""
+                textcustomization="text-2xl font-extrabold"
+                textboxcustomization=""
               />
             </div>
             <div class="max-w-[400px] w-[100%] text-white">
@@ -131,14 +144,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: 0.2s ease-in-out;
-    mask-image: linear-gradient(
-      to left,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 1) 6%,
-      rgba(0, 0, 0, 1) 94%,
-      rgba(0, 0, 0, 0) 100%
-    );
+  }
+  #strength-glow {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
   }
   #strength {
     position: relative;

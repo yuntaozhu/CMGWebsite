@@ -23,7 +23,7 @@
             id={"Form" + label}
             name={label}
             type="text"
-            class="w-full mt-2 rounded-lg text-black h-8 pl-3 pr-3 bg-white/[0.8] placeholder:italic placeholder:text-gray-800 placeholder:font-thin"
+            class="w-full mt-2 rounded-lg text-black h-8 pl-3 pr-3 bg-white/[0.8] placeholder:italic placeholder:text-gray-800 placeholder:font-thin focus:outline-0"
             {placeholder}
             required
         />
@@ -33,7 +33,7 @@
             id={"Form" + label}
             name={label}
             type="text"
-            class="w-full mt-2 rounded-lg text-black h-8 pl-3 pr-3 bg-white/[0.8] placeholder:italic placeholder:text-gray-800 placeholder:font-thin"
+            class="w-full mt-2 rounded-lg text-black h-8 pl-3 pr-3 bg-white/[0.8] placeholder:italic placeholder:text-gray-800 placeholder:font-thin focus:outline-0"
             {placeholder}
         />
     {/if}
