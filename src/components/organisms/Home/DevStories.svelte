@@ -47,6 +47,7 @@
 </script>
 
 <section
+  id="devstories"
   class="scrollFadeIn py-32 max-sm:mx-4 max-lg:mx-10 max-xl:mx-16 max-3xl:mx-28 3xl:mx-40 z-[1]"
 >
   <!-- div class to center the dev story header -->
@@ -59,6 +60,8 @@
     <img
       src="/assets/gradient-ellipse.svg"
       alt="Gradient Ellipse"
+      width="90"
+      height="90"
       class="absolute w-[70px] top-[6%] md:top-[15%] left-[75%] origin-center rotate-45"
     />
 
@@ -66,6 +69,8 @@
     <img
       src="/assets/gradient-ellipse.svg"
       alt="Gradient Ellipse"
+      width="45"
+      height="45"
       class="absolute w-[45px] top-[80%] sm:top-[65%] left-[35%] opacity-40"
     />
 
@@ -73,6 +78,8 @@
     <img
       src="/assets/gradient-hexagon.svg"
       alt="Gradient Hexagon"
+      width="140"
+      height="162"
       class="absolute w-[140px] top-[30%] md:top-[8%] left-[-8%] md:left-[0%] 2xl:left-[15%]"
     />
 
@@ -80,6 +87,8 @@
     <img
       src="/assets/gradient-hexagon-2.svg"
       alt="Gradient Hexagon"
+      width="70"
+      height="81"
       class="absolute w-[70px] top-[85%] left-[90%] md:top-[85%] md:left-[70%]"
     />
 

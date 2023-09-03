@@ -27,6 +27,8 @@
           <img
             src="/assets/notification.svg"
             alt="Notification Vector"
+            width="30"
+            height="33.42"
             class="w-[30px]"
           />
 
@@ -50,6 +52,8 @@
           <img
             src="/assets/calendar.svg"
             alt="Calendar Icon"
+            width="40"
+            height="40"
             class="w-[40px]"
           />
           <p class="text-center">{eventDateTime}</p>
@@ -64,6 +68,8 @@
         <img
           src={eventImage}
           alt="ACSS Event Placeholder"
+          width="381"
+          height="349"
           class="object-cover"
         />
       </div>
