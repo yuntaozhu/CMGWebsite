@@ -4,22 +4,12 @@
 
     import Carousel from './Carousel.svelte'
 
-    let currentSkillIndex = 0;
-
-    function nextSkill() {
-    currentSkillIndex = Math.min(currentSkillIndex + 1, developer.skills.length - 1);
-    }
-
-    function prevSkill() {
-    currentSkillIndex = Math.max(currentSkillIndex - 1, 0);
-    }
-
     function onCloseButtonClick() {
         closeModal(); // Call the closeModal function passed from the parent
     }
 </script>
 
-<div class="fixed inset-0 items-center justify-center z-10 backdrop-blur container mx-auto my-auto px-36">
+<div class="modal fixed inset-0 items-center justify-center z-10 backdrop-blur mx-auto my-auto px-36 ">
     
     <div class="flex flex-col min-h-screen gap-5 md:flex-row md:align-center md:justify-between md:gap-20 full-height py-36 px-4 md:px-8 lg:px-16 xl:px-20">
 
@@ -62,33 +52,6 @@
                 <div class="bio justify-center flex-col items-center">
                   <p>{developer.bio}</p>
                 </div>
-<!--           
-                <div class="skills flex-wrap flex-col justify-center items-center">
-                    <p class="text-base-sky-blue mb-2 font-semibold">Skills:</p>
-                    <div class="flex flex-wrap gap-2">
-                        <div class="glassmorphic flex-auto rounded-lg py-1 px-1 mb-1 items-center justify-center" style="width: {developer.skills[currentSkillIndex].length * 11.5}px;">
-                            <p class="text-center">{developer.skills[currentSkillIndex]}</p>
-                        </div>
-                    </div>
-                    {#if developer.skills.length > 1}
-                        <div class="arrow-buttons flex items-center justify-center gap-2">
-                            {#if currentSkillIndex !== 0}
-                                <button class="arrow-button floating" on:click={prevSkill}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-base-sky-blue transform rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                                    </svg>
-                                </button>
-                            {/if}
-                            {#if currentSkillIndex !== developer.skills.length - 1}
-                                <button class="arrow-button floating" on:click={nextSkill}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-base-sky-blue transform -rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                                    </svg>
-                                </button>
-                            {/if}
-                        </div>
-                    {/if}
-                </div> -->
 
                 <!-- Skills Carousel -->
                 <div class="skills flex-wrap flex-col justify-center items-center">
@@ -135,6 +98,14 @@
 </div>
 
 <style>
+    .modal {
+        background: linear-gradient(
+            135deg,
+            rgba(16, 17, 44, 0.663) 0%,
+            rgba(17, 28, 32, 0.8) 100%
+        );
+    }
+
     .photo{
         filter: drop-shadow(0px 1px 1px #000000);
     }
@@ -153,8 +124,8 @@
         border: 0.05rem solid rgba(255, 255, 255, 0.1);
         background: linear-gradient(
         135deg,
-        rgba(255, 255, 255, 0.2) 0%,
-        rgba(0, 84, 117, 0.3) 100%
+        rgba(223, 203, 203, 0.231) 0%,
+        rgba(44, 78, 104, 0.42) 100%
         );
     }
 
@@ -168,18 +139,5 @@
 
     .icon-image:hover {
         transform: scale(1.2); /* Add a hover effect to scale the icons */
-    }
-
-    .floating {
-        animation: floatingAnimation 2s ease infinite alternate;
-    }
-
-    @keyframes floatingAnimation {
-        0% {
-            transform: translateY(0);
-        }
-        100% {
-            transform: translateY(-4px);
-        }
     }
 </style>

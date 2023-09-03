@@ -38,6 +38,7 @@
 {/if}
 
 <style>
+  
   .glassmorphic {
     filter: drop-shadow(0px 8px 8px #000000);
     border: 0.01rem solid rgba(255, 255, 255, 0.1);

@@ -15,6 +15,7 @@
 <div class="flex team-tabs text-white items-center justify-center pt-24 pb-6">
   {#each tabs as tab}
     <button
+      id={`tab-${tab}`}
       class="flex items-center justify-center rounded-full w-4 h-4 m-1 relative {tab === activeTab ? 'bg-blue-500 shadow-lg' : 'text-white'}"
       on:click={() => handleTabClick(tab)}
       on:mouseenter={() => hoveredTab = tab}

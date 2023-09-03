@@ -18,7 +18,7 @@ export const teams = [
         },
         {
           fullName: 'Austin Asunsion',
-          imageSrc: 'herin.png',
+          imageSrc: '2.jpg',
           nickname: 'Laydon',
           batch: 'Y.B. 12.2',
           bio: 'Ako ang pinakapogi sa ACSS. Ang umangal ay iddisaffi ko!',
@@ -31,7 +31,7 @@ export const teams = [
         },
         {
           fullName: 'Austin Asunsion',
-          imageSrc: 'herin.png',
+          imageSrc: '2.jpg',
           nickname: 'Vince',
           batch: 'Y.B. 12.2',
           bio: 'Ako ang pinakapogi sa ACSS. Ang umangal ay iddisaffi ko!',
@@ -44,7 +44,7 @@ export const teams = [
         },
         {
           fullName: 'Austin Asunsion',
-          imageSrc: 'herin.png',
+          imageSrc: '2.jpg',
           nickname: 'Hannah',
           batch: 'Y.B. 12.2',
           bio: 'Ako ang pinakapogi sa ACSS. Ang umangal ay iddisaffi ko!',
@@ -57,7 +57,7 @@ export const teams = [
         },
         {
           fullName: 'Austin Asunsion',
-          imageSrc: 'herin.png',
+          imageSrc: '2.jpg',
           nickname: 'Marlo',
           batch: 'Y.B. 12.2',
           bio: 'Ako ang pinakapogi sa ACSS. Ang umangal ay iddisaffi ko!',
@@ -70,7 +70,7 @@ export const teams = [
         },
         {
           fullName: 'Austin Asunsion',
-          imageSrc: 'herin.png',
+          imageSrc: '2.jpg',
           nickname: 'Jeypi',
           batch: 'Y.B. 12.2',
           bio: 'Ako ang pinakapogi sa ACSS. Ang umangal ay iddisaffi ko!',
@@ -83,7 +83,7 @@ export const teams = [
         },
         {
           fullName: 'Austin Asunsion',
-          imageSrc: 'herin.png',
+          imageSrc: '2.jpg',
           nickname: 'Ken',
           batch: 'Y.B. 12.2',
           bio: 'Ako ang pinakapogi sa ACSS. Ang umangal ay iddisaffi ko!',
@@ -102,7 +102,7 @@ export const teams = [
       developers: [
         {
           fullName: 'Austin Asunsion',
-          imageSrc: 'herin.png',
+          imageSrc: '2.jpg',
           nickname: 'Sion',
           batch: 'Y.B. 12.2',
           bio: 'Ako ang pinakapogi sa ACSS. Ang umangal ay iddisaffi ko!',
@@ -122,7 +122,7 @@ export const teams = [
       developers: [
         {
           fullName: 'Austin Asunsion',
-          imageSrc: 'herin.png',
+          imageSrc: '2.jpg',
           nickname: 'Sion',
           batch: 'Y.B. 12.2',
           bio: 'Ako ang pinakapogi sa ACSS. Ang umangal ay iddisaffi ko!',

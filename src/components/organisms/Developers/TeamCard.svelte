@@ -10,12 +10,12 @@
   else fontSizeClass = 'text-4xl'; // Default size
 </script>
 
-<section class="container mx-auto relative">
-  <div class="absolute flex-col md:flex-row md:gap-4 flex px-1 md:px-8 lg:px-16 xl:px-72">
+<section class="container mx-auto">
+  <div class="flex-col md:flex-row md:gap-4 flex md:px-8 lg:px-16 xl:px-[21rem]">
 
     <div class="flex md:flex-1 items-center justify-center left-side w-1/2 h-50vh">
       <!-- Team Name -->
-      <h1 class="text-bold leading-tight lg:text-15xl md:leading-snug text-white text-right {fontSizeClass}">
+      <h1 class="text-bold leading-tight lg:text-15xl md:leading-snug text-white text-right text-3xl">
         {teamName}
       </h1>
     </div>
