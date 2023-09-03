@@ -255,7 +255,7 @@
       id="circle-blur"
       src="/assets/gradient-blur-ellipse.svg"
       alt="Gradient Blur Ellipse"
-      class="absolute w-[600px] h-[600px] max-w-[78vw] max-h-[78vw] top-0"
+      class="absolute w-[600px] h-[600px] max-w-[78vw] max-h-[78vw] top-0 cursor-pointer"
       on:click={() => {
         newInterval();
         if (spotlight != 6) {
