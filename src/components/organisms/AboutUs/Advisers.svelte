@@ -15,7 +15,10 @@
   ];
 </script>
 
-<div class="advisers flex flex-col justify-center items-center h-fit p-20">
+<div
+  id="advisers"
+  class="scrollFadeIn advisers flex flex-col justify-center items-center h-fit p-20"
+>
   <h3>Advisers</h3>
   <div class="flex flex-col gap-5">
     {#each advisers as text, index}

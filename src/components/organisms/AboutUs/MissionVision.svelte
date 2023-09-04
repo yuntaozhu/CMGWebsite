@@ -1,10 +1,13 @@
-<div class="mission-vision flex flex-row gap-8 p-20 w-full h-fit">
-  <div
-    class="mission-container flex grow justify-start items-start w-1/2 h-fit"
-  >
-    <div class="flex flex-col pt-12 p-10 gap-3 text-right">
+<div
+  id="mission-vision"
+  class="scrollFadeIn mission-vision flex flex-row p-10 mt-20 lg:mt-0 xl:mt-0 gap-10 w-full h-fit xl-h-screen"
+>
+  <div class="mission-container flex lg:p-10 lg:w-1/2 xl:w-1/2 h-fit">
+    <div
+      class="flex flex-col gap-3 text-center md:text-right lg:text-right xl:text-right"
+    >
       <h3 class="mission-title">Mission</h3>
-      <div class="card flex items-center h-fit">
+      <div class="card flex h-fit">
         <p class="text-base font-extralight">
           It shall be the mission of this organization to develop students
           worthy of the title “Iskolar ng Bayan para sa Bayan”; to continuously
@@ -17,10 +20,12 @@
       </div>
     </div>
   </div>
-  <div class="vision-container flex grow justify-start items-start w-1/2 h-fit">
-    <div class="flex flex-col pt-12 p-10 gap-3 text-left">
+  <div class="vision-container flex lg:p-10 lg:w-1/2 xl:w-1/2 h-fit">
+    <div
+      class="flex flex-col gap-3 text-center md:text-left lg:text-left xl:text-left"
+    >
       <h3 class="vision-title">Vision</h3>
-      <div class="card flex items-center h-fit">
+      <div class="card flex h-fit">
         <p class="text-base font-extralight">
           It shall be the vision of this organization to become a national
           organization that shall be helpful to the country and its people, and
