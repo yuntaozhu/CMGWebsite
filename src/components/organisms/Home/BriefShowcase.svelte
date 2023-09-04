@@ -415,7 +415,7 @@
   <div class="flex justify-center h-fit z-0">
     <div
       id="showcased-description"
-      class="max-w-[500px] text-justify h-fit pt-20 pb-20 -mt-20 break-words indent-8 transition duration-700"
+      class="max-w-[500px] text-justify h-fit pt-20 pb-20 -mt-20 break-words indent-8 transition duration-700 font-light"
     >
       {events[spotlight - 1][2]}
     </div>
