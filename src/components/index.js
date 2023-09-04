@@ -24,7 +24,7 @@ import ContactForm from './organisms/ContactUs/ContactForm.svelte';
 //Developers
 import InitialSection from './organisms/Developers/InitialSection.svelte';
 import ResidentMembers from './organisms/Developers/ResidentMembers.svelte';
-import MembersRoster from './organisms/Developers/MembersRoster.svelte';
+import MemberRoster from './organisms/Developers/MemberRoster.svelte';
 
 //Home
 import BriefShowcase from './organisms/Home/BriefShowcase.svelte';
@@ -64,7 +64,7 @@ export {
     NavBar, Footer,
     CoreValues, History, MissionVision, Advisers,
     ContactForm,
-    InitialSection, ResidentMembers, MembersRoster, 
+    InitialSection, ResidentMembers, MemberRoster, 
     BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, 
     Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs
 }

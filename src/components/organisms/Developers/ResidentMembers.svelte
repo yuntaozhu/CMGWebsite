@@ -66,7 +66,7 @@
 
 <div class="container mx-auto">
         {#each teams as team, i}
-        <section id={i === 0 ? 'executives' : i === 1 ? 'resident-members' : team.name} class="pb-32">
+        <section id={i === 0 ? 'executives' : i === 1 ? 'resident-members' : team.name} class="pb-32 scrollFadeIn">
             <TeamCard teamName={team.name} description={team.description} />
 
             <div class="flex flex-col items-center justify-center pt-4">
