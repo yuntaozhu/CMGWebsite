@@ -3,21 +3,55 @@
     export let closeModal;
 
     import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
+    import { onMount } from "svelte";
     import Carousel from "./Carousel.svelte";
 
+    let top = 0;
+
     function onCloseButtonClick() {
+        scrollableMain();
         closeModal(); // Call the closeModal function passed from the parent
     }
+
+    // Removes the scrollbar on main
+    function fixedMain() {
+        let main = document.getElementById("main");
+        if (main) {
+            top = main.getBoundingClientRect().top;
+            main.style.position = "fixed";
+            main.style.top = top + "px";
+            main.style.width = "100vw";
+        }
+    }
+
+    // Adds the scrollbar on main
+    function scrollableMain() {
+        let main = document.getElementById("main");
+        if (main) {
+            main.style.position = "static";
+            window.scrollTo({ top:top*-1, left:0, behavior: "instant"})
+            main.style.width = "auto";
+        }
+    }
+
+    onMount(() => {
+        fixedMain();
+        window.addEventListener("resize", fixedMain);
+        return()=>{
+            scrollableMain();
+            window.removeEventListener("resize", fixedMain);
+        }
+    });
 </script>
 
 <div
-    class="modal fixed inset-0 flex justify-center z-10 backdrop-blur-lg bg-base-black mx-auto px-5 overflow-y-auto overflow-x-hidden"
+    class="modal fixed inset-0 flex justify-center z-10 backdrop-blur-lg bg-base-black mx-auto px-5 overflow-y-auto overflow-x-hidden md:items-center"
 >
     <div
-        class="relative flex flex-col h-screen items-center gap-5 md:flex-row md:align-center md:justify-between md:px-8 md:py-0 md:gap-10 xl:gap-20"
+        class="relative top-[150px] flex flex-col h-fit gap-0 md:flex-row md:align-center md:justify-between md:px-8 md:py-0 md:gap-10 md:top-0 xl:gap-20"
     >
         <div
-            class="photo relative flex items-center max-w-full min-h-screen md:min-h-fit xl:min-h-fit"
+            class="photo top-[150px] flex items-center max-w-full min-h-fit md:top-0 md:min-h-fit xl:top-0 xl:min-h-fit"
         >
             <div
                 class="mask1 md:w-[300px] md:h-[300px] xl:w-[400px] xl:h-[400px] w-[80vw] h-[80vw] max-w-[400px] max-h-[400px]"
@@ -29,10 +63,12 @@
                 />
             </div>
 
-            <div class="absolute md:w-[300px] md:h-[300px] xl:w-[400px] xl:h-[400px] w-[80vw] h-[80vw] max-w-[400px] max-h-[400px]">
+            <div
+                class="absolute md:w-[300px] md:h-[300px] xl:w-[400px] xl:h-[400px] w-[80vw] h-[80vw] max-w-[400px] max-h-[400px]"
+            >
                 <!-- Close button -->
                 <div
-                    class="close-btn -left-[1.3%] top-[17%] xl:top-[70px] xl:left-[-6px] md:top-[50px] md:left-[-6px] mx-auto items-center justify-center relative"
+                    class="close-btn -left-[1.3%] top-[17.5%] xl:top-[70px] xl:left-[-6px] md:top-[50px] md:left-[-6px] mx-auto items-center justify-center relative"
                 >
                     <button
                         class="flex flex-col justify-between h-full gap-1 relative"
@@ -58,7 +94,10 @@
                                 </svg>
                             </div>
                             <div>
-                                <span class="text-white text-[10px] md:text-[10px] xl:text-[12px]">Close</span>
+                                <span
+                                    class="text-white text-[10px] md:text-[10px] xl:text-[12px]"
+                                    >Close</span
+                                >
                             </div>
                         </div>
                         <div>
@@ -74,11 +113,14 @@
         </div>
 
         <!-- Developer information -->
-        <div id="details" class="details flex pb-[10vw] justify-center relative top-[-50%] md:pb-0 md:top-0 xl:pb-0 xl:top-0">
+        <div
+            id="details"
+            class="details flex pb-[10vw] justify-center md:pb-0 md:top-0 xl:pb-0 xl:top-0"
+        >
             <div
-                class="glassmorphic drop-shadow-md border-[1rem] rounded-2xl border-opacity-10 h-fit w-[380px] max-w-[80vw] mx-auto my-auto px-9 py-9"
+                class="glassmorphic drop-shadow-md border-[1rem] rounded-2xl border-opacity-10 h-fit w-[380px] max-w-[80vw] p-9"
             >
-                <div class="flex flex-col justify-between h-full gap-2">
+                <div class="flex flex-col justify-between h-full gap-8">
                     <!-- Use flex and justify-between to span content from top to bottom -->
 
                     <div class="flex flex-col items-center justify-center">
@@ -91,7 +133,7 @@
                     </div>
 
                     <div class="bio justify-center flex-col items-center">
-                        <p>{developer.bio}</p>
+                        <p class="text-center">{developer.bio}</p>
                     </div>
 
                     <!-- Skills Carousel -->
@@ -169,10 +211,15 @@
 
 <style>
     .modal {
-        background: linear-gradient(
+        /* background: linear-gradient(
             135deg,
             rgba(16, 17, 44, 0.663) 0%,
             rgba(17, 28, 32, 0.8) 100%
+        ); */
+        background: linear-gradient(
+            180deg,
+            rgba(9, 9, 54, 0.663) 0%,
+            rgba(6, 2, 23, 0.8) 100%
         );
     }
 
@@ -196,7 +243,7 @@
             135deg,
             rgba(223, 203, 203, 0.231) 0%,
             rgba(44, 78, 104, 0.42) 100%
-        );  
+        );
     }
 
     .icon-image {

@@ -25,7 +25,7 @@
   });
 </script>
 
-<main class="overflow-hidden">
+<main id="main" class="overflow-hidden">
   <NavBar />
   <GradientBlur />
   <!-- <ChatBot /> -->
