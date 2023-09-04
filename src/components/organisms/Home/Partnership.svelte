@@ -4,16 +4,16 @@
 
     // CUSTOMIZE THIS: Add here the URL of logos from static folder ("./home-partnership/<logo>")
     let logos = [
-        ["./home-partnership/Amihan.png", "Amihan Global Strategies Phils. Inc."],
-        ["./home-partnership/Azeus.png", "Azeus Systems Philippines Limited"],
-        ["./home-partnership/Breta Consulting.png", "Breta Consulting"],
-        ["./home-partnership/Coding Girls Manila.png", "Coding Girls Manila"],
-        ["./home-partnership/Cognizant.jpeg", "Cognizant"],
-        ["./home-partnership/Drupal.png", "Drupal Pilipinas"],
-        ["./home-partnership/Freelancer.png", "Freelancer.com Philippines"],
-        ["./home-partnership/Intelimina.png", "Intelimina System Inc."],
-        ["./home-partnership/OpenText.jpg", "OpenText Philippines"],
-        ["./home-partnership/Secret6.png", "Secret 6"],
+        ["./home-partnership/Amihan.webp", "Amihan Global Strategies Phils. Inc."],
+        ["./home-partnership/Azeus.webp", "Azeus Systems Philippines Limited"],
+        ["./home-partnership/Breta-Consulting.webp", "Breta Consulting"],
+        ["./home-partnership/Coding-Girls-Manila.webp", "Coding Girls Manila"],
+        ["./home-partnership/Cognizant.webp", "Cognizant"],
+        ["./home-partnership/Drupal.webp", "Drupal Pilipinas"],
+        ["./home-partnership/Freelancer.webp", "Freelancer.com Philippines"],
+        ["./home-partnership/Intelimina.webp", "Intelimina System Inc."],
+        ["./home-partnership/OpenText.webp", "OpenText Philippines"],
+        ["./home-partnership/Secret6.webp", "Secret 6"],
     ];
     // END OF CUSTOMIZATION
 
