@@ -22,7 +22,7 @@
 <header class="description relative h-55vh min-h-300px z-1 px-5">
     {#each data[contents] as content }
         {#if content.title === contentTitle}
-            <div class="showcase-content flex flex-col justify-center md:w-[700px] lg:w-[840px] h-full ">
+            <div class="showcase-content flex flex-col justify-center md:w-[700px] lg:w-[900px]  xl:w-[1200px] h-full ">
                 <div class="showcase-container">
                     <div class="showcase-title perspective-60" >
                         <h5 class="text-3xl lg:text-4xl font-normal transform-style-flat origin-top-center text-white">

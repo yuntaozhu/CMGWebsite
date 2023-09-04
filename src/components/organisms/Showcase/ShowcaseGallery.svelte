@@ -17,7 +17,7 @@
       {#if content.title === contentTitle}
         {#each content.images as image}
           <div class="image-container relative block overflow-hidden transform transition-transform rounded-2xl hover:scale-105">
-            <img src="{image}" class="gallery-img w-[300px] md:w-[480px] h-[100px] md:h-[320px] object-cover object-top " alt=''/>
+            <img src="{image}" class="gallery-img w-[300px] md:w-[360px] h-[100px] md:h-[240px] object-cover  " alt=''/>
           </div>
         {/each}
       {/if}
