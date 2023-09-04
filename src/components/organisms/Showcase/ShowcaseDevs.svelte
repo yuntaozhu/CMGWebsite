@@ -18,7 +18,7 @@
 <section class="px-5 md:py-10">
     <div class="dev-cards-content">
         <div class=" flex flex-col md:items-center ">
-            <h4 class="title text-5xl font-bold  text-white">
+            <h4 class="text-4xl lg:text-5xl font-bold text-white">
                 Developers
             </h4>
             
@@ -67,13 +67,7 @@
                                 {#each dev.socials as social}
                                     <a href = ""><img src="{social}" class="transform transition-transform hover:scale-110"></a>
                                 {/each}
-                                
-
                             </div>
-                            
-
-
-
 
                         </div>
                     {/each} 
@@ -111,33 +105,6 @@
         );
         backdrop-filter: blur(21px);
     
-    }
-    @media (max-width: 640px) {
-    .title {
-        font-size: 1.5rem;
-    }
-
-    }
-    @media (min-width: 641px) and (max-width: 767px) {
-    .title {
-        font-size: 1.875rem;
-    }
-
-    }
-
-    @media (min-width: 768px) and (max-width: 1023px) {
-
-    .title {
-        font-size: 2.25rem;
-    }
-
-    }
-
-    @media (min-width: 1024px) {
-
-    .title {
-        font-size: 3rem;
-    } 
     }
 </style>
 

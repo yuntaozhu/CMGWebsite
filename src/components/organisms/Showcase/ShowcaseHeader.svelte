@@ -1,18 +1,46 @@
+<script>
+// @ts-nocheck
+
+    export let contents = "";
+    export let contentTitle = "";
+
+
+    import { data } from "./data";
+
+    
+    // let words = id.split(' ');
+
+    // if (words.length > 0){
+    //     contents = words[0];
+
+    //     words.splice(0,1);
+    //     contentTitle = words.join(' ');
+    // }
+    
+</script>
+
 <header class="description relative h-55vh min-h-300px z-1 px-5">
-    <div class="showcase-content flex flex-col justify-center h-full ">
-        <div class="showcase-container">
-            <div class="showcase-title perspective-60" >
-                <h5 class="text-base font-normal transform-style-flat origin-top-center text-white">
-                    ACSS UPLB WEBSITE
-                </h5>
+    {#each data[contents] as content }
+        {#if content.title === contentTitle}
+            <div class="showcase-content flex flex-col justify-center md:w-[700px] lg:w-[840px] h-full ">
+                <div class="showcase-container">
+                    <div class="showcase-title perspective-60" >
+                        <h5 class="text-3xl lg:text-4xl font-normal transform-style-flat origin-top-center text-white">
+                            {content.title}
+                        </h5>
+                    </div>
+                    <div class="showcase-blurb border-white">
+                        <h2 class=" text-4xl lg:text-5xl font-bold tracking-wider text-white mt-10">
+                            {content.blurb}
+                        </h2>
+                    </div>
+                </div>
             </div>
-            <div class="showcase-blurb">
-                <h2 class="text-2xl font-bold tracking-wider text-white ">
-                    Official Website <br> of Alliance of Computer Science Students
-                </h2>
-            </div>
-        </div>
-    </div>
+        {/if}
+    {/each}
+
+
+
 </header>
 
 <style>
@@ -22,7 +50,7 @@
             padding-top: 8rem;
         }
 
-        .text-base {
+        /* .text-base {
             font-size: 18px;
             line-height: 1rem;
             
@@ -33,7 +61,7 @@
             
             margin-top: 1.5rem;
 
-        }
+        } */
     }
 
 
@@ -44,7 +72,7 @@
 
         }
 
-        .text-base {
+        /* .text-base {
             font-size: 20px;
             
         }
@@ -54,7 +82,7 @@
             font-weight:400;
             margin-top: 2rem;
 
-        }
+        } */
     }
 
  
@@ -63,7 +91,7 @@
             padding-top: 8rem;
         }
 
-        .text-base {
+        /* .text-base {
             font-size: 28px;
             
         }
@@ -73,7 +101,7 @@
             
             margin-top: 2.25rem;
 
-        }
+        } */
     }
 
    
@@ -83,16 +111,16 @@
 
 
         }
-        .text-base {
+        /* .text-base {
             font-size: 36px;
             
         }
-        .text-2xl {
+        .text-3 {
             font-size: 48px;
             line-height: 3rem;
             
             margin-top: 2.5rem;
-        }
+        } */
     }
 </style>
 
