@@ -49,7 +49,7 @@
     />
   </svg>
 </div>
-<div class="footer flex flex-col h-fit z-20">
+<div class="footer flex flex-col h-fit">
   <div class="hidden md:flex lg:flex xl:flex w-100">
     <FooterContentOne />
   </div>

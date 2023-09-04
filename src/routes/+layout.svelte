@@ -1,36 +1,37 @@
 <script>
-    import "../app.css";
-    import { NavBar, Footer, ChatBot } from "$components";
-    import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
-    import { onMount } from "svelte";
+  import "../app.css";
+  import { NavBar, Footer, ChatBot } from "$components";
+  import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
+  import { onMount } from "svelte";
 
-    // Scroll Fade In Animation (To use: add "scrollFadeIn" class to a html element)
-    function scrollFadeIn() {
-        let scrollFadeInElements =
-            document.getElementsByClassName("scrollFadeIn");
+  // Scroll Fade In Animation (To use: add "scrollFadeIn" class to a html element)
+  function scrollFadeIn() {
+    let scrollFadeInElements = document.getElementsByClassName("scrollFadeIn");
 
-        for (let element of scrollFadeInElements) {
-            if (
-                element instanceof HTMLElement &&
-                element.getBoundingClientRect().top <
-                    document.documentElement.clientHeight * 0.5
-            ) {
-                element.style.opacity = "1";
-            }
-        }
+    for (let element of scrollFadeInElements) {
+      if (
+        element instanceof HTMLElement &&
+        element.getBoundingClientRect().top <
+          document.documentElement.clientHeight * 0.5
+      ) {
+        element.style.opacity = "1";
+      }
     }
+  }
 
-    onMount(() => {
-        scrollFadeIn();
-        window.addEventListener("scroll", scrollFadeIn);
-        window.addEventListener("resize", scrollFadeIn);
-    });
+  onMount(() => {
+    scrollFadeIn();
+    window.addEventListener("scroll", scrollFadeIn);
+    window.addEventListener("resize", scrollFadeIn);
+  });
 </script>
 
 <main class="overflow-hidden">
-    <NavBar />
-    <GradientBlur />
-    <!-- <ChatBot /> -->
-    <slot />
+  <NavBar />
+  <GradientBlur />
+  <!-- <ChatBot /> -->
+  <slot />
+  <div class="relative z-20">
     <Footer />
+  </div>
 </main>
