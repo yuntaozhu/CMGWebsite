@@ -12,7 +12,7 @@
     {#each data[contents] as content}
         {#if content.title === contentTitle}
             <div class = "image-container relative block overflow-hidden  perspective-100">
-                <img src="{content.images[0]}" class = "image w-screen h-[300px] md:h-[720px] xl:h-[1080px] object-cover " alt=""/>
+                <img src="{content.images[0]}" class = "image w-screen h-[300px] md:h-[720px] xl:h-[1080px] object-cover object-top" alt=""/>
             </div>
         {/if}
 
@@ -34,9 +34,6 @@
       
     }
 
-    .image-container{
-        
-    }
 
 
 

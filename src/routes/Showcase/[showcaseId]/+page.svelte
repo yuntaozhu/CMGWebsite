@@ -35,7 +35,7 @@
     <ShowcaseDescription contents = {contents} contentTitle = {contentTitle}/>
     <ShowcaseGallery contents = {contents} contentTitle = {contentTitle}/>
     {#if contents === "projects"}
-        <ShowcaseDevs/>
+        <ShowcaseDevs contentTitle = {contentTitle}/>
     {/if}
   
   
