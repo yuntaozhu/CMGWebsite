@@ -1,3 +1,8 @@
+<!-- 
+    kahit ano
+ -->
+
+
 <script>
     import {ShowcaseHeader, NavBar, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs} from "$components";
     import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";

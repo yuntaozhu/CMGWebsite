@@ -14,7 +14,7 @@
     <!-- tabs -->
     <ul class="navbar-text flex justify-center gap-10 lg:gap-24 list-none">
             {#each tabs as tab}
-                <li on:click={() => handleTabClick(tab)}> 
+                <li on:click={() => handleTabClick(tab)} class = "z-10"> 
                     <a href = "" class = "duration-150 text-base md:text-xl hover:text-base-sky-blue"
                     class:active={tab === activeTab}>{tab}</a>
                 </li>
