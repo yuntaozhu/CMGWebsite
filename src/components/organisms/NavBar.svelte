@@ -1,0 +1,98 @@
+<script>
+  import { Button, HamburgerMenu } from "$components";
+  import { page } from "$app/stores";
+
+  let pages = [
+    { title: "Home", url: "/" },
+    { title: "About Us", url: "/about-us" },
+    { title: "Showcase", url: "/showcase" },
+    { title: "Developers", url: "/developers" },
+  ];
+
+  $: currentPath = $page.url.pathname;
+
+  const isActive = (/** @type {string} */ path) => {
+    return currentPath === path;
+  };
+
+  function handleClick() {
+    // string = "You wasted a second of your life :D";
+    // buttonVisible = false;
+  }
+
+  // let showComponent = true;
+  // const handleHover = () => {
+  //   showComponent = true;
+  // };
+
+  // const handleLeave = () => {
+  //   showComponent = false;
+  // };
+</script>
+
+<header>
+  <nav class="p-10 fixed z-50">
+    <div class="flex lg:hidden xl:hidden justify-start self-start">
+      <HamburgerMenu />
+    </div>
+  </nav>
+  <div class="hoverable-component bg-transparent">
+    <!-- {#if showComponent} -->
+    <nav
+      class="hovered-section"
+    >
+      <div
+        class="flex flex-row justify-between items-center fixed top-0 w-screen pl-10 xl:pl-20 lg:pl-20 pr-20 pb-3 pt-10 lg:pt-3 xl:pt-3 z-50 backdrop-blur-none lg:backdrop-blur-md xl:backdrop-blur-md"
+      >
+        <div class="hidden lg:grid xl:grid grid-cols-2">
+          <a href="/">
+            <img
+              src="/logo.webp"
+              alt="The official seal of The Alliance of Computer Science Student"
+              class="w-12 h-12"
+            />
+          </a>
+        </div>
+        <div class="hidden lg:flex items-center flex justify-end gap-5">
+          <ul class="flex flex-row gap-5">
+            {#each pages as { title, url }}
+              <li>
+                <a
+                  href={url}
+                  class="duration-150 hover:text-base-sky-blue"
+                  class:active-link={currentPath === url}>{title}</a
+                >
+              </li>
+            {/each}
+          </ul>
+          <a href="/contact-us">
+            <Button onClick={handleClick}>Contact Us</Button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- {/if} -->
+  </div>
+</header>
+
+<style>
+  .active-link {
+    margin-top: 1px;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-image-source: linear-gradient(270deg,
+            rgba(46, 55, 146, 0) 0%,
+            #2e3792 27.6%,
+            #00f5f1 74.48%,
+            rgba(0, 245, 241, 0) 100%);
+    color: #00f5f1;
+  }
+
+  .active-link:hover {
+    color: #F4F1FF;
+  }
+</style>

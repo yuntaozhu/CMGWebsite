@@ -1,35 +1,47 @@
 <script>
-    import { Button } from "$components";
-    let string = "", buttonVisible = true;
-
-    function handleClick() {
-        string = "You wasted a second of your life :D";
-        buttonVisible = false;
-    }
+  import {
+    Hero,
+    Summary,
+    IncomingActivity,
+    DevStories,
+    Contributions,
+    Strengths,
+    BriefShowcase,
+  } from "$components";
+  import Partnership from "$components/organisms/Home/Partnership.svelte";
 </script>
 
 <head>
-    <title>Home</title>
+  <title>The Alliance of Computer Science Students UPLB</title>
+  <meta name="title" content="The Alliance of Computer Science Students UPLB" />
+  <meta
+  property="og:title"
+  content="The Alliance of Computer Science Students UPLB"
+  />
+  <meta
+  property="twitter:title"
+  content="The Alliance of Computer Science Students UPLB"
+  />
+  <meta name="description" content="Discover boundless opportunities and innovation with The Alliance of Computer Science Students - UPLB, an official academic organization at the University of the Philippines Los Baños. Join our visionary community and help shape a future where dreams become reality." />
+  <meta
+    property="og:description"
+    content="Discover boundless opportunities and innovation with The Alliance of Computer Science Students - UPLB, an official academic organization at the University of the Philippines Los Baños. Join our visionary community and help shape a future where dreams become reality."
+  />
+  <meta
+    property="twitter:description"
+    content="Discover boundless opportunities and innovation with The Alliance of Computer Science Students - UPLB, an official academic organization at the University of the Philippines Los Baños. Join our visionary community and help shape a future where dreams become reality."
+  />
 </head>
-<div class="h-screen flex items-center justify-center bg-base-dark-2 text-base-white">
-    <div class="w-full flex flex-col items-center gap-4 px-5">
-        <img
-            src="/logo.webp"
-            alt="The official seal of The Alliance of Computer Science Student"
-            class="max-w-xs"
-        />
-        <h1 class="text-3xl font-bold inline-block relative text-base-white">
-            Project Face <span
-                class="absolute text-xs px-2 top-0 bg-base-purple font-normal text-white rounded-lg"
-                >v2.0.0</span
-            >
-        </h1>
-        <p class="max-w-lg text-center text-base-white">
-            We are currently developing the new look of ACSS. See you soon!
-        </p>
-        {#if buttonVisible}
-        <Button onClick={handleClick}>Click Me</Button>
-        {/if}
-        <p class="text-base-blue">{string}</p>
-    </div>
+
+<div
+  class="overflow-hidden w-full bg-base-black px-5 lg:px-10 flex flex-col gap-10 pb-40"
+>
+  <Hero />
+  <Summary />
+  <IncomingActivity />
+  <DevStories />
+  <Strengths />
+  <Contributions />
+  <BriefShowcase />
+  <Partnership />
 </div>

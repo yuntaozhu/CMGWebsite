@@ -1,0 +1,206 @@
+<!-- 
+  This is the registration form template where you can add different input components (check the list below).
+
+  Input Components:
+    1. TextInputComponent (required attributes: label, required, placeholder)
+    2. NumberInputComponent (required attributes: label, required, placeholder)
+    3. EmailInputComponent (required attributes: label, required, placeholder)
+    4. DropdownComponent (required attributes: label, options)
+    5. RadioInputComponent (required attributes: label, options)
+    6. CheckboxInputComponent (required attributes: label, options)
+-->
+
+<script>
+  // Import statements
+  import { TextAreaComponent } from "$components";
+  // import TextAreaComponent from "$components/atoms/TexAreaComponent.svelte";
+  import TextInputComponent from "$components/atoms/TextInputComponent.svelte";
+  import EmailInputComponent from "$components/atoms/EmailInputComponent.svelte";
+  import SubmitButton from "$components/atoms/SubmitButton.svelte";
+
+  // CUSTOMIZE THIS: Add the list of dropdown options and radio options here
+  // @ts-ignore
+  let colleges = [
+    "College of Arts and Sciences",
+    "College of Economics and Management",
+    "College of Forestry and Natural Resources",
+    "College of Development Communication",
+    "College of Agriculture and Food Science",
+    "College of Engineering and Agro-industrial Technology",
+    "College of Human Ecology",
+    "College of Veterinary Medicine",
+    "College of Public Affairs and Development",
+    "School of Environmental Science and Management",
+  ];
+
+  // @ts-ignore
+  let howYouHear = ["ACSS Social Media Post", "Shared Post of a Friend"];
+  // END OF CUSTOMIZATION
+
+  // Form submission into formValues
+  function submitForm() {
+    let formValues = {};
+
+    // @ts-ignore
+    let components = document.getElementById("components")?.children;
+    if (components) {
+      // for (let component of components) {
+      //   if (component.id.substring(0, 14) === "FormRadioACSS-") {
+      //     let name = component.id.replace("FormRadioACSS-", "");
+      //     console.log(component.id);
+      //     const radio = document.querySelectorAll(`input[name="${name}"]`);
+      //     for (const f of radio) {
+      //       // @ts-ignore
+      //       if (f.checked) {
+      //         // @ts-ignore
+      //         formValues[name] = f.value;
+      //       }
+      //     }
+      //   } else {
+      //     // @ts-ignore
+      //     // formValues[component.id] = document.getElementById(
+      //     //   `Form${component.id}`
+      //     // ).value;
+      //   }
+      // }
+      console.log(formValues);
+      isOpen = true;
+    }
+  }
+
+  let isOpen = false;
+
+  function closeModal() {
+    isOpen = false;
+  }
+
+  /**
+   * @param {{ target: any; currentTarget: any; }} event
+   */
+  function handleOutsideClick(event) {
+    if (event.target === event.currentTarget) {
+      closeModal();
+    }
+  }
+</script>
+
+<div class="flex justify-center items-center h-fit lg:h-screen w-100">
+  <div
+    class="grid grid-cols-10 pt-32 pr-10 pl-10 md:pr-20 md:pl-20 lg:pr-0 lg:pl-0 w-100 lg:w-4/5 pb-20"
+  >
+    <div class="flex justify-center items-center lg:col-span-5 xl:w-7/8">
+      <div
+        class="hidden justify-center xl:justify-end lg:p-10 lg:block xl:block"
+      >
+        <img src="/assets/contactUS-photo.png" alt="photo" class="floating" />
+      </div>
+    </div>
+    <div
+      class="flex flex-col justify-center items-center col-span-10 md:col-span-9 lg:col-span-5"
+    >
+      <div class="grid grid-row-8 gap-3">
+        <div class="flex flex-col justify-start items-start row-span-2">
+          <h4 class="font-bold m-0">
+            Get in <span style="color:var(--color-blue)">Touch!</span>
+          </h4>
+          <p class="font-base font-lightweight">
+            We will answer as soon as we can!
+          </p>
+        </div>
+        <div
+          class="glassmorphic-rectangle flex justify-start items-center row-span-1"
+        >
+          <div class="flex flex-col">
+            <form
+              id="registration-form"
+              class="h-fit flex flex-col justify-between"
+              on:submit={submitForm}
+            >
+              <div id="components">
+                <div id="components" class="flex flex-row gap-8">
+                  <TextInputComponent
+                    label="Name"
+                    required={true}
+                    placeholder="Juan Dela Cruz"
+                  />
+                  <EmailInputComponent
+                    label="Email"
+                    required={true}
+                    placeholder="jdelacruz@up.edu.ph"
+                  />
+                </div>
+                <TextAreaComponent
+                  label="Message"
+                  required={true}
+                  placeholder="Your Message"
+                />
+              </div>
+              <div class="flex row-span-1">
+                <div class="mt-8">
+                  <SubmitButton />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  {#if isOpen}
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <div
+      class="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black bg-opacity-50 backdrop-blur-sm"
+      on:click={handleOutsideClick}
+    >
+      <div class="w-3/4 p-6 bg-white rounded shadow-lg md:w-1/2 lg:w-1/3">
+        <header class="flex items-center justify-end mb-4">
+          <!-- <h2 class="text-xl font-semibold">Click Outside of Modal</h2> -->
+          <button class="text-gray-700" on:click={closeModal}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </header>
+        <div class="flex flex-col justify-center items-center p-10">
+          <p class="text-justify text-gray-700 w-100">
+            This feature is not yet available. Though, you could still contact
+            us via our <a href="https://www.facebook.com/ACSSPH"
+              ><span style="color:var(--color-blue); cursor:pointer;"
+                >Facebook Page</span
+              ></a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+  {/if}
+</div>
+
+<style>
+  .glassmorphic-rectangle {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 245, 241, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    padding: 25px;
+    text-align: justify;
+    border-radius: 16px;
+    border: 0.01rem solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(21px);
+  }
+</style>
