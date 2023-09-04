@@ -28,7 +28,10 @@
         />
       </div>
       <!-- CUSTOMIZE THIS: Add here the contibutions (should be a paragraph) -->
-      <div id="background2" class="glassmorphic-rectangle p-10 mt-2 opacity-0 scrollFadeIn">
+      <div
+        id="background2"
+        class="glassmorphic-rectangle p-10 mt-2 opacity-0 scrollFadeIn"
+      >
         <p class="font-light text-justify indent-8">
           Contributions, this is a sample sentence. Contributions, this is a
           sample sentence. Contributions, this is a sample sentence.
@@ -52,10 +55,10 @@
     top: calc(100% - 48px);
     left: -15px;
   }
-  #background{
+  #background {
     transition-delay: 0.5s;
   }
-  #background2{
+  #background2 {
     transition-delay: 0.2s;
   }
 </style>

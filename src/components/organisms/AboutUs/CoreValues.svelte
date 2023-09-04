@@ -74,9 +74,14 @@
   }
 </script>
 
-<div class="mt-20 flex flex-col w-100 h-fit p-20 justify-center items-center">
-  <div class="flex flex-col justify-center items-center text-center w-100">
-    <h3 class="mission-title">Core Values</h3>
+<div
+  id="core-values"
+  class="scrollFadeIn relative z-0 flex flex-col w-100 h-fit xl:h-screen p-10 lg:p-20 xl:p-20 justify-center items-center"
+>
+  <div
+    class="flex flex-col justify-center gap-3 items-center text-center w-100"
+  >
+    <h3 class="mission-title text-5xl lg:text-6xl xl:text-6xl">Core Values</h3>
     <p class="title text-lg font-extralight">
       The organization adopts these values to reinforce its core and its
       principles.
@@ -186,7 +191,7 @@
 </div>
 
 <style>
-  @media (min-width: 900px) and (max-width: 1200px) {
+  @media (min-width: 900px) and (max-width: 1260px) {
     .carouselThree {
       display: none;
     }
