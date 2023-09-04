@@ -19,16 +19,16 @@
   on:click={openModal}
 >
   <!-- Outer glassmorphic rectangle -->
-  <div class="glassmorphic drop-shadow-md border-[1rem] rounded-2xl border-opacity-10 h-[218px] w-[172px]"></div>
+  <div class="glassmorphic drop-shadow-md border-[1rem] md:rounded-2xl rounded-lg border-opacity-10 md:h-[218px] md:w-[172px] h-[109px] w-[86px]"></div>
 
   <!-- Inner glassmorphic rectangle -->
-  <div class="glassmorphic left-[11px] top-3 absolute rounded-2xl w-[150px] h-[160px]">
+  <div class="glassmorphic absolute md:rounded-2xl rounded-lg md:w-[150px] md:h-[160px] md:left-[11px] md:top-3 w-[75px] h-[80px] left-[6px] top-[6px]">
     <!-- Placeholder for developer image --> 
-    <img src={developer.imageSrc} alt={developer.nickname} class="w-full h-full object-cover rounded-2xl" />
+    <img src={developer.imageSrc} alt={developer.nickname} class="w-full h-full object-cover md:rounded-2xl rounded-lg" />
   </div>
 
   <!-- Developer nickname -->
-  <p class="absolute w-238 h-12 left-4 bottom-[-7px] font-bold text-2xl">{developer.nickname}</p>
+  <p class="absolute font-bold md:text-2xl w-238 h-12 md:left-4 md:bottom-[-7px] left-2 bottom-[-24px]">{developer.nickname}</p>
 </div>
 
 {#if isModalOpen}

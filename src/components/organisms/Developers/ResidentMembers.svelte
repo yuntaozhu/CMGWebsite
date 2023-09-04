@@ -46,7 +46,7 @@
     });
 </script>
 
-<div class="team-tabs-wrapper">
+<div class="team-tabs-wrapper hidden">
     <div class="team-tabs flex justify-center items-center ">
         <nav class="section-nav">
             <ol class='flex flex-wrap mx-auto'>
@@ -65,19 +65,19 @@
 </div>
 
 <div class="container mx-auto">
-        {#each teams as team}
-        <section id={team.name} class="pb-32">
+        {#each teams as team, i}
+        <section id={i === 0 ? 'executives' : i === 1 ? 'resident-members' : team.name} class="pb-32">
             <TeamCard teamName={team.name} description={team.description} />
 
             <div class="flex flex-col items-center justify-center pt-4">
-                <div class="grid grid-cols-4 gap-4 mb-4">
+                <div class="grid grid-cols-4 gap-3 md:gap-4 mb-3 md:mb-4">
                     {#each team.developers as developer, i}
                         {#if i < (team.developers.length - 1) - ((team.developers.length - 1) % 4)}
                             <DeveloperCard developer={developer} />
                         {/if}
                     {/each}
                 </div>
-                <div class="flex gap-4">
+                <div class="flex gap-3 md:gap-4">
                     {#each team.developers as developer, i}
                         {#if i >= (team.developers.length - 1) - ((team.developers.length - 1) % 4)}
                             <DeveloperCard developer={developer} />
@@ -111,6 +111,6 @@
     .team-tabs-wrapper {
         position: sticky;
         top: 0;
-        z-index: 40; /* Add a high z-index value */
+        z-index: 9; /* Add a high z-index value */
     }
 </style>

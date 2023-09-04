@@ -1,24 +1,12 @@
 <!-- InitialSection.svelte -->
 <script>
-  import {slide, fade} from 'svelte/transition'; 
+  import {slide, fade} from 'svelte/transition';
 
   const gallery_items = [
-    {
-      url: "2.jpg",
-      description: "Dog",
-    },
-    {
-      url: "herin.png",
-      description: "Building",
-    },
-    {
-      url: "herin.png",
-      description: "Staircase",
-    },
-    {
-      url: "2.jpg",
-      description: "Staircase",
-    },
+    { url: "2.jpg", description: "Dog",},
+    { url: "herin.png", description: "Building",},
+    { url: "herin.png", description: "Staircase",},
+    { url: "2.jpg", description: "Staircase",},
   ];
   let currentSlideItem = 0;
   function nextImage() {
@@ -36,46 +24,41 @@
 </script>
 
 
-<section class="tag container mx-auto relative">
+<section class="container mx-auto relative pt-8">
   <div class="flex flex-col min-h-[85vh] mx-4 pt-10 gap-5 md:flex-row md:align-center md:justify-evenly md:gap-10 2xl:gap-2">
     
       <!-- Left side: Slideshow with Fade Animation -->
-        <div class="pt-4 ss:pt-12 md:pt-0 right-0 flex items-center 3xl:max-w-screen-sm">
-          <!-- Hexagon -->
+        <div class="relative flex flex-row mx-auto my-auto">
           <div class="absolute flex top-[-40px] right-[-45px]">
-            <img src="Hexagon Gradient.svg" alt="Hexagon" class="max-w-[100%] ss:max-w-[100%] w-24"/>
+            <img src="Hexagon Gradient.svg" alt="Hexagon" class="max-w-[100%] w-24"/>
           </div>
   
-          <!-- Hexagon -->
           <div class="absolute bottom-[-40px] left-[-45px]">
-            <img src="Hexagon Gradient.svg" alt="Hexagon" class="max-w-[100%] ss:max-w-[100%] w-24"/>
+            <img src="Hexagon Gradient.svg" alt="Hexagon" class="max-w-[100%] w-24"/>
           </div>
   
-          <!-- Images -->
-          <div class="slideshow pt-4 ss:pt-12 md:pt-0 flex justify-center items-center md:flex-1 3xl:max-w-screen-sm w-[400px] h-[450px]">
+          <div class="slideshow pt-4 ss:pt-0 md:pt-0 flex justify-center items-center md:flex-1 3xl:max-w-screen-sm w-[300px] h-[350px]">
             <!-- Reference: https://cloudinary.com/blog/how-to-create-a-carousel-in-3-ways-in-svelte -->
             {#each [gallery_items[currentSlideItem]] as item (currentSlideItem)}
               <img in:slide out:fade src={item.url} alt={item.description} class="w-full h-full object-cover rounded-2xl ax-w-xs 2xl:max-w-sm 3xl:max-w-lg m-auto"/>
             {/each}
           </div>
   
-          <!-- Hexagon -->
           <div class="absolute top-[40px] right-[-30px]">
-            <img src="Hexagon Gradient.svg" alt="Hexagon" class="max-w-[100%] ss:max-w-[100%] w-16"/>
+            <img src="Hexagon Gradient.svg" alt="Hexagon" class="max-w-[100%] w-16"/>
           </div>
   
-          <!-- Hexagon -->
           <div class="absolute bottom-[40px] left-[-30px]">
-            <img src="Hexagon Gradient.svg" alt="Hexagon" class="max-w-[100%] ss:max-w-[100%] w-16"/>
+            <img src="Hexagon Gradient.svg" alt="Hexagon" class="max-w-[100%] w-16"/>
           </div>
       </div>
 
       <!-- Right side: Text and scroll icon -->
-      <div class="flex flex-col md:justify-center md:flex-1 gap-6 md:max-w-xl 3xl:max-w-2xl">
+      <div class="flex flex-col md:justify-center md:flex-1 gap-6 md:max-w-xl 3xl:max-w-2xl pt-4">
           <div class="flex flex-col gap-1">
 
               <!-- "Meet the Team" text -->
-              <h1 class="text-4xl font-bold leading-tight lg:text-5xl md:leading-snug tracking-wide">
+              <h1 class="text-4xl font-bold leading-tight lg:text-5xl md:leading-snug tracking-wide text-center md:text-left">
                   Meet the Team
               </h1>
 
