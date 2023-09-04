@@ -1,7 +1,7 @@
 //--- Atoms ---
 import Button from './atoms/Button.svelte';
 import HamburgerMenu from './atoms/HamburgerMenu.svelte';
-import ChatBot from './atoms/chatBot.svelte';
+import ChatBot from './atoms/ChatBot/ChatBot.svelte';
 import TextAreaComponent from './atoms/TextAreaComponent.svelte';
 
 //--- Molecules ---
