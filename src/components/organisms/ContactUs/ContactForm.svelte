@@ -17,27 +17,6 @@
   import TextInputComponent from "$components/atoms/TextInputComponent.svelte";
   import EmailInputComponent from "$components/atoms/EmailInputComponent.svelte";
   import SubmitButton from "$components/atoms/SubmitButton.svelte";
-    import { SvelteComponentTyped } from "svelte";
-    import { form } from "sanity/desk";
-
-  // CUSTOMIZE THIS: Add the list of dropdown options and radio options here
-  // @ts-ignore
-  let colleges = [
-    "College of Arts and Sciences",
-    "College of Economics and Management",
-    "College of Forestry and Natural Resources",
-    "College of Development Communication",
-    "College of Agriculture and Food Science",
-    "College of Engineering and Agro-industrial Technology",
-    "College of Human Ecology",
-    "College of Veterinary Medicine",
-    "College of Public Affairs and Development",
-    "School of Environmental Science and Management",
-  ];
-
-  // @ts-ignore
-  let howYouHear = ["ACSS Social Media Post", "Shared Post of a Friend"];
-  // END OF CUSTOMIZATION
 
   // Form submission into formValues
   async function submitForm() {
@@ -59,21 +38,6 @@
       },
       body: JSON.stringify(formValues)
     })
-  }
-
-  let isOpen = false;
-
-  function closeModal() {
-    isOpen = false;
-  }
-
-  /**
-   * @param {{ target: any; currentTarget: any; }} event
-   */
-  function handleOutsideClick(event) {
-    if (event.target === event.currentTarget) {
-      closeModal();
-    }
   }
 </script>
 
