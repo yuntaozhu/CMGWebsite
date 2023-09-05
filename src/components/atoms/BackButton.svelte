@@ -47,6 +47,7 @@
     #button{
         min-width: 14px;
         min-height: 28px;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
     }
     #button:hover{
         opacity: 50%;

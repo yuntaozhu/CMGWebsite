@@ -49,11 +49,11 @@
 <style>
   #top1-pos {
     top: -10px;
-    left: calc(100% - 38px);
+    left: calc(100% - 43px);
   }
   #bot1-pos {
     top: calc(100% - 48px);
-    left: -15px;
+    left: -20px;
   }
   #background {
     transition-delay: 0.5s;
