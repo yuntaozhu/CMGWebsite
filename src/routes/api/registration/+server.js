@@ -4,7 +4,6 @@ export async function POST({ request }) {
     try {
         // extract request
         const req = await request.json();
-        console.log(req)
 
         // post to google script
         // body needs three entries:
@@ -21,14 +20,7 @@ export async function POST({ request }) {
                 sheetName: "Registration",
                 formData: {
                     "Registration Date": new Date().toLocaleString(),
-                    Name: req.Name,
-                    Nickname: req.Nickname, 
-                    Email: req.Email,
-                    College: req.College,
-                    "Degree Program": req["Degree Program"],
-                    Batch: req.Batch,
-                    "Facebook Profile Link": req["Facebook Profile Link"],
-                    "How did you hear about this event?": req["How did you hear about this event?"]
+                    ...req
                 }
             })
         })
