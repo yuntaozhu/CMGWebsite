@@ -2,51 +2,51 @@
     import TeamCard from './TeamCard.svelte';
     import DeveloperCard from './DeveloperCard.svelte';
     import { teams } from './data.js';
-    import { onMount } from 'svelte';
+    // import { onMount } from 'svelte';
 
-    let activeSection = teams[0].name;
+    // let activeSection = teams[0].name;
 
-    onMount(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                const id = entry.target.getAttribute('id');
-                if (entry.intersectionRatio > 0) {
-                    document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
-                } else {
-                    document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
-                }
-            });
-        });
+    // onMount(() => {
+    //     const observer = new IntersectionObserver(entries => {
+    //         entries.forEach(entry => {
+    //             const id = entry.target.getAttribute('id');
+    //             if (entry.intersectionRatio > 0) {
+    //                 document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+    //             } else {
+    //                 document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
+    //             }
+    //         });
+    //     });
 
-        // Track all sections that have an `id` applied
-        document.querySelectorAll('section[id]').forEach((section) => {
-            observer.observe(section);
-        });
+    //     // Track all sections that have an `id` applied
+    //     document.querySelectorAll('section[id]').forEach((section) => {
+    //         observer.observe(section);
+    //     });
 
-        // Function to handle smooth scrolling
-        function scrollToSection(sectionId) {
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                const offset = targetSection.offsetTop - 75; // Adjust the offset as needed
-                window.scrollTo({
-                    top: offset,
-                    behavior: 'smooth',
-                });
-            }
-        }
+    //     // Function to handle smooth scrolling
+    //     function scrollToSection(sectionId) {
+    //         const targetSection = document.getElementById(sectionId);
+    //         if (targetSection) {
+    //             const offset = targetSection.offsetTop - 75; // Adjust the offset as needed
+    //             window.scrollTo({
+    //                 top: offset,
+    //                 behavior: 'smooth',
+    //             });
+    //         }
+    //     }
 
-        // Add click event listeners to navigation links
-        document.querySelectorAll('.section-nav a').forEach((link) => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault();
-                const sectionId = link.getAttribute('href').substring(1); // Remove the # symbol
-                scrollToSection(sectionId);
-            });
-        });
-    });
+    //     // Add click event listeners to navigation links
+    //     document.querySelectorAll('.section-nav a').forEach((link) => {
+    //         link.addEventListener('click', (event) => {
+    //             event.preventDefault();
+    //             const sectionId = link.getAttribute('href').substring(1); // Remove the # symbol
+    //             scrollToSection(sectionId);
+    //         });
+    //     });
+    // });
 </script>
 
-<div class="team-tabs-wrapper hidden">
+<!-- <div class="team-tabs-wrapper hidden">
     <div class="team-tabs flex justify-center items-center ">
         <nav class="section-nav">
             <ol class='flex flex-wrap mx-auto'>
@@ -62,7 +62,7 @@
             </ol>
         </nav>
     </div>
-</div>
+</div> -->
 
 <div class="container mx-auto">
         {#each teams as team, i}
@@ -94,7 +94,7 @@
         scroll-behavior: smooth;
     }
 
-    .section-nav li.active > a {
+    /* .section-nav li.active > a {
         color: #ffffff;
         font-weight: 500;
     }
@@ -111,6 +111,6 @@
     .team-tabs-wrapper {
         position: sticky;
         top: 0;
-        z-index: 9; /* Add a high z-index value */
-    }
+        z-index: 9;
+    } */
 </style>

@@ -36,8 +36,8 @@
 </script>
 
 
-<section class="container mx-auto relative pt-8">
-  <div class="flex flex-col min-h-[85vh] mx-4 pt-10 gap-5 md:flex-row md:align-center md:justify-evenly md:gap-10 2xl:gap-2">
+<section class="container mx-auto relative pt-8 ">
+  <div class="flex flex-col min-h-[85vh] mx-4 pt-10 gap-5 md:flex-row md:align-center md:justify-evenly md:gap-10 2xl:gap-2 px-10">
     
       <!-- Left side: Slideshow with Fade Animation -->
         <div class="relative flex flex-row mx-auto my-auto">
@@ -63,7 +63,7 @@
           <div class="absolute bottom-[40px] left-[-30px]">
             <img src="Hexagon Gradient.svg" alt="Hexagon" class="max-w-[100%] w-16"/>
           </div>
-      </div>
+        </div>
 
       <!-- Right side: Text and scroll icon -->
       <div class="flex flex-col md:justify-center md:flex-1 gap-6 md:max-w-xl 3xl:max-w-2xl pt-4">
@@ -76,24 +76,23 @@
 
               <!-- Description text -->
               <p class="font-light text-slate-200 text-sm 3xl:text-base 3xl:max-w-xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                Unveiling the Brilliant Minds and Creative Geniuses Who Drive the Vision
+                and Success of Alliance of Computer Science Students - UPLB
               </p>
 
               <div class="flex justify-center items-center space-x-4">
                 <button
-                class="bg-gradient-to-r from-blue-700 to-blue-500 text-white px-4 py-2 rounded-2xl hover:from-blue-500 hover:scale-105 hover:shadow-md transition duration-300 ease-in-out"
+                class="text-xs ss:text-base bg-gradient-to-r from-blue-700 to-blue-500 text-white px-4 py-2 rounded-2xl hover:from-blue-500 hover:scale-105 hover:shadow-md transition duration-300 ease-in-out"
                 on:click={() => scrollToSection('executives')}
                 >
-                  See Members
+                  View Members
                 </button>
                 
                 <button
-                  class="bg-transparent border-2 border-gradient-to-r from-blue-700 to-blue-500 text-white px-4 py-2 rounded-2xl hover:shadow-md hover:scale-105 transition duration-300 ease-in-out"
+                  class="text-xs ss:text-base bg-transparent border-2 border-gradient-to-r from-blue-700 to-blue-500 text-white px-4 py-2 rounded-2xl hover:shadow-md hover:scale-105 transition duration-300 ease-in-out"
                   on:click={() => scrollToSection('member-roster')}
                 >
-                  See Roster
+                  View Roster
                 </button>
               
               </div>
