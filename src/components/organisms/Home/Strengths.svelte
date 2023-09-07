@@ -38,7 +38,7 @@
     ) {
       if (bg) {
         bg.style.opacity = "1";
-        bg.style.backgroundImage = "url(acss-cube-1.svg)";
+        bg.style.backgroundImage = "url(/acss-cube-1.svg)";
       }
     } else if (
       bgelement &&
@@ -47,7 +47,7 @@
     ) {
       if (bg) {
         bg.style.opacity = "1";
-        bg.style.backgroundImage = "url(acss-cube-2.svg)";
+        bg.style.backgroundImage = "url(/acss-cube-2.svg)";
       }
     } else if (
       bgelement &&
@@ -56,7 +56,7 @@
     ) {
       if (bg) {
         bg.style.opacity = "1";
-        bg.style.backgroundImage = "url(acss-cube-3.svg)";
+        bg.style.backgroundImage = "url(/acss-cube-3.svg)";
       }
     } else if (
       bgelement &&
@@ -65,7 +65,7 @@
     ) {
       if (bg) {
         bg.style.opacity = "1";
-        bg.style.backgroundImage = "url(acss-cube-4.svg)";
+        bg.style.backgroundImage = "url(/acss-cube-4.svg)";
       }
     } else {
       if (bg) {
@@ -142,7 +142,7 @@
 <style>
   #strength-bg {
     position: relative;
-    background: url("acss-cube.svg");
+    background: url("/acss-cube.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
