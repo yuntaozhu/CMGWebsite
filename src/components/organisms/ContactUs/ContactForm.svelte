@@ -16,14 +16,11 @@
   // import TextAreaComponent from "$components/atoms/TexAreaComponent.svelte";
   import TextInputComponent from "$components/atoms/TextInputComponent.svelte";
   import EmailInputComponent from "$components/atoms/EmailInputComponent.svelte";
-  import SubmitButton from "$components/atoms/SubmitButton.svelte";
-  import Button from "$components/atoms/Button.svelte";
-  import { fly } from "svelte/transition";
-  import { cubicInOut } from "svelte/easing";
+  import FormButton from "$components/atoms/FormButton.svelte";
 
-  let notificationMessage = "Unable to send your message due to server error.";
+  let notificationMessage = "";
   let showNotif = false;
-  let successNotif = false;
+  let success = false;
   let loadingSubmission = false;
 
   // Form submission into formValues
@@ -56,10 +53,10 @@
         loadingSubmission = false;
         if (body["success"]) {
           notificationMessage = "Your message has been sent. Thank you for contacting us."
-          successNotif = true;
+          success = true;
         } else {
           notificationMessage = "Unable to send your message due to server error."
-          successNotif = false;
+          success = false;
         }
 
         showNotif = true;
@@ -71,7 +68,7 @@
   }
 </script>
 
-<SubmitNotification success={successNotif} message={notificationMessage} showNotif={showNotif}/>
+<SubmitNotification {success} message={notificationMessage} showNotif={showNotif}/>
 
 <div class="flex justify-center items-center h-fit lg:h-screen w-100">
   <div
@@ -126,14 +123,7 @@
               </div>
               <div class="flex row-span-1">
                 <div class="flex mt-8 items-center gap-4">
-                  <Button disabled={loadingSubmission} onClick={() => {}}>
-                    <div class="flex flex-col justify-center w-20 h-5">
-                        <span>Submit</span>
-                    </div>
-                  </Button>
-                  {#if loadingSubmission}
-                    <span class="bg-0 italic text-sm" transition:fly={{duration: 500, x: -20, easing: cubicInOut}}>Submitting...</span>
-                  {/if}
+                  <FormButton {loadingSubmission}/>
                 </div>
               </div>
             </form>
@@ -156,5 +146,9 @@
     border-radius: 16px;
     border: 0.01rem solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(21px);
+  }
+
+  .button {
+    -webkit-tap-highlight-color: transparent;
   }
 </style>
