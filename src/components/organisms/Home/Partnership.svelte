@@ -4,12 +4,16 @@
 
     // CUSTOMIZE THIS: Add here the URL of logos from static folder ("./home-partnership/<logo>")
     let logos = [
-        "https://www.salesforceben.com/wp-content/uploads/2021/03/google-logo-icon-PNG-Transparent-Background-2048x2048.png",
-        "https://cdn.freebiesupply.com/logos/large/2x/jollibee-logo-png-transparent.png",
-        "https://th.bing.com/th/id/R.20384eee41a9c9906ff9783969e634de?rik=miI7LNJq%2fSV%2bbg&riu=http%3a%2f%2ffc09.deviantart.net%2ffs71%2ff%2f2014%2f218%2ff%2fa%2fred_velvet_logo_png_render_by_classicluv-d7tz4f6.png&ehk=j5ovtz5EVdGgMfBeI8%2bsj1HzNL8jR9AvfuOkpkZXcCE%3d&risl=&pid=ImgRaw&r=0",
-        "https://1000logos.net/wp-content/uploads/2022/09/Valorant-Logo.png",
-        "https://logos-world.net/wp-content/uploads/2020/03/Coca-Cola-Logo.png",
-        "./home-partnership/sample-logo.png",
+        ["./home-partnership/Amihan.webp", "Amihan Global Strategies Phils. Inc."],
+        ["./home-partnership/Azeus.webp", "Azeus Systems Philippines Limited"],
+        ["./home-partnership/Breta-Consulting.webp", "Breta Consulting"],
+        ["./home-partnership/Coding-Girls-Manila.webp", "Coding Girls Manila"],
+        ["./home-partnership/Cognizant.webp", "Cognizant"],
+        ["./home-partnership/Drupal.webp", "Drupal Pilipinas"],
+        ["./home-partnership/Freelancer.webp", "Freelancer.com Philippines"],
+        ["./home-partnership/Intelimina.webp", "Intelimina System Inc."],
+        ["./home-partnership/OpenText.webp", "OpenText Philippines"],
+        ["./home-partnership/Secret6.webp", "Secret 6"],
     ];
     // END OF CUSTOMIZATION
 
@@ -92,14 +96,14 @@
 </script>
 
 <div
-    class="w-full h-[400px] max-h-[90vw] flex flex-col items-center gap-5 mt-[110px] pl-[10%] pr-[10%] relative"
+    class="w-full h-[320px] max-h-[90vw] flex flex-col items-center gap-5 mt-[110px] pl-[10%] pr-[10%] relative"
 >
-    <h6 class="absolute top-0 text-2xl font-bold text-center">
+    <h6 class="absolute top-0 text-2xl font-extrabold text-center">
         We have worked with {logos.length} companies.
     </h6>
     <div
         id="logos"
-        class="absolute top-[80px] z-10 w-[900px] h-[900px] max-w-[150vw] max-h-[150vw] rounded-full"
+        class="absolute top-[80px] z-20 w-[900px] h-[900px] max-w-[150vw] max-h-[150vw] rounded-full"
     >
         <div
             id="moving-div"
@@ -109,15 +113,19 @@
                 <div id="logos{j}" class="flex gap-20 relative">
                     {#each Array(logos.length * 2) as logo, i}
                         <img
-                            src={logos[i % logos.length]}
-                            class="relative top-0 left-[100px] max-w-[70px] max-h-[70px] object-contain"
+                            src={logos[i % logos.length][0]}
+                            title={logos[i % logos.length][1]}  
+                            class="relative top-0 left-[100px] max-w-[80px] max-h-[80px] object-contain"
+                            alt={logos[i % logos.length][1]}
                         />
                     {/each}
                     {#if logos.length < 10}
                         {#each Array((10 - logos.length) * 2) as logo, i}
                             <img
-                                src={logos[i % logos.length]}
-                                class="relative top-0 left-[100px] max-w-[70px] max-h-[70px] object-contain"
+                                src={logos[i % logos.length][0]}
+                                title={logos[i % logos.length][1]}
+                                class="relative top-0 left-[100px] max-w-[80px] max-h-[80px] object-contain"
+                                alt={logos[i % logos.length][1]}
                             />
                         {/each}
                     {/if}
@@ -129,7 +137,7 @@
         id="circle-blur"
         src="/assets/gradient-blur-ellipse.svg"
         alt="Gradient Blur Ellipse"
-        class="absolute top-[70px] z-0 w-[900px] h-[900px] max-w-[155vw] max-h-[155vw]"
+        class="absolute top-[70px] z-10 w-[900px] h-[900px] max-w-[155vw] max-h-[155vw]"
     />
     <div />
 </div>

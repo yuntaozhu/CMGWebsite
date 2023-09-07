@@ -16,7 +16,11 @@
     /**
      * @type {any}
      */
-    export let tailwindcustomization;
+    export let textcustomization;
+    /**
+     * @type {any}
+     */
+     export let textboxcustomization;
 
     let titleWidth = 0;
 
@@ -44,8 +48,8 @@
     });
 </script>
 
-<div class="flex flex-col items-center">
-    <h5 id={"title-" + text} class="font-bold w-fit z-10 {tailwindcustomization}">
+<div id="reg-form-title" class="flex flex-col {textboxcustomization}">
+    <h5 id={"title-" + text} class="font-bold w-fit z-10 {textcustomization}">
         {text}
     </h5>
     <svg
@@ -85,5 +89,9 @@
 <style>
     #svgLine {
         max-width: 80vw;
+        min-width: 100%;
+    }
+    #reg-form-title{
+        word-break: break-word; 
     }
 </style>
