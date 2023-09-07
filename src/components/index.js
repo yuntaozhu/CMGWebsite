@@ -4,6 +4,7 @@ import HamburgerMenu from './atoms/HamburgerMenu.svelte';
 import ChatBot from './atoms/ChatBot/ChatBot.svelte';
 import TextAreaComponent from './atoms/TextAreaComponent.svelte';
 import SubmitNotification from './atoms/SubmitNotification.svelte';
+import FormButton from './atoms/FormButton.svelte';
 
 //--- Molecules ---
 import FooterContentOne from './molecules/Footers/FooterContentOne.svelte';
@@ -60,7 +61,7 @@ import Workshops from './organisms/Showcase/Workshops.svelte';
 
     export {
         //Atoms
-        Button, HamburgerMenu, ChatBot, TextAreaComponent,
+        Button, HamburgerMenu, ChatBot, TextAreaComponent, FormButton, SubmitNotification,
         //Molecules
         FooterContentOne, FooterContentTwo,
         DevStoriesHeader, DevStoriesTemplate, StatisticsTemplate,
@@ -70,5 +71,5 @@ import Workshops from './organisms/Showcase/Workshops.svelte';
         ContactForm,
         InitialSection, ResidentMembers, MembersRoster,
         BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, Statistics,
-        Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs, SubmitNotification
+        Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs
     };
