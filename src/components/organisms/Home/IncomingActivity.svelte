@@ -1,20 +1,22 @@
 <!-- Incoming/Ongoing Event Section -->
-<script>
-  import { goto } from '$app/navigation';
+<script lang="ts">
   let eventName = "ACSS Orientation";
   let eventDescription =
     "Lorem ipsum dolor sit amet consectetur. Euismod tellus mattis eget bibendum tempus non sed. Posuere dis sapien suspendisse tellus. Urna venenatis.";
   let eventImage = "/assets/placeholder-event-image.svg";
-  let eventDateTime = "September 00, 2023 7:00 PM";
+  let eventDateTime = "September 21, 2023 7:00 PM";
   import { Button } from "$components";
-  function handleButton() {
-    goto("/registration/acss-orientation");
+  import { goto } from "$app/navigation";
+
+  let link = "/registration/form-acss-orientation";
+  function routeToPage() {
+    goto(link);
   }
 </script>
 
 <section class="scrollFadeIn">
   <div
-    class="banner-container p-2 grid grid-cols-1 ss:mt-20 md:mt-28 3xl:mx-40"
+    class="banner-container p-2 grid grid-cols-1 ss:mt-20 md:mt-28 max-sm:mx-4 max-lg:mx-10 max-xl:mx-16 max-3xl:mx-28 3xl:mx-40"
   >
     <div class="p-10 lg:px-14 xl:px-[18%] md:grid md:grid-cols-3 md:gap-8">
       <div class="md:col-span-2 justify-self-center">
@@ -25,6 +27,8 @@
           <img
             src="/assets/notification.svg"
             alt="Notification Vector"
+            width="30"
+            height="33.42"
             class="w-[30px]"
           />
 
@@ -33,7 +37,7 @@
 
         <!-- Event Name -->
         <p
-          class="text-4xl lg:text-5xl content-center font-bold gradient-line py-2 max-w-fit"
+          class="max-ss:text-3xl text-4xl lg:text-5xl content-center font-bold gradient-line py-2 max-w-fit"
         >
           {eventName}
         </p>
@@ -48,13 +52,15 @@
           <img
             src="/assets/calendar.svg"
             alt="Calendar Icon"
+            width="40"
+            height="40"
             class="w-[40px]"
           />
           <p class="text-center">{eventDateTime}</p>
         </div>
 
         <!-- Register Button -->
-        <Button onClick={handleButton}>Register Now</Button>
+        <Button onClick={routeToPage}>Register Now</Button>
       </div>
 
       <!-- Event Image -->
@@ -62,6 +68,8 @@
         <img
           src={eventImage}
           alt="ACSS Event Placeholder"
+          width="381"
+          height="349"
           class="object-cover"
         />
       </div>
