@@ -6,7 +6,7 @@
     { title: "Home", url: "/" },
     { title: "About Us", url: "/about-us" },
     { title: "Showcase", url: "/showcase" },
-    { title: "Developers", url: "/developers" },
+    // { title: "Developers", url: "/developers" },
   ];
 
   $: currentPath = $page.url.pathname;
