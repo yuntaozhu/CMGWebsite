@@ -15,7 +15,7 @@
 
     // Removes the scrollbar on main
     function fixedMain() {
-        let main = document.getElementById("main");
+        let main = document.getElementById("fixed-on-modal-on");
         if (main) {
             top = main.getBoundingClientRect().top;
             main.style.position = "fixed";
@@ -26,7 +26,7 @@
 
     // Adds the scrollbar on main
     function scrollableMain() {
-        let main = document.getElementById("main");
+        let main = document.getElementById("fixed-on-modal-on");
         if (main) {
             main.style.position = "static";
             window.scrollTo({ top:top*-1, left:0, behavior: "instant"})
@@ -45,7 +45,7 @@
 </script>
 
 <div
-    class="modal fixed inset-0 flex justify-center z-10 backdrop-blur-lg bg-base-black mx-auto px-5 overflow-y-auto overflow-x-hidden md:items-center"
+    class="modal fixed inset-0 flex justify-center z-20 backdrop-blur-lg bg-base-black mx-auto px-5 overflow-y-auto overflow-x-hidden md:items-center"
 >
     <div
         class="relative top-[150px] flex flex-col h-fit gap-0 md:flex-row md:align-center md:justify-between md:px-8 md:py-0 md:gap-10 md:top-0 xl:gap-20"
