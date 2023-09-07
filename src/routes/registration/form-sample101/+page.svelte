@@ -4,15 +4,15 @@
     2. Event Name
     3. Event Description
 
-  Go to routes/RegistrationForms/'the-form-component' to modify or add your own form 
+  Go to src > components > organisms > RegistrationForms to modify or add your own form 
 -->
 
 <script>
-  import RegistrationTemplate from "$components/organisms/RegistrationForms/RegistrationTemplate.svelte"; // registration template component
+  import RegistrationTemplate from "$components/molecules/Form/RegistrationTemplate.svelte"; // registration template component
 
   // CUSTOMIZE THIS: This is where you can modify the header photo, event name, and event description
-  import Sample101 from "./Sample101.svelte"; // Form Component: import your form component (double check the import statement)
-  let headerPhotoURL = "https://wallpapercave.com/wp/wp5787527.jpg"; // Header Photo: a file from static folder
+  import Sample101 from "../../../components/organisms/RegistrationForms/Sample101.svelte"; // Form Component: a file from src > components > organisms > RegistrationForms (URL should be ../../../components/organisms/RegistrationForms/'your form component)
+  let headerPhotoURL = "https://wallpapercave.com/wp/wp5787527.jpg"; // Header Photo: a file from src > static (URL should be ../form-headers/'your file')
   let eventName = "Sample 101"; // Event Name
   let eventDescription = `
                 This is a sample form.

@@ -34,7 +34,7 @@
 </head>
 
 <div
-  class="overflow-hidden w-full bg-base-black px-5 lg:px-10 flex flex-col gap-10 pb-40"
+  class="overflow-hidden w-full px-5 lg:px-10 flex flex-col gap-10 pb-40 relative z-20"
 >
   <Hero />
   <Summary />

@@ -2,30 +2,30 @@
   import { Button } from "$components";
 
   let HomePage = [
-    ["DevStories", ""],
-    ["Strengths", ""],
-    ["Contributions", ""],
-    ["Brief Showcase", ""],
+    ["DevStories", "/#devstories"],
+    ["Strengths", "/#strengths"],
+    ["Contributions", "/#contributions"],
+    ["Brief Showcase", "/#briefshowcase"],
   ];
 
   let Showcase = [
-    ["Projects", ""],
-    ["Events", ""],
-    ["Workshops", ""],
-    ["Activities", ""],
+    ["Projects", "/showcase#projects"],
+    ["Events", "/showcase#events"],
+    ["Workshops", "/workshops#workshops"],
+    ["Activities", "/activities#activities"],
   ];
 
   let AboutUs = [
-    ["History", ""],
-    ["Mission & Vision", ""],
-    ["Core Vaues", ""],
-    ["Advisers", ""],
+    ["History", "/about-us#history"],
+    ["Mission & Vision", "/about-us#mission-vision"],
+    ["Core Vaues", "/about-us#core-values"],
+    ["Advisers", "/about-us#advisers"],
   ];
 
   let Developers = [
-    ["Executives", ""],
-    ["Resident Members", ""],
-    ["Member Roster", ""],
+    ["Executives", "/developers#executives"],
+    ["Resident Members", "/developers#resident-members"],
+    ["Member Roster", "/developers#member-roster"],
   ];
 
   function handleClick() {
@@ -53,7 +53,9 @@
         <a href="https://twitter.com/ACSSUPLB">
           <img src="/assets/icon-twitter.svg" class="h-6 w-6" />
         </a>
-        <a href="/"><img src="/assets/icon-instagram.svg" class="h-6 w-6" /></a>
+        <a href="https://www.instagram.com/acssuplb/"
+          ><img src="/assets/icon-instagram.svg" class="h-6 w-6" /></a
+        >
       </div>
     </div>
   </div>
@@ -67,7 +69,7 @@
         <p class="font-normal text-sm mb-2">Home</p>
         {#each HomePage as item, index}
           <div class="page-container">
-            <p class="pages">{item[0]}</p>
+            <a href={item[1]}><p class="pages">{item[0]}</p></a>
           </div>
         {/each}
       </div>
@@ -75,7 +77,7 @@
         <p class="font-normal text-sm mb-2">Showcase</p>
         {#each Showcase as item, index}
           <div class="page-container">
-            <p class="pages">{item[0]}</p>
+            <a href={item[1]}><p class="pages">{item[0]}</p></a>
           </div>
         {/each}
       </div>
@@ -87,7 +89,7 @@
         <p class="font-normal text-sm mb-2">About Us</p>
         {#each AboutUs as item, index}
           <div class="page-container">
-            <p class="pages">{item[0]}</p>
+            <a href={item[1]}><p class="pages">{item[0]}</p></a>
           </div>
         {/each}
       </div>
@@ -95,7 +97,7 @@
         <p class="font-normal text-sm mb-2">Developers</p>
         {#each Developers as item, index}
           <div class="page-container">
-            <p class="pages">{item[0]}</p>
+            <a href={item[1]}><p class="pages">{item[0]}</p></a>
           </div>
         {/each}
       </div>
@@ -108,71 +110,9 @@
       <p class="text-xl font-bold">Let’s Discuss What’s Next</p>
       <p>Have a question? We’d love to here from you!</p>
     </div>
-    <Button onClick={handleClick}>Contact Us</Button>
+    <a href="/contact-us"><Button onClick={handleClick}>Contact Us</Button></a>
   </div>
 </div>
-
-<!-- <div class="flex gap-10 w-2/3">
-  <div class="flex flex-col font-thin text-base i-tiny text-right">
-    <p class="i-regular font-normal text-xl mb-1">Contacts</p>
-    <p>Third Floor, Physical Sciences Building,</p>
-    <p>UPLB 4031 Los Baños, Philippines</p>
-    <p>0912 345 7890</p>
-    <p>acssph@gmail.com</p>
-  </div>
-  <div class="vertical-line h-100" />
-  <div class="w-full flex flex-wrap gap-4">
-    <div class="content md:w-1/2 lg:w-1/5 xl:w-1/5">
-      <div class="flex flex-col font-thin text-base i-tiny">
-        <p class="i-regular font-normal text-xl mb-1">Home</p>
-        {#each HomePage as item, index}
-          <div class="page-container">
-            <p>{item[0]}</p>
-          </div>
-        {/each}
-      </div>
-    </div>
-    <div class="content md:w-1/2 lg:w-1/5 xl:w-1/5">
-      <div class="flex flex-col font-thin text-base i-tiny">
-        <p class="i-regular font-normal text-xl mb-1">Showcase</p>
-        {#each Showcase as item, index}
-          <div class="page-container">
-            <p>{item[0]}</p>
-          </div>
-        {/each}
-      </div>
-    </div>
-    <div class="content md:w-1/2 lg:w-1/5 xl:w-1/5">
-      <div class="flex flex-col font-thin text-base i-tiny">
-        <p class="i-regular font-normal text-xl mb-1">About Us</p>
-        {#each AboutUs as item, index}
-          <div class="page-container">
-            <p>{item[0]}</p>
-          </div>
-        {/each}
-      </div>
-    </div>
-    <div class="content md:w-1/2 lg:w-1/4 xl:w-1/4">
-      <div class="flex flex-col font-thin text-base i-tiny">
-        <p class="i-regular font-normal text-xl mb-1">Developers</p>
-        {#each Developers as item, index}
-          <div class="page-container">
-            <p>{item[0]}</p>
-          </div>
-        {/each}
-      </div>
-    </div>
-  </div>
-</div>
-<div class="flex gap-3 justify-end font-thin text-base i-tiny w-1/3">
-  <div class="flex flex-col justify-self-around">
-    <div class="flex flex-col">
-      <p class="i-large-bold text-xl">Let’s Discuss What’s Next</p>
-      <p>Have a question? We’d love to here from you!</p>
-    </div>
-    <Button onClick={handleClick}>Contact Us</Button>
-  </div>
-</div> -->
 
 <style>
   .content-container .pages:hover {

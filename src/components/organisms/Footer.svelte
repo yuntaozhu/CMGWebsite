@@ -2,10 +2,10 @@
   import { FooterContentOne, FooterContentTwo } from "$components";
 
   let HomePage = [
-    ["DevStories", ""],
-    ["Strengths", ""],
-    ["Contributions", ""],
-    ["Brief Showcase", ""],
+    ["DevStories", "/#devstories"],
+    ["Strengths", "/#strengths"],
+    ["Contributions", "/#contributions"],
+    ["Brief Showcase", "/#briefshowcase"],
   ];
 
   let Showcase = [
@@ -49,7 +49,7 @@
     />
   </svg>
 </div>
-<div class="footer flex flex-col h-fit z-20">
+<div class="footer flex flex-col h-fit">
   <div class="hidden md:flex lg:flex xl:flex w-100">
     <FooterContentOne />
   </div>
@@ -60,11 +60,6 @@
     class="footer__bottom flex flex-row pl-20 pr-20 pt-5 pb-5 w-100 justify-between items-center"
   >
     <div class="flex flex-row align-center justify-start flex-grow">
-      <!-- <img
-        src="/logo.webp"
-        alt="The official seal of The Alliance of Computer Science Student"
-        class="footer__logo"
-      /> -->
       <div class="flex flex-col font-thin align-center justify-center">
         <p class="i-tiny">Alliance of Computer Science Students</p>
         <p class="i-super-tiny">University of the Philippines Los Banos</p>

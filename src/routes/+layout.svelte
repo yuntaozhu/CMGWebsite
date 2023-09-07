@@ -8,12 +8,16 @@
     function scrollFadeIn() {
         let scrollFadeInElements =
             document.getElementsByClassName("scrollFadeIn");
+        let main = document.getElementById("main");
 
         for (let element of scrollFadeInElements) {
             if (
                 element instanceof HTMLElement &&
-                element.getBoundingClientRect().top <
-                    document.documentElement.clientHeight * 0.5
+                main &&
+                (element.getBoundingClientRect().top <
+                    document.documentElement.clientHeight * 0.5 ||
+                    main?.getBoundingClientRect().bottom <=
+                        document.documentElement.clientHeight)
             ) {
                 element.style.opacity = "1";
             }
@@ -27,10 +31,14 @@
     });
 </script>
 
-<main class="overflow-hidden">
+<main id="main" class="overflow-hidden bg-base-black h-fit">
     <NavBar />
-    <GradientBlur />
-    <!-- <ChatBot /> -->
-    <slot />
-    <Footer />
+    <div id="fixed-on-modal-on">
+        <GradientBlur />
+        <!-- <ChatBot /> -->
+        <slot />
+        <div class="relative z-20">
+            <Footer />
+        </div>
+    </div>
 </main>

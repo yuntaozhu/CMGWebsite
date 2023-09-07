@@ -1,24 +1,35 @@
 <script>
-    const description = "We have always wanted to reach more people. Other than our social media handles, our official website is also our official introduction to the World Wide Web. Our website is likewise a convenient way to get the latest information about our developers, our recent events and activities, and our recent projects."
+    export let contents = "";
+    export let contentTitle = "";
+
+
+    import { data } from "./data";
+
 </script>
 
 <section class="relative z-1 px-5 ">
-  <div class="description-content ">
-      <div class="description-container" >
-          <div class="description-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center ">
-              <div class="h-full">
-                  <div>
-                      <h4 class="title font-bold text-white">Description</h4>
-                  </div>
-                  
-              </div>
+  {#each data[contents] as content}
+    {#if content.title.toLowerCase() === contentTitle}
+      <div class="description-content ">
+        <div class="description-container" >
+            <div class="description-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center ">
+                <div class="h-full">
+                    <div>
+                        <h4 class="text-4xl lg:text-5xl font-bold text-white">Description</h4>
+                    </div>
+                    
+                </div>
 
-              <div class="xl:w-[500px]">
-                  <h5 class="description font-normal text-white">{description}</h5>
-              </div>
-          </div>
-      </div>
-  </div>
+                <div class="xl:w-[500px]">
+                    <h5 class=" text-sm md:text-base font-normal text-white">{content.description}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/if}
+
+  {/each}
+
 </section>
 
 <style>
@@ -32,13 +43,7 @@
     .description-grid {
       gap: 2rem;
     }
-    .title {
-      font-size: 1.5rem; /* Adjusted font size */
-    }
-    .description {
-      font-size: 0.875rem; /* Adjusted font size */
-      
-    }
+
   }
 
   /* Medium screen */
@@ -50,12 +55,7 @@
     .description-grid {
       gap: 2.5rem;
     }
-    .title {
-      font-size: 1.875rem; /* Adjusted font size */
-    }
-    .description {
-      font-size: 1rem; /* Adjusted font size */
-    }
+
   }
 
   /* Large screen */
@@ -68,12 +68,7 @@
     .description-grid {
       gap: 3rem;
     }
-    .title {
-      font-size: 2.25rem; /* Adjusted font size */
-    }
-    .description {
-      font-size: 1rem; /* Adjusted font size */
-    }
+
   }
 
   /* Extra large screen */
@@ -86,11 +81,6 @@
     .description-grid {
       gap: 4rem;
     }
-    .title {
-      font-size: 3rem; /* Adjusted font size */
-    }
-    .description {
-      font-size: 1rem; /* Adjusted font size */
-    }
+
   }
 </style>
