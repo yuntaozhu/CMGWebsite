@@ -5,25 +5,26 @@
 
 <script>
     import {ShowcaseHeader, NavBar, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs} from "$components";
-    import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
 
     import { page } from '$app/stores'
     const showcaseId = $page.params.showcaseId;
     
     let contents = "";
     let contentTitle = "";
-    let words = showcaseId.split(' ');
+    let words = showcaseId.split('-');
 
     if (words.length > 0){
         contents = words[0];
 
         words.splice(0,1);
         contentTitle = words.join(' ');
+        
     }
+    
   
 </script>
   <head>
-      <title>{contentTitle}</title>
+      <title>{contentTitle.toUpperCase()} - Showcase</title>
   </head>
   
   <style>

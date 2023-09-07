@@ -21,7 +21,7 @@
             <div class="md:w-[840px] lg:w-[1200px] xl:w-[1500px]">
                 <div class="flex flex-wrap gap-5 md:gap-10 md:justify-center py-10 ">
                     {#each data["projects"] as content}
-                        {#if content.title === contentTitle }
+                        {#if content.title.toLowerCase() === contentTitle }
                             {#each content.developers as dev}
                             <div class="glassmorphic-rectangle py-8 flex flex-col justify-self-center items-center w-[200px] md:w-[232px] h-[300px]  rounded-2xl relative">
                             
