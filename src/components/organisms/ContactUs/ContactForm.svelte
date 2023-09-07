@@ -68,7 +68,7 @@
   }
 </script>
 
-<SubmitNotification {success} message={notificationMessage} showNotif={showNotif}/>
+<SubmitNotification {success} message={notificationMessage} {showNotif}/>
 
 <div class="flex justify-center items-center h-fit lg:h-screen w-100">
   <div
