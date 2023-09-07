@@ -25,7 +25,7 @@
 
   // Form submission into formValues
   // @ts-ignore
-  async function submitForm(e) {
+  async function submitForm(e) { // submit form values to API
     loadingSubmission = true;
 
     let formValues = {
@@ -146,9 +146,5 @@
     border-radius: 16px;
     border: 0.01rem solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(21px);
-  }
-
-  .button {
-    -webkit-tap-highlight-color: transparent;
   }
 </style>
