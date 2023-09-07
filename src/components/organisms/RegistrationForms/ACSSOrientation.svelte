@@ -110,8 +110,9 @@
     }
     
 </script>
-
-<SubmitNotification {success} message={notificationMessage} {showNotif}/>
+<div class="relative z-50">
+    <SubmitNotification {success} message={notificationMessage} {showNotif}/>
+</div>
 
 <RegSectionBody>
     <form

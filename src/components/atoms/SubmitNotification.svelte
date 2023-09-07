@@ -20,8 +20,8 @@
 
 {#if showNotif}
     <!-- container -->
-    <div class="w-screen fixed flex justify-center z-50 box-border px-4 top-4">
-        <div class="flex justify-evenly items-center h-fit z-50 p-3 rounded-xl border border-white bg-white bg-opacity-20 border-opacity-30 shadow-2xl backdrop-blur-md" transition:fly={{ duration: 500, y: -200, easing: cubicInOut }}>
+    <div class="w-screen fixed flex justify-center z-[60] box-border px-4 top-4 ">
+        <div class="flex justify-evenly max-w-lg items-center h-fit p-3 rounded-xl border border-white bg-white bg-opacity-20 border-opacity-30 shadow-2xl backdrop-blur-md" transition:fly={{ duration: 500, y: -200, easing: cubicInOut }}>
             <!-- icon -->
             {#if success}
                 <img class="mt-1 w-11 h-11" src="/assets/check.svg" alt="✔"/>

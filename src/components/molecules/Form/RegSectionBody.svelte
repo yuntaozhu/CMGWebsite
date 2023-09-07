@@ -73,26 +73,28 @@
     });
 </script>
 
-<div id="form" class="mr-[10%] ml-[10%] mt-7 flex">
-    <div
-        id="input-section"
-        class="relative glassmorphic-rectangle bg-slate-700 flex-col"
-    >
-        <!-- Input Components -->
-        <slot name="registration-form" />
-    </div>
-
-    {#if windowWidth * 0.75 > windowHeight && windowWidth > 720}
+<div class="relative z-20">
+    <div id="form" class="mr-[10%] ml-[10%] mt-7 flex">
         <div
-            id="reg-form-illus-measure"
-            class="w-7/12 flex justify-center overflow-hidden"
+            id="input-section"
+            class="relative glassmorphic-rectangle bg-slate-700 flex-col"
         >
-            <div id="reg-form-illus-photo" class="relative w-full h-fit">
-                <!-- Illustration -->
-                <RegFormIllus />
-            </div>
+            <!-- Input Components -->
+            <slot name="registration-form" />
         </div>
-    {/if}
+
+        {#if windowWidth * 0.75 > windowHeight && windowWidth > 720}
+            <div
+                id="reg-form-illus-measure"
+                class="w-7/12 flex justify-center overflow-hidden"
+            >
+                <div id="reg-form-illus-photo" class="relative w-full h-fit">
+                    <!-- Illustration -->
+                    <RegFormIllus />
+                </div>
+            </div>
+        {/if}
+    </div>
 </div>
 
 <style>

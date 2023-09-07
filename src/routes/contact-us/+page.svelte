@@ -24,6 +24,6 @@
   />
 </head>
 
-<div class="relative z-20">
+<div>
   <ContactForm />
 </div>
