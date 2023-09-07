@@ -7,7 +7,7 @@
 
 </script>
 
-<section class="relative z-1 px-5 ">
+<section class="px-5">
   {#each data[contents] as content}
     {#if content.title.toLowerCase() === contentTitle}
       <div class="description-content ">
