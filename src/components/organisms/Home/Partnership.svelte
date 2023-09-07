@@ -96,7 +96,7 @@
 </script>
 
 <div
-    class="w-full h-[320px] max-h-[90vw] flex flex-col items-center gap-5 mt-[110px] pl-[10%] pr-[10%] relative"
+    class="w-full h-[320px] max-h-[90vw] flex flex-col items-center gap-5 mt-[110px] pl-[10%] pr-[10%] relative scrollFadeIn"
 >
     <h6 class="absolute top-0 text-2xl font-extrabold text-center">
         We have worked with {logos.length} companies.

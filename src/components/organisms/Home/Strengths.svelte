@@ -7,19 +7,19 @@
   let strengths = [
     [
       "Technology Proficiency",
-      "Strength, this is a sample sentence. Strength, this is a sample sentence. Strength, this is a sample sentence.",
+      "As technology grows and changes, our developers are equipped with strong collaborative skills and programming knowledge, which allow us to keep up with the cultural shift.",
     ],
     [
       "Competitive Workforce",
-      "Strength, this is a sample sentence. Strength, this is a sample sentence. Strength, this is a sample sentence.",
+      "Our organization fosters excellence and innovation as our developers are skilled, motivated, and fueled with our love for technology and community. This also keeps us ahead while being disciplined and dependable.",
     ],
     [
       "Effective Research and Development Aptitude",
-      "Strength, this is a sample sentence. Strength, this is a sample sentence. Strength, this is a sample sentence.",
+      "Our developers are innovative in developing solutions to solve community problems using technology, aligned with our organization's mission.",
     ],
     [
       "Agile Development",
-      "Strength, this is a sample sentence. Strength, this is a sample sentence. Strength, this is a sample sentence.",
+      "Our developers are able to anticipate the need for flexibility and evolve in a changing environment while maintaining rapport among its constituents and clients.",
     ],
   ];
   // END OF CUSTOMIZATION

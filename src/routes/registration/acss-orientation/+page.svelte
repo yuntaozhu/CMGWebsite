@@ -15,10 +15,10 @@
   let headerPhotoURL = "../form-headers/sample-reg-header.webp"; // Header Photo: a file from src > static (URL should be ../form-headers/'your file')
   let eventName = "ACSS Orientation"; // Event Name
   let eventDescription = `
-                This is an early registration form for the incoming ACSS Orientation
-                "Insert Orientation Name" which aims to familiarize you with our
-                growing organization. The orientation will be held on September 00,
-                2023 at 6:00 PM. If you wish to join the orientation, kindly fill
+                This is an early registration form for the upcoming "ACSS-UPLB Orientation:
+                Xperience Sugar, Spice, and Everthing Nice!" which aims to familiarize you with our
+                growing organization. The orientation will be held on September 21,
+                2023, 7:00 PM at Jollibee Vega. If you wish to join the orientation, kindly fill
                 out this form. Orientation details and updates will be sent through
                 the email used in answering this form.
                 `; // Event Description

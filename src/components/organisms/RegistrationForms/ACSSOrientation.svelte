@@ -82,6 +82,7 @@
             <!-- CUSTOMIZE THIS: Add the input components here -->
             <TextInputComponent label="Name" required={true} placeholder="Juan Dela Cruz"/>
             <TextInputComponent label="Nickname" required={true} placeholder=""/>
+            <TextInputComponent label="Preferred Pronouns" required={true} placeholder="He/Him"/>
             <EmailInputComponent label="Email" required={true} placeholder="jdelacruz@up.edu.ph"/>
             <DropdownInputComponent label="College" options={colleges} />
             <TextInputComponent label="Degree Program" required={true} placeholder="BSCS"/>

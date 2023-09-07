@@ -48,7 +48,7 @@
     });
 </script>
 
-<div class="flex flex-col {textboxcustomization}">
+<div id="reg-form-title" class="flex flex-col {textboxcustomization}">
     <h5 id={"title-" + text} class="font-bold w-fit z-10 {textcustomization}">
         {text}
     </h5>
@@ -90,5 +90,8 @@
     #svgLine {
         max-width: 80vw;
         min-width: 100%;
+    }
+    #reg-form-title{
+        word-break: break-word; 
     }
 </style>
