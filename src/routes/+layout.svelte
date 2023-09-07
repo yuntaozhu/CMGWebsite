@@ -2,7 +2,9 @@
     import "../app.css";
     import { NavBar, Footer, ChatBot } from "$components";
     import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
+    import { submissionSuccess, notificationMessage, showNotification } from "$lib/stores";
     import { onMount } from "svelte";
+    import SubmitNotification from "$components/atoms/SubmitNotification.svelte";
 
     // Scroll Fade In Animation (To use: add "scrollFadeIn" class to a html element)
     function scrollFadeIn() {
@@ -32,6 +34,7 @@
 </script>
 
 <main id="main" class="overflow-hidden bg-base-black h-fit">
+    <SubmitNotification success={$submissionSuccess} message={$notificationMessage} showNotif={$showNotification}/>
     <NavBar />
     <div id="fixed-on-modal-on">
         <GradientBlur />
