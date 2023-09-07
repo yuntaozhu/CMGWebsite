@@ -11,7 +11,7 @@
 </script>
 
 <section class="container mx-auto relative">
-  <div class="flex-col md:flex-row md:gap-4 flex md:px-8 lg:px-16 xl:px-[21rem]">
+  <div class="flex-col md:flex-row md:gap-4 flex md:px-8 lg:px-16 xl:px-[16rem]">
 
     <div class="pt-4 ss:pt-0 md:pt-0 flex justify-center items-center md:flex-1 3xl:max-w-screen-sm">
       <!-- Team Name -->
@@ -23,7 +23,7 @@
     <div class="flex flex-col md:justify-center md:flex-1 gap-6 md:max-w-xl 3xl:max-w-2xl">
       <div class="flex flex-col gap-1">
         <!-- Description text -->
-        <p class="font-light text-slate-200 max-w-1xl text-sm">{description}</p>
+        <p class="font-light text-slate-200 max-w-1xl text-xs">{description}</p>
       </div>
     </div>
   </div>

@@ -82,7 +82,7 @@ export const teams = [
           },
         },
         {
-          fullName: 'Austin Asunsion',
+          fullName: 'Ralph Ken Rea',
           imageSrc: '2.jpg',
           nickname: 'Ken',
           batch: 'Y.B. 12.2',
@@ -198,7 +198,7 @@ export const teams = [
     },
     {
       name: 'Media and Publicity Team',
-      description: 'Ang pinakamalupit na mga tao sa ACSS. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: 'The Media and Publicity Team, or informally known as the “Pub Team” primarily concerns itself with promoting the image and advocacies of the organization to the public, not just within the university but also the larger community outside of it',
       developers: [
         {
           fullName: 'Austin Asunsion',
