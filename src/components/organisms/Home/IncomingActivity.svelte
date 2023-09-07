@@ -2,7 +2,7 @@
 <script lang="ts">
   let eventName = "ACSS Orientation";
   let eventDescription =
-    "Lorem ipsum dolor sit amet consectetur. Euismod tellus mattis eget bibendum tempus non sed. Posuere dis sapien suspendisse tellus. Urna venenatis.";
+    "Xperience Sugar, Spice, and Everything Nice: An ACSS-UPLB Orientation. See you at Jollibee Vega!";
   let eventImage = "/assets/placeholder-event-image.svg";
   let eventDateTime = "September 21, 2023 7:00 PM";
   import { Button } from "$components";
