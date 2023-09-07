@@ -33,10 +33,12 @@
 
 <main id="main" class="overflow-hidden bg-base-black h-fit">
     <NavBar />
-    <GradientBlur />
-    <!-- <ChatBot /> -->
-    <slot />
-    <div class="relative z-20">
-        <Footer />
+    <div id="fixed-on-modal-on">
+        <GradientBlur />
+        <!-- <ChatBot /> -->
+        <slot />
+        <div class="relative z-20">
+            <Footer />
+        </div>
     </div>
 </main>
