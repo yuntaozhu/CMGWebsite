@@ -19,7 +19,7 @@
     
 </script>
 
-<header class="description relative h-55vh min-h-300px z-1 px-5">
+<header class="description relative h-55vh min-h-300px px-5">
     {#each data[contents] as content }
         {#if content.title.toLowerCase() === contentTitle}
             <div class="showcase-content flex flex-col justify-center md:w-[700px] lg:w-[900px]  xl:w-[1200px] h-full ">

@@ -42,7 +42,7 @@
       }
   </style>
   
-  <div class="min-h-screen flex flex-col items-center showcase-background pt-20 pb-20 gap-10 lg:gap-20">
+  <div class="min-h-screen flex flex-col items-center showcase-background pt-20 pb-20 gap-10 lg:gap-20 relative z-20">
     <ShowcaseHeader contents = {contents} contentTitle = {contentTitle}/>
     <ShowcaseImage contents = {contents} contentTitle = {contentTitle}/>
     <ShowcaseDescription contents = {contents} contentTitle = {contentTitle}/>
