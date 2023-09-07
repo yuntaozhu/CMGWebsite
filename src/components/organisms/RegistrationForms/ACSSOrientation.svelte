@@ -18,7 +18,6 @@
     import NumberInputComponent from "$components/atoms/NumberInputComponent.svelte";
     import DropdownInputComponent from "$components/atoms/DropdownInputComponent.svelte";
     import RadioInputComponent from "$components/atoms/RadioInputComponent.svelte";
-    import SubmitButton from "$components/atoms/SubmitButton.svelte";
     import FormButton from "$components/atoms/FormButton.svelte";
     import SubmitNotification from "$components/atoms/SubmitNotification.svelte";
 
@@ -84,7 +83,7 @@
     async function postToSheets(formValues) { // send form values to API
         loadingSubmission = true;
         
-        await fetch("/api/contact-us", {
+        await fetch("/api/registration", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -95,10 +94,10 @@
             .then(body => {
                 loadingSubmission = false;
                 if (body["success"]) {
-                notificationMessage = "Your message has been sent. Thank you for contacting us."
+                notificationMessage = "Thank you for registering!"
                 success = true;
                 } else {
-                notificationMessage = "Unable to send your message due to server error."
+                notificationMessage = "There seems to be an error with the server."
                 success = false;
                 }
 
@@ -137,7 +136,7 @@
             />
             <!-- END OF CUSTOMIZATION -->
         </div>
-        <div class="max-ss:self-center">
+        <div class="max-ss:self-center ">
             <FormButton {loadingSubmission}/>
         </div>
     </form>
