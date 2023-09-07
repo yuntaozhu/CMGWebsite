@@ -142,7 +142,7 @@
 <style>
   #strength-bg {
     position: relative;
-    background: url("../acss-cube.svg");
+    background: url("acss-cube.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
