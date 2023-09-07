@@ -37,7 +37,9 @@
 </head>
 
 <History />
-<MissionVision />
-<PhotoPage />
-<CoreValues />
-<Advisers />
+<div class="relative z-20">
+  <MissionVision />
+  <PhotoPage />
+  <CoreValues />
+  <Advisers />
+</div>
