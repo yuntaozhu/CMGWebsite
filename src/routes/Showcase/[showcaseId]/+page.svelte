@@ -4,8 +4,10 @@
 
 
 <script>
-    import {ShowcaseHeader, NavBar, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs} from "$components";
+// @ts-nocheck
 
+    import {ShowcaseHeader, NavBar, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs} from "$components";
+    import {data} from "$components/organisms/Showcase/data.js";
     import { page } from '$app/stores'
     const showcaseId = $page.params.showcaseId;
     
@@ -24,7 +26,12 @@
   
 </script>
   <head>
-      <title>{contentTitle.toUpperCase()} - Showcase</title>
+        {#each data[contents] as content}
+            {#if content.title.toLowerCase() === contentTitle}
+                <title>{content.title} - Showcase</title>
+            {/if}
+
+        {/each}  
   </head>
   
   <style>
