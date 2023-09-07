@@ -18,7 +18,7 @@ export const data = {
         },
         {
             title: "Project TAKS",
-            blurb: "Streamlining Real Propert and Business Tax Payments ",
+            blurb: "Streamlining Real Property and Business Tax Payments ",
             images: ["/project_taks_01.webp", "/project_taks_02.webp"],
             description: "Project TAKS is a full-stack website development project with the purpose of providing an easier payment method of real property and business taxes in City of Balanga.",
             developers: [
@@ -53,13 +53,13 @@ export const data = {
         {
             title: "Game of Codes",
             blurb: "Unleashing Coding Prowess for Tomorrow's Tech World ",
-            images: ["/acss_uplb_game_of_codes.webp"],
+            images: ["/acss_uplb_game_of_codes.webp", "/acss_uplb_game_of_codes02.webp", "/acss_uplb_game_of_codes03.webp", "/acss_uplb_game_of_codes04.webp", "/acss_uplb_game_of_codes05.webp", "/acss_uplb_game_of_codes06.webp" ],
             description : "The Game of Codes allows teams of budding computer scientists and programmers to test their skills in this modified ACM-ICPC style programming competition. Teams compete to solve programming problems in a range of difficulties, ultimately vying for the most points."
         },
         {
             title: "Exhibits",
-            blurb: "Streamlining Real Property and Business Tax Payments ",
-            images: ["/acss_uplb_exhibit.webp"],
+            blurb: "Exploring the Forefront of Computer Science from Emerging Techs",
+            images: ["/acss_uplb_exhibit.webp", "/acss_uplb_exhibit02.webp", "/acss_uplb_exhibit03.webp", "/acss_uplb_exhibit04.webp", "/acss_uplb_exhibit05.webp"],
             description: "As an academic organization, our exhibits fulfill the desire to share knowledge, ranging from trends in computer science, emerging technologies, up to already well-known concepts that will pique the interest of the community. Our exhibits also reveal at-a-glance information about our organization, as well as information about our events at the time."
         },
     ],
@@ -69,14 +69,14 @@ export const data = {
     "workshops" : [
         {
             title: "External Workshops",
-            blurb: "Streamlining Real Property and Business Tax Payments ",
-            images: ["/acss_uplb_external_workshop.webp"],
+            blurb: "Enhancing Your Grasp of University-Level Computer Science Courses",
+            images: ["/acss_uplb_external_workshop.webp","/acss_uplb_external_workshop02.webp", "/acss_uplb_external_workshop03.webp", "/acss_uplb_external_workshop04.webp", "/acss_uplb_external_workshop05.webp", "/acss_uplb_external_workshop06.webp", "/acss_uplb_external_workshop07.webp", "/acss_uplb_external_workshop08.webp"],
             description : "While our external tutorials help in strengthening the understanding of computer science subjects taught in the University, our external workshops answer the need of the community for more knowledge in practical technology— whether be it web development skills or programming techniques."
         },
         {
             title: "External Tutorials",
-            blurb: "Streamlining Real Property and Business Tax Payments ",
-            images: ["/acss_uplb_external_tutorial.webp"],
+            blurb: "Sharing Extensive Expertise in Diverse Computer Science Domains",
+            images: ["/acss_uplb_external_tutorial.webp", "/acss_uplb_external_tutorial02.webp", "/acss_uplb_external_tutorial03.webp", "/acss_uplb_external_tutorial04.webp","/acss_uplb_external_tutorial05.webp", "/acss_uplb_external_tutorial06.webp"],
             description: "In our commitment to service, our developers showcase and share the breadth and depth of their knowledge of various aspects of computer science through external tutorials. This equips computer science students the supplementary knowledge to assist them in reviewing for upcoming academic assessments."
         },
     ]
