@@ -12,14 +12,25 @@
 
 <script>
   // Import statements
-  import { TextAreaComponent } from "$components";
+  import { TextAreaComponent, SubmitNotification } from "$components";
   // import TextAreaComponent from "$components/atoms/TexAreaComponent.svelte";
   import TextInputComponent from "$components/atoms/TextInputComponent.svelte";
   import EmailInputComponent from "$components/atoms/EmailInputComponent.svelte";
   import SubmitButton from "$components/atoms/SubmitButton.svelte";
+  import Button from "$components/atoms/Button.svelte";
+  import { fly } from "svelte/transition";
+  import { cubicInOut } from "svelte/easing";
+
+  let notificationMessage = "Unable to send your message due to server error.";
+  let showNotif = false;
+  let successNotif = false;
+  let loadingSubmission = false;
 
   // Form submission into formValues
-  async function submitForm() {
+  // @ts-ignore
+  async function submitForm(e) {
+    loadingSubmission = true;
+
     let formValues = {
       "Name": "",
       "Email": "",
@@ -31,6 +42,8 @@
       formValues[key] = document.getElementById(`Form${key}`).value;
     }
 
+    e.target.reset();
+
     await fetch("/api/contact-us", {
       method: "POST",
       headers: {
@@ -38,8 +51,27 @@
       },
       body: JSON.stringify(formValues)
     })
+      .then(res => res.json())
+      .then(body => {
+        loadingSubmission = false;
+        if (body["success"]) {
+          notificationMessage = "Your message has been sent. Thank you for contacting us."
+          successNotif = true;
+        } else {
+          notificationMessage = "Unable to send your message due to server error."
+          successNotif = false;
+        }
+
+        showNotif = true;
+
+        setTimeout(() => {
+          showNotif = false;
+        }, 3000);
+      })
   }
 </script>
+
+<SubmitNotification success={successNotif} message={notificationMessage} showNotif={showNotif}/>
 
 <div class="flex justify-center items-center h-fit lg:h-screen w-100">
   <div
@@ -71,7 +103,7 @@
             <form
               id="registration-form"
               class="h-fit flex flex-col justify-between"
-              on:submit={submitForm}
+              on:submit|preventDefault={submitForm}
             >
               <div id="components">
                 <div id="components" class="flex flex-row gap-8">
@@ -93,8 +125,15 @@
                 />
               </div>
               <div class="flex row-span-1">
-                <div class="mt-8">
-                  <SubmitButton />
+                <div class="flex mt-8 items-center gap-4">
+                  <Button disabled={loadingSubmission} onClick={() => {}}>
+                    <div class="flex flex-col justify-center w-20 h-5">
+                        <span>Submit</span>
+                    </div>
+                  </Button>
+                  {#if loadingSubmission}
+                    <span class="bg-0 italic text-sm" transition:fly={{duration: 500, x: -20, easing: cubicInOut}}>Submitting...</span>
+                  {/if}
                 </div>
               </div>
             </form>

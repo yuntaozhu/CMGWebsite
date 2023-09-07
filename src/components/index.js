@@ -3,6 +3,7 @@ import Button from './atoms/Button.svelte';
 import HamburgerMenu from './atoms/HamburgerMenu.svelte';
 import ChatBot from './atoms/ChatBot/ChatBot.svelte';
 import TextAreaComponent from './atoms/TextAreaComponent.svelte';
+import SubmitNotification from './atoms/SubmitNotification.svelte';
 
 //--- Molecules ---
 import FooterContentOne from './molecules/Footers/FooterContentOne.svelte';
@@ -57,17 +58,17 @@ import Projects from './organisms/Showcase/Projects.svelte';
 import Workshops from './organisms/Showcase/Workshops.svelte';
 
 
-export {
-    //Atoms
-    Button, HamburgerMenu, ChatBot,TextAreaComponent,
-    //Molecules
-    FooterContentOne, FooterContentTwo,
-    DevStoriesHeader, DevStoriesTemplate, StatisticsTemplate,
-    //Organisms
-    NavBar, Footer,
-    CoreValues, History, MissionVision, Advisers, PhotoPage,
-    ContactForm,
-    InitialSection, ResidentMembers, MembersRoster,
-    BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, Statistics,
-    Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs
-}
+    export {
+        //Atoms
+        Button, HamburgerMenu, ChatBot, TextAreaComponent,
+        //Molecules
+        FooterContentOne, FooterContentTwo,
+        DevStoriesHeader, DevStoriesTemplate, StatisticsTemplate,
+        //Organisms
+        NavBar, Footer,
+        CoreValues, History, MissionVision, Advisers, PhotoPage,
+        ContactForm,
+        InitialSection, ResidentMembers, MembersRoster,
+        BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, Statistics,
+        Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs, SubmitNotification
+    };
