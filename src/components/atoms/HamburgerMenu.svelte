@@ -1,20 +1,16 @@
 <script>
   import { Button } from "$components";
   let menuState = false;
-  $: {
-    console.log(menuState);
-  }
 
   function toggleMenu() {
     menuState = !menuState;
-    console.log(menuState);
   }
 
   let pages = [
     { title: "Home", url: "/" },
     { title: "About Us", url: "/about-us" },
     { title: "Showcase", url: "/showcase" },
-    { title: "Developers", url: "/developers" },
+    // { title: "Developers", url: "/developers" },
     // {title: "ACSS Week", url: ""},
   ];
 
