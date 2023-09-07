@@ -1,10 +1,7 @@
 <div>
-    <!-- megaphone is outside the glassmorphic container if smaller screen size -->
     <img
         src="/assets/megaphone.svg"
         alt="Megaphone Vector"
-        width="80"
-        height="80"
         class="min-[444px]:hidden w-20 mx-auto"
     />
     <div class="glassmorphic-rounded px-5 py-1 max-[444px]:py-4 sm:w-[460px]">
@@ -12,8 +9,6 @@
             <img
                 src="/assets/megaphone.svg"
                 alt="Megaphone Vector"
-                width="80"
-                height="80"
                 class="max-[444px]:hidden w-20"
             />
             <p class="text-2xl font-extrabold text-center">Developer Stories</p>
