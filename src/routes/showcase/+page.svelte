@@ -16,7 +16,7 @@
     Projects,
     Events,
     Workshops,
-    Activities,
+    Activities
   };
 
 
