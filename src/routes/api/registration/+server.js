@@ -19,7 +19,7 @@ export async function POST({ request }) {
                 spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1N3MjIOC5UZ9CuFbPb445BpyZk6rOxhTc0eFokn2koXQ/edit?usp=sharing",
                 sheetName: "Registration",
                 formData: {
-                    "Registration Date": new Date().toLocaleString(),
+                    "Registration Date": new Date().toLocaleString("PST"),
                     ...req
                 }
             })

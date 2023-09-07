@@ -13,7 +13,7 @@ export async function POST({ request }) {
                 spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1o54SKsG3p4_3b90xV1E7iTH0NKxA_FlDPB9nECUUfkw/edit#gid=0",
                 sheetName: "Sheet1",
                 formData: {
-                    "Date and Time": new Date().toLocaleString(),
+                    "Date and Time": new Date().toLocaleString("PST"),
                     ...req
                 }
             })
