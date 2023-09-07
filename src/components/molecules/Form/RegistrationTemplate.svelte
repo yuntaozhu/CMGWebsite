@@ -40,9 +40,7 @@
   <div
     class="h-full min-h-screen flex-column text-base-white overflow-y-hidden overflow-x-hidden pb-20"
   >
-    <div class="relative z-20">
-      <RegSectionHead {headerPhotoURL} {eventName} {eventDescription} />
-    </div>
+    <RegSectionHead {headerPhotoURL} {eventName} {eventDescription} />
     <!-- Form Component-->
     <slot name="form" />
   </div>
