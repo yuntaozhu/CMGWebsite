@@ -68,11 +68,9 @@
   }
 </script>
 
-<div class="relative z-50">
-  <SubmitNotification {success} message={notificationMessage} {showNotif}/>
-</div>
+<SubmitNotification {success} message={notificationMessage} {showNotif}/>
 
-<div class="relative z-20 flex justify-center items-center h-fit lg:h-screen w-100">
+<div class="flex justify-center items-center h-fit lg:h-screen w-100">
   <div
     class="grid grid-cols-10 pt-32 pr-10 pl-10 md:pr-20 md:pl-20 lg:pr-0 lg:pl-0 w-100 lg:w-4/5 pb-20"
   >
