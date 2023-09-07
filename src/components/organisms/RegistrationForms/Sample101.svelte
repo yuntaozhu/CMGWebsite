@@ -12,7 +12,7 @@
 
 <script>
     // Import statements
-    import RegSectionBody from "$components/organisms/RegistrationForms/RegSectionBody.svelte";
+    import RegSectionBody from "$components/molecules/Form/RegSectionBody.svelte";
     import TextInputComponent from "$components/atoms/TextInputComponent.svelte";
     import EmailInputComponent from "$components/atoms/EmailInputComponent.svelte";
     import NumberInputComponent from "$components/atoms/NumberInputComponent.svelte";

@@ -23,4 +23,7 @@
     content="Get in touch with The Alliance of Computer Science Students UPLB. We welcome your inquiries, feedback, and collaboration opportunities. Reach out to us today!"
   />
 </head>
-<ContactForm />
+
+<div class="relative z-20">
+  <ContactForm />
+</div>

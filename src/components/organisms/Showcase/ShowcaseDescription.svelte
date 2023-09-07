@@ -9,7 +9,7 @@
 
 <section class="relative z-1 px-5 ">
   {#each data[contents] as content}
-    {#if content.title === contentTitle}
+    {#if content.title.toLowerCase() === contentTitle}
       <div class="description-content ">
         <div class="description-container" >
             <div class="description-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center ">

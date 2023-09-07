@@ -5,7 +5,7 @@
   onMount(() => {});
 </script>
 
-<div class="container mx-auto">
+<div id="contributions" class="container mx-auto">
   <div
     class="flex flex-col first-letter:justify-center mt-[110px] mb-[40px] md:ml-[10%] md:mr-[10%] xl:ml-[16%] xl:mr-[40%] ss:ml-[6%] ss:mr-[6%] scrollFadeIn"
   >
@@ -33,12 +33,12 @@
         class="glassmorphic-rectangle p-10 mt-2 opacity-0 scrollFadeIn"
       >
         <p class="font-light text-justify indent-8">
-          Contributions, this is a sample sentence. Contributions, this is a
-          sample sentence. Contributions, this is a sample sentence.
-          Contributions, this is a sample sentence. Contributions, this is a
-          sample sentence. Contributions, this is a sample sentence.
-          Contributions, this is a sample sentence. Contributions, this is a
-          sample sentence. Contributions, this is a sample sentence.
+          The Alliance of Computer Science Students — UPLB has been in existence
+          since December 2014 developing students worthy of the title “Iskolar
+          ng Bayan para sa Bayan” and assists in building individuals who shall
+          lead in solving problems of the community through technology. The
+          organization has continuously carried out initiatives that are
+          consistent with its mission and vision.
         </p>
       </div>
       <!-- END OF CUSTOMIZATION -->
@@ -49,11 +49,11 @@
 <style>
   #top1-pos {
     top: -10px;
-    left: calc(100% - 38px);
+    left: calc(100% - 53px);
   }
   #bot1-pos {
     top: calc(100% - 48px);
-    left: -15px;
+    left: -11px;
   }
   #background {
     transition-delay: 0.5s;

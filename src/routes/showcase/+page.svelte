@@ -16,15 +16,17 @@
     Projects,
     Events,
     Workshops,
-    Activities,
+    Activities
   };
 
 
   let tabs = ["Projects", "Events", "Workshops", "Activities"]
-  let activeTab = "Projects" 
+  let activeTab = sessionStorage.getItem("activeTab") || "Projects";
 
   const tabChange = (e) => {
     activeTab = e.detail;
+   
+    sessionStorage.setItem("activeTab", activeTab);
   }
 </script>
 

@@ -3,26 +3,39 @@
   import UnderlinedText from "$components/atoms/UnderlinedText.svelte";
   import HexagonGlass from "$components/molecules/Home/HexagonGlass.svelte";
   import { onMount } from "svelte";
+  import { goto } from "$app/navigation";
 
   // CUSTOMIZE THIS: This is where you can modify the brief showcase ([1] Event Name, [2] URL of the event photo from static folder)
   let events = [
-    ["ACSS WEEK 2023 Sublimed", "../home-briefshowcase/briefshowcase-1.jpg"],
-    ["ACSS WEEK 2023 Exhibit", "../home-briefshowcase/briefshowcase-2.jpg"],
     [
-      "ACSS WEEK 2023 Company Talks",
-      "../home-briefshowcase/briefshowcase-3.jpg",
+      "ACSS Week: Company Talks",
+      "../home-briefshowcase/briefshowcase-1.webp",
+      "Showcases diverse fields in Computer Science through invited speakers from different companies. Here you can gain invaluable industry insights and a competitive edge for your future career.",
     ],
     [
-      "Git To The Point: A GitHub Workshop",
-      "../home-briefshowcase/briefshowcase-4.jpg",
+      "ACSS Week: Exhibit",
+      "../home-briefshowcase/briefshowcase-2.webp",
+      "Serves as a platform to highlight the organization, its members, and details related to the year's chosen theme. Its objectives include offering extra insights into computer science, introducing the ACSS organization, motivating students to engage in ACSS Week activities, and fostering additional opportunities.",
     ],
     [
-      "Ad Astra: An ACSS-UPLB Orientation",
-      "../home-briefshowcase/briefshowcase-5.jpg",
+      "ACSS Week: Game of Codes",
+      "../home-briefshowcase/briefshowcase-3.webp",
+      "Aims to ignite passion for Computer Science and IT careers through an ACM ICPC-style competition. It enhance students' field awareness, technical skills, and critical thinking. A contest to unleash your coding prowess, solve real-life problems, and make programming exciting.",
     ],
     [
-      "BSCS Freshie Kumustahan 2022",
-      "../home-briefshowcase/briefshowcase-6.jpg",
+      "ACSS Week: Sublimed",
+      "../home-briefshowcase/briefshowcase-4.webp",
+      "One of the highly anticipated events in ACSS week. An annual general quiz competition featuring sports, music, food, and more. Beyond education, we offer entertainment for students and to explore knowledge beyond computer science.",
+    ],
+    [
+      "ACSS Orientation",
+      "../home-briefshowcase/briefshowcase-5.webp",
+      "A way of connecting with computer science enthusiasts. A means to introduce ACSS and our team to the UPLB community, fostering a deeper understanding of our organization.",
+    ],
+    [
+      "Team Building Activity",
+      "../home-briefshowcase/briefshowcase-6.webp",
+      "An internal event to strengthen bonds among members, enhance collaboration, and develop essential skills like communication and problem-solving. Boost morale, foster a positive work environment, and propel our organization to greater heights.",
     ],
   ];
   // END OF CUSTOMIZATION
@@ -50,6 +63,44 @@
   // This handles the auto-change of spotlight
   function updateCanAutoChange() {
     canAutoChange = !canAutoChange;
+  }
+
+  // Adds reading efficiency in mobile view
+  function mobileReactivity() {
+    let showcasedDescription = document.getElementById("showcased-description");
+    let showcasedDescriptionPos = document
+      .getElementById("showcased-description")
+      ?.getBoundingClientRect();
+
+    if (windowWidth <= 1100) {
+      if (
+        showcasedDescription &&
+        showcasedDescriptionPos &&
+        showcasedDescriptionPos.top <=
+          document.documentElement.clientHeight / 2 &&
+        showcasedDescriptionPos.bottom >=
+          document.documentElement.clientHeight / 2
+      ) {
+        canAutoChange = false;
+        showcasedDescription.style.opacity = "1";
+      } else if (showcasedDescription) {
+        canAutoChange = true;
+        showcasedDescription.style.opacity = "50%";
+      }
+    } else if (showcasedDescription) {
+      showcasedDescription.style.opacity = "1";
+      if (
+        showcasedDescriptionPos &&
+        showcasedDescriptionPos.top <=
+          document.documentElement.clientHeight / 2 &&
+        showcasedDescriptionPos.bottom >=
+          document.documentElement.clientHeight / 2
+      ) {
+        canAutoChange = false;
+      } else if (showcasedDescription) {
+        canAutoChange = true;
+      }
+    }
   }
 
   // Updates the windowWidth variable
@@ -91,6 +142,8 @@
 
     window.addEventListener("resize", updateCircleBlurMargin);
     window.addEventListener("resize", updateSize);
+    window.addEventListener("resize", mobileReactivity);
+    window.addEventListener("scroll", mobileReactivity);
 
     return () => {
       clearInterval(interval);
@@ -99,6 +152,7 @@
 </script>
 
 <div
+  id="briefshowcase"
   class="flex flex-col gap-8 mt-[110px] mb-[40px] ml-[10%] mr-[10%] w-[80%] h-fit scrollFadeIn"
 >
   <h5 class="break-words text-center">Brief Showcase</h5>
@@ -217,7 +271,7 @@
       id="circle-blur"
       src="/assets/gradient-blur-ellipse.svg"
       alt="Gradient Blur Ellipse"
-      class="absolute w-[600px] h-[600px] max-w-[78vw] max-h-[78vw] top-0"
+      class="absolute w-[600px] h-[600px] max-w-[78vw] max-h-[78vw] top-0 cursor-pointer"
       on:click={() => {
         newInterval();
         if (spotlight != 6) {
@@ -238,14 +292,15 @@
         id="showcase-name"
         class="flex items-center justify-center w-fit rounded-2xl cursor-pointer"
         on:click={() => {
-          window.location.assign("./Showcase");
+          goto("./showcase");
         }}
       >
         <UnderlinedText
           text={events[spotlight - 1][0]}
           isFixed={false}
           width={0}
-          tailwindcustomization="text-white text-sm font-normal text-center hover:text-[#00F5F1] transition duration-500 ease"
+          textcustomization="text-white text-sm font-bold text-center hover:text-[#00F5F1] transition duration-500 ease"
+          textboxcustomization="items-center min-w-[200px]"
         />
       </div>
     </div>
@@ -356,6 +411,14 @@
       {/if}
     </div>
     <div />
+  </div>
+  <div class="flex justify-center h-fit z-0">
+    <div
+      id="showcased-description"
+      class="max-w-[500px] text-justify h-fit pt-20 pb-20 -mt-20 break-words indent-8 transition duration-700 font-light"
+    >
+      {events[spotlight - 1][2]}
+    </div>
   </div>
 </div>
 

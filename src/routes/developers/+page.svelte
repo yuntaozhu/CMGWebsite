@@ -3,82 +3,14 @@
     InitialSection,
     ResidentMembers,
     MembersRoster,
-    NavBar,
-    Footer,
   } from "$components";
-  import { onMount } from 'svelte';
-  import GradientBlur from "../../components/molecules/Home/GradientBlur.svelte";
+  import UnderlinedText from "$components/atoms/UnderlinedText.svelte";
 
-  let activeSection = "initial"; // To keep track of the active section
-
-  function handleScroll(event) {
-    const windowHeight = window.innerHeight;
-    const scrollPosition = window.scrollY;
-    const documentHeight = document.body.clientHeight;
-
-    if (scrollPosition + windowHeight >= documentHeight) {
-      // Reached the bottom of the page, update activeSection
-      switch (activeSection) {
-        case "initial":
-          activeSection = "executives";
-          break;
-        case "executives":
-          activeSection = "roster";
-          break;
-        case "roster":
-          activeSection = "residents";
-          break;
-        // You can add more cases if you have additional sections
-      }
-
-      // Scroll to the next section smoothly
-      const sectionElement = document.getElementById(activeSection);
-      if (sectionElement) {
-        sectionElement.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }
-
-  onMount(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
 </script>
 
-<div class="container">
-  <GradientBlur />
-  <NavBar />
-
-  <div id="initial">
-    <InitialSection
-      imageURL='sample.png'
-      title="Meet the Team"
-      description="Alliance of Computer Science Students — University of the Philippines Los Baños Alliance of Computer Science"
-    />
-  </div>
-
-  <div id="resident">
+<div class="overflow-hidden w-full px-5 lg:px-10 flex flex-col gap-10 pb-40 relative z-20">
+    <InitialSection />
     <ResidentMembers />
-  </div>
-
-  <!-- <div id="roster">
+    <!-- <UnderlinedText text='' isFixed={true} width={100} tailwindcustomization=""/> -->
     <MembersRoster />
-  </div> -->
-
-  <!-- <div id="residents">
-    <ResidentMembers />
-  </div> -->
-
-  <!-- <Footer /> -->
 </div>
-
-<style>
-  .container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-</style>
