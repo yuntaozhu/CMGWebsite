@@ -11,19 +11,19 @@
 </script>
 
 <section class="container mx-auto relative">
-  <div class="absolute flex-col md:flex-row md:gap-4 flex px-1 md:px-8 lg:px-16 xl:px-72">
+  <div class="flex-col md:flex-row md:gap-4 flex md:px-8 lg:px-16 xl:px-[16rem]">
 
-    <div class="flex md:flex-1 items-center justify-center left-side w-1/2 h-50vh">
+    <div class="pt-4 ss:pt-0 md:pt-0 flex justify-center items-center md:flex-1 3xl:max-w-screen-sm">
       <!-- Team Name -->
-      <h1 class="text-bold leading-tight lg:text-15xl md:leading-snug text-white text-right {fontSizeClass}">
+      <h1 class="text-bold leading-tight text-center lg:text-15xl md:leading-snug text-white sm:text-right text-3xl">
         {teamName}
       </h1>
     </div>
 
-    <div class="flex flex-col md:justify-center md:flex-1">
+    <div class="flex flex-col md:justify-center md:flex-1 gap-6 md:max-w-xl 3xl:max-w-2xl">
       <div class="flex flex-col gap-1">
         <!-- Description text -->
-        <p class="font-light text-slate-200 max-w-1xl text-sm">{description}</p>
+        <p class="font-light text-slate-200 max-w-1xl text-xs">{description}</p>
       </div>
     </div>
   </div>
