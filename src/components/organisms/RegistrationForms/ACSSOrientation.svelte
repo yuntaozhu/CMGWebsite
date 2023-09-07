@@ -66,7 +66,25 @@
                 }
             }
             console.log(formValues);
+
+            postToSheets(formValues);
         }
+    }
+
+    /**
+     * @param {{}} formValues
+     */
+    async function postToSheets(formValues) {      
+        let addEntry = await fetch("/api/registration", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formValues)
+        })
+
+        let response = await addEntry.json();
+        console.log(response) 
     }
     
 </script>

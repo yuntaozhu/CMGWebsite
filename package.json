@@ -19,6 +19,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^17.6.6",
 		"@commitlint/config-conventional": "^17.6.6",
+		"@gradio/client": "^0.3.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-vercel": "^3.0.2",
 		"@sveltejs/kit": "^1.22.4",
@@ -37,6 +38,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sanity/vision": "^3.14.2",
+		"@splidejs/splide": "^4.1.4",
 		"@splidejs/svelte-splide": "^0.2.9",
 		"sanity": "^3.14.2"
 	}

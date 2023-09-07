@@ -1,20 +1,29 @@
 
 
+<script>
+// @ts-nocheck
+
+  export let contents = "";
+  export let contentTitle = "";
+
+
+  import { data } from "./data";
+  //const images =  ["/acss_uplb_website.webp", "/acss_uplb_website_02.webp", "/acss_uplb_website_03.webp", "/acss_uplb_website_04.webp"]
+</script>
+
 <section class = "gallery px-5">
-  <div class = "gallery-container bg-none grid grid-cols-3 lg:grid-cols-4 justify-center items-start gap-2 md:gap-4 lg:gap-4 xl:gap-8  mb-4">
-    <div class="image-container relative block overflow-hidden transform transition-transform rounded-2xl hover:scale-105">
-        <img src="/acss_uplb_website.jpg" class="gallery-img max-w-full h-[full] object-contain  " alt=''/>
-    </div>
-    <div class="image-container relative block overflow-hidden transform transition-transform rounded-2xl hover:scale-105">
-      <img src="/acss_uplb_website.jpg" class="gallery-img max-w-full h-full object-contain  " alt=''/>
-    </div>
-    <div class="image-container relative block overflow-hidden transform transition-transform rounded-2xl hover:scale-105">
-      <img src="/acss_uplb_website.jpg" class="gallery-img max-w-full h-full object-contain  " alt=''/>
-    </div>  
-    <div class="image-container relative block overflow-hidden transform transition-transform rounded-2xl hover:scale-105">
-      <img src="/acss_uplb_website.jpg" class="gallery-img max-w-full h-full object-contain  " alt=''/>
-    </div>
-  </div>
+  <div class = "gallery-container bg-none grid grid-cols-4  md:grid-cols-2 lg:grid-cols-3 justify-center items-start gap-2 md:gap-4 lg:gap-4 xl:gap-4 ">
+    {#each data[contents] as content}
+      {#if content.title === contentTitle}
+        {#each content.images as image}
+          <div class="image-container relative block overflow-hidden transform transition-transform rounded-2xl hover:scale-105">
+            <img src="{image}" class="gallery-img w-[300px] md:w-[360px] h-[100px] md:h-[240px] object-cover  " alt=''/>
+          </div>
+        {/each}
+      {/if}
+    {/each}
+
+
 </section>
 
 
