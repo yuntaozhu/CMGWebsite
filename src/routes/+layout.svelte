@@ -36,5 +36,7 @@
     <GradientBlur />
     <!-- <ChatBot /> -->
     <slot />
-    <Footer />
+    <div class="relative z-20">
+        <Footer />
+    </div>
 </main>
