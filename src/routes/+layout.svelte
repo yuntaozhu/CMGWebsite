@@ -13,11 +13,12 @@
         for (let element of scrollFadeInElements) {
             if (
                 element instanceof HTMLElement &&
-                main &&
+                ((main &&
                 (element.getBoundingClientRect().top <
                     document.documentElement.clientHeight * 0.5 ||
                     main?.getBoundingClientRect().bottom <=
-                        document.documentElement.clientHeight)
+                        document.documentElement.clientHeight)) ||
+                document.documentElement.clientWidth < 1100)
             ) {
                 element.style.opacity = "1";
             }
