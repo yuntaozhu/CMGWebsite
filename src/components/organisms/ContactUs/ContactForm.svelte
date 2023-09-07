@@ -17,10 +17,8 @@
   import TextInputComponent from "$components/atoms/TextInputComponent.svelte";
   import EmailInputComponent from "$components/atoms/EmailInputComponent.svelte";
   import FormButton from "$components/atoms/FormButton.svelte";
+  import { submissionSuccess, showNotification, notificationMessage } from "$lib/stores";
 
-  let notificationMessage = "";
-  let showNotif = false;
-  let success = false;
   let loadingSubmission = false;
 
   // Form submission into formValues
@@ -52,23 +50,21 @@
       .then(body => {
         loadingSubmission = false;
         if (body["success"]) {
-          notificationMessage = "Your message has been sent. Thank you for contacting us."
-          success = true;
+          $notificationMessage = "Your message has been sent. Thank you for contacting us."
+          $submissionSuccess = true;
         } else {
-          notificationMessage = "Unable to send your message due to server error."
-          success = false;
+          $notificationMessage = "Unable to send your message due to server error."
+          $submissionSuccess = false;
         }
 
-        showNotif = true;
+        $showNotification = true;
 
         setTimeout(() => {
-          showNotif = false;
+          $showNotification = false;
         }, 3000);
       })
   }
 </script>
-
-<SubmitNotification {success} message={notificationMessage} {showNotif}/>
 
 <div class="flex justify-center items-center h-fit lg:h-screen w-100">
   <div

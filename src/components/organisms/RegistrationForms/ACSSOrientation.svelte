@@ -20,11 +20,9 @@
     import RadioInputComponent from "$components/atoms/RadioInputComponent.svelte";
     import FormButton from "$components/atoms/FormButton.svelte";
     import SubmitNotification from "$components/atoms/SubmitNotification.svelte";
+    import { submissionSuccess, showNotification, notificationMessage } from "$lib/stores";
 
     let loadingSubmission = false;
-    let notificationMessage = "";
-    let success = false;
-    let showNotif = false;
 
     // CUSTOMIZE THIS: Add the list of dropdown options and radio options here
     let colleges = [
@@ -94,24 +92,22 @@
             .then(body => {
                 loadingSubmission = false;
                 if (body["success"]) {
-                notificationMessage = "Thank you for registering!"
-                success = true;
+                $notificationMessage = "Thank you for registering!"
+                $submissionSuccess = true;
                 } else {
-                notificationMessage = "There seems to be an error with the server."
-                success = false;
+                $notificationMessage = "There seems to be an error with the server."
+                $submissionSuccess = false;
                 }
 
-                showNotif = true;
+                $showNotification = true;
 
                 setTimeout(() => {
-                showNotif = false;
+                $showNotification = false;
                 }, 3000);
             })
     }
     
 </script>
-
-<SubmitNotification {success} message={notificationMessage} {showNotif}/>
 
 <RegSectionBody>
     <form
