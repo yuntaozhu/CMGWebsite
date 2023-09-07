@@ -25,8 +25,10 @@
   // END OF CUSTOMIZATION
 </script>
 
-<RegistrationTemplate {headerPhotoURL} {eventName} {eventDescription}>
-  <!-- CUSTOMIZE THIS: Insert here your form component with an attribute slot="form" -->
-  <ACSSOrientation slot="form" />
-  <!-- END OF CUSTOMIZATION -->
-</RegistrationTemplate>
+<div class="relative z-20">
+  <RegistrationTemplate {headerPhotoURL} {eventName} {eventDescription}>
+    <!-- CUSTOMIZE THIS: Insert here your form component with an attribute slot="form" -->
+    <ACSSOrientation slot="form" />
+    <!-- END OF CUSTOMIZATION -->
+  </RegistrationTemplate>
+</div>

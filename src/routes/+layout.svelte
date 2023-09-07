@@ -12,10 +12,12 @@
 
         for (let element of scrollFadeInElements) {
             if (
-                element instanceof HTMLElement && main &&
+                element instanceof HTMLElement &&
+                main &&
                 (element.getBoundingClientRect().top <
                     document.documentElement.clientHeight * 0.5 ||
-                    main?.getBoundingClientRect().bottom <= document.documentElement.clientHeight)
+                    main?.getBoundingClientRect().bottom <=
+                        document.documentElement.clientHeight)
             ) {
                 element.style.opacity = "1";
             }
@@ -33,8 +35,6 @@
     <NavBar />
     <GradientBlur />
     <!-- <ChatBot /> -->
-    <div class="relative z-20">
-        <slot />
-    </div>
+    <slot />
     <Footer />
 </main>
