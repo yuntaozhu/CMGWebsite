@@ -19,6 +19,13 @@
     import DropdownInputComponent from "$components/atoms/DropdownInputComponent.svelte";
     import RadioInputComponent from "$components/atoms/RadioInputComponent.svelte";
     import SubmitButton from "$components/atoms/SubmitButton.svelte";
+    import FormButton from "$components/atoms/FormButton.svelte";
+    import SubmitNotification from "$components/atoms/SubmitNotification.svelte";
+
+    let loadingSubmission = false;
+    let notificationMessage = "";
+    let success = false;
+    let showNotif = false;
 
     // CUSTOMIZE THIS: Add the list of dropdown options and radio options here
     let colleges = [
@@ -74,45 +81,63 @@
     /**
      * @param {{}} formValues
      */
-    async function postToSheets(formValues) {      
-        let addEntry = await fetch("/api/registration", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formValues)
+    async function postToSheets(formValues) { // send form values to API
+        loadingSubmission = true;
+        
+        await fetch("/api/contact-us", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formValues)
         })
+            .then(res => res.json())
+            .then(body => {
+                loadingSubmission = false;
+                if (body["success"]) {
+                notificationMessage = "Your message has been sent. Thank you for contacting us."
+                success = true;
+                } else {
+                notificationMessage = "Unable to send your message due to server error."
+                success = false;
+                }
 
-        let response = await addEntry.json();
-        console.log(response) 
+                showNotif = true;
+
+                setTimeout(() => {
+                showNotif = false;
+                }, 3000);
+            })
     }
     
 </script>
+
+<SubmitNotification {success} message={notificationMessage} {showNotif}/>
 
 <RegSectionBody>
     <form
         id="registration-form"
         slot="registration-form"
         class="h-[100%] flex flex-col justify-between"
-        on:submit={submitForm}
+        on:submit|preventDefault={submitForm}
     >
         <div id="components">
             <!-- CUSTOMIZE THIS: Add the input components here -->
-            <TextInputComponent label="Name" required={true} placeholder="Juan Dela Cruz"/>
-            <TextInputComponent label="Nickname" required={true} placeholder=""/>
-            <EmailInputComponent label="Email" required={true} placeholder="jdelacruz@up.edu.ph"/>
+            <TextInputComponent label="Name" required={false} placeholder="Juan Dela Cruz"/>
+            <TextInputComponent label="Nickname" required={false} placeholder=""/>
+            <EmailInputComponent label="Email" required={false} placeholder="jdelacruz@up.edu.ph"/>
             <DropdownInputComponent label="College" options={colleges} />
-            <TextInputComponent label="Degree Program" required={true} placeholder="BSCS"/>
-            <NumberInputComponent label="Batch" required={true} placeholder="2021"/>
-            <TextInputComponent label="Facebook Profile Link" required={true} placeholder=""/>
+            <TextInputComponent label="Degree Program" required={false} placeholder="BSCS"/>
+            <NumberInputComponent label="Batch" required={false} placeholder="2021"/>
+            <TextInputComponent label="Facebook Profile Link" required={false} placeholder=""/>
             <RadioInputComponent
                 label="How did you hear about this event?"
                 options={howYouHear}
             />
             <!-- END OF CUSTOMIZATION -->
         </div>
-        <div class="overflow-hidden">
-            <SubmitButton/>
+        <div class="max-ss:self-center">
+            <FormButton {loadingSubmission}/>
         </div>
     </form>
 </RegSectionBody>
