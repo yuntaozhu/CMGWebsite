@@ -18,7 +18,11 @@
     import NumberInputComponent from "$components/atoms/NumberInputComponent.svelte";
     import DropdownInputComponent from "$components/atoms/DropdownInputComponent.svelte";
     import RadioInputComponent from "$components/atoms/RadioInputComponent.svelte";
-    import SubmitButton from "$components/atoms/SubmitButton.svelte";
+    import FormButton from "$components/atoms/FormButton.svelte";
+    import SubmitNotification from "$components/atoms/SubmitNotification.svelte";
+    import { submissionSuccess, showNotification, notificationMessage } from "$lib/stores";
+
+    let loadingSubmission = false;
 
     // CUSTOMIZE THIS: Add the list of dropdown options and radio options here
     let colleges = [
@@ -74,17 +78,33 @@
     /**
      * @param {{}} formValues
      */
-    async function postToSheets(formValues) {      
-        let addEntry = await fetch("/api/registration", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formValues)
+    async function postToSheets(formValues) { // send form values to API
+        loadingSubmission = true;
+        
+        await fetch("/api/registration", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formValues)
         })
+            .then(res => res.json())
+            .then(body => {
+                loadingSubmission = false;
+                if (body["success"]) {
+                $notificationMessage = "Thank you for registering!"
+                $submissionSuccess = true;
+                } else {
+                $notificationMessage = "There seems to be an error with the server."
+                $submissionSuccess = false;
+                }
 
-        let response = await addEntry.json();
-        console.log(response) 
+                $showNotification = true;
+
+                setTimeout(() => {
+                $showNotification = false;
+                }, 3000);
+            })
     }
     
 </script>
@@ -94,7 +114,7 @@
         id="registration-form"
         slot="registration-form"
         class="h-[100%] flex flex-col justify-between"
-        on:submit={submitForm}
+        on:submit|preventDefault={submitForm}
     >
         <div id="components">
             <!-- CUSTOMIZE THIS: Add the input components here -->
@@ -112,8 +132,8 @@
             />
             <!-- END OF CUSTOMIZATION -->
         </div>
-        <div class="overflow-hidden">
-            <SubmitButton/>
+        <div class="max-ss:self-center ">
+            <FormButton {loadingSubmission}/>
         </div>
     </form>
 </RegSectionBody>
