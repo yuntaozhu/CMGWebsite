@@ -4,7 +4,7 @@ export async function POST({ request }) {
     // extract data from request
     let req = await request.json();
     try {
-        const res = await fetch("https://script.google.com/macros/s/AKfycbwoQUGUKD1JRU8x-NUb5s_Tf4WUjsa0je8cy_F-DXBrmh6Sqb1x3XVWwiY4bUDzq3ZR_A/exec", {
+        const res = await fetch("https://script.google.com/macros/s/AKfycbxyyh419Hh8QLbB5fKiDAOm4AMy9A3HHFnevGyXqY0-K3vXy7l6BkwLE9UiyuCNUUAqjA/exec", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
