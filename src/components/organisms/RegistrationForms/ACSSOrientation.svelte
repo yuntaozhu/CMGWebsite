@@ -53,7 +53,6 @@
                     component.id.substring(0, 14) === "FormRadioACSS-"
                 ) {
                     let name = component.id.replace("FormRadioACSS-", "");
-                    console.log(component.id);
                     const radio = document.querySelectorAll(
                         `input[name="${name}"]`
                     );
@@ -69,7 +68,6 @@
                     formValues[component.id] = document.getElementById(`Form${component.id}`).value;
                 }
             }
-            console.log(formValues);
 
             postToSheets(formValues);
         }

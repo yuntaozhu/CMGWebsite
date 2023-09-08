@@ -93,14 +93,14 @@
           </div>
         {/each}
       </div>
-      <div class="flex flex-col">
+      <!-- <div class="flex flex-col">
         <p class="font-normal text-sm mb-2">Developers</p>
         {#each Developers as item, index}
           <div class="page-container">
             <a href={item[1]}><p class="pages">{item[0]}</p></a>
           </div>
         {/each}
-      </div>
+      </div> -->
     </div>
   </div>
   <div
