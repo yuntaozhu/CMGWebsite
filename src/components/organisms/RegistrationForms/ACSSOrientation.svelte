@@ -90,17 +90,27 @@
             .then(body => {
                 loadingSubmission = false;
                 if (body["success"]) {
-                $notificationMessage = "Thank you for registering!"
-                $submissionSuccess = true;
+                    if (body["code"] == "email-found") {
+                        $notificationMessage = "You're already registered."
+                    } else {
+                        $notificationMessage = "Thank you for registering!"
+                    }
+
+                    $submissionSuccess = true;
                 } else {
-                $notificationMessage = "There seems to be an error with the server."
-                $submissionSuccess = false;
+                    if (body["code"] == "registration-limit-exceeded") {
+                        $notificationMessage = "Sorry, maximum number of participants already reached."
+                    } else {
+                        $notificationMessage = "There seems to be an error with the server.";
+                    }
+
+                    $submissionSuccess = false;
                 }
 
                 $showNotification = true;
 
                 setTimeout(() => {
-                $showNotification = false;
+                    $showNotification = false;
                 }, 3000);
             })
     }
@@ -116,14 +126,14 @@
     >
         <div id="components">
             <!-- CUSTOMIZE THIS: Add the input components here -->
-            <TextInputComponent label="Name" required={true} placeholder="Juan Dela Cruz"/>
-            <TextInputComponent label="Nickname" required={true} placeholder=""/>
-            <TextInputComponent label="Preferred Pronouns" required={true} placeholder="He/Him"/>
-            <EmailInputComponent label="Email" required={true} placeholder="jdelacruz@up.edu.ph"/>
+            <TextInputComponent label="Name" required={false} placeholder="Juan Dela Cruz"/>
+            <TextInputComponent label="Nickname" required={false} placeholder=""/>
+            <TextInputComponent label="Preferred Pronouns" required={false} placeholder="He/Him"/>
+            <EmailInputComponent label="Email" required={false} placeholder="jdelacruz@up.edu.ph"/>
             <DropdownInputComponent label="College" options={colleges} />
-            <TextInputComponent label="Degree Program" required={true} placeholder="BSCS"/>
-            <NumberInputComponent label="Batch" required={true} placeholder="2021"/>
-            <TextInputComponent label="Facebook Profile Link" required={true} placeholder=""/>
+            <TextInputComponent label="Degree Program" required={false} placeholder="BSCS"/>
+            <NumberInputComponent label="Batch" required={false} placeholder="2021"/>
+            <TextInputComponent label="Facebook Profile Link" required={false} placeholder=""/>
             <RadioInputComponent
                 label="How did you hear about this event?"
                 options={howYouHear}
