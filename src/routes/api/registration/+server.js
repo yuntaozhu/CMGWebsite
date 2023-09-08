@@ -10,7 +10,7 @@ export async function POST({ request }) {
             // url of spreadsheet
             // name of sheet data will be inserted in
             // the form data itself
-        const res = await fetch("https://script.google.com/macros/s/AKfycbz8zwLnpd_JpV6e_wKqX-8_IRQ7U8iizAK_KIRLMw-8tvtLzqLLxZdNj1VRPw3o8Pk6MA/exec", {
+        const res = await fetch("https://script.google.com/macros/s/AKfycbwoQUGUKD1JRU8x-NUb5s_Tf4WUjsa0je8cy_F-DXBrmh6Sqb1x3XVWwiY4bUDzq3ZR_A/exec", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

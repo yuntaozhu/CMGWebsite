@@ -4,7 +4,7 @@ export async function POST({ request }) {
     // extract data from request
     let req = await request.json();
     try {
-        const res = await fetch("https://script.google.com/macros/s/AKfycbyF0V3IaPhf_VrBruErv-pG34-BSbBDOVxHb9aUOujMvWt6EGNsw-zQjQd4MdpdzwV00A/exec", {
+        const res = await fetch("https://script.google.com/macros/s/AKfycbwoQUGUKD1JRU8x-NUb5s_Tf4WUjsa0je8cy_F-DXBrmh6Sqb1x3XVWwiY4bUDzq3ZR_A/exec", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -13,7 +13,6 @@ export async function POST({ request }) {
                 spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1o54SKsG3p4_3b90xV1E7iTH0NKxA_FlDPB9nECUUfkw/edit#gid=0",
                 sheetName: "Sheet1",
                 formData: {
-                    "Date and Time": new Date().toLocaleString("PST"),
                     ...req
                 }
             })
