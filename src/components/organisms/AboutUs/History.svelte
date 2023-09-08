@@ -34,16 +34,16 @@
           <SplideTrack>
             {#each photos as photo}
               <SplideSlide>
-                <img src="/assets/a-1.png" alt="photo" />
+                <img src="/assets/AUH-1.webp" alt="photo" />
               </SplideSlide>
               <SplideSlide>
-                <img src="/assets/a-2.png" alt="photo" />
+                <img src="/assets/AUH-2.webp" alt="photo" />
               </SplideSlide>
               <SplideSlide>
-                <img src="/assets/a-3.png" alt="photo" />
+                <img src="/assets/AUH-3.webp" alt="photo" />
               </SplideSlide>
               <SplideSlide>
-                <img src="/assets/a-4.png" alt="photo" />
+                <img src="/assets/AUH-4.webp" alt="photo" />
               </SplideSlide>
             {/each}
           </SplideTrack>
