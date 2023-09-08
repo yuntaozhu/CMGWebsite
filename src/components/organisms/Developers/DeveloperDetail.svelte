@@ -228,7 +228,7 @@
     }
 
     .mask1 {
-        -webkit-mask-image: url("assets/honeycomb.png");
+        -webkit-mask-image: url("/assets/honeycomb.png");
         mask-image: url("assets/honeycomb.png");
         -webkit-mask-size: 100%;
         mask-size: 100%;
