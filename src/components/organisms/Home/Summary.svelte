@@ -24,6 +24,8 @@
         <img
           src="/assets/white-logo-no-text.webp"
           alt="The official seal of The Alliance of Computer Science Students"
+          width="160"
+          height="160.67"
           class="max-w-[120px] ss:max-w-[100%] w-40"
         />
       </div>
@@ -48,6 +50,8 @@
         <img
           src="/assets/gradient-logo-cube.webp"
           alt="ACSS Gradient Logo Cube"
+          width="320"
+          height="388.63"
           class="w-80 absolute left-[80%] md:left-[60%] xl:bottom-[-320px] xl:left-[56%] z-0"
         />
       </div>
