@@ -18,7 +18,7 @@ export async function POST({ request }) {
             body: JSON.stringify({
                 spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1N3MjIOC5UZ9CuFbPb445BpyZk6rOxhTc0eFokn2koXQ/edit?usp=sharing",
                 sheetName: "Registration",
-                registrationLimit: 10,
+                registrationLimit: 60,
                 formData: {
                     "Registration Date": new Date().toLocaleString("en-US", { timeZone: "Asia/Manila" }),
                     ...req
