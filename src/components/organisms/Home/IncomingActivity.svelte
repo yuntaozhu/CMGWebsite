@@ -8,7 +8,7 @@
   import { Button } from "$components";
   import { goto } from "$app/navigation";
 
-  let link = "/registration/form-acss-orientation";
+  let link = "/registration/acss-orientation";
   function routeToPage() {
     goto(link);
   }
