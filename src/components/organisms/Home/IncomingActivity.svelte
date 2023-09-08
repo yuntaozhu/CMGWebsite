@@ -37,7 +37,7 @@
 
         <!-- Event Name -->
         <p
-          class="max-ss:text-3xl text-4xl lg:text-5xl content-center font-bold gradient-line py-2 max-w-fit"
+          class="max-ss:text-3xl text-4xl lg:text-5xl content-center font-bold gradient-line py-2 max-w-fit max-[280px]:break-all"
         >
           {eventName}
         </p>
@@ -56,7 +56,7 @@
             height="40"
             class="w-[40px]"
           />
-          <p class="text-center">{eventDateTime}</p>
+          <p class="text-center max-ss:break-all">{eventDateTime}</p>
         </div>
 
         <!-- Register Button -->

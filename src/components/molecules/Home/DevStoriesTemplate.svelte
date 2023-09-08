@@ -35,10 +35,12 @@
             />
         </div>
         <div class="text-center mt-4 mb-6">
-            <h1 class="text-lg max-ss:text-base font-bold">
+            <h1 class="text-lg font-bold max-ss:text-sm">
                 {name}
             </h1>
-            <p class="text-sm italic font-thin leading-6 h-12 w-64">
+            <p
+                class="text-sm italic font-thin leading-6 h-12 w-64 max-ss:w-60 max-ss:text-xs"
+            >
                 {position}
             </p>
         </div>
