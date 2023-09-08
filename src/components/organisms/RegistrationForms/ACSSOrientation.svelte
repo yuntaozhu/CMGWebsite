@@ -53,7 +53,6 @@
                     component.id.substring(0, 14) === "FormRadioACSS-"
                 ) {
                     let name = component.id.replace("FormRadioACSS-", "");
-                    console.log(component.id);
                     const radio = document.querySelectorAll(
                         `input[name="${name}"]`
                     );
@@ -69,7 +68,6 @@
                     formValues[component.id] = document.getElementById(`Form${component.id}`).value;
                 }
             }
-            console.log(formValues);
 
             postToSheets(formValues);
         }
@@ -92,17 +90,27 @@
             .then(body => {
                 loadingSubmission = false;
                 if (body["success"]) {
-                $notificationMessage = "Thank you for registering!"
-                $submissionSuccess = true;
+                    if (body["code"] == "email-found") {
+                        $notificationMessage = "You're already registered."
+                    } else {
+                        $notificationMessage = "Thank you for registering!"
+                    }
+
+                    $submissionSuccess = true;
                 } else {
-                $notificationMessage = "There seems to be an error with the server."
-                $submissionSuccess = false;
+                    if (body["code"] == "registration-limit-exceeded") {
+                        $notificationMessage = "Sorry, maximum number of participants already reached."
+                    } else {
+                        $notificationMessage = "There seems to be an error with the server.";
+                    }
+
+                    $submissionSuccess = false;
                 }
 
                 $showNotification = true;
 
                 setTimeout(() => {
-                $showNotification = false;
+                    $showNotification = false;
                 }, 3000);
             })
     }
