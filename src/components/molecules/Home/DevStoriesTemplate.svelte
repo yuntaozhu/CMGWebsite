@@ -27,7 +27,12 @@
 >
     <div class="flex flex-col justify-center items-center p-4">
         <div class="circular-photo">
-            <img src={imageUrl} alt="Developer {index}" />
+            <img
+                src={imageUrl}
+                width="500"
+                height="500"
+                alt="Developer {index}: {name}"
+            />
         </div>
         <div class="text-center mt-4 mb-6">
             <h1 class="text-lg max-ss:text-base font-bold">
