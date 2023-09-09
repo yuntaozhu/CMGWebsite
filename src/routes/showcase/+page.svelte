@@ -56,6 +56,7 @@
 <div class="overflow-hidden w-full flex flex-col bg-base-black items-center px-5 py-10" >
 
   <ShowcaseTitle/>
+ 
   <ShowcaseNavBar {activeTab} {tabs} on:tabChange={tabChange}/>
   {#each tabs as tab}
     {#if activeTab === tab}
