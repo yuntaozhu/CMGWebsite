@@ -4,7 +4,7 @@
       name: "Sir Fermin Roberto G. Lapitan",
       position: "Senior Adviser",
       testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "Happy to have served as the adviser for several years. Keep up the great work with the projects and activities that benefit the ICS students.",
       photo: "/assets/advisers-1.webp",
     },
     {
