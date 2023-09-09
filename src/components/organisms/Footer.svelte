@@ -8,7 +8,7 @@
     width="1826"
     height="65"
     viewBox="0 0 1826 65"
-    fill="none"
+    fill="none" 
     class="svg"
   >
     <path
