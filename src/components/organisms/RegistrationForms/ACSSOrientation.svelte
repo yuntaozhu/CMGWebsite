@@ -19,8 +19,8 @@
     import DropdownInputComponent from "$components/atoms/DropdownInputComponent.svelte";
     import RadioInputComponent from "$components/atoms/RadioInputComponent.svelte";
     import FormButton from "$components/atoms/FormButton.svelte";
-    import SubmitNotification from "$components/atoms/SubmitNotification.svelte";
     import { submissionSuccess, showNotification, notificationMessage } from "$lib/stores";
+    import { onMount } from "svelte";
 
     let loadingSubmission = false;
 
@@ -115,6 +115,9 @@
             })
     }
     
+    onMount(()=>{
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    });
 </script>
 
 <RegSectionBody>
