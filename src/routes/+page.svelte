@@ -15,14 +15,17 @@
   <title>The Alliance of Computer Science Students UPLB</title>
   <meta name="title" content="The Alliance of Computer Science Students UPLB" />
   <meta
-  property="og:title"
-  content="The Alliance of Computer Science Students UPLB"
+    property="og:title"
+    content="The Alliance of Computer Science Students UPLB"
   />
   <meta
-  property="twitter:title"
-  content="The Alliance of Computer Science Students UPLB"
+    property="twitter:title"
+    content="The Alliance of Computer Science Students UPLB"
   />
-  <meta name="description" content="Discover boundless opportunities and innovation with The Alliance of Computer Science Students - UPLB, an official academic organization at the University of the Philippines Los Baños. Join our visionary community and help shape a future where dreams become reality." />
+  <meta
+    name="description"
+    content="Discover boundless opportunities and innovation with The Alliance of Computer Science Students - UPLB, an official academic organization at the University of the Philippines Los Baños. Join our visionary community and help shape a future where dreams become reality."
+  />
   <meta
     property="og:description"
     content="Discover boundless opportunities and innovation with The Alliance of Computer Science Students - UPLB, an official academic organization at the University of the Philippines Los Baños. Join our visionary community and help shape a future where dreams become reality."
@@ -34,14 +37,16 @@
 </head>
 
 <div
-  class="overflow-hidden w-full px-5 lg:px-10 flex flex-col gap-10 pb-40 -mb-8 relative z-20"
+  class="overflow-hidden w-full lg:px-10 flex flex-col gap-10 pb-40 -mb-8 relative z-20"
 >
-  <Hero />
-  <Summary />
-  <IncomingActivity />
-  <DevStories />
-  <Strengths />
-  <Contributions />
-  <BriefShowcase />
+  <div class="px-5">
+    <Hero />
+    <Summary />
+    <IncomingActivity />
+    <DevStories />
+    <Strengths />
+    <Contributions />
+    <BriefShowcase />
+  </div>
   <Partnership />
 </div>
