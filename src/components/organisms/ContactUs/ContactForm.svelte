@@ -17,19 +17,24 @@
   import TextInputComponent from "$components/atoms/TextInputComponent.svelte";
   import EmailInputComponent from "$components/atoms/EmailInputComponent.svelte";
   import FormButton from "$components/atoms/FormButton.svelte";
-  import { submissionSuccess, showNotification, notificationMessage } from "$lib/stores";
+  import {
+    submissionSuccess,
+    showNotification,
+    notificationMessage,
+  } from "$lib/stores";
 
   let loadingSubmission = false;
 
   // Form submission into formValues
   // @ts-ignore
-  async function submitForm(e) { // submit form values to API
+  async function submitForm(e) {
+    // submit form values to API
     loadingSubmission = true;
 
     let formValues = {
-      "Name": "",
-      "Email": "",
-      "Message": ""
+      Name: "",
+      Email: "",
+      Message: "",
     };
 
     for (let key in formValues) {
@@ -42,18 +47,20 @@
     await fetch("/api/contact-us", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(formValues)
+      body: JSON.stringify(formValues),
     })
-      .then(res => res.json())
-      .then(body => {
+      .then((res) => res.json())
+      .then((body) => {
         loadingSubmission = false;
         if (body["success"]) {
-          $notificationMessage = "Your message has been sent. Thank you for contacting us."
+          $notificationMessage =
+            "Your message has been sent. Thank you for contacting us.";
           $submissionSuccess = true;
         } else {
-          $notificationMessage = "Unable to send your message due to server error."
+          $notificationMessage =
+            "Unable to send your message due to server error.";
           $submissionSuccess = false;
         }
 
@@ -62,7 +69,7 @@
         setTimeout(() => {
           $showNotification = false;
         }, 3000);
-      })
+      });
   }
 </script>
 
@@ -92,14 +99,14 @@
         <div
           class="glassmorphic-rectangle flex justify-start items-center row-span-1"
         >
-          <div class="flex flex-col">
+          <div class="w-100 flex flex-col">
             <form
               id="registration-form"
               class="h-fit flex flex-col justify-between"
               on:submit|preventDefault={submitForm}
             >
               <div id="components">
-                <div id="components" class="flex flex-row gap-8">
+                <div id="components" class="two-inputs flex flex-row gap-8">
                   <TextInputComponent
                     label="Name"
                     required={true}
@@ -119,7 +126,7 @@
               </div>
               <div class="flex row-span-1">
                 <div class="flex mt-8 items-center gap-4">
-                  <FormButton {loadingSubmission}/>
+                  <FormButton {loadingSubmission} />
                 </div>
               </div>
             </form>
@@ -131,6 +138,13 @@
 </div>
 
 <style>
+  @media (min-width: 0px) and (max-width: 500px) {
+    .two-inputs {
+      flex-direction: column;
+      row-gap: 0px;
+    }
+  }
+
   .glassmorphic-rectangle {
     background: linear-gradient(
       0deg,
