@@ -101,7 +101,7 @@
 </script>
 
 <div
-    class="w-full h-[510px] min-h-[510px] max-h-[90vw] flex flex-col items-center gap-5 mt-[110px] -mb-48 pl-[10%] pr-[10%] relative overflow-hidden"
+    class="w-full h-[510px] min-h-[510px] max-h-[90vw] flex flex-col items-center gap-5 -mb-48 pl-[10%] pr-[10%] relative overflow-hidden"
 >
     <h6 class="relative text-2xl font-extrabold text-center px-5">
         We have worked with {logos.length} companies.
@@ -143,7 +143,7 @@
             id="circle-blur"
             src="/assets/gradient-blur-ellipse.svg"
             alt="Gradient Blur Ellipse"
-            class="absolute top-0 z-10 w-[900px] h-[900px] min-w-[900px] min-h-[900px]"
+            class="absolute top-0 z-10 w-[940px] h-[940px] min-w-[940px] min-h-[940px]"
         />
         <div />
     </div>
