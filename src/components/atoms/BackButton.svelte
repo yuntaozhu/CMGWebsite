@@ -6,7 +6,7 @@
      export let reference;
     function goBack(){
         let referrer = document.referrer;
-        if(referrer){
+        if(referrer == reference){
             history.back() // URL of referrer
         }else{
             goto(reference)
