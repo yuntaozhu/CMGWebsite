@@ -16,6 +16,7 @@
   };
 
   function handleClick() {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     // string = "You wasted a second of your life :D";
     // buttonVisible = false;
   }
@@ -60,7 +61,8 @@
                 <a
                   href={url}
                   class="duration-150 hover:text-base-sky-blue"
-                  class:active-link={currentPath === url}>{title}</a
+                  class:active-link={currentPath === url}
+                  on:click={()=>{window.scrollTo({ top: 0, left: 0, behavior: "instant" })}}>{title}</a
                 >
               </li>
             {/each}

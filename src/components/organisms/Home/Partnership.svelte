@@ -20,10 +20,7 @@
     // Variables (for ui)
     let duration = logos.length < 10 ? 36000 : logos.length * 4000; // Duration of animatiion
     let resetDuration = logos.length < 10 ? 600 : logos.length * 60; // Duration of reset animation
-    let transitionLeft =
-        logos.length < 10
-            ? -2120
-            : -2 * (70 * logos.length + 40 * (logos.length - 1)); // Computes the position of the movingDiv on the right side
+    let transitionLeft = 0;
     /**
      * @type {string | number | NodeJS.Timeout | undefined}
      */
@@ -81,6 +78,11 @@
     }
 
     onMount(() => {
+        let move = document.getElementById("moving-div");
+        if(move){
+            transitionLeft = -(move.getBoundingClientRect().width - 1200);
+        }
+
         window.addEventListener("focus", startAnimation);
         window.addEventListener("blur", () => {
             clearInterval(logoAnimationInterval);
@@ -107,15 +109,15 @@
     >
         <div
             id="moving-div"
-            class="relative left-[-180px] flex flex-col gap-10"
+            class="relative left-[-180px] flex flex-col gap-10 w-fit"
         >
             {#each Array(4) as item, j}
-                <div id="logos{j}" class="flex gap-20 relative">
+                <div id="logos{j}" class="flex gap-0 relative">
                     {#each Array(logos.length * 2) as logo, i}
                         <img
                             src={logos[i % logos.length][0]}
                             title={logos[i % logos.length][1]}  
-                            class="relative top-0 left-[100px] max-w-[80px] max-h-[80px] object-contain"
+                            class="relative top-0 left-[100px] max-w-[80px] max-h-[80px] object-contain mx-10"
                             alt={logos[i % logos.length][1]}
                         />
                     {/each}
