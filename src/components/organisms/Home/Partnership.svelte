@@ -112,7 +112,7 @@
             class="relative left-[-180px] flex flex-col gap-10 w-fit"
         >
             {#each Array(4) as item, j}
-                <div id="logos{j}" class="flex gap-0 relative">
+                <div id="logos{j}" class="flex relative">
                     {#each Array(logos.length * 2) as logo, i}
                         <img
                             src={logos[i % logos.length][0]}
