@@ -8,7 +8,7 @@
 </script>
   
 <div class="modal z-50 fixed top-0 left-0 w-full h-full flex flex-row items-center justify-center backdrop-blur-lg bg-base-black" >
-    <button class="glassmorphic rounded-full w-12 h-12 absolute top-2 left-2 text-2xl cursor-pointer text-thin text-white" on:click={() => closeModal()}>
+    <button class="glassmorphic rounded-full w-12 h-12 absolute top-2 left-2 text-2xl cursor-pointer text-thin text-white z-20" on:click={() => closeModal()}>
         x
     </button>
     <button class="glassmorphic text-black p-3 rounded-full absolute left-5 z-20" on:click={() => selectedImageIndex = (selectedImageIndex - 1 + galleryImages.length) % galleryImages.length}>
@@ -43,7 +43,7 @@
         
         
 
-        <img src={galleryImages[selectedImageIndex]} alt="" class="max-w-full h-auto object-cover" />
+        <img src={galleryImages[selectedImageIndex]} alt="" class="max-w-full h-auto  object-cover" />
 
     </div>
     <button class="glassmorphic text-black p-3 rounded-full absolute right-5 transform scale-x-[-1]" on:click={() => selectedImageIndex = (selectedImageIndex + 1) % galleryImages.length}>

@@ -47,7 +47,7 @@
   
 </script>
 
-<section class = "gallery px-5">
+<section class = "z-50 gallery px-5">
   
   <div class="gallery-container bg-none grid grid-cols-4 md:grid-cols-2 lg:grid-cols-3 justify-center items-start gap-2 md:gap-4 lg:gap-4 xl:gap-4">
     {#each galleryImages as image, index}

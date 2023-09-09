@@ -8,22 +8,20 @@
     import developer from "$lib/admin/schemas/developer";
     import { data } from "./data";
 
-    let dev_row1 = [];
-    let dev_row2 = [];
 
 </script>
 
 
 
 
-<section class="px-5 md:py-10">
+<section class="z-50 px-5 md:py-10">
     <div class="dev-cards-content">
         <div class=" flex flex-col md:items-center ">
             <h4 class="text-4xl lg:text-5xl font-bold text-white">
                 Developers
             </h4>
             
-            <div class="md:w-[840px] lg:w-[1200px] xl:w-[1500px] ">
+            <div class="lg:w-[1000px]">
                 <div class="flex flex-wrap gap-2 sm:gap-4 md:gap-5 md:justify-center py-10 ">
                     {#each data["projects"] as content}
                         {#if content.title.toLowerCase() === contentTitle }
@@ -37,23 +35,23 @@
         
                                     
                                     <div class="absolute bottom-[120px]  sm:bottom-[165px] left-[40px] md:left-[55px] transform -translate-x-1/2  translate-y-1/3 transform transition-transform hover:scale-110">
-                                        <div class=" bg-center bg-cover rounded-full absolute bottom-[6px] left-[4.5px] sm:bottom-[8px] sm:left-[6px]" >
+                                        <div class=" bg-center bg-cover rounded-full absolute bottom-[3px] left-[1px] sm:bottom-[4px] sm:left-[2px]" >
                                             
-                                            <img src = "{dev.ts[0]} " class="w-[10px] sm:w-full"/>
+                                            <img src = "{dev.ts[0]} " class=""/>
                                             
                                         </div>
                                         
                                         <img src="/Hexagon Gradient.svg" class= "w-[20px] sm:w-full" />
                                     </div>
                                     <div class="absolute top-[10px] right-[18px] sm:top-[20px] sm:right-[20px] md:right-[40px] transform -translate-x-1/2  translate-y-1/3 transform transition-transform hover:scale-110">
-                                        <div class=" bg-center bg-cover rounded-full absolute bottom-[6px] left-[5px] sm:bottom-[8px] sm:left-[7px]" >
-                                            <img src = "{dev.ts[1]}" class="w-[10px] sm:w-full"/>
+                                        <div class=" bg-center bg-cover rounded-full absolute bottom-[3px] left-[1px] sm:bottom-[4px] sm:left-[2px]" >
+                                            <img src = "{dev.ts[1]}" class=""/>
                                         </div>
                                         <img src="/Hexagon Gradient.svg"  class= "w-[20px] sm:w-full" />
                                     </div>
                                     <div class="absolute bottom-[122px] right-[15px] sm:bottom-[165px] sm:right-[10px] md:right-[25px] transform -translate-x-1/2  translate-y-1/3 transform transition-transform hover:scale-110">
-                                        <div class=" bg-center bg-cover rounded-full absolute bottom-[7px] left-[5px] sm:bottom-[8px] sm:left-[7px]" >
-                                            <img src = "{dev.ts[2]}" class="w-[10px] sm:w-full"/>
+                                        <div class="bg-center bg-cover rounded-full absolute bottom-[3px] left-[1px] sm:bottom-[4px] sm:left-[2px]" >
+                                            <img src = "{dev.ts[2]}" class=""/>
                                         </div>
                                         <img src="/Hexagon Gradient.svg" class= "w-[20px] sm:w-full"  />
                                     </div>
@@ -64,17 +62,17 @@
                                         <h5 class="text-position font-normal text-xs text-white text-center leading-none">{@html dev.role}</h5>
                                         
                                     </div>
-                                    <div class="flex flex-row justify-center space-x-3 items-center mt-2 gap-1 ">
-                                        {#each dev.socials as social}
-                                            <a href = ""><img src="{social}" class="transform transition-transform w-[10px] sm:w-full sm:h-full hover:scale-110"></a>
+                                    <div class="flex flex-row justify-center space-x-2 sm:space-x-3 items-center mt-2 gap-1 ">
+                                        {#each dev.socials as social,i}
+                                            <a href = "{dev.links[i]}">
+                                                <img src="{social}" class="transform transition-transform w-[10px] sm:w-full sm:h-full hover:scale-110">
+                                            </a>
                                         {/each}
                                     </div>
         
                                 </div>
                             {/each}
                         {/if}
-               
-
                     {/each} 
                 </div>  
             </div>
