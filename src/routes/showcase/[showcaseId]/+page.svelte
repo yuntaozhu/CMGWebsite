@@ -38,14 +38,6 @@
         {/each}  
   </head>
   
-  <style>
-      .showcase-background {
-          background-image: url('/BACKGROUND.svg');
-          background-repeat: no-repeat;
-          background-size: cover;
-      }
-  </style>
-  
   <div class="min-h-screen flex flex-col md:items-center showcase-background pt-10 md:pt-20 pb-10 md:pb-20 gap-10 lg:gap-20 relative z-20">
     <ShowcaseHeader contents = {contents} contentTitle = {contentTitle}/>
     <ShowcaseImage contents = {contents} contentTitle = {contentTitle}/>
