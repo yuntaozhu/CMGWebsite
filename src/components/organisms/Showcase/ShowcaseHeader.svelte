@@ -5,6 +5,7 @@
     export let contentTitle = "";
 
 
+  import BackButton from "$components/atoms/BackButton.svelte";
     import { data } from "./data";
 
     
@@ -23,11 +24,20 @@
     {#each data[contents] as content }
         {#if content.title.toLowerCase() === contentTitle}
             <div class="showcase-content flex flex-col justify-center md:w-[700px] lg:w-[900px]  xl:w-[1200px] h-full ">
+                <div class = "py-5">
+
+                    
+                </div>
                 <div class="showcase-container">
                     <div class="showcase-title perspective-60" >
-                        <h5 class="text-3xl lg:text-4xl font-normal transform-style-flat origin-top-center text-white">
-                            {content.title}
-                        </h5>
+                        <div class = "flex flex-row items-center gap-4">
+                            <BackButton/>
+                            <h5 class="text-3xl lg:text-4xl font-normal transform-style-flat origin-top-center text-white">
+                            
+                                {content.title}
+                            </h5>
+                        </div>
+                  
                     </div>
                     <div class="showcase-blurb border-white">
                         <h2 class=" text-4xl lg:text-5xl font-bold tracking-wider text-white mt-10">

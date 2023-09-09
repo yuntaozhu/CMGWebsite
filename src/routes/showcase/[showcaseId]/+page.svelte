@@ -29,21 +29,20 @@
     }
 </script>
 
-<head>
-    {#each data[contents] as content}
-        {#if content.title.toLowerCase() === contentTitle}
-            <title>{content.title} - Showcase</title>
-        {/if}
-    {/each}
-</head>
+  <head>
+        {#each data[contents] as content}
+            {#if content.title.toLowerCase() === contentTitle}
+                <title>{content.title} - Showcase</title>
+            {/if}
 
-<div
-    class="min-h-screen flex flex-col items-center showcase-background pt-20 pb-20 gap-10 lg:gap-20 relative z-20"
->
-    <ShowcaseHeader {contents} {contentTitle} />
-    <ShowcaseImage {contents} {contentTitle} />
-    <ShowcaseDescription {contents} {contentTitle} />
-    <ShowcaseGallery {contents} {contentTitle} />
+        {/each}  
+  </head>
+  
+  <div class="min-h-screen flex flex-col md:items-center showcase-background pt-10 md:pt-20 pb-10 md:pb-20 gap-10 lg:gap-20 relative z-20">
+    <ShowcaseHeader contents = {contents} contentTitle = {contentTitle}/>
+    <ShowcaseImage contents = {contents} contentTitle = {contentTitle}/>
+    <ShowcaseDescription contents = {contents} contentTitle = {contentTitle}/>
+    <ShowcaseGallery contents = {contents} contentTitle = {contentTitle}/>
     {#if contents === "projects"}
         <ShowcaseDevs {contentTitle} />
     {/if}
