@@ -8,10 +8,27 @@
     gap: "1rem",
     autoplay: true,
     // autoWidth: true,
-    arrows: true, // show left and right arrows
+    arrows: false,
     interval: 3000,
-    speed: 1000,
-    pagination: false,
+
+    breakpoints: {
+      900: {
+        width: 600,
+      },
+      700: {
+        width: 500,
+      },
+      580: {
+        width: 400,
+      },
+      480: {
+        width: 300,
+      },
+      380: {
+        width: 200,
+      },
+    },
+    pagination: true,
   };
 
   const coreValues = [
@@ -70,22 +87,10 @@
 
   function nextSlide() {
     currentSlide = (currentSlide + 1) % coreValues.length;
-    console.log("prev", currentSlide - 1);
-    console.log("current", currentSlide);
-    console.log(coreValues.length - 1);
-    console.log("next", currentSlide + 1);
-    console.log(coreValues[currentSlide]);
   }
 
   function prevSlide() {
     currentSlide = (currentSlide - 1 + coreValues.length) % coreValues.length;
-
-    console.log("prev", currentSlide - 1);
-    console.log("current", currentSlide);
-    console.log(coreValues.length + 1);
-    console.log("next", currentSlide + 1);
-
-    console.log(coreValues[currentSlide]);
   }
 </script>
 
@@ -102,8 +107,8 @@
       principles.
     </p>
   </div>
-  <div class="w-100 flex justify-center items-center gap-5 mt-5 md:mt-10">
-    <div class="flex">
+  <div class="w-full flex justify-center items-center gap-5 mt-5 md:mt-10">
+    <div class="arrows flex">
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
       <!-- svelte-ignore a11y-img-redundant-alt -->
@@ -121,15 +126,14 @@
         class="h-10 w-10 {currentSlide === 0 ? 'flex' : ''}"
       />
     </div>
-    <div class="carouselOne hidden">
-      <!-- Splide width not working -->
+    <div class="w-full carouselOne hidden flex justify-center items-center">
       <Splide {options} hasTrack={false} aria-label="...">
         <div class="custom-wrapper">
           <SplideTrack>
             {#each coreValues as text}
               <SplideSlide>
                 <div
-                  class="flex flex-col glass justify-center items-center p-20"
+                  class="flex flex-col w-100 not-mid glass justify-center items-center p-10 sm:p-20"
                 >
                   <p class="text-xl font-bold mb-3">{text.title}</p>
                   <p class="text-base font-extralight">
@@ -139,27 +143,8 @@
               </SplideSlide>
             {/each}
           </SplideTrack>
-
-          <div class="splide__arrows" />
         </div>
       </Splide>
-
-      <!-- Do not Delete for now -->
-      <!-- {#each coreValues as text, index}
-        <div
-          class="carousel flex w-100 h-fit
-            {index === currentSlide ? 'active' : 'hidden'}"
-        >
-          <div
-            class="flex flex-col glass not-mid justify-center items-center duration-300 p-20"
-          >
-            <p class="text-xl font-bold mb-3">{text.title}</p>
-            <p class="text-base font-extralight">
-              {text.definition}
-            </p>
-          </div>
-        </div>
-      {/each} -->
     </div>
     <div
       class="carouselTwo hidden w-4/5 gap-5 {currentSlide < 1
@@ -216,7 +201,7 @@
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
     <!-- svelte-ignore a11y-img-redundant-alt -->
-    <div class="flex">
+    <div class="arrows flex">
       <img
         src="/assets/right-arrow.png"
         alt="photo"
@@ -257,6 +242,9 @@
     .title {
       width: 80%;
     }
+    .arrows {
+      display: none;
+    }
   }
   @media (min-width: 0px) and (max-width: 600px) {
     .carouselThree {
@@ -268,12 +256,18 @@
     .carouselOne {
       display: flex;
     }
-    .title {
-      width: 80%;
-    }
 
     .not-mid {
-      height: fit-content !important;
+      height: 300px !important;
+    }
+
+    .arrows {
+      display: none;
+    }
+  }
+  @media (min-width: 0px) and (max-width: 370px) {
+    .not-mid {
+      height: 500px !important;
     }
   }
 
