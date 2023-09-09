@@ -101,12 +101,12 @@
 </script>
 
 <div
-    class="w-full h-[510px] min-h-[510px] max-h-[90vw] flex flex-col items-center gap-5 -mb-48 pl-[10%] pr-[10%] relative overflow-hidden"
+    class="w-full h-fit flex flex-col items-center gap-5 -mb-48 pl-[10%] pr-[10%] relative overflow-hidden"
 >
     <h6 class="relative text-2xl font-extrabold text-center px-5">
         We have worked with {logos.length} companies.
     </h6>
-    <div class="relative flex justify-center">
+    <div class="relative flex justify-center h-[480px]">
         <div
             id="logos"
             class="absolute top-5 z-20 w-[900px] h-[900px] rounded-full"
