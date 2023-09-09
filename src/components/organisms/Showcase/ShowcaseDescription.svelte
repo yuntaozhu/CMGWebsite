@@ -9,7 +9,7 @@
 
 </script>
 
-<section class="z-10 px-5">
+<section class="px-5">
   {#each data[contents] as content}
     {#if content.title.toLowerCase() === contentTitle}
       <div class="description-contentborder border-white">

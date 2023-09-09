@@ -5,7 +5,7 @@
 
 <section class="tag container mx-auto relative">
     <div
-        class="flex flex-col min-h-[90vh] mx-4 pt-10 gap-5 md:flex-row md:align-center md:justify-evenly md:gap-10 2xl:gap-2"
+        class="flex flex-col min-h-[90vh] mx-4 pt-10 gap-5 md:flex-row md:align-center md:justify-evenly md:gap-10 2xl:gap-2 max-[480px]:min-h-[100vh] max-[480px]:mb-20"
     >
         <!-- ACSS Logo -->
         <div
@@ -48,7 +48,9 @@
         </div>
     </div>
     <!-- Scroll Down Mouse Graphic Animation -->
-    <div class="w-8 h-10 border-2 rounded-full m-auto pt-2 mt-6 sm:mt-0 mb-10">
+    <div
+        class="max-[480px]:hidden w-8 h-10 border-2 rounded-full m-auto pt-2 mt-6 sm:mt-0 mb-10"
+    >
         <div class="w-1 h-3 bg-white rounded-md animate-bounce m-auto" />
     </div>
 </section>

@@ -4,14 +4,13 @@ export async function POST({ request }) {
     try {
         // extract request
         const req = await request.json();
-        console.log(req)
 
         // post to google script
         // body needs three entries:
             // url of spreadsheet
             // name of sheet data will be inserted in
             // the form data itself
-        const res = await fetch("https://script.google.com/macros/s/AKfycbyF0V3IaPhf_VrBruErv-pG34-BSbBDOVxHb9aUOujMvWt6EGNsw-zQjQd4MdpdzwV00A/exec", {
+        const res = await fetch("https://script.google.com/macros/s/AKfycbwz1PBJGSzcDJ79oADk9iCx58jzqAtez_Lj4P8kZi2CKD_k9jEOo0EpD1jFN1QiFdIGwQ/exec", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -19,27 +18,15 @@ export async function POST({ request }) {
             body: JSON.stringify({
                 spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1N3MjIOC5UZ9CuFbPb445BpyZk6rOxhTc0eFokn2koXQ/edit?usp=sharing",
                 sheetName: "Registration",
+                registrationLimit: 60,
                 formData: {
-                    "Registration Date": new Date().toLocaleString(),
-                    Name: req.Name,
-                    Nickname: req.Nickname, 
-                    Email: req.Email,
-                    College: req.College,
-                    "Degree Program": req["Degree Program"],
-                    Batch: req.Batch,
-                    "Facebook Profile Link": req["Facebook Profile Link"],
-                    "How did you hear about this event?": req["How did you hear about this event?"]
+                    "Registration Date": new Date().toLocaleString("en-US", { timeZone: "Asia/Manila" }),
+                    ...req
                 }
             })
         })
 
-        if (res.ok) {
-            const resJson = await res.json();
-            return json(resJson);
-        } else {
-            throw error(500)
-        }
-
+        return json(await res.json());
     } catch {
         throw error(500, "Unable to access registration sheet.")
     }

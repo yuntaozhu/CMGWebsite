@@ -12,75 +12,64 @@
 
 <script>
   // Import statements
-  import { TextAreaComponent } from "$components";
+  import { TextAreaComponent, SubmitNotification } from "$components";
   // import TextAreaComponent from "$components/atoms/TexAreaComponent.svelte";
   import TextInputComponent from "$components/atoms/TextInputComponent.svelte";
   import EmailInputComponent from "$components/atoms/EmailInputComponent.svelte";
-  import SubmitButton from "$components/atoms/SubmitButton.svelte";
+  import FormButton from "$components/atoms/FormButton.svelte";
+  import {
+    submissionSuccess,
+    showNotification,
+    notificationMessage,
+  } from "$lib/stores";
 
-  // CUSTOMIZE THIS: Add the list of dropdown options and radio options here
-  // @ts-ignore
-  let colleges = [
-    "College of Arts and Sciences",
-    "College of Economics and Management",
-    "College of Forestry and Natural Resources",
-    "College of Development Communication",
-    "College of Agriculture and Food Science",
-    "College of Engineering and Agro-industrial Technology",
-    "College of Human Ecology",
-    "College of Veterinary Medicine",
-    "College of Public Affairs and Development",
-    "School of Environmental Science and Management",
-  ];
-
-  // @ts-ignore
-  let howYouHear = ["ACSS Social Media Post", "Shared Post of a Friend"];
-  // END OF CUSTOMIZATION
+  let loadingSubmission = false;
 
   // Form submission into formValues
-  function submitForm() {
-    let formValues = {};
+  // @ts-ignore
+  async function submitForm(e) {
+    // submit form values to API
+    loadingSubmission = true;
 
-    // @ts-ignore
-    let components = document.getElementById("components")?.children;
-    if (components) {
-      // for (let component of components) {
-      //   if (component.id.substring(0, 14) === "FormRadioACSS-") {
-      //     let name = component.id.replace("FormRadioACSS-", "");
-      //     console.log(component.id);
-      //     const radio = document.querySelectorAll(`input[name="${name}"]`);
-      //     for (const f of radio) {
-      //       // @ts-ignore
-      //       if (f.checked) {
-      //         // @ts-ignore
-      //         formValues[name] = f.value;
-      //       }
-      //     }
-      //   } else {
-      //     // @ts-ignore
-      //     // formValues[component.id] = document.getElementById(
-      //     //   `Form${component.id}`
-      //     // ).value;
-      //   }
-      // }
-      console.log(formValues);
-      isOpen = true;
+    let formValues = {
+      Name: "",
+      Email: "",
+      Message: "",
+    };
+
+    for (let key in formValues) {
+      // @ts-ignore
+      formValues[key] = document.getElementById(`Form${key}`).value;
     }
-  }
 
-  let isOpen = false;
+    e.target.reset();
 
-  function closeModal() {
-    isOpen = false;
-  }
+    await fetch("/api/contact-us", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formValues),
+    })
+      .then((res) => res.json())
+      .then((body) => {
+        loadingSubmission = false;
+        if (body["success"]) {
+          $notificationMessage =
+            "Your message has been sent. Thank you for contacting us.";
+          $submissionSuccess = true;
+        } else {
+          $notificationMessage =
+            "Unable to send your message due to server error.";
+          $submissionSuccess = false;
+        }
 
-  /**
-   * @param {{ target: any; currentTarget: any; }} event
-   */
-  function handleOutsideClick(event) {
-    if (event.target === event.currentTarget) {
-      closeModal();
-    }
+        $showNotification = true;
+
+        setTimeout(() => {
+          $showNotification = false;
+        }, 3000);
+      });
   }
 </script>
 
@@ -110,14 +99,14 @@
         <div
           class="glassmorphic-rectangle flex justify-start items-center row-span-1"
         >
-          <div class="flex flex-col">
+          <div class="w-100 flex flex-col">
             <form
               id="registration-form"
               class="h-fit flex flex-col justify-between"
-              on:submit={submitForm}
+              on:submit|preventDefault={submitForm}
             >
               <div id="components">
-                <div id="components" class="flex flex-row gap-8">
+                <div id="components" class="two-inputs flex flex-row gap-8">
                   <TextInputComponent
                     label="Name"
                     required={true}
@@ -136,8 +125,8 @@
                 />
               </div>
               <div class="flex row-span-1">
-                <div class="mt-8">
-                  <SubmitButton />
+                <div class="flex mt-8 items-center gap-4">
+                  <FormButton {loadingSubmission} />
                 </div>
               </div>
             </form>
@@ -147,50 +136,15 @@
     </div>
   </div>
 </div>
-<div>
-  {#if isOpen}
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <div
-      class="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black bg-opacity-50 backdrop-blur-sm"
-      on:click={handleOutsideClick}
-    >
-      <div class="w-3/4 p-6 bg-white rounded shadow-lg md:w-1/2 lg:w-1/3">
-        <header class="flex items-center justify-end mb-4">
-          <!-- <h2 class="text-xl font-semibold">Click Outside of Modal</h2> -->
-          <button class="text-gray-700" on:click={closeModal}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </header>
-        <div class="flex flex-col justify-center items-center p-10">
-          <p class="text-justify text-gray-700 w-100">
-            This feature is not yet available. Though, you could still contact
-            us via our <a href="https://www.facebook.com/ACSSPH"
-              ><span style="color:var(--color-blue); cursor:pointer;"
-                >Facebook Page</span
-              ></a
-            >.
-          </p>
-        </div>
-      </div>
-    </div>
-  {/if}
-</div>
 
 <style>
+  @media (min-width: 0px) and (max-width: 500px) {
+    .two-inputs {
+      flex-direction: column;
+      row-gap: 0px;
+    }
+  }
+
   .glassmorphic-rectangle {
     background: linear-gradient(
       0deg,

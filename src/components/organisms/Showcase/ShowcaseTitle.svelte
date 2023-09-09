@@ -1,4 +1,4 @@
-<header class = "relavtive z-1 mx-auto px-5 py-5">
+<header class = "mx-auto px-5 py-5">
     <h1 class= "text-title text-4xl lg:text-5xl text-white text-center">
         Milestone of Progress
     </h1>

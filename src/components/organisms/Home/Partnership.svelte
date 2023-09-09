@@ -4,7 +4,10 @@
 
     // CUSTOMIZE THIS: Add here the URL of logos from static folder ("./home-partnership/<logo>")
     let logos = [
-        ["./home-partnership/Amihan.webp", "Amihan Global Strategies Phils. Inc."],
+        [
+            "./home-partnership/Amihan.webp",
+            "Amihan Global Strategies Phils. Inc.",
+        ],
         ["./home-partnership/Azeus.webp", "Azeus Systems Philippines Limited"],
         ["./home-partnership/Breta-Consulting.webp", "Breta Consulting"],
         ["./home-partnership/Coding-Girls-Manila.webp", "Coding Girls Manila"],
@@ -20,10 +23,7 @@
     // Variables (for ui)
     let duration = logos.length < 10 ? 36000 : logos.length * 4000; // Duration of animatiion
     let resetDuration = logos.length < 10 ? 600 : logos.length * 60; // Duration of reset animation
-    let transitionLeft =
-        logos.length < 10
-            ? -2120
-            : -2 * (70 * logos.length + 40 * (logos.length - 1)); // Computes the position of the movingDiv on the right side
+    let transitionLeft = 0;
     /**
      * @type {string | number | NodeJS.Timeout | undefined}
      */
@@ -81,6 +81,11 @@
     }
 
     onMount(() => {
+        let move = document.getElementById("moving-div");
+        if (move) {
+            transitionLeft = -(move.getBoundingClientRect().width - 1200);
+        }
+
         window.addEventListener("focus", startAnimation);
         window.addEventListener("blur", () => {
             clearInterval(logoAnimationInterval);
@@ -96,50 +101,52 @@
 </script>
 
 <div
-    class="w-full h-[320px] max-h-[90vw] flex flex-col items-center gap-5 mt-[110px] pl-[10%] pr-[10%] relative"
+    class="w-full h-fit flex flex-col items-center gap-5 -mb-48 pl-[10%] pr-[10%] relative overflow-hidden"
 >
-    <h6 class="absolute top-0 text-2xl font-extrabold text-center">
+    <h6 class="relative text-2xl font-extrabold text-center px-5">
         We have worked with {logos.length} companies.
     </h6>
-    <div
-        id="logos"
-        class="absolute top-[80px] z-20 w-[900px] h-[900px] max-w-[150vw] max-h-[150vw] rounded-full"
-    >
+    <div class="relative flex justify-center h-[480px]">
         <div
-            id="moving-div"
-            class="relative left-[-180px] flex flex-col gap-10"
+            id="logos"
+            class="absolute top-5 z-20 w-[900px] h-[900px] rounded-full"
         >
-            {#each Array(4) as item, j}
-                <div id="logos{j}" class="flex gap-20 relative">
-                    {#each Array(logos.length * 2) as logo, i}
-                        <img
-                            src={logos[i % logos.length][0]}
-                            title={logos[i % logos.length][1]}  
-                            class="relative top-0 left-[100px] max-w-[80px] max-h-[80px] object-contain"
-                            alt={logos[i % logos.length][1]}
-                        />
-                    {/each}
-                    {#if logos.length < 10}
-                        {#each Array((10 - logos.length) * 2) as logo, i}
+            <div
+                id="moving-div"
+                class="relative left-[-180px] flex flex-col gap-10 w-fit"
+            >
+                {#each Array(4) as item, j}
+                    <div id="logos{j}" class="flex relative">
+                        {#each Array(logos.length * 2) as logo, i}
                             <img
                                 src={logos[i % logos.length][0]}
                                 title={logos[i % logos.length][1]}
-                                class="relative top-0 left-[100px] max-w-[80px] max-h-[80px] object-contain"
+                                class="relative top-0 left-[100px] max-w-[80px] max-h-[80px] object-contain mx-10"
                                 alt={logos[i % logos.length][1]}
                             />
                         {/each}
-                    {/if}
-                </div>
-            {/each}
+                        {#if logos.length < 10}
+                            {#each Array((10 - logos.length) * 2) as logo, i}
+                                <img
+                                    src={logos[i % logos.length][0]}
+                                    title={logos[i % logos.length][1]}
+                                    class="relative top-0 left-[100px] max-w-[80px] max-h-[80px] object-contain"
+                                    alt={logos[i % logos.length][1]}
+                                />
+                            {/each}
+                        {/if}
+                    </div>
+                {/each}
+            </div>
         </div>
+        <img
+            id="circle-blur"
+            src="/assets/gradient-blur-ellipse.svg"
+            alt="Gradient Blur Ellipse"
+            class="absolute top-0 z-10 w-[940px] h-[940px] min-w-[940px] min-h-[940px]"
+        />
+        <div />
     </div>
-    <img
-        id="circle-blur"
-        src="/assets/gradient-blur-ellipse.svg"
-        alt="Gradient Blur Ellipse"
-        class="absolute top-[70px] z-10 w-[900px] h-[900px] max-w-[155vw] max-h-[155vw]"
-    />
-    <div />
 </div>
 
 <style>
