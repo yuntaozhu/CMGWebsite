@@ -2,14 +2,6 @@
   // import SplideJS for the Dev Story Carousel
   import { Splide, SplideSlide, SplideTrack } from "@splidejs/svelte-splide";
   import "@splidejs/svelte-splide/css";
-  import { fade } from "svelte/transition";
-
-  let photos = [
-    "/assets/photo-1.webp",
-    "/assets/photo-2.webp",
-    "/assets/photo-3.webp",
-    "/assets/photo-4.webp",
-  ];
 
   // Splide Options to autoplay
   const options = {
@@ -32,20 +24,18 @@
       <Splide {options} hasTrack={false} aria-label="...">
         <div class="custom-wrapper">
           <SplideTrack>
-            {#each photos as photo}
-              <SplideSlide>
-                <img src="/assets/AUH-1.webp" alt="photo" />
-              </SplideSlide>
-              <SplideSlide>
-                <img src="/assets/AUH-2.webp" alt="photo" />
-              </SplideSlide>
-              <SplideSlide>
-                <img src="/assets/AUH-3.webp" alt="photo" />
-              </SplideSlide>
-              <SplideSlide>
-                <img src="/assets/AUH-4.webp" alt="photo" />
-              </SplideSlide>
-            {/each}
+            <SplideSlide>
+              <img src="/assets/AUH-1.webp" alt="photo" />
+            </SplideSlide>
+            <SplideSlide>
+              <img src="/assets/AUH-2.webp" alt="photo" />
+            </SplideSlide>
+            <SplideSlide>
+              <img src="/assets/AUH-3.webp" alt="photo" />
+            </SplideSlide>
+            <SplideSlide>
+              <img src="/assets/AUH-4.webp" alt="photo" />
+            </SplideSlide>
           </SplideTrack>
 
           <div class="splide__arrows" />

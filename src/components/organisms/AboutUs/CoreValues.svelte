@@ -1,4 +1,19 @@
 <script>
+  import { Splide, SplideSlide, SplideTrack } from "@splidejs/svelte-splide";
+  import "@splidejs/svelte-splide/css";
+
+  // Splide Options to autoplay
+  const options = {
+    rewind: true,
+    gap: "1rem",
+    autoplay: true,
+    // autoWidth: true,
+    arrows: true, // show left and right arrows
+    interval: 3000,
+    speed: 1000,
+    pagination: false,
+  };
+
   const coreValues = [
     {
       title: "Initiative",
@@ -87,14 +102,18 @@
       principles.
     </p>
   </div>
-  <div class="w-100 flex justify-center items-center gap-5 mt-10">
+  <div class="w-100 flex justify-center items-center gap-5 mt-5 md:mt-10">
     <div class="flex">
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+      <!-- svelte-ignore a11y-img-redundant-alt -->
       <img
         src="/assets/left-arrow.png"
         alt="photo"
         on:click={prevSlide}
         class="h-10 w-10 cursor-pointer {currentSlide === 0 ? 'hidden' : ''}"
       />
+      <!-- svelte-ignore a11y-img-redundant-alt -->
       <img
         src="/assets/left-arrow-disabled.png"
         alt="photo"
@@ -102,8 +121,31 @@
         class="h-10 w-10 {currentSlide === 0 ? 'flex' : ''}"
       />
     </div>
-    <div class="carouselOne hidden w-4/5">
-      {#each coreValues as text, index}
+    <div class="carouselOne hidden">
+      <!-- Splide width not working -->
+      <Splide {options} hasTrack={false} aria-label="...">
+        <div class="custom-wrapper">
+          <SplideTrack>
+            {#each coreValues as text}
+              <SplideSlide>
+                <div
+                  class="flex flex-col glass justify-center items-center p-20"
+                >
+                  <p class="text-xl font-bold mb-3">{text.title}</p>
+                  <p class="text-base font-extralight">
+                    {text.definition}
+                  </p>
+                </div>
+              </SplideSlide>
+            {/each}
+          </SplideTrack>
+
+          <div class="splide__arrows" />
+        </div>
+      </Splide>
+
+      <!-- Do not Delete for now -->
+      <!-- {#each coreValues as text, index}
         <div
           class="carousel flex w-100 h-fit
             {index === currentSlide ? 'active' : 'hidden'}"
@@ -117,7 +159,7 @@
             </p>
           </div>
         </div>
-      {/each}
+      {/each} -->
     </div>
     <div
       class="carouselTwo hidden w-4/5 gap-5 {currentSlide < 1
@@ -171,6 +213,9 @@
       </div>
     </div>
     <div class="flex flex-row" />
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+    <!-- svelte-ignore a11y-img-redundant-alt -->
     <div class="flex">
       <img
         src="/assets/right-arrow.png"
