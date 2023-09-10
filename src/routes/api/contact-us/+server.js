@@ -10,7 +10,7 @@ export async function POST({ request }) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1o54SKsG3p4_3b90xV1E7iTH0NKxA_FlDPB9nECUUfkw/edit#gid=0",
+                spreadsheetId: "1o54SKsG3p4_3b90xV1E7iTH0NKxA_FlDPB9nECUUfkw",
                 sheetName: "Sheet1",
                 formData: {
                     "Date and Time": new Date().toLocaleString("en-US", { timeZone: "Asia/Manila" }),

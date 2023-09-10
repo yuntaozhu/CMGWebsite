@@ -54,7 +54,6 @@
     />
     <div id="fixed-on-modal-on">
         <GradientBlur />
-        <!-- <ChatBot /> -->
         <div id="content">
             <slot />
         </div>
@@ -62,4 +61,5 @@
             <Footer />
         </div>
     </div>
+    <ChatBot />
 </main>

@@ -184,7 +184,7 @@
                             <!-- message text -->
                             <p class={"text flex p-4 gap-3 max-w-[80%] flex-[1_0_0] text-white text-xs font-normal tracking-[0.6px] whitespace-pre-line " + (message.isUser ? "text--user" : "text--bot")}>
                                 {#if (message.isUser || message.textLoaded)}
-                                    {message.text}
+                                    {@html message.text}
                                 {:else}
                                     <LoadingDots />
                                 {/if}
