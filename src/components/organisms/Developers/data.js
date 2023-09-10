@@ -1,7 +1,7 @@
 export const teams = [
     {
       name: 'Executive Team',
-      description: 'Ang pinakamalupit na mga tao sa ACSS. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: 'The Executive Team comprises the Head Developers who serve as the highest governing team of the organization. Headed by the Executive Head Developer, the team serves as the role models of the organization. Furthermore, they are responsible for facilitating events, meetings, and other gatherings, as well as identifying and handling cases that require immediate action concerning the organization.',
       developers: [
         {
           fullName: 'Austin Asunsion',
@@ -11,7 +11,7 @@ export const teams = [
           bio: 'Ako ang pinakapogi sa ACSS. Ang umangal ay iddisaffi ko!',
           skills: ['Halimaw magtampo', 'Delulu lord', 'Python'],
           contacts: {
-            gmail: 'kdolipas@up.edu.ph',
+            gmail: '',
             github: 'github.com/owen-olipas',
             linkedin: 'linkedin.com/owen-olipas',
           },
@@ -98,7 +98,7 @@ export const teams = [
     },
     {
       name: 'Logistics and Public Affairs Team',
-      description: 'Ang pinakamalupit na mga tao sa ACSS. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor aliqua.',
+      description: 'The Logistics and Public Affairs team is responsible for handling the non-monetary assets of the organization. They also represent the organization in external affairs as well as maintain our relationships with companies, sponsors, and other organizations.',
       developers: [
         {
           fullName: 'Laydon Albert Dela Cruz',
@@ -118,7 +118,7 @@ export const teams = [
     },
     {
       name: 'Academic Affairs Team',
-      description: 'Ang pinakamalupit na mga tao sa ACSS. Lorem do eiusmod tempor incididunt ut labore et dolore.',
+      description: "The Academic Affairs Team is dedicated to fostering a culture of learning, innovation, and growth among members of the organization. They oversee academic development, provide valuable educational resources and activities, and monitor the organization's development projects.",
       developers: [
         {
           fullName: 'Vince Arellano',
@@ -138,7 +138,7 @@ export const teams = [
     },
     {
       name: 'Records and Documentation Team',
-      description: 'Ang pinakamalupit na mga tao sa ACSS. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: "The Academic Affairs Team is dedicated to fostering a culture of learning, innovation, and growth among members of the organization. They oversee academic development, provide valuable educational resources and activities, and monitor the organization's development projects.",
       developers: [
         {
           fullName: 'Hana Christine galon',
@@ -158,7 +158,7 @@ export const teams = [
     },
     {
       name: 'Finance and Management Team',
-      description: 'Ang pinakamalupit na mga tao sa ACSS. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: "The Finance and Management Team's main responsibility is to handle to organization's monetary assets. They are also the ones mainly in charge of Fundraising Activities (FRAs). These help make the organization's events and other needs come to fruition. With this, when an event or activity needs funding, it is up to this team to approve and oversee every bit spent.",
       developers: [
         {
           fullName: 'Chris Marlo Jimenez',
@@ -178,7 +178,7 @@ export const teams = [
     },
     {
       name: 'Membership and Internal Affairs Team',
-      description: 'Ang pinakamalupit na mga tao sa ACSS. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: 'The Membership and Internal Affairs Team bears the responsibility of safeguarding the organizational health and ensuring its overall well-being. Additionally, the team is entrusted with managing the recruitment process and diligently monitoring the condition and performance of developers within the organization.',
       developers: [
         {
           fullName: 'Jeanfer Deloso',
@@ -198,7 +198,7 @@ export const teams = [
     },
     {
       name: 'Media and Publicity Team',
-      description: 'The Media and Publicity Team, or informally known as the “Pub Team” primarily concerns itself with promoting the image and advocacies of the organization to the public, not just within the university but also the larger community outside of it',
+      description: 'The Membership and Internal Affairs Team bears the responsibility of safeguarding the organizational health and ensuring its overall well-being. Additionally, the team is entrusted with managing the recruitment process and diligently monitoring the condition and performance of developers within the organization.',
       developers: [
         {
           fullName: 'Ralph Ken Rea',
