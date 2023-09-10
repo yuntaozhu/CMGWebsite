@@ -30,8 +30,7 @@
   }
 
   function scrollTabChange() {
-      console.log("c");
-      activeTab = sessionStorage.getItem("activeTab"); 
+      activeTab = sessionStorage.getItem("activeTab") || "Projects"; 
     }
   
 
