@@ -5,9 +5,11 @@
      * @default undefined
      */
     export let onClick;
+
+    export let disabled = false;
 </script>
 
-<button class="glassmorphic-button px-7 py-3" on:click={onClick}>
+<button {disabled} class="glassmorphic-button px-7 py-3" on:click={onClick}>
     <slot />
 </button>
 

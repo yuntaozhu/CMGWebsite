@@ -18,7 +18,11 @@
     import NumberInputComponent from "$components/atoms/NumberInputComponent.svelte";
     import DropdownInputComponent from "$components/atoms/DropdownInputComponent.svelte";
     import RadioInputComponent from "$components/atoms/RadioInputComponent.svelte";
-    import SubmitButton from "$components/atoms/SubmitButton.svelte";
+    import FormButton from "$components/atoms/FormButton.svelte";
+    import { submissionSuccess, showNotification, notificationMessage } from "$lib/stores";
+    import { onMount } from "svelte";
+
+    let loadingSubmission = false;
 
     // CUSTOMIZE THIS: Add the list of dropdown options and radio options here
     let colleges = [
@@ -49,7 +53,6 @@
                     component.id.substring(0, 14) === "FormRadioACSS-"
                 ) {
                     let name = component.id.replace("FormRadioACSS-", "");
-                    console.log(component.id);
                     const radio = document.querySelectorAll(
                         `input[name="${name}"]`
                     );
@@ -65,7 +68,6 @@
                     formValues[component.id] = document.getElementById(`Form${component.id}`).value;
                 }
             }
-            console.log(formValues);
 
             postToSheets(formValues);
         }
@@ -74,19 +76,48 @@
     /**
      * @param {{}} formValues
      */
-    async function postToSheets(formValues) {      
-        let addEntry = await fetch("/api/registration", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formValues)
+    async function postToSheets(formValues) { // send form values to API
+        loadingSubmission = true;
+        
+        await fetch("/api/registration", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formValues)
         })
+            .then(res => res.json())
+            .then(body => {
+                loadingSubmission = false;
+                if (body["success"]) {
+                    if (body["code"] == "email-found") {
+                        $notificationMessage = "You're already registered."
+                    } else {
+                        $notificationMessage = "Thank you for registering!"
+                    }
 
-        let response = await addEntry.json();
-        console.log(response) 
+                    $submissionSuccess = true;
+                } else {
+                    if (body["code"] == "registration-limit-exceeded") {
+                        $notificationMessage = "Sorry, maximum number of participants already reached."
+                    } else {
+                        $notificationMessage = "There seems to be an error with the server.";
+                    }
+
+                    $submissionSuccess = false;
+                }
+
+                $showNotification = true;
+
+                setTimeout(() => {
+                    $showNotification = false;
+                }, 3000);
+            })
     }
     
+    onMount(()=>{
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    });
 </script>
 
 <RegSectionBody>
@@ -94,7 +125,7 @@
         id="registration-form"
         slot="registration-form"
         class="h-[100%] flex flex-col justify-between"
-        on:submit={submitForm}
+        on:submit|preventDefault={submitForm}
     >
         <div id="components">
             <!-- CUSTOMIZE THIS: Add the input components here -->
@@ -112,8 +143,8 @@
             />
             <!-- END OF CUSTOMIZATION -->
         </div>
-        <div class="overflow-hidden">
-            <SubmitButton/>
+        <div class="max-ss:self-center ">
+            <FormButton {loadingSubmission}/>
         </div>
     </form>
 </RegSectionBody>

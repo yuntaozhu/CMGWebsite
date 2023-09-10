@@ -1,46 +1,14 @@
 <script>
   import { FooterContentOne, FooterContentTwo } from "$components";
-
-  let HomePage = [
-    ["DevStories", "/#devstories"],
-    ["Strengths", "/#strengths"],
-    ["Contributions", "/#contributions"],
-    ["Brief Showcase", "/#briefshowcase"],
-  ];
-
-  let Showcase = [
-    ["Projects", ""],
-    ["Events", ""],
-    ["Workshops", ""],
-    ["Activities", ""],
-  ];
-
-  let AboutUs = [
-    ["History", ""],
-    ["Mission & Vision", ""],
-    ["Core Vaues", ""],
-    ["Advisers", ""],
-  ];
-
-  let Developers = [
-    ["Executives", ""],
-    ["Resident Members", ""],
-    ["Member Roster", ""],
-  ];
-
-  function handleClick() {
-    // string = "You wasted a second of your life :D";
-    // buttonVisible = false;
-  }
 </script>
 
-<div class="svg-container">
+<div class="svg-container w-screen">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1826"
     height="65"
     viewBox="0 0 1826 65"
-    fill="none"
+    fill="none" 
     class="svg"
   >
     <path
@@ -49,7 +17,7 @@
     />
   </svg>
 </div>
-<div class="footer flex flex-col h-fit">
+<div id="footer" class="footer flex flex-col h-fit">
   <div class="hidden md:flex lg:flex xl:flex w-100">
     <FooterContentOne />
   </div>

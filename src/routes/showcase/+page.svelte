@@ -10,7 +10,7 @@
     ShowcaseTitle,
     ShowcaseCards,
   } from "$components";
-  import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
+    import { onMount } from "svelte";
   
   const showcaseComponents = {
     Projects,
@@ -28,6 +28,18 @@
    
     sessionStorage.setItem("activeTab", activeTab);
   }
+
+  function scrollTabChange() {
+      activeTab = sessionStorage.getItem("activeTab") || "Projects"; 
+    }
+  
+
+  onMount(()=>{
+    window.addEventListener("scrollend", scrollTabChange);
+    return(()=>{
+      removeEventListener("scrollend", scrollTabChange);
+    });
+  });
 </script>
 
 
@@ -53,9 +65,10 @@
   />
 </head>
 
-<div class="overflow-hidden w-full flex flex-col bg-base-black items-center px-5 py-10" >
+<div id={activeTab.toLocaleLowerCase()} class="overflow-hidden w-full flex flex-col items-center px-5 py-10 relative z-20" >
 
   <ShowcaseTitle/>
+ 
   <ShowcaseNavBar {activeTab} {tabs} on:tabChange={tabChange}/>
   {#each tabs as tab}
     {#if activeTab === tab}
