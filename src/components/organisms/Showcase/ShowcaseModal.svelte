@@ -10,13 +10,13 @@
 <Modal>
     <div class="flex flex-col items-center justify-center">
         <button
-            class="glassmorphic rounded-full w-12 h-12 absolute top-5 left-5 text-2xl cursor-pointer text-thin text-white z-20"
+            class="glassmorphic rounded-full w-12 h-12 absolute top-5 left-5 text-2xl cursor-pointer text-thin text-white z-50"
             on:click={() => closeModal()}
         >
             x
         </button>
         <button
-            class="glassmorphic text-black p-3 rounded-full absolute left-5 z-20"
+            class="glassmorphic text-black p-3 rounded-full absolute left-5 z-50"
             on:click={() =>
                 (selectedImageIndex =
                     (selectedImageIndex - 1 + galleryImages.length) %
@@ -64,7 +64,7 @@
             />
         </div>
         <button
-            class="glassmorphic text-black p-3 rounded-full absolute right-5 transform scale-x-[-1]"
+            class="glassmorphic text-black p-3 rounded-full absolute right-5 transform scale-x-[-1] z-50"
             on:click={() =>
                 (selectedImageIndex =
                     (selectedImageIndex + 1) % galleryImages.length)}
