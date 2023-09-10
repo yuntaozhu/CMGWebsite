@@ -2,6 +2,7 @@
     import { goto } from "$app/navigation";
     import Button from "$components/atoms/Button.svelte";
     import { onMount } from "svelte";
+    import { page } from "$app/stores";
 
     onMount(() => {
         window.scrollTo({ top: 0, left: 0, behavior: "instant" });
@@ -16,9 +17,11 @@
         class="flex flex-col max-w-[80%] gap-4 items-startz justify-center items-center"
     >
         <div id="error-illus" class="mb-3" />
-        <div class="font-bold break-words text-2xl">
-            Not the page you're looking for.
-        </div>
+        {#if $page.status === 404}
+            <div class="font-bold break-words text-2xl">Page not found.</div>
+        {:else}
+            <div class="font-bold break-words text-2xl">Something went wrong.</div>
+        {/if}
         <Button
             onClick={() => {
                 goto("/");
