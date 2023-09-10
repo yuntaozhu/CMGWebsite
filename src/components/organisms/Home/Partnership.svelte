@@ -96,6 +96,11 @@
         return () => {
             clearInterval(logoAnimationInterval);
             clearInterval(logoAnimationResetInterval);
+            window.removeEventListener("focus", startAnimation);
+            window.removeEventListener("blur", () => {
+                clearInterval(logoAnimationInterval);
+                clearInterval(logoAnimationResetInterval);
+            });
         };
     });
 </script>
