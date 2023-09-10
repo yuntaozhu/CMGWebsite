@@ -81,6 +81,7 @@
               href={item[1]}
               on:click={() => {
                 sessionStorage.setItem("activeTab", item[0]);
+                window.scrollTo({ top: 0, left: 0, behavior: "instant" });
               }}><p class="pages">{item[0]}</p></a
             >
           </div>

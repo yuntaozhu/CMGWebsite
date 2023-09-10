@@ -10,7 +10,7 @@
     ShowcaseTitle,
     ShowcaseCards,
   } from "$components";
-  import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
+    import { onMount } from "svelte";
   
   const showcaseComponents = {
     Projects,
@@ -28,6 +28,19 @@
    
     sessionStorage.setItem("activeTab", activeTab);
   }
+
+  function scrollTabChange() {
+      console.log("c");
+      activeTab = sessionStorage.getItem("activeTab"); 
+    }
+  
+
+  onMount(()=>{
+    window.addEventListener("scrollend", scrollTabChange);
+    return(()=>{
+      removeEventListener("scrollend", scrollTabChange);
+    });
+  });
 </script>
 
 
