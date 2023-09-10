@@ -35,7 +35,7 @@
         width: 800px;
     }
     #error-illus {
-        background-image: url("/assets/oops.svg");
+        background-image: url("/assets/error.svg");
         background-repeat: no-repeat;
         background-size: cover;
         width: 80vw;
