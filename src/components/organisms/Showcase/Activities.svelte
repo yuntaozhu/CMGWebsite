@@ -4,16 +4,21 @@
 </script>
 <!-- <ShowcaseCards {contents}/> -->
 <div class = "p-10 ">
-  <div class = "relavtive z-1 mx-auto px-5 py-5">
+  <div class = "flex flex-col relavtive z-1 mx-auto py-5  justify-center items-center">
     
-    <div class = "w-[300px] h-[300px] md:w-[800px] md:h-[800px] ">
-      <img src = "/logo.webp" class = "w-full h-full object-cover">
+    <div class = "">
+      <img src = "/logo.webp" class = "w-[300px] h-[300px] floating object-cover" alt="">
     </div>
 
-    
-    <h1 class= "text-title text-4xl lg:text-5xl text-white text-center">
-        Still uploading...
-    </h1>
+    <div class = "flex flex-col items-center gap-4">
+      <span class= "  justify-center text-title text-xl md:text-3xl font-bold text-white text-center">
+        Oops!   
+      </span>
+      <span class= "  justify-center text-title text-lg md:text-2xl font-normal text-white text-center">
+        This page is still under development.
+      </span>
+    </div>
+
 </div>
 
   <!-- <div class = "w-[300px] h-[300px] ">
