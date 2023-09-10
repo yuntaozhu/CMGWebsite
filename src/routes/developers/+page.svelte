@@ -1,84 +1,19 @@
 <script>
+  // Importing components
   import {
     InitialSection,
     ResidentMembers,
     MembersRoster,
-    NavBar,
-    Footer,
   } from "$components";
-  import { onMount } from 'svelte';
-  import GradientBlur from "../../components/molecules/Home/GradientBlur.svelte";
-
-  let activeSection = "initial"; // To keep track of the active section
-
-  function handleScroll(event) {
-    const windowHeight = window.innerHeight;
-    const scrollPosition = window.scrollY;
-    const documentHeight = document.body.clientHeight;
-
-    if (scrollPosition + windowHeight >= documentHeight) {
-      // Reached the bottom of the page, update activeSection
-      switch (activeSection) {
-        case "initial":
-          activeSection = "executives";
-          break;
-        case "executives":
-          activeSection = "roster";
-          break;
-        case "roster":
-          activeSection = "residents";
-          break;
-        // You can add more cases if you have additional sections
-      }
-
-      // Scroll to the next section smoothly
-      const sectionElement = document.getElementById(activeSection);
-      if (sectionElement) {
-        sectionElement.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }
-
-  onMount(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
 </script>
 
-<div class="container">
-  <GradientBlur />
-  <NavBar />
+<div class="overflow-hidden w-full bg-base-black px-10 lg:px-10 flex flex-col gap-10 pb-40 z-15">
+  <!-- Initial Section component -->
+  <InitialSection />
 
-  <div id="initial">
-    <InitialSection
-      imageURL='sample.png'
-      title="Meet the Team"
-      description="Alliance of Computer Science Students — University of the Philippines Los Baños Alliance of Computer Science"
-    />
-  </div>
+  <!-- Resident Members component -->
+  <ResidentMembers />
 
-  <div id="resident">
-    <ResidentMembers />
-  </div>
-
-  <!-- <div id="roster">
-    <MembersRoster />
-  </div> -->
-
-  <!-- <div id="residents">
-    <ResidentMembers />
-  </div> -->
-
-  <!-- <Footer /> -->
+  <!-- Members Roster component -->
+  <MembersRoster />
 </div>
-
-<style>
-  .container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-</style>

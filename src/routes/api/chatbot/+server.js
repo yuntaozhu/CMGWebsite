@@ -5,6 +5,9 @@ export async function POST ({ request }) {
     // extract question
     let { question } = await request.json()
     try {
+        let tempReplyString = "<span>Hey there, user! Thank you for checking out our website. Unfortunately, this feature is still in the works. However, you can contact us through our <a class='font-bold underline' href='https://www.facebook.com/ACSSPH'>Facebook Page</a>, our email through acssuplb@gmail.com, or simply at our <a class='font-bold underline' href='/contact-us'>Contact Us</a> page.</span>"
+        return json({result: tempReplyString})
+
         // connect to HuggingFace Spaces
         const app = await client("https://sejo-acss-chatbot.hf.space/", {});
         

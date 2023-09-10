@@ -1,33 +1,52 @@
 <script>
-  export let imageSrc;
-  export let nickname;
+  // Exported prop for developer data
+  export let developer;
 
-  let isHovered = false;
+  // Import DeveloperDetail component
+  import DeveloperDetail from './DeveloperDetail.svelte';
 
-  function handleHover() {
-    isHovered = true;
+  // Variable to control the modal's open state
+  let isModalOpen = false;
+
+  // Function to open the modal
+  function openModal() {
+    isModalOpen = true;
   }
 
-  function handleUnhover() {
-    isHovered = false;
+  // Function to close the modal
+  function closeModal() {
+    isModalOpen = false;
   }
 </script>
 
-<div class="relative transition-transform transform-gpu hover:scale-[1.1] on:mouseenter={handleHover} on:mouseleave={handleUnhover} cursor-pointer grayscale">
+<!-- Developer card container -->
+<div
+  class="relative transition-transform transform-gpu hover:scale-[1.1] cursor-pointer grayscale"
+  style="transition: transform 0.5s;"
+  on:click={openModal}
+>
   <!-- Outer glassmorphic rectangle -->
-  <div class="glassmorphic drop-shadow-md border-[1rem] rounded-2xl border-opacity-10 h-[218px] w-[172px]"></div>
+  <div class="glassmorphic drop-shadow-md border-[1rem] border-opacity-10 rounded-lg md:rounded-2xl h-[109px] w-[86px] md:h-[218px] md:w-[172px]"></div>
 
   <!-- Inner glassmorphic rectangle -->
-  <div class="glassmorphic left-[11px] top-3 absolute rounded-2xl w-[150px] h-[160px]">
+  <div class="glassmorphic absolute md:rounded-2xl rounded-lg md:w-[150px] md:h-[160px] md:left-[11px] md:top-3 w-[75px] h-[80px] left-[6px] top-[6px]">
     <!-- Placeholder for developer image --> 
-    <img src={imageSrc} alt={nickname} class="w-full h-full object-cover rounded-2xl" />
+    <img src={developer.imageSrc} alt={developer.nickname} class="w-full h-full object-cover md:rounded-2xl rounded-lg" />
   </div>
 
   <!-- Developer nickname -->
-  <p class="absolute w-238 h-12 left-4 bottom-[-7px] font-bold text-2xl">{nickname}</p>
+  <p class="absolute font-bold md:text-2xl w-238 h-12 md:left-4 md:bottom-[-7px] left-2 bottom-[-24px]">{developer.nickname}</p>
 </div>
 
+<!-- Render DeveloperDetail component within a modal when isModalOpen is true -->
+{#if isModalOpen}
+  <div class="modal-background absolute">
+    <DeveloperDetail developer={developer} closeModal={closeModal}/>
+  </div>
+{/if}
+
 <style>
+  /* Styles for the glassmorphic effect on the card */
   .glassmorphic {
     filter: drop-shadow(0px 8px 8px #000000);
     border: 0.01rem solid rgba(255, 255, 255, 0.1);
@@ -38,14 +57,13 @@
     );
   }
 
+  /* Grayscale effect for the card on hover */
   .grayscale {
-    filter: grayscale(100%);
-    --tw-text-opacity: 1;
-    color: rgb(226 232 240 / var(--tw-text-opacity));
+    filter: grayscale(100%) sepia(65%) hue-rotate(150deg);
   }
 
+  /* Remove grayscale effect on hover */
   .grayscale:hover {
     filter: grayscale(0%);
-    color: white;
   }
 </style>
