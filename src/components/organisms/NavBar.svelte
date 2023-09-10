@@ -2,6 +2,7 @@
   import { Button, HamburgerMenu } from "$components";
   import { page } from "$app/stores";
 
+
   let pages = [
     { title: "Home", url: "/" },
     { title: "About Us", url: "/about-us" },

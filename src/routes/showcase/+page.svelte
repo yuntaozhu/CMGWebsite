@@ -1,6 +1,5 @@
 <script>
-// @ts-nocheck
-
+  import { onMount } from "svelte";
   import {
     Activities,
     Events,
@@ -10,38 +9,40 @@
     ShowcaseTitle,
     ShowcaseCards,
   } from "$components";
-    import { onMount } from "svelte";
-  
+
   const showcaseComponents = {
     Projects,
     Events,
     Workshops,
-    Activities
+    Activities,
   };
 
-
-  let tabs = ["Projects", "Events", "Workshops", "Activities"]
-  let activeTab = sessionStorage.getItem("activeTab") || "Projects";
+  let tabs = ["Projects", "Events", "Workshops", "Activities"];
+  let activeTab = "Projects"; // Default active tab
 
   const tabChange = (e) => {
     activeTab = e.detail;
-   
     sessionStorage.setItem("activeTab", activeTab);
-  }
+  };
 
   function scrollTabChange() {
-      activeTab = sessionStorage.getItem("activeTab") || "Projects"; 
+    if (typeof window !== "undefined") {
+      activeTab = sessionStorage.getItem("activeTab") || "Projects";
     }
-  
+  }
 
-  onMount(()=>{
-    window.addEventListener("scrollend", scrollTabChange);
-    return(()=>{
-      removeEventListener("scrollend", scrollTabChange);
-    });
+  onMount(() => {
+    if (typeof window !== "undefined") {
+      // Check if running on the client side
+      // Reset activeTab to "Projects" on page reload
+      sessionStorage.setItem("activeTab", activeTab);
+      window.addEventListener("scrollend", scrollTabChange);
+      return () => {
+        removeEventListener("scrollend", scrollTabChange);
+      };
+    }
   });
 </script>
-
 
 <head>
   <title>Showcasing Excellence - The Alliance of Computer Science Students UPLB</title>
@@ -68,19 +69,17 @@
 <div id={activeTab.toLocaleLowerCase()} class="overflow-hidden w-full flex flex-col items-center px-5 py-10 relative z-20" >
 
   <ShowcaseTitle/>
- 
+  
   <ShowcaseNavBar {activeTab} {tabs} on:tabChange={tabChange}/>
+
+
   {#each tabs as tab}
+
     {#if activeTab === tab}
       <svelte:component this={showcaseComponents[tab]}/>
     {/if}
   {/each}
-  <!-- <div class="showcase-container  flex flex-col items-center  ">
 
-    
-
-
-  </div> -->
 </div>
 
 

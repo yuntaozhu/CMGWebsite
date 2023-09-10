@@ -64,9 +64,12 @@
                                     </div>
                                     <div class="flex flex-row justify-center space-x-2 sm:space-x-3 items-center mt-2 gap-1 ">
                                         {#each dev.socials as social,i}
-                                            <a href = "{dev.links[i]}">
-                                                <img src="{social}" class="transform transition-transform w-[10px] sm:w-full sm:h-full hover:scale-110">
-                                            </a>
+                                            {#if dev.links[i] !== ""}
+                                                <a href="{dev.links[i]}">
+                                                    <img src="{social}" class="transform transition-transform w-[10px] sm:w-full sm:h-full hover:scale-110">
+                                                </a>
+                        
+                                            {/if}
                                         {/each}
                                     </div>
         
