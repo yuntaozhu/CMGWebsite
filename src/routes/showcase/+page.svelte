@@ -53,7 +53,7 @@
   />
 </head>
 
-<div class="overflow-hidden w-full flex flex-col items-center px-5 py-10 relative z-20" >
+<div id={activeTab.toLocaleLowerCase()} class="overflow-hidden w-full flex flex-col items-center px-5 py-10 relative z-20" >
 
   <ShowcaseTitle/>
  

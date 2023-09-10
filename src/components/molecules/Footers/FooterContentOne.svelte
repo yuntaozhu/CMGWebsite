@@ -11,8 +11,8 @@
   let Showcase = [
     ["Projects", "/showcase#projects"],
     ["Events", "/showcase#events"],
-    ["Workshops", "/workshops#workshops"],
-    ["Activities", "/activities#activities"],
+    ["Workshops", "/showcase#workshops"],
+    ["Activities", "/showcase#activities"],
   ];
 
   let AboutUs = [
@@ -77,7 +77,12 @@
         <p class="font-normal text-sm mb-2">Showcase</p>
         {#each Showcase as item, index}
           <div class="page-container">
-            <a href={item[1]}><p class="pages">{item[0]}</p></a>
+            <a
+              href={item[1]}
+              on:click={() => {
+                sessionStorage.setItem("activeTab", item[0]);
+              }}><p class="pages">{item[0]}</p></a
+            >
           </div>
         {/each}
       </div>

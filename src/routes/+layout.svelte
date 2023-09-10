@@ -34,15 +34,17 @@
 </script>
 
 <main id="main" class="overflow-hidden bg-base-black h-fit">
+    <div id="header-div-for-modal-on">
+        <NavBar />
+    </div>
     <SubmitNotification success={$submissionSuccess} message={$notificationMessage} showNotif={$showNotification}/>
-    <NavBar />
     <div id="fixed-on-modal-on">
         <GradientBlur />
         <!-- <ChatBot /> -->
         <div id="content">
             <slot />
         </div>
-        <div class="relative z-20">
+        <div id="footer-div-for-modal-on" class="relative z-20">
             <Footer />
         </div>
     </div>
