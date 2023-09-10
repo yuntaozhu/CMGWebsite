@@ -20,6 +20,7 @@
     import RadioInputComponent from "$components/atoms/RadioInputComponent.svelte";
     import SubmitButton from "$components/atoms/SubmitButton.svelte";
     import CheckboxInputComponent from "$components/atoms/CheckboxInputComponent.svelte";
+    import { onMount } from "svelte";
 
     // CUSTOMIZE THIS: Add the list of dropdown options, checkbox options, and radio options here
     let dropdown = ["Option 1", "Option 2", "Option 3"];
@@ -70,9 +71,12 @@
                     ).value;
                 }
             }
-            console.log(formValues);
         }
     }
+
+    onMount(()=>{
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    });
 </script>
 
 <RegSectionBody>

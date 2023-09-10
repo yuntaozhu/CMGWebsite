@@ -1,7 +1,7 @@
 <!-- Summary Section -->
 <section class="scrollFadeIn">
   <div
-    class="relative flex flex-col mx-4 md:pt-10 max-[335px]:pb-[750px] max-[390px]:pb-[600px] max-ss:pb-[550px] ss:pb-[400px] sm:pb-80"
+    class="relative flex flex-col mx-4 md:pt-10 max-[335px]:pb-[750px] max-[390px]:pb-[600px] max-ss:pb-[550px] ss:pb-[400px] sm:pb-80 max-[280px]:pb-[900px]"
   >
     <div class="relative flex flex-row z-10 md:mx-[16%] xl:mx-[20%] xl:pb-2">
       <!-- Who are We ACSS Column -->
@@ -19,11 +19,13 @@
       </div>
       <!-- ACSS Logo Image -->
       <div
-        class="absolute z-[10] top-[20%] left-[74%] ss:top-[8%] ss:left-[70%] lg:left-[36%] xl:left-[28%]"
+        class="absolute z-[10] top-[20%] left-[74%] ss:top-[8%] ss:left-[70%] lg:left-[36%] xl:left-[28%] max-[280px]:hidden"
       >
         <img
           src="/assets/white-logo-no-text.webp"
           alt="The official seal of The Alliance of Computer Science Students"
+          width="160"
+          height="160.67"
           class="max-w-[120px] ss:max-w-[100%] w-40"
         />
       </div>
@@ -48,6 +50,8 @@
         <img
           src="/assets/gradient-logo-cube.webp"
           alt="ACSS Gradient Logo Cube"
+          width="320"
+          height="388.63"
           class="w-80 absolute left-[80%] md:left-[60%] xl:bottom-[-320px] xl:left-[56%] z-0"
         />
       </div>
