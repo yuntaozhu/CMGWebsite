@@ -16,7 +16,7 @@ export async function POST({ request }) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                spreadsheetUrl: "https://docs.google.com/spreadsheets/d/1N3MjIOC5UZ9CuFbPb445BpyZk6rOxhTc0eFokn2koXQ/edit?usp=sharing",
+                spreadsheetId: "1N3MjIOC5UZ9CuFbPb445BpyZk6rOxhTc0eFokn2koXQ",
                 sheetName: "Registration",
                 registrationLimit: 60,
                 formData: {
