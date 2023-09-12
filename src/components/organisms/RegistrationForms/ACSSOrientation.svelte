@@ -38,7 +38,7 @@
         "School of Environmental Science and Management",
     ];
 
-    let howYouHear = ["ACSS Social Media Post", "Shared Post of a Friend"];
+    let howYouHear = ["ACSS Social Media Post", "Shared Post of a Friend",  "Invitation from a Friend"];
     // END OF CUSTOMIZATION
 
     // Form submission into formValues
