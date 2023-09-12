@@ -61,7 +61,6 @@
       activeTab = "Projects";
     }
     show = true;
-    console.log(activeTab);
     window.addEventListener("scrollend", scrollTabChange);
     return () => {
       removeEventListener("scrollend", scrollTabChange);
