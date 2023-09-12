@@ -12,7 +12,7 @@
 
   // CUSTOMIZE THIS: This is where you can modify the header photo, event name, and event description
   import ACSSOrientation from "../../../components/organisms/RegistrationForms/ACSSOrientation.svelte"; // Form Component: a file from src > components > organisms > RegistrationForms (URL should be ../../../components/organisms/RegistrationForms/'your form component)
-  let headerPhotoURL = "../form-headers/sample-reg-header.webp"; // Header Photo: a file from src > static (URL should be ../form-headers/'your file')
+  let headerPhotoURL = "../form-headers/acss-orientation-xssaen.webp"; // Header Photo: a file from src > static (URL should be ../form-headers/'your file')
   let eventName = "ACSS Orientation"; // Event Name
   let eventDescription = `
                 This is an early registration form for the upcoming "ACSS-UPLB Orientation:
