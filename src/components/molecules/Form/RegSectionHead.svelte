@@ -20,7 +20,6 @@
     <!-- Photo Header Of Form -->
     <div
         id="photo-header" 
-        class="relative w-full h-1/4"
         style="background-image: url({headerPhotoURL})"
     >
     </div>
@@ -74,9 +73,8 @@
         opacity: 80%;
         mask-image: linear-gradient(
             to bottom,
-            rgba(10, 4, 31, 0) 0%,
-            rgba(0, 0, 0, 1) 30%,
-            rgba(0, 0, 0, 1) 70%,
+            rgba(10, 4, 31, 1) 0%,
+            rgba(0, 0, 0, 1) 60%,
             rgba(10, 4, 31, 0) 100%
         );
     }
