@@ -18,7 +18,7 @@ export async function POST({ request }) {
             body: JSON.stringify({
                 spreadsheetId: "1N3MjIOC5UZ9CuFbPb445BpyZk6rOxhTc0eFokn2koXQ",
                 sheetName: "Registration",
-                registrationLimit: 60,
+                registrationLimit: 50,
                 formData: {
                     "Registration Date": new Date().toLocaleString("en-US", { timeZone: "Asia/Manila" }),
                     ...req
