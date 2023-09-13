@@ -42,7 +42,7 @@
   <div class="px-5">
     <Hero />
     <Summary />
-    <!-- <IncomingActivity /> -->
+    <IncomingActivity />
     <DevStories />
     <Strengths />
     <Contributions />
