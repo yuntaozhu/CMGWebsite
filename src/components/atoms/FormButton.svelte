@@ -11,9 +11,9 @@
     <Button disabled={loadingSubmission} onClick={() => {}}>
       <div class="flex flex-col justify-center items-center w-20 h-5">
         {#if !loadingSubmission}
-          <span class="fixed" transition:fade={{ duration: 300, easing: cubicInOut }}>Submit</span>
+          <span class="absolute" transition:fade={{ duration: 300, easing: cubicInOut }}>Submit</span>
         {:else}
-          <span class="w-fit fixed" transition:fade={{ duration: 300, easing: cubicInOut }}>                        
+          <span class="w-fit absolute" transition:fade={{ duration: 300, easing: cubicInOut }}>                        
             <LoadingDots />
           </span>
         {/if}
