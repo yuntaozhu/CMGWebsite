@@ -16,7 +16,7 @@
   let eventName = "ACSS Orientation"; // Event Name
   let eventDescription = `
                 This is an early registration form for the upcoming "ACSS-UPLB Orientation:
-                Xperience Sugar, Spice, and Everthing Nice!" which aims to familiarize you with our
+                Xperience Sugar, Spice, and Everything Nice!" which aims to familiarize you with our
                 growing organization. The orientation will be held on September 21,
                 2023, 7:00 PM at Jollibee Vega. If you wish to join the orientation, kindly fill
                 out this form. Orientation details and updates will be sent through
