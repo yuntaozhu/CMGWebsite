@@ -5,6 +5,7 @@ export const teams = [
       developers: [
         {
           fullName: 'Austin Asunsion',
+          position: 'Executive Head Developer',
           imageSrc: '2.jpg',
           nickname: 'Sion',
           batch: 'Y.B. 12.2',
@@ -12,12 +13,13 @@ export const teams = [
           skills: ['Halimaw magtampo', 'Delulu lord', 'Python'],
           contacts: {
             gmail: '',
-            github: 'github.com/owen-olipas',
-            linkedin: 'linkedin.com/owen-olipas',
+            github: 'https://www.github.com/owen-olipas',
+            linkedin: 'https://linkedin.com/in/owen-olipas',
           },
         },
         {
           fullName: 'Austin Asunsion',
+          position: 'Head Developer for Logistics and Public Affairs',
           imageSrc: '2.jpg',
           nickname: 'Laydon',
           batch: 'Y.B. 12.2',
@@ -31,6 +33,7 @@ export const teams = [
         },
         {
           fullName: 'Austin Asunsion',
+          position: 'Head Developer for Academic Affairs',
           imageSrc: '2.jpg',
           nickname: 'Vince',
           batch: 'Y.B. 12.2',
@@ -44,6 +47,7 @@ export const teams = [
         },
         {
           fullName: 'Austin Asunsion',
+          position: 'Head Developer for Records and Documentation',
           imageSrc: '2.jpg',
           nickname: 'Hannah',
           batch: 'Y.B. 12.2',
@@ -57,6 +61,7 @@ export const teams = [
         },
         {
           fullName: 'Austin Asunsion',
+          position: 'Head Developer for Finance and Management',
           imageSrc: '2.jpg',
           nickname: 'Marlo',
           batch: 'Y.B. 12.2',
@@ -70,6 +75,7 @@ export const teams = [
         },
         {
           fullName: 'Austin Asunsion',
+          position: 'Head Developer for Membership and Internal Affairs',
           imageSrc: '2.jpg',
           nickname: 'JP',
           batch: 'Y.B. 12.2',
@@ -83,6 +89,7 @@ export const teams = [
         },
         {
           fullName: 'Ralph Ken Rea',
+          position: 'Head Developer for Media and Publicity',
           imageSrc: '2.jpg',
           nickname: 'Ken',
           batch: 'Y.B. 12.2',
@@ -207,6 +214,19 @@ export const teams = [
           batch: 'Y.B. 12.2',
           bio: 'Ako ang pinakapogi sa ACSS. Ang umangal ay iddisaffi ko!',
           skills: ['Halimaw magtampo'],
+          contacts: {
+            gmail: 'misterromatiko@up.edu.ph',
+            github: 'sion',
+            linkedin: 'link',
+          },
+        },
+        {
+          fullName: 'Leonard Paul A. Garchitorena',
+          imageSrc: '2.jpg',
+          nickname: 'Garchi',
+          batch: 'Y.B. 13',
+          bio: 'Hello, world! I am Marki, a Senior BS Computer Science Student of UPLB. After entering the different realms of computer science, programming frontend is what piqued my interest the most. Probably, it stemmed from interest in things art-related such as photography and drawing. I must say, it is refreshing to integrate programming and my interest in art.',
+          skills: ['Front-End Web Developmentmm', 'Good Collaboration and Communicatio', 'Halimaw magtampo'],
           contacts: {
             gmail: 'misterromatiko@up.edu.ph',
             github: 'sion',

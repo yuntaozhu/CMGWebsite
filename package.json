@@ -41,6 +41,7 @@
 		"@splidejs/splide": "^4.1.4",
 		"@splidejs/svelte-splide": "^0.2.9",
 		"sanity": "^3.14.2",
-		"siema": "^1.5.1"
+		"siema": "^1.5.1",
+		"tippy.js": "^6.3.7"
 	}
 }
