@@ -79,7 +79,7 @@
     async function postToSheets(formValues) { // send form values to API
         loadingSubmission = true;
         
-        await fetch("/api/registration", {
+        await fetch("/api/pre-application", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
