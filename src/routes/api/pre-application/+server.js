@@ -5,9 +5,9 @@ export async function POST({ request }) {
         // extract request
         const req = await request.json();
 
-        if (Date.now() >= Date.parse("18 Sept 2023 22:42:00 GMT+0800")) {
+        if (Date.now() <= Date.parse("18 Sept 2023 22:45:00 GMT+0800")) {
             console.log(Date.now().toLocaleString())
-            console.log(Date.parse("18 Sept 2023 22:42:00 GMT+0800").toLocaleString())
+            console.log(Date.parse("18 Sept 2023 22:45:00 GMT+0800").toLocaleString())
 
             return json({
                 "success": false,
