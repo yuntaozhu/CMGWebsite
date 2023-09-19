@@ -79,7 +79,7 @@
     async function postToSheets(formValues) { // send form values to API
         loadingSubmission = true;
         
-        await fetch("/api/registration", {
+        await fetch("/api/pre-application", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -98,8 +98,8 @@
 
                     $submissionSuccess = true;
                 } else {
-                    if (body["code"] == "registration-limit-exceeded") {
-                        $notificationMessage = "Sorry, maximum number of participants already reached."
+                    if (body["code"] == "registration-closed") {
+                        $notificationMessage = "Sorry, registration is still closed."
                     } else {
                         $notificationMessage = "There seems to be an error with the server.";
                     }
