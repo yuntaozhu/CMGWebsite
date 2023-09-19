@@ -2,12 +2,12 @@ import { json, error } from "@sveltejs/kit"
 
 export async function POST({ request }) {
     try {
-        if (Date.now() <= Date.parse("21 Sept 2023 21:00:00 GMT+0800")) {
-            return json({
-                "success": false,
-                "code": "registration-closed"
-            })
-        }
+        // if (Date.now() <= Date.parse("21 Sept 2023 21:00:00 GMT+0800")) {
+        //     return json({
+        //         "success": false,
+        //         "code": "registration-closed"
+        //     })
+        // }
 
         // extract request
         const req = await request.json();
