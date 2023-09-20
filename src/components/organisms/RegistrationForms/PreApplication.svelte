@@ -99,7 +99,7 @@
                     $submissionSuccess = true;
                 } else {
                     if (body["code"] == "registration-closed") {
-                        $notificationMessage = "Sorry, registration is still closed."
+                        $notificationMessage = "Sorry, we're not yet accepting applications."
                     } else {
                         $notificationMessage = "There seems to be an error with the server.";
                     }
