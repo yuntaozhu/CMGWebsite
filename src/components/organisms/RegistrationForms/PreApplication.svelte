@@ -91,9 +91,9 @@
                 loadingSubmission = false;
                 if (body["success"]) {
                     if (body["code"] == "email-found") {
-                        $notificationMessage = "You're already registered."
+                        $notificationMessage = "You've already sent your application."
                     } else {
-                        $notificationMessage = "Thank you for registering!"
+                        $notificationMessage = "Thank you for submitting your application!"
                     }
 
                     $submissionSuccess = true;
