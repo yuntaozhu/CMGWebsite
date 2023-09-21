@@ -11,11 +11,19 @@
   // Function to open the modal
   function openModal() {
     isModalOpen = true;
+    const footer = document.getElementById('footer-div-for-modal-on');
+    if (footer) {
+      footer.style.zIndex = '0'; // Adjust this value as needed
+    }
   }
 
   // Function to close the modal
   function closeModal() {
     isModalOpen = false;
+    const footer = document.getElementById('footer-div-for-modal-on');
+    if (footer) {
+      footer.style.zIndex = '20'; // Adjust this value as needed
+    }
   }
 </script>
 

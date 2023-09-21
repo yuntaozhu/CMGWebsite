@@ -7,7 +7,8 @@
   } from "$components";
 </script>
 
-<div class="overflow-hidden w-full bg-base-black px-10 lg:px-10 flex flex-col gap-10 pb-40 z-15">
+<title>Developers - The Alliance of Computer Science Students UPLB</title>
+<div class="overflow-hidden w-full px-10 lg:px-10 flex flex-col gap-10 pb-40 relative z-20">
   <!-- Initial Section component -->
   <InitialSection />
 

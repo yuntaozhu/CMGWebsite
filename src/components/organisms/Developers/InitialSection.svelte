@@ -5,10 +5,10 @@
 
   // Array of gallery items with image URLs and descriptions
   const gallery_items = [
-    { url: "assets/aboutus-photo.jpg", description: "ACSS group photo" },
-    { url: "assets/about-us1.jpg", description: "ACSS group photo" },
-    { url: "assets/about-us2.jpg", description: "ACSS group photo" },
-    { url: "assets/about-us3.jpg", description: "ACSS group photo" },
+    { url: "assets/ACSS-DEVS1.jpg", description: "ACSS group photo" },
+    { url: "assets/ACSS-DEVS2.png", description: "ACSS group photo" },
+    { url: "assets/ACSS-DEVS3.jpg", description: "ACSS group photo" },
+    { url: "assets/ACSS-DEVS4.jpg", description: "ACSS group photo" },
   ];
 
   // Current slide item index for the slideshow

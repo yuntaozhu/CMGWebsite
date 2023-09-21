@@ -6,7 +6,10 @@
     // Importing necessary components and functions
     import { onMount } from "svelte";
     import Carousel from "./Carousel.svelte";
-  
+    import tippy from 'tippy.js';
+    import 'tippy.js/dist/tippy.css';
+    import 'tippy.js/animations/scale-subtle.css';
+    
     // Variable to store the initial top position for main
     let top = 0;
   
@@ -46,11 +49,48 @@
         window.removeEventListener("resize", fixedMain);
       };
     });
+
+    // Function to copy Gmail address to clipboard
+    function copyToClipboard() {
+        const gmailAddress = developer.contacts.gmail.trim();
+        if (gmailAddress) {
+            // Create a temporary input element to copy the text
+            const tempInput = document.createElement('input');
+            tempInput.value = gmailAddress;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // Show a tooltip to indicate the text has been copied
+            tippy(this, {
+                content: 'Copied to Clipboard',
+                trigger: 'click', // Show the tooltip manually
+                animation: 'scale-subtle',
+                theme: 'material',
+                placement: 'bottom',
+                arrow: false,
+            }).show();
+        }
+    }
+
+    // Function to determine the CSS class based on skill length
+    function getSkillSize(skill) {
+      if (skill.length > 34) {
+        return 'text-[8px] ss:text-[12px]';
+      } else if (skill.length > 27 && skill.length <= 34){
+        return 'text-[9px] ss:text-[14px]';
+      } else if (skill.length > 16 && skill.length <= 27){
+        return 'text-[10px] ss:text-[15px]';
+      } else {
+        return;
+      }
+    }
   </script>
   
   <!-- Modal content -->
   <div
-    class="modal fixed inset-0 flex justify-center z-10 backdrop-blur-lg bg-base-black mx-auto my-auto px-5 overflow-y-auto overflow-x-hidden md:items-center"
+    class="top-[-100px] md:top-0 modal fixed inset-0 flex justify-center z-[100] backdrop-blur-lg bg-base-black mx-auto my-auto px-5 overflow-y-auto overflow-x-hidden md:items-center"
   >
     <div
       class="relative top-[150px] flex flex-col h-fit gap-0 md:flex-row md:align-center md:justify-between md:px-8 md:py-0 md:gap-10 md:top-0 xl:gap-20"
@@ -131,12 +171,16 @@
               <h2 class="text-base-sky-blue text-2xl font-bold text-center">
                 {developer.fullName}
               </h2>
-              <p class="font-semibold">{developer.batch}</p>
+              <!-- Conditionally show the LinkedIn icon if there is a LinkedIn contact -->
+              {#if developer.position && developer.position.trim() !== ""}
+                <p class="text-sm text-slate-200 text-center">{developer.position}</p>
+              {/if}
+              <p class="font-semibold text-center">{developer.batch}</p>
             </div>
   
             <!-- Developer bio -->
-            <div class="bio justify-center flex-col items-center">
-              <p class="text-center">{developer.bio}</p>
+            <div class="bio justify-center flex-col items-center max-h-14 overflow-y-auto">
+              <p class="text-sm text-justify">{developer.bio}</p>
             </div>
   
             <!-- Skills Carousel -->
@@ -149,18 +193,18 @@
                   <div
                     class="glassmorphic flex-auto rounded-lg py-1 px-1 mb-1 items-center justify-center"
                   >
-                    <p class="text-center">{developer.skills}</p>
+                    <p class="text-center {getSkillSize(developer.skills)}">{developer.skills}</p>
                   </div>
                 </div>
               {:else}
                 <!-- Display a skills carousel -->
-                <div class="skills-carousel-container">
+                <div class="skills-carousel-container ">
                   <Carousel autoplay="2000">
                     {#each developer.skills as skill, index (index)}
                       <div
-                        class="glassmorphic flex flex-wrap rounded-lg py-1 px-1 mb-1 items-center justify-center"
+                        class="glassmorphic flex flex-wrap rounded-lg py-1 px-1 mb-1 items-center justify-center h-[35px]"
                       >
-                        <p class="text-center">{skill}</p>
+                        <p class="text-center {getSkillSize(skill)}">{skill}</p>
                       </div>
                     {/each}
                   </Carousel>
@@ -175,9 +219,9 @@
             
                 <!-- Conditionally show the Gmail icon if there is a Gmail contact -->
                 {#if developer.contacts.gmail && developer.contacts.gmail.trim() !== ""}
-                    <a href={developer.contacts.gmail} target="_blank">
+                    <button on:click={copyToClipboard}>
                     <img src="assets/gmail-icon.png" alt="Gmail" class="icon-image" />
-                    </a>
+                    </button>
                 {/if}
             
                 <!-- Conditionally show the GitHub icon if there is a GitHub contact -->
