@@ -91,15 +91,15 @@
                 loadingSubmission = false;
                 if (body["success"]) {
                     if (body["code"] == "email-found") {
-                        $notificationMessage = "You're already registered."
+                        $notificationMessage = "You've already sent your application."
                     } else {
-                        $notificationMessage = "Thank you for registering!"
+                        $notificationMessage = "Thank you for submitting your application!"
                     }
 
                     $submissionSuccess = true;
                 } else {
                     if (body["code"] == "registration-closed") {
-                        $notificationMessage = "Sorry, registration is still closed."
+                        $notificationMessage = "Sorry, we're not yet accepting applications."
                     } else {
                         $notificationMessage = "There seems to be an error with the server.";
                     }
