@@ -1,5 +1,6 @@
 <script>
   import { Button, HamburgerMenu } from "$components";
+  import { AW24Button } from "../../aw2024-components";
   import { page } from "$app/stores";
 
   let pages = [
@@ -27,17 +28,15 @@
       <HamburgerMenu />
     </div>
   </nav>
-  <div class="hoverable-component bg-transparent">
-    <!-- {#if showComponent} -->
-    <nav class="hovered-section">
+  <div>
+    <nav>
       <div
-        id="dark-gradient"
-        class="flex flex-row justify-between items-center fixed top-0 w-screen pl-10 xl:pl-20 lg:pl-20 pr-20 pb-5 pt-10 lg:pt-3 xl:pt-3 z-50 backdrop-blur-none lg:backdrop-blur-md xl:backdrop-blur-md"
+        class="navbar flex flex-row justify-between items-center fixed top-0 w-screen pl-10 xl:pl-20 lg:pl-20 pr-20 pb-5 pt-10 lg:pt-3 xl:pt-3 z-50"
       >
         <div class="hidden lg:grid xl:grid grid-cols-2">
           <a href="/">
             <img
-              src="/logo.webp"
+              src="/logo-white.webp"
               alt="The official seal of The Alliance of Computer Science Student"
               class="w-12 h-12"
             />
@@ -59,43 +58,22 @@
             {/each}
           </ul>
           <a href="/contact-us">
-            <Button onClick={handleClick}>Contact Us</Button>
+            <AW24Button onClick={handleClick}>
+              <p class="button-text">Contact Us</p>
+            </AW24Button>
           </a>
         </div>
       </div>
     </nav>
-    <!-- {/if} -->
   </div>
 </header>
 
 <style>
-  .active-link {
-    margin-top: 1px;
-    border: 10px solid;
-    border-image-slice: 1;
-    border-width: 3px;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    border-image-source: linear-gradient(
-      270deg,
-      rgba(46, 55, 146, 0) 0%,
-      #2e3792 27.6%,
-      #00f5f1 74.48%,
-      rgba(0, 245, 241, 0) 100%
-    );
-    color: #00f5f1;
+  .navbar {
+    background-color: #1c110a;
   }
-
-  .active-link:hover {
-    color: #f4f1ff;
-  }
-  #dark-gradient {
-    background: linear-gradient(
-      180deg,
-      rgba(10, 3, 31, 0.8) 0%,
-      rgba(10, 3, 31, 0.6) 30%,
-      rgba(10, 3, 31, 0) 100%
-    );
+  .button-text {
+    color: #1c110a;
+    font-weight: 800;
   }
 </style>

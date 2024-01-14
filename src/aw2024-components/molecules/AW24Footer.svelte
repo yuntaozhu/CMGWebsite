@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="flex font-thin justify-end flex-grow">
-      <p class="i-tiny">2023</p>
+      <p class="i-tiny">2024</p>
     </div>
   </div>
 </div>
@@ -27,15 +27,15 @@
     z-index: 1;
     position: relative;
     width: 100%;
-    background-color: var(--color-dark-3);
-    box-shadow: 0 0 100px rgba(59, 127, 239, 0.5);
+    background-color: #1c110a;
+    box-shadow: 0 0 100px rgba(228, 214, 167, 1);
     transition: box-shadow 0.5s ease-in-out;
   }
 
   .footer:hover {
-    box-shadow: 0 0 110px rgba(59, 127, 239, 7);
+    box-shadow: 0 0 110px rgba(228, 214, 167, 1);
   }
   .footer__bottom {
-    background-color: var(--color-dark-4);
+    background-color: #1c110a;
   }
 </style>
