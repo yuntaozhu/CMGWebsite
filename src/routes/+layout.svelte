@@ -46,23 +46,14 @@
 </script>
 
 {#if $acssWeekStatus}
-  <main id="main" class="overflow-hidden bg-base-black h-fit">
+  <main id="main" class="overflow-hidden h-fit">
     <div id="header-div-for-modal-on">
       <AW24Navbar />
     </div>
-    <SubmitNotification
-      success={$submissionSuccess}
-      message={$notificationMessage}
-      showNotif={$showNotification}
-    />
-    <div id="fixed-on-modal-on">
-      <div id="content">
-        <slot />
-      </div>
+    <div class="relative">
       <AW24Background />
-      <div id="footer-div-for-modal-on" class="relative z-20">
-        <AW24Footer />
-      </div>
+      <slot />
+      <AW24Footer />
     </div>
   </main>
 {:else}

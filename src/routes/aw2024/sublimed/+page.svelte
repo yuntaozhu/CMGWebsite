@@ -30,6 +30,11 @@
   />
 </head>
 
-<div class="relative z-20">
-  <h4>SUBLIMED</h4>
+<div class="relative flex items-center justify-center min-h-screen">
+  <div class="relative z-10 text-center">
+    <h4 class="text-4xl font-bold text-white">Sublimed</h4>
+  </div>
 </div>
+
+<style>
+</style>

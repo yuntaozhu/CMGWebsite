@@ -7,7 +7,6 @@
 html,
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--color-dark-2);
     color: var(--color-white);
 }
 

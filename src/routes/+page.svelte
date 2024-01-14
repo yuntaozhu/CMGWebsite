@@ -38,11 +38,11 @@
 </head>
 
 {#if $acssWeekStatus}
-  <div
+  <!-- <div
     class="overflow-hidden w-full lg:px-10 flex flex-col gap-10 pb-40 -mb-8 relative z-20"
   >
     <div class="px-5"></div>
-  </div>
+  </div> -->
 {:else}
   <div
     class="overflow-hidden w-full lg:px-10 flex flex-col gap-10 pb-40 -mb-8 relative z-20"
