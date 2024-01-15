@@ -12,6 +12,7 @@
   import { acssWeekStatus } from "../stores/store";
 
   import { AW24Navbar, AW24Footer, AW24Background } from "../aw2024-components";
+  import { fade } from "svelte/transition";
 
   // Scroll Fade In Animation (To use: add "scrollFadeIn" class to a html element)
   function scrollFadeIn() {
@@ -46,7 +47,7 @@
 </script>
 
 {#if $acssWeekStatus}
-  <main id="main" class="overflow-hidden h-fit">
+  <main id="main" class="overflow-hidden h-fit" in:fade>
     <div id="header-div-for-modal-on">
       <AW24Navbar />
     </div>
@@ -57,7 +58,7 @@
     </div>
   </main>
 {:else}
-  <main id="main" class="overflow-hidden bg-base-black h-fit">
+  <main id="main" class="overflow-hidden bg-base-black h-fit" in:fade>
     <div id="header-div-for-modal-on">
       <NavBar />
     </div>

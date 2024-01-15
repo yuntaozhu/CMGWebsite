@@ -12,6 +12,11 @@
   } from "$components";
   import { onMount } from "svelte";
   import { page } from "$app/stores";
+  import { setAcssWeekStatusFalse } from "../stores/store.js"; // Adjust the path based on your file structure
+
+  onMount(() => {
+    setAcssWeekStatusFalse();
+  });
 
   const showcaseComponents = {
     Projects,
@@ -57,7 +62,7 @@
           .substr(2, $page.url.hash.length - 1)}`
       );
     }
-    if(activeTab === null){
+    if (activeTab === null) {
       activeTab = "Projects";
     }
     show = true;
