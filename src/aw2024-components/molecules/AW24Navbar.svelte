@@ -48,7 +48,7 @@
               <li>
                 <a
                   href={url}
-                  class="duration-150 hover:text-base-sky-blue"
+                  class="duration-150 hover:font-bold"
                   class:active-link={currentPath === url}
                   on:click={() => {
                     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
