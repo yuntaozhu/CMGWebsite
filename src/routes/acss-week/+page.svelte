@@ -1,5 +1,11 @@
 <script>
   import { ACSSWeekArchive } from "$components";
+  import { onMount } from "svelte";
+  import { setAcssWeekStatusFalse } from "../../stores/store.js"; // Adjust the path based on your file structure
+
+  onMount(() => {
+    setAcssWeekStatusFalse();
+  });
 </script>
 
 <head>

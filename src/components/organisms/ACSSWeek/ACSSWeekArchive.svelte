@@ -4,7 +4,7 @@
       title: "ACSS Week 2024: Mind Hive",
       blurb: "Swarming the Future",
       image: "",
-      url: "/",
+      url: "/aw2024/home",
     },
     {
       title: "ACSS Week 2023: Defragment",
