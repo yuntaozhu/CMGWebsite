@@ -1,5 +1,6 @@
 //Atoms
 import AW24Button from './atoms/AW24Button.svelte';
+import AW24HamburgerNav from './atoms/HamburgerMenu.svelte';
 
 //Molecules
 import AW24Background from './molecules/AW24Background.svelte';
@@ -21,6 +22,7 @@ import AW24Navbar from './molecules/AW24Navbar.svelte';
 
 export {
     //Atoms
+    AW24HamburgerNav,
     AW24Button,
     //Molecules
     AW24Background,
