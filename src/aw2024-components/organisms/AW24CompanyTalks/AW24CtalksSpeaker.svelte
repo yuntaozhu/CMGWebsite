@@ -28,7 +28,7 @@
       <div
         class="flex flex-col mt-5 justify-center align-center items-center text-center"
       >
-        <div class="font-lg font-extrabold">{speaker.name}</div>
+        <div class="font-xl font-extrabold">{speaker.name}</div>
         <div class="mt-3 font-base">{speaker.position}</div>
         <div class="font-base italic">{speaker.company}</div>
         <div class="mt-3 font-medium">{speaker.desc}</div>
@@ -40,6 +40,7 @@
 <style>
   .ctalks-text {
     color: #1c110a;
+    text-shadow: 0px 24px 50.5px #faecce;
   }
 
   .float {

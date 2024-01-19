@@ -1,5 +1,5 @@
-<header class="mt-10 mx-auto px-5 py-5">
-  <h1 class="text-title text-4xl lg:text-5xl text-white text-center">
+<header class="mt-10 mx-auto w-full px-5 py-5">
+  <h1 class="text-title text-4xl lg:text-7xl text-white text-center">
     COMPANY TALKS 2024
   </h1>
 </header>

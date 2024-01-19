@@ -32,5 +32,6 @@
 <style>
   .ctalks-text {
     color: #1c110a;
+    text-shadow: 0px 24px 50.5px #faecce;
   }
 </style>
