@@ -1,12 +1,13 @@
 <script>
   import { onMount } from "svelte";
   import { setAcssWeekStatusTrue } from "../../../stores/store.js"; // Adjust the path based on your file structure
+  import  AW24Exhibit  from "../../../aw2024-components/organisms/AW24Exhibit/AW24Exhibit.svelte";
+
 
   onMount(() => {
     setAcssWeekStatusTrue();
   });
 </script>
-
 <head>
   <title>About Us - The Alliance of Computer Science Students UPLB</title>
   <meta
@@ -35,10 +36,8 @@
   />
 </head>
 
-<div class="relative flex items-center justify-center min-h-screen">
-  <div class="relative z-10 text-center">
-    <h4 class="text-4xl font-bold text-white">Exhibit</h4>
-  </div>
+<div class="relative flex items-center justify-center min-h-screen w-full">
+  <AW24Exhibit />
 </div>
 
 <style>
