@@ -72,7 +72,7 @@
   @media screen and (min-width: 1024px) {
     .navbar {
       background-color: #1c110a;
-      box-shadow: 0 0 110px rgba(228, 214, 167, 1);
+      /* box-shadow: 0 0 110px rgba(228, 214, 167, 1); */
     }
   }
   .button-text {
