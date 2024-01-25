@@ -1,6 +1,6 @@
 <script>
   import { Button, HamburgerMenu } from "$components";
-  import { AW24Button } from "../../aw2024-components";
+  import { AW24Button, AW24HamburgerNav } from "../../aw2024-components";
   import { page } from "$app/stores";
 
   let pages = [
@@ -25,7 +25,7 @@
 <header>
   <nav class="p-10 fixed z-50">
     <div class="flex lg:hidden xl:hidden justify-start self-start">
-      <HamburgerMenu />
+      <AW24HamburgerNav />
     </div>
   </nav>
   <div>
@@ -69,8 +69,11 @@
 </header>
 
 <style>
-  .navbar {
-    background-color: #1c110a;
+  @media screen and (min-width: 1024px) {
+    .navbar {
+      background-color: #1c110a;
+      /* box-shadow: 0 0 110px rgba(228, 214, 167, 1); */
+    }
   }
   .button-text {
     color: #1c110a;

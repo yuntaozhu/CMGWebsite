@@ -1,5 +1,6 @@
 <script>
   import { Button } from "$components";
+  import { AW24Button } from "../../aw2024-components";
   let menuState = false;
 
   function toggleMenu() {
@@ -10,8 +11,7 @@
     { title: "Home", url: "/" },
     { title: "About Us", url: "/about-us" },
     { title: "Showcase", url: "/showcase" },
-    // { title: "Developers", url: "/developers" },
-    { title: "ACSS Week", url: "/aw2024/home" },
+    { title: "ACSS Week", url: "" },
   ];
 
   function handleClick() {
@@ -31,7 +31,7 @@
   <div class="flex flex-row justify-between gap-5 items-center">
     <div class="w-50 h-50">
       <img
-        src="/logo.webp"
+        src="/logo-white.webp"
         alt="The official seal of The Alliance of Computer Science Student"
         class="h-12 w-12"
       />
@@ -59,7 +59,9 @@
         {/each}
         <div class="mt-3">
           <a on:click={closeHamburger} href="/contact-us"
-            ><Button onClick={handleClick}>Contact Us</Button></a
+            ><AW24Button onClick={handleClick}>
+              <p class="button-text">Contact Us</p></AW24Button
+            ></a
           >
         </div>
       </ul>
@@ -71,12 +73,16 @@
 
 <style>
   .menu-container {
-    background-color: var(--color-dark-3);
+    background-color: #1c110a;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
   }
 
   li:last-child,
   li:nth-child(4) {
     border-bottom: none;
+  }
+  .button-text {
+    color: #1c110a;
+    font-weight: 800;
   }
 </style>
