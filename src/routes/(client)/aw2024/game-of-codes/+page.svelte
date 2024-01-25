@@ -1,7 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { setAcssWeekStatusTrue } from "../../../stores/store.js";
-  import { AW24CTalksHome } from "../../../aw2024-components";
+  import { setAcssWeekStatusTrue } from "$lib/stores";
 
   onMount(() => {
     setAcssWeekStatusTrue();
@@ -37,7 +36,9 @@
 </head>
 
 <div class="relative flex items-center justify-center min-h-screen">
-  <AW24CTalksHome />
+  <div class="relative z-10 text-center">
+    <h4 class="text-4xl font-bold text-white">Game of Codes</h4>
+  </div>
 </div>
 
 <style>

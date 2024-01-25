@@ -1,10 +1,9 @@
 <script>
-  import { ACSSWeekArchive } from "$components";
   import { onMount } from "svelte";
-  import { setAcssWeekStatusFalse } from "../../stores/store.js"; // Adjust the path based on your file structure
+  import { setAcssWeekStatusTrue } from "$lib/stores";
 
   onMount(() => {
-    setAcssWeekStatusFalse();
+    setAcssWeekStatusTrue();
   });
 </script>
 
@@ -36,6 +35,11 @@
   />
 </head>
 
-<div class="relative z-20">
-  <ACSSWeekArchive />
+<div class="relative flex items-center justify-center min-h-screen">
+  <div class="relative z-10 text-center">
+    <h4 class="text-4xl font-bold text-white">Registration</h4>
+  </div>
 </div>
+
+<style>
+</style>

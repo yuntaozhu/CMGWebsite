@@ -1,10 +1,16 @@
 <script>
+  import {
+    CoreValues,
+    History,
+    MissionVision,
+    Advisers,
+    PhotoPage,
+  } from "$components";
   import { onMount } from "svelte";
-  import { setAcssWeekStatusTrue } from "../../../stores/store.js"; // Adjust the path based on your file structure
-    import { AW24Home } from "../../../aw2024-components/index.js";
+  import { setAcssWeekStatusFalse } from "$lib/stores";
 
   onMount(() => {
-    setAcssWeekStatusTrue();
+    setAcssWeekStatusFalse();
   });
 </script>
 
@@ -36,11 +42,10 @@
   />
 </head>
 
-<div class="relative flex items-center justify-center min-h-screen">
-  <div class="relative z-10 text-center">
-    <AW24Home />
-  </div>
+<History />
+<div class="relative z-20">
+  <MissionVision />
+  <PhotoPage />
+  <CoreValues />
+  <Advisers />
 </div>
-
-<style>
-</style>

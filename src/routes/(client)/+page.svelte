@@ -9,9 +9,8 @@
     BriefShowcase,
   } from "$components";
   import Partnership from "$components/organisms/Home/Partnership.svelte";
-  import { acssWeekStatus } from "../stores/store";
+  import { acssWeekStatus, setAcssWeekStatusFalse } from "$lib/stores";
   import { onMount } from "svelte";
-  import { setAcssWeekStatusFalse } from "../stores/store.js"; // Adjust the path based on your file structure
 
   onMount(() => {
     setAcssWeekStatusFalse();

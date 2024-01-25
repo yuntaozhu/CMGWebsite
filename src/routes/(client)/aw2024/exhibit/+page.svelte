@@ -1,13 +1,13 @@
 <script>
   import { onMount } from "svelte";
-  import { setAcssWeekStatusTrue } from "../../../stores/store.js"; // Adjust the path based on your file structure
-  import  AW24Exhibit  from "../../../aw2024-components/organisms/AW24Exhibit/AW24Exhibit.svelte";
-
+  import { setAcssWeekStatusTrue } from "$lib/stores";
+  import AW24Exhibit from "../../../../aw2024-components/organisms/AW24Exhibit/AW24Exhibit.svelte";
 
   onMount(() => {
     setAcssWeekStatusTrue();
   });
 </script>
+
 <head>
   <title>About Us - The Alliance of Computer Science Students UPLB</title>
   <meta

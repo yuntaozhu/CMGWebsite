@@ -1,7 +1,7 @@
 <script>
   import { ContactForm } from "$components";
   import { onMount } from "svelte";
-  import { setAcssWeekStatusFalse } from "../../stores/store.js"; // Adjust the path based on your file structure
+  import { setAcssWeekStatusFalse } from "$lib/stores";
 
   onMount(() => {
     setAcssWeekStatusFalse();

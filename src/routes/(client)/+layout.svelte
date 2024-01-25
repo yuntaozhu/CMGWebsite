@@ -1,17 +1,21 @@
 <script>
-  import "../app.css";
+  import "../../app.css";
   import { NavBar, Footer, ChatBot } from "$components";
   import GradientBlur from "$components/molecules/Home/GradientBlur.svelte";
   import {
     submissionSuccess,
     notificationMessage,
     showNotification,
+    acssWeekStatus,
   } from "$lib/stores";
   import { onMount } from "svelte";
   import SubmitNotification from "$components/atoms/SubmitNotification.svelte";
-  import { acssWeekStatus } from "../stores/store";
 
-  import { AW24Navbar, AW24Footer, AW24Background } from "../aw2024-components";
+  import {
+    AW24Navbar,
+    AW24Footer,
+    AW24Background,
+  } from "../../aw2024-components";
   import { fade } from "svelte/transition";
 
   // Scroll Fade In Animation (To use: add "scrollFadeIn" class to a html element)
