@@ -19,11 +19,17 @@ export const getChatbotQA = async () => {
 
 export const getDevelopers = async () => {
     return await sanityClient.fetch(
-        `*[_type == "team"]{
-            name,
-            "description": description[0].children[0].text,
-            "developers": 
-              *[_type == "developer" && (team->name == ^.name || isHead && ^.name == "Executive Team")]{
+        `*[_type == "team"] |
+        order(order, name)
+        {
+          name,
+          "description": description[0].children[0].text,
+          "developers": 
+            *[
+              _type == "developer" &&
+              (team->name == ^.name || isHead && ^.name == "Executive Team")
+             ] |
+              order(position) {
                 "imageSrc": image.asset->url,
                 "sanityImageId": image.asset._ref,
                 firstName,
@@ -44,6 +50,6 @@ export const getDevelopers = async () => {
                 skills,
                 position
               }
-          }`
+      }`
     )
 }

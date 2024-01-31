@@ -22,6 +22,12 @@ export default defineType({
                 })
             ],
             description: "Kindly indicate a description of the team that you are adding to this organization."
+        }),
+        defineField({
+            name: "order",
+            title: "Team Priority",
+            type: "number",
+            description: "Kindly put the number in which this team should appear in order. (A lower number means a lower priority."
         })
     ]
 });
