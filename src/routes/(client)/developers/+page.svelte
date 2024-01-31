@@ -5,6 +5,9 @@
   import { onMount } from "svelte";
   import { setAcssWeekStatusFalse } from "$lib/stores";
 
+  export let data;
+  const { teams } = data;
+
   onMount(() => {
     setAcssWeekStatusFalse();
   });
@@ -18,7 +21,7 @@
   <InitialSection />
 
   <!-- Resident Members component -->
-  <ResidentMembers />
+  <ResidentMembers {teams} />
 
   <!-- Members Roster component -->
   <MembersRoster />
