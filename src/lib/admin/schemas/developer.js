@@ -82,6 +82,19 @@ export default defineType({
       type: "reference",
       to: [{ type: "team"}],
       description: "Kindly indicate the team of the developer."
+    }),
+    defineField({
+      name: "isHead",
+      title: "Head Developer",
+      type: "boolean",
+      description: "Is this developer part of the executive team?"
+    }),
+    defineField({
+      name: "position",
+      title: "Position",
+      type: "string",
+      description: "Kindly indicate the position of the developer.",
+      hidden: ({ parent }) => !parent?.isHead
     })
   ],
   preview: {

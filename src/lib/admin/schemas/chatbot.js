@@ -31,7 +31,7 @@ export default defineType({
                         defineField({
                             name: "question",
                             type: "string",
-                            title: "Question"
+                            title: "Question",
                         }),
                         defineField({
                             name: "answer",
@@ -40,7 +40,8 @@ export default defineType({
                         })
                     ]
                 })
-            ]
+            ],
+            description: "Each element in this array is a document that includes a pair of question and an answer."
         })
     ],
   })
