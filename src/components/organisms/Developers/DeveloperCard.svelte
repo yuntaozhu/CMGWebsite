@@ -39,11 +39,11 @@
   <!-- Inner glassmorphic rectangle -->
   <div class="glassmorphic absolute md:rounded-2xl rounded-lg md:w-[150px] md:h-[160px] md:left-[11px] md:top-3 w-[75px] h-[80px] left-[6px] top-[6px]">
     <!-- Placeholder for developer image --> 
-    <img src={developer.imageSrc} alt={developer.nickname} class="w-full h-full object-cover md:rounded-2xl rounded-lg" />
+    <img src={developer.imageSrc} alt={developer.lastName} class="w-full h-full object-cover md:rounded-2xl rounded-lg" />
   </div>
 
-  <!-- Developer nickname -->
-  <p class="absolute font-bold md:text-2xl w-238 h-12 md:left-4 md:bottom-[-7px] left-2 bottom-[-24px]">{developer.nickname}</p>
+  <!-- Developer lastName -->
+  <p class="absolute font-bold md:text-2xl w-238 h-12 md:left-4 md:bottom-[-7px] left-2 bottom-[-24px]">{developer.lastName}</p>
 </div>
 
 <!-- Render DeveloperDetail component within a modal when isModalOpen is true -->
