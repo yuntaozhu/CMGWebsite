@@ -74,5 +74,6 @@
 
     button {
         box-shadow: -5px 5px 20px 0px rgba(0, 0, 0, 0.2);
+        -webkit-tap-highlight-color: transparent;
     }
 </style>
