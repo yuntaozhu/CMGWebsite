@@ -5,24 +5,33 @@
     import ChatBotButton from "./ChatBotButton.svelte";
     import Messages from "./Messages.svelte";
     import InputArea from "./InputArea.svelte";
+    import { usePresetMessages } from "$lib/stores";
+
+    /**
+     * @type {[]}
+     */
+    export let qaPairs;
 
     /**
      * @type {HTMLTextAreaElement}
      */
     let userInputArea; // the input text box HTML element
 
-    let usePresetMessages = true; // boolean to show preset messages or the input area
     let userInputValue = ""; // the current text input by the user
     let question = ""; // the actual question to be sent to the ChatBot AI API
     let isChatbotOpen = false;
     let questionSent = false;
     let buttonTransitionDuration = 200; // the numerical value for uniform button transition durations
     
+    let defaultText = $usePresetMessages
+                        ? "Greetings, visitor!\n\nI am your ACSStant, a simple bot that you can ask about ACSS. To start, simply pick a question below that you would want to know about."
+                        : "Greetings, visitor!\n\nI am your ACSStant, a chatbot that you can ask about all things ACSS! If you've any question, just type it and ask away."
+
     let messageHistory = [
         {
             isUser: false,
             textLoaded: true,
-            text: "Greetings, visitor!\n\nI am your ACSStant, a chatbot that you can ask about all things ACSS! If you've any question, just type it and ask away."
+            text: defaultText
         },
     ]
 
@@ -111,11 +120,11 @@
             <!-- div for containing the messages at a fixed width and height -->
             <Messages 
                 bind:messageHistory={messageHistory}
-                {usePresetMessages}
+                {qaPairs}
             />
 
             <!-- input area -->
-            {#if !usePresetMessages} 
+            {#if !$usePresetMessages} 
                 <InputArea 
                     {sendQuestion}
                     bind:userInputArea={userInputArea}

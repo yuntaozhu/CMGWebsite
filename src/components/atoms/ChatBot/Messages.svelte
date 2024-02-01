@@ -1,9 +1,10 @@
 <script>
-    import { afterUpdate } from "svelte";
+    import { afterUpdate, onMount } from "svelte";
     import LoadingDots from "./LoadingDots.svelte";
     import { cubicOut } from "svelte/easing";
     import { fly } from "svelte/transition";
     import PresetMessages from "./PresetMessages.svelte";
+    import { usePresetMessages } from "$lib/stores";
 
     /**
      * @type {any}
@@ -11,9 +12,9 @@
     export let messageHistory;
 
     /**
-     * @type {Boolean}
-    */
-    export let usePresetMessages;
+     * @type {[]}
+     */
+    export let qaPairs; // chatbot preset QA entries
 
     /**
      * @type {HTMLDivElement}
@@ -30,7 +31,7 @@
 
     // update scroll when there are new messages
     afterUpdate(() => {
-        if (messagesContainer) {
+        if (messagesContainer && !usePresetMessages) {
             messagesContainer.scrollTo(0, messagesContainer.scrollHeight)
         }
     })
@@ -39,7 +40,7 @@
 <!-- div for containing the messages at a fixed width and height -->
 <div class="flex flex-col relative justify-end items-center h-full box-border overflow-auto">
     <!-- messages container -->
-    <div bind:this={messagesContainer} class="flex flex-col overflow-y-auto gap-1 p-[25px]">
+    <div bind:this={messagesContainer} class="flex flex-col overflow-y-auto gap-1 p-[25px] overflow-x-hidden">
         <!-- render each message -->
         {#each messageHistory as message, i}
             <div class={"flex flex-col gap-1 self-stretch " + (message.isUser ? "items-end" : "items-start")} in:fly={messageIn}>
@@ -56,9 +57,10 @@
             </div>
         {/each}
 
-        {#if usePresetMessages}
+        {#if $usePresetMessages}
             <!-- preset messages -->
             <PresetMessages
+                {qaPairs}
                 bind:messageHistory={messageHistory}
                 bind:messagesContainer={messagesContainer}
             />

@@ -1,6 +1,7 @@
 <script>
+    import { fly } from "svelte/transition";
     import { afterUpdate, onMount } from "svelte";
-    import { fade, fly } from "svelte/transition";
+    import { backIn, cubicIn, cubicInOut } from "svelte/easing"
 
     /**
      * @type {Array<Object>}
@@ -12,32 +13,19 @@
     */
     export let messagesContainer;
 
+    // export let data;
     /**
-     * @type {Object}
+     * @type {{}}
      */
-    let qaPairs = {};
+    export let qaPairs;
 
-    let loaded = false;
+    let answerLoaded = true;
     let hasError = false;
-    let showChoices = false;
 
-    onMount(async () => {
-        await fetch("/api/preset-chatbot")
-            .then(res => res.json())
-            .then(body => {
-                if (body["success"]) {
-                    qaPairs = {...body["qaPairs"]}
-                } else {
-                    messageHistory = [...messageHistory, {
-                        isUser: false,
-                        textLoaded: true,
-                        text: "There seems to be an error with the server. Please try again later."
-                    }]
-                    hasError = true;
-                }
-
-                loaded = true;
-            })
+    onMount(() => {
+        if (!qaPairs) {
+            hasError = true;
+        }
     })
 
     // add new message to messageHistory
@@ -49,9 +37,10 @@
 
     // get answer from qaPairs object
     const getAnswer = (/*** @type {string} */ question) => {
+        answerLoaded = false;
+
         // set messageHistory
         addNewMessage(true, true, question)
-        toggleChoices()
 
         // @ts-ignore
         let answer = qaPairs[question];
@@ -64,46 +53,32 @@
             setTimeout(() => {
                 // @ts-ignore
                 messageHistory[messageHistory.length - 1]["textLoaded"] = true;
+                answerLoaded = true;
             }, 1500)
         }, 500)
     }
-
-    const toggleChoices = () => {
-        showChoices = !showChoices
-        
-    }
-
-    // update scroll when there are new messages
-    afterUpdate(() => {
-        if (messagesContainer) {
-            messagesContainer.scrollTo(0, messagesContainer.scrollHeight)
-        }
-    })
-
-    $: if ((showChoices || !showChoices) && messagesContainer) {
-        messagesContainer.scrollTo(0, messagesContainer.scrollHeight)
-    }
 </script>
 
-{#if loaded}
-    <div class="flex self-center justify-center bottom-0">
-        <!-- preset questions div -->
-        {#if showChoices && !hasError}
-            <div class="flex flex-col justify-center items-center px-4 gap-5" transition:fade={{ delay: 100, duration: 250 }}>
-                <!-- list of choices -->
-                {#each Object.keys(qaPairs) as question}
-                    <button type="button" class="flex px-2 items-center justify-center outline rounded-3xl" on:click={() => {getAnswer(question)}}>
-                        <span>{question}</span>
-                    </button>
-                {/each}
-            </div>
-        {/if}
-    
-        <!-- button to show choices after asking a question-->
-        {#if !showChoices && !hasError}
-            <button type="button" class="flex px-2 items-center justify-center outline rounded-3xl w-fit h-fit" on:click={toggleChoices} transition:fade={{ delay: 100, duration: 250 }}>
-                Ask a question
+<!-- preset questions div -->
+{#if answerLoaded && !hasError}
+    <div class="flex flex-col justify-center items-center px-4 gap-5 lg:gap-3 mt-4" in:fly={{ y: 100, duration: 250, easing: cubicInOut}} out:fly={{ y: 100, duration: 250, easing: cubicInOut }}>
+        <!-- list of choices -->
+        {#each Object.keys(qaPairs) as question}
+            <button type="button" class="flex p-2 items-center justify-center rounded-xl text-sm bg-white bg-opacity-10" on:click={() => {getAnswer(question)}}>
+                <span class="text">{question}</span>
             </button>
-        {/if}
+        {/each}
     </div>
 {/if}
+
+<style>
+    .text {
+        hyphens: auto;
+        word-break: break-word;
+        word-wrap: break-word;
+    }
+
+    button {
+        box-shadow: -5px 5px 20px 0px rgba(0, 0, 0, 0.2);
+    }
+</style>

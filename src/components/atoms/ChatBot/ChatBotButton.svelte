@@ -45,3 +45,9 @@
         </svg>
     {/if}
 </button>
+
+<style>
+    button {
+        -webkit-tap-highlight-color: transparent;
+    }
+</style>
