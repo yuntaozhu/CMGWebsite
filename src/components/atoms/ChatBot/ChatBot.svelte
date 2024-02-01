@@ -6,6 +6,7 @@
     import Messages from "./Messages.svelte";
     import InputArea from "./InputArea.svelte";
     import { usePresetMessages } from "$lib/stores";
+    import { onMount } from "svelte";
 
     /**
      * @type {{}}
@@ -23,9 +24,15 @@
     let questionSent = false;
     let buttonTransitionDuration = 200; // the numerical value for uniform button transition durations
     
-    let defaultText = $usePresetMessages
-                        ? "Greetings, visitor!\n\nI am your ACSStant, a simple bot that you can ask about ACSS. To start, simply pick a question below that you would want to know about."
-                        : "Greetings, visitor!\n\nI am your ACSStant, a chatbot that you can ask about all things ACSS! If you've any question, just type it and ask away."
+    let defaultText;
+
+    if ($usePresetMessages) {
+        defaultText = qaPairs
+            ? "Greetings, visitor!\n\nI am your ACSStant, a chatbot that you can ask about all things ACSS! If you've any question, just type it and ask away."
+            : "<span>Hey there, user! Thank you for checking out our website. Unfortunately, this feature is still in the works. However, you can contact us through our <a class='font-bold underline' href='https://www.facebook.com/ACSSPH'>Facebook Page</a>, our email through acssuplb@gmail.com, or simply at our <a class='font-bold underline' href='/contact-us'>Contact Us</a> page.</span>"
+    } else {
+        defaultText = "Greetings, visitor!\n\nI am your ACSStant, a simple bot that you can ask about ACSS. To start, simply pick a question below that you would want to know about.";
+    }
 
     let messageHistory = [
         {
