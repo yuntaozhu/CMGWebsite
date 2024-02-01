@@ -51,10 +51,10 @@
 
 <!-- preset questions div -->
 {#if answerLoaded && !hasError}
-    <div class="flex flex-col justify-center items-center px-4 gap-5 lg:gap-3 mt-4" in:fly={{ y: 100, duration: 250, easing: cubicInOut}} out:fly={{ y: 100, duration: 250, easing: cubicInOut }}>
+    <div class="flex flex-col justify-center items-center px-4 gap-3 mt-4" in:fly={{ y: 100, duration: 250, easing: cubicInOut}} out:fly={{ y: 100, duration: 250, easing: cubicInOut }}>
         <!-- list of choices -->
         {#each Object.keys($qaPairs) as question}
-            <button type="button" class="flex p-2 items-center justify-center rounded-xl text-sm bg-white bg-opacity-10" on:click={() => {getAnswer(question)}}>
+            <button type="button" class="flex p-3 items-center justify-center rounded-lg text-xs bg-white bg-opacity-10" on:click={() => {getAnswer(question)}}>
                 <span class="text">{question}</span>
             </button>
         {/each}

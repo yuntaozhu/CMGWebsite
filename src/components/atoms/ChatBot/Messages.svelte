@@ -1,10 +1,11 @@
 <script>
-    import { afterUpdate, onMount } from "svelte";
+    import { afterUpdate, onDestroy, onMount } from "svelte";
     import LoadingDots from "./LoadingDots.svelte";
     import { cubicOut } from "svelte/easing";
     import { fly } from "svelte/transition";
     import PresetMessages from "./PresetMessages.svelte";
-    import { usePresetMessages } from "$lib/stores";
+    import { usePresetMessages, chatBotFirstMount } from "$lib/stores";
+    import chatbot from "$lib/admin/schemas/chatbot";
 
     /**
      * @type {any}
@@ -24,11 +25,23 @@
         opacity: 0,
     }
 
-    // update scroll when there are new messages
-    afterUpdate(() => {
-        if (messagesContainer && !usePresetMessages) {
+    const scrollToBottom = () => {
+        if (messagesContainer) {
             messagesContainer.scrollTo(0, messagesContainer.scrollHeight)
         }
+    }
+
+    onMount(() => {
+        if (!$chatBotFirstMount) scrollToBottom();
+    })
+
+    // update scroll when there are new messages (only when using non-preset messages)
+    afterUpdate(() => {
+        if (!$usePresetMessages) scrollToBottom();
+    })
+
+    onDestroy(() => {
+        if ($chatBotFirstMount) $chatBotFirstMount = false;
     })
 </script>
 
