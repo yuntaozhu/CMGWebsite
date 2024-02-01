@@ -1,7 +1,10 @@
-import { getDevelopers } from "$lib/admin/sanityFunctions"
+export async function load({ fetch }) {
+    const res = await fetch("/api/developers");
 
-export async function load() {
-    return {
-        teams: await getDevelopers()
+    if (res.ok) {
+        const body = await res.json();
+        return {
+            teams: body["teams"]
+        }
     }
 }

@@ -1,3 +1,4 @@
+import { error, json } from "@sveltejs/kit";
 import { createClient } from "@sanity/client";
 
 const sanityClient = createClient({
@@ -7,17 +8,8 @@ const sanityClient = createClient({
     useCdn: false
 })
 
-export const getChatbotQA = async () => {
-    return await sanityClient.fetch(
-        `*[_type == "chatbot_qa"][0]{
-            qa_pairs[]{
-                question, answer
-            }
-        }`
-    )
-}
-
-export const getDevelopers = async () => {
+// get developers by team
+const getDevelopers = async () => {
     return await sanityClient.fetch(
         `*[_type == "team"] |
         order(order, name)
@@ -52,4 +44,13 @@ export const getDevelopers = async () => {
               }
       }`
     )
+}
+
+export async function GET() {
+    try {
+        const developers = await getDevelopers();
+        return json({teams: developers});
+    } catch {
+        return error(500)
+    }
 }
