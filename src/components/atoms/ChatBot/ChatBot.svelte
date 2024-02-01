@@ -8,6 +8,11 @@
     import { usePresetMessages } from "$lib/stores";
 
     /**
+     * @type {{}}
+     */
+    export let qaPairs;
+
+    /**
      * @type {HTMLTextAreaElement}
      */
     let userInputArea; // the input text box HTML element
@@ -115,6 +120,7 @@
             <!-- div for containing the messages at a fixed width and height -->
             <Messages 
                 bind:messageHistory={messageHistory}
+                {qaPairs}
             />
 
             <!-- input area -->

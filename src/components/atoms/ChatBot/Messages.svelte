@@ -5,12 +5,16 @@
     import { fly } from "svelte/transition";
     import PresetMessages from "./PresetMessages.svelte";
     import { usePresetMessages, chatBotFirstMount } from "$lib/stores";
-    import chatbot from "$lib/admin/schemas/chatbot";
 
     /**
      * @type {any}
      */
     export let messageHistory;
+
+    /**
+     * @type {{}}
+     */
+    export let qaPairs;
 
     /**
      * @type {HTMLDivElement}
@@ -69,6 +73,7 @@
             <!-- preset messages -->
             <PresetMessages
                 bind:messageHistory={messageHistory}
+                {qaPairs}
             />
         {/if}
     </div>

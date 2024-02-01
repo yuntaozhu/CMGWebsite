@@ -2,18 +2,22 @@
     import { fly } from "svelte/transition";
     import { onMount } from "svelte";
     import { cubicInOut } from "svelte/easing"
-    import { qaPairs } from "$lib/stores";
 
     /**
      * @type {Array<Object>}
      */
     export let messageHistory;
 
+    /**
+     * @type {{}}
+     */
+    export let qaPairs;
+
     let answerLoaded = true;
     let hasError = false;
 
     onMount(() => {
-        if (!$qaPairs) {
+        if (!qaPairs) {
             hasError = true;
         }
     })
@@ -33,7 +37,7 @@
         addNewMessage(true, true, question)
 
         // @ts-ignore
-        let answer = $qaPairs[question];
+        let answer = qaPairs[question];
 
         setTimeout(() => {
             // add bot message loading chat bubble
@@ -53,7 +57,7 @@
 {#if answerLoaded && !hasError}
     <div class="flex flex-col justify-center items-center px-4 gap-3 mt-4" in:fly={{ y: 100, duration: 250, easing: cubicInOut}} out:fly={{ y: 100, duration: 250, easing: cubicInOut }}>
         <!-- list of choices -->
-        {#each Object.keys($qaPairs) as question}
+        {#each Object.keys(qaPairs) as question}
             <button type="button" class="flex p-3 items-center justify-center rounded-lg text-xs bg-white bg-opacity-10" on:click={() => {getAnswer(question)}}>
                 <span class="text">{question}</span>
             </button>
