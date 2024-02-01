@@ -5,6 +5,7 @@ export const showNotification = writable(false);
 export const notificationMessage = writable("");
 export const usePresetMessages = writable(true);
 export const acssWeekStatus = writable(false);
+export const qaPairs = writable({});
 
 export const setAcssWeekStatusTrue = () => {
     acssWeekStatus.set(true);

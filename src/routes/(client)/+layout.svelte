@@ -18,9 +18,6 @@
   } from "../../aw2024-components";
   import { fade } from "svelte/transition";
 
-  export let data;
-  const { qaPairs } = data; // the preset question/answer pairs for the chatbot
-
   // Scroll Fade In Animation (To use: add "scrollFadeIn" class to a html element)
   function scrollFadeIn() {
     let scrollFadeInElements = document.getElementsByClassName("scrollFadeIn");
@@ -83,6 +80,6 @@
         <Footer />
       </div>
     </div>
-    <ChatBot {qaPairs}/>
+    <ChatBot />
   </main>
 {/if}

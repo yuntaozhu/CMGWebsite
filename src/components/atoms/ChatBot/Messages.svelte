@@ -12,11 +12,6 @@
     export let messageHistory;
 
     /**
-     * @type {[]}
-     */
-    export let qaPairs; // chatbot preset QA entries
-
-    /**
      * @type {HTMLDivElement}
      */
     let messagesContainer; // the HTML block that contains all the messages
@@ -60,9 +55,7 @@
         {#if $usePresetMessages}
             <!-- preset messages -->
             <PresetMessages
-                {qaPairs}
                 bind:messageHistory={messageHistory}
-                bind:messagesContainer={messagesContainer}
             />
         {/if}
     </div>
