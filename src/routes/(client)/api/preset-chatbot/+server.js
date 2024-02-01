@@ -1,5 +1,22 @@
 import { error, json } from "@sveltejs/kit";
-import { getChatbotQA } from "$lib/admin/sanityFunctions";
+import { createClient } from "@sanity/client";
+
+const sanityClient = createClient({
+    projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
+    dataset: import.meta.env.VITE_SANITY_DATASET,
+    apiVersion: "2021-10-21",
+    useCdn: false
+})
+
+const getChatbotQA = async () => {
+    return await sanityClient.fetch(
+        `*[_type == "chatbot_qa"][0]{
+            qa_pairs[]{
+                question, answer
+            }
+        }`
+    )
+}
 
 export async function GET () {
     try {
@@ -7,17 +24,15 @@ export async function GET () {
 
         if (qaPairs) {
             let qaPairsObj = {};
-
-            for (let pair of qaPairs["qa_pairs"]) {
-                // @ts-ignore
-                qaPairsObj[pair["question"]] = pair["answer"];
-            }
+            qaPairs["qa_pairs"].forEach(({ question, answer }) => {
+                qaPairsObj[question] = answer;
+            });
 
             return json({success: true, qaPairs: qaPairsObj})
         }
 
-        return json({success: false})
+        return error(500)
     } catch {
-        return json({success: false})
+        return error(500)
     }
 }
