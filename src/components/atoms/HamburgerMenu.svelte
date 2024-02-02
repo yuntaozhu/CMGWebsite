@@ -11,7 +11,7 @@
     { title: "About Us", url: "/about-us" },
     { title: "Showcase", url: "/showcase" },
     // { title: "Developers", url: "/developers" },
-    { title: "ACSS Week", url: "/aw2024/home" },
+    // {title: "ACSS Week", url: ""},
   ];
 
   function handleClick() {

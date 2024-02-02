@@ -2,15 +2,10 @@
     // Importing Svelte components and data
     import TeamCard from './TeamCard.svelte';
     import DeveloperCard from './DeveloperCard.svelte';
-    // import { teams } from './data.js';
+    import { teams } from './data.js';
   
     // Importing Svelte lifecycle function to run code after component mount
     import { onMount } from 'svelte';
-
-    /**
-     * @type {[]}
-     */
-    export let teams;
   
     // Initialize a variable to check screen size
     let isScreenSs = false; // Default to false
