@@ -52,11 +52,11 @@
 
     // Function to copy Gmail address to clipboard
     function copyToClipboard() {
-        const gmailAddress = developer.contacts.gmail.trim();
-        if (gmailAddress) {
+        const emailAddress = developer.contacts.email.trim();
+        if (emailAddress) {
             // Create a temporary input element to copy the text
             const tempInput = document.createElement('input');
-            tempInput.value = gmailAddress;
+            tempInput.value = emailAddress;
             document.body.appendChild(tempInput);
             tempInput.select();
             document.execCommand('copy');
@@ -105,7 +105,7 @@
         >
           <img
             src={developer.imageSrc}
-            alt={developer.nickname}
+            alt={developer.fullName}
             class="w-full h-full object-cover"
           />
         </div>
@@ -218,9 +218,9 @@
                 <div class="icon-container flex flex-row items-center justify-center gap-6" style="transition: transform 0.5s;">
             
                 <!-- Conditionally show the Gmail icon if there is a Gmail contact -->
-                {#if developer.contacts.gmail && developer.contacts.gmail.trim() !== ""}
+                {#if developer.contacts.email && developer.contacts.email.trim() !== ""}
                     <button on:click={copyToClipboard}>
-                    <img src="assets/gmail-icon.png" alt="Gmail" class="icon-image" />
+                    <img src="assets/gmail-icon.png" alt="Email" class="icon-image" />
                     </button>
                 {/if}
             
@@ -293,6 +293,16 @@
     /* Hover effect for the developer contact icons */
     .icon-image:hover {
       transform: scale(1.2);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
     }
   </style>
   

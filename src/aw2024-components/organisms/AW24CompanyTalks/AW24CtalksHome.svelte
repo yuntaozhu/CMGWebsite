@@ -7,20 +7,23 @@
     Projects,
     Workshops,
     ShowcaseNavBar,
-    ShowcaseTitle,
-    ShowcaseCards,
   } from "$components";
   import { onMount } from "svelte";
   import { page } from "$app/stores";
-
+  import {
+    AW24CTalksTitle,
+    AW24CTalksNavbar,
+    CTalks2024,
+    Company,
+    Speakers,
+  } from "../../../aw2024-components";
   const showcaseComponents = {
-    Projects,
-    Events,
-    Workshops,
-    Activities,
+    CTalks2024,
+    Company,
+    Speakers,
   };
 
-  let tabs = ["Projects", "Events", "Workshops", "Activities"];
+  let tabs = ["CTalks2024", "Speakers", "Company"];
   let activeTab;
   let show = false;
 
@@ -30,7 +33,7 @@
   } catch {
     activeTab =
       $page.url.hash === ""
-        ? "Projects"
+        ? "CTalks2024"
         : `${$page.url.hash[1].toUpperCase()}${$page.url.hash
             .toLowerCase()
             .substr(2, $page.url.hash.length - 1)}`;
@@ -41,30 +44,11 @@
     sessionStorage.setItem("activeTab", activeTab);
   };
 
-  function scrollTabChange() {
-    activeTab = sessionStorage.getItem("activeTab") || "Projects";
-  }
-
   onMount(() => {
-    if ($page.url.hash !== "") {
-      activeTab = `${$page.url.hash[1].toUpperCase()}${$page.url.hash
-        .toLowerCase()
-        .substr(2, $page.url.hash.length - 1)}`;
-      sessionStorage.setItem(
-        "activeTab",
-        `${$page.url.hash[1].toUpperCase()}${$page.url.hash
-          .toLowerCase()
-          .substr(2, $page.url.hash.length - 1)}`
-      );
-    }
-    if(activeTab === null){
-      activeTab = "Projects";
+    if (activeTab === null) {
+      activeTab = "CTalks2024";
     }
     show = true;
-    window.addEventListener("scrollend", scrollTabChange);
-    return () => {
-      removeEventListener("scrollend", scrollTabChange);
-    };
   });
 </script>
 
@@ -101,10 +85,10 @@
 <div
   class="overflow-hidden w-full flex flex-col items-center px-5 py-10 relative z-20 min-h-screen"
 >
-  <ShowcaseTitle />
+  <AW24CTalksTitle />
 
   {#if show}
-    <ShowcaseNavBar {activeTab} {tabs} on:tabChange={tabChange} />
+    <AW24CTalksNavbar {activeTab} {tabs} on:tabChange={tabChange} />
     {#each tabs as tab}
       {#if activeTab === tab}
         <svelte:component this={showcaseComponents[tab]} />
