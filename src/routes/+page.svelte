@@ -9,12 +9,6 @@
     BriefShowcase,
   } from "$components";
   import Partnership from "$components/organisms/Home/Partnership.svelte";
-  import { acssWeekStatus, setAcssWeekStatusFalse } from "$lib/stores";
-  import { onMount } from "svelte";
-
-  onMount(() => {
-    setAcssWeekStatusFalse();
-  });
 </script>
 
 <head>
@@ -42,25 +36,17 @@
   />
 </head>
 
-{#if $acssWeekStatus}
-  <!-- <div
-    class="overflow-hidden w-full lg:px-10 flex flex-col gap-10 pb-40 -mb-8 relative z-20"
-  >
-    <div class="px-5"></div>
-  </div> -->
-{:else}
-  <div
-    class="overflow-hidden w-full lg:px-10 flex flex-col gap-10 pb-40 -mb-8 relative z-20"
-  >
-    <div class="px-5">
-      <Hero />
-      <Summary />
-      <!-- <IncomingActivity /> -->
-      <DevStories />
-      <Strengths />
-      <Contributions />
-      <BriefShowcase />
-    </div>
-    <Partnership />
+<div
+  class="overflow-hidden w-full lg:px-10 flex flex-col gap-10 pb-40 -mb-8 relative z-20"
+>
+  <div class="px-5">
+    <Hero />
+    <Summary />
+    <!-- <IncomingActivity /> -->
+    <DevStories />
+    <Strengths />
+    <Contributions />
+    <BriefShowcase />
   </div>
-{/if}
+  <Partnership />
+</div>

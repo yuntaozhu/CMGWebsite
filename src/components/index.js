@@ -58,8 +58,6 @@ import Events from './organisms/Showcase/Events.svelte';
 import Projects from './organisms/Showcase/Projects.svelte';
 import Workshops from './organisms/Showcase/Workshops.svelte';
 
-//ACSS Week
-import ACSSWeekArchive from './organisms/ACSSWeek/ACSSWeekArchive.svelte';
 
     export {
         //Atoms
@@ -73,6 +71,5 @@ import ACSSWeekArchive from './organisms/ACSSWeek/ACSSWeekArchive.svelte';
         ContactForm,
         InitialSection, ResidentMembers, MembersRoster,
         BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, Statistics,
-        Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs,
-        ACSSWeekArchive
+        Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs
     };

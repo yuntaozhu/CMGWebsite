@@ -2,11 +2,11 @@
   import { Button, HamburgerMenu } from "$components";
   import { page } from "$app/stores";
 
+
   let pages = [
     { title: "Home", url: "/" },
     { title: "About Us", url: "/about-us" },
     { title: "Showcase", url: "/showcase" },
-    { title: "ACSS Week", url: "/acss-week" },
     // { title: "Developers", url: "/developers" },
   ];
 
