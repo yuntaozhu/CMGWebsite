@@ -16,7 +16,7 @@
   let eventName = "ACSS Orientation"; // Event Name
   let eventDescription = `
                 This is an early registration form for the upcoming "A Demigod's Odyssey: An ACSS Orientation"
-                which aims to familiarize you with our growing organization. The orientation will be held on March 28,
+                which aims to familiarize you with our growing organization. The orientation will be held on March 8,
                 2024, 7:30 PM at Jollibee Vega. If you wish to join the orientation, kindly fill
                 out this form. Orientation details and updates will be sent through
                 the email used in answering this form.
