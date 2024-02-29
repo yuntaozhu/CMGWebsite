@@ -8,33 +8,34 @@
   // CUSTOMIZE THIS: This is where you can modify the brief showcase ([1] Event Name, [2] URL of the event photo from static folder)
   let events = [
     [
-      "CMG Week: Company Talks",
-      "../home-briefshowcase/briefshowcase-1.webp",
-      "Showcases diverse fields in Computer Science through invited speakers from different companies. Here you can gain invaluable industry insights and a competitive edge for your future career.",
+      "CMG Week: Angela Hewitt   Wednesday, October 14, 2015 – 7:30 PM ",
+      "../home-briefshowcase/case1.jpg",
+      "Mesmerizing, precise, driven, gifted, these adjectives and dozens more describe Angle Hewitt,  one of the world’s leading pianists who has performed with major orchestras throughout Europe, the Americas and Asia. Her performances of Bach have drawn particular praise, she is one of the composer’s foremost interpreters of our time..",
     ],
     [
-      "CMG Week: Exhibit",
-      "../home-briefshowcase/briefshowcase-2.webp",
-      "Serves as a platform to highlight the organization, its members, and details related to the year's chosen theme. Its objectives include offering extra insights into computer science, introducing the CMG organization, motivating students to engage in CMG Week activities, and fostering additional opportunities.",
+      "CMG Week: Hsiu-Jung Hou    Sunday, January 10, 2016 – 3:00 PM",
+      "../home-briefshowcase/case2.jpg",
+      "Born in Taipei, Taiwan,  and Cranbrook Music Guild Betty Brewster Scholar, Hsiu-jung Hou began piano study at the age of five, and entered music\n" +
+      "talent class in elementary school. During junior and senior\n.",
     ],
     [
-      "CMG Week: Game of Codes",
-      "../home-briefshowcase/briefshowcase-3.webp",
-      "Aims to ignite passion for Computer Science and IT careers through an ACM ICPC-style competition. It enhance students' field awareness, technical skills, and critical thinking. A contest to unleash your coding prowess, solve real-life problems, and make programming exciting.",
+      "CMG Week: Catalyst Quartet    Wednesday, February 3, 2016 – 7:30 PM",
+      "../home-briefshowcase/case3.jpg",
+      "The Catalyst Quartet hailed by the New York Times at their Carnegie Hall debut as “invariably energetic and finely burnished… playing with earthy vigor” the Catalyst Quartet, prize winners of the Gianni Bergamo Classical Music Award 2012 (Switzerland) is comprised of top Laureates and alumni of the internationally acclaimed Sphinx Competition..",
     ],
     [
       "CMG Week: Sublimed",
-      "../home-briefshowcase/briefshowcase-4.webp",
+      "../home-briefshowcase/case4.jpg",
       "One of the highly anticipated events in CMG week. An annual general quiz competition featuring sports, music, food, and more. Beyond education, we offer entertainment for students and to explore knowledge beyond computer science.",
     ],
     [
       "CMG Orientation",
-      "../home-briefshowcase/briefshowcase-5.webp",
+      "../home-briefshowcase/case5.jpg",
       "A way of connecting with computer science enthusiasts. A means to introduce CMG and our team to the UPLB community, fostering a deeper understanding of our organization.",
     ],
     [
       "Team Building Activity",
-      "../home-briefshowcase/briefshowcase-6.webp",
+      "../home-briefshowcase/case1.jpg",
       "An internal event to strengthen bonds among members, enhance collaboration, and develop essential skills like communication and problem-solving. Boost morale, foster a positive work environment, and propel our organization to greater heights.",
     ],
   ];

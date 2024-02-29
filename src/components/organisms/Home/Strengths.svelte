@@ -6,20 +6,35 @@
   // CUSTOMIZE THIS: Array of strengths
   let strengths = [
     [
-      "Technology Proficiency",
-      "As technology grows and changes, our developers are equipped with strong collaborative skills and programming knowledge, which allow us to keep up with the cultural shift.",
+      "We support young talent",
+      "The Cranbrook Music Guild’s Betty Brewster Scholarship Award (inaugurated as the Guild Gift\n" +
+      "Fund in 1955, but renamed  Betty Brewster Scholarship Award in 1967 to honor the Guild’s first\n" +
+      "president), has proudly supported the efforts of our up and coming musical artists by awarding\n" +
+      "a $2500 scholarship for graduate study and performance to a distinguished student at the\n" +
+      "University of Michigan School of Music. Our scholarship winner always performs a concert\n" +
+      "recital during our musical season. The Cranbrook Music Guild is proud of this initiative and the\n" +
+      "results that have been achieved affirming the vision of the founding members..",
     ],
     [
-      "Competitive Workforce",
-      "Our organization fosters excellence and innovation as our developers are skilled, motivated, and fueled with our love for technology and community. This also keeps us ahead while being disciplined and dependable.",
+      "We have taken a new route to celebrate young talent",
+      "talent. We  created the Cranbrook Music Guild\n" +
+      "Emerging Artists Competition. The competition provides an opportunity for emerging artists\n" +
+      "to compete and perform. Funds for this competition come in part from the Betty Brewster\n" +
+      "Scholarship program. This event will be held every other year. Anticipate news for our next\n" +
+      "competition in late 2020.",
     ],
     [
-      "Effective Research and Development Aptitude",
-      "Our developers are innovative in developing solutions to solve community problems using technology, aligned with our organization's mission.",
+      "Purchasing tickets is as easy as “Do Re Mi”",
+      "Cranbrook Music Guild offers a variety of ways to attend our concerts and complimentary\n" +
+      "afterglows with the performers. Please consider purchasing a season ticket, as you will enjoy\n" +
+      "all five sublime concerts and afterglows. Patron ticket holders are given the chance to sit in the\n" +
+      "first three rows.",
     ],
     [
-      "Agile Development",
-      "Our developers are able to anticipate the need for flexibility and evolve in a changing environment while maintaining rapport among its constituents and clients.",
+      "We would love to hear from you.",
+      "Cranbrook Music Guild is always glad to welcome a new pair of helping hands, a gracious\n" +
+      "donor or interested sponsor. We also would appreciate your comments as we strive to bring\n" +
+      "you a memorable music experience..",
     ],
   ];
   // END OF CUSTOMIZATION

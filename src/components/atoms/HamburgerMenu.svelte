@@ -10,7 +10,7 @@
     { title: "Home", url: "/" },
     { title: "About Us", url: "/about-us" },
     { title: "Showcase", url: "/showcase" },
-    { title: "Video", url: "/developers" },
+    { title: "concerr archive", url: "/developers" },
     {title: "CMG Week", url: ""},
   ];
 

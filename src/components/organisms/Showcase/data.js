@@ -3,22 +3,22 @@ export const data = {
         {
             title: "Project FACE V1",
             blurb: "First Official Website of Alliance of Computer Science Students" ,
-            images: ["/acss_uplb_website.webp", "/acss_uplb_website_02.webp", "/acss_uplb_website_03.webp", "/acss_uplb_website_04.webp"],
+            images: ["/CMGPicture.png", "/CMGPicture.png", "/CMGPicture.png", "/CMGPicture.png"],
             description: "We have always wanted to reach more people. Other than our social media handles, our official website is also our official introduction to the World Wide Web. Our website is likewise a convenient way to get the latest information about our developers, our recent events and activities, and our recent projects.",
             developers: [
                 {id: 0, name: "Charles Cyrus Chavez", role: "Project Manager", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/ChaCyChavez","mailto:chacychavez@gmail.com", "https://www.linkedin.com/in/charles-cyrus-chavez-53146013a/"  ],  ts:["","",""], pic:["/dev_charles.webp"]},
                 {id: 1, name: "Jericho <br> Calibuso", role: "Lead Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"],links:["https://github.com/jerichocalibuso","mailto:jerichocalibuso@gmail.com","https://www.linkedin.com/in/jerichocalibuso/" ], ts:["","",""], pic:["/devpic_jericho.webp"] },
                 {id: 2, name: "John Heinrich Austria", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/heynrits","mailto:jbaustria@up.edu.ph","https://www.linkedin.com/in/heynrits" ], ts:["","",""], pic:["/dev_heinrich.webp"]},
-                
-                
+
+
                 ]
-        
+
         },
 
         {
             title: "Project FACE V2",
             blurb: "Official Website of Alliance of Computer Science Students" ,
-            images: ["/acss_uplb_websitev2.webp", "/acss_uplb_websitev202.webp", "/acss_uplb_websitev204.webp", "/acss_uplb_websitev205.webp"],
+            images: ["/CMGPicture1.webp", "/CMGPicture1.webp", "/CMGPicture1.webp", "/CMGPicture1.webp"],
             description: "We have always wanted to reach more people. Other than our social media handles, our official website is also our official introduction to the World Wide Web. Our website is likewise a convenient way to get the latest information about our developers, our recent events and activities, and our recent projects.",
             developers: [
                 {id: 0, name: "Michael Jay Makiling", role: "Project Manager", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/iammtmakiling", "malito:mjaymakiling@gmail.com", "https://www.linkedin.com/in/iammtmakiling/"  ],ts:["/angular.svg","/flutter.svg","/react.svg"], pic:["/devpic_kael.webp"]},
@@ -29,26 +29,26 @@ export const data = {
                 {id: 5, name: "Karl Kenneth Owen Olipas", role: "Front End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["github.com/owen-olipas", "kdolipas@up.edu.ph", "https://www.linkedin.com/in/owen-olipas/"  ],ts:["/svelte.svg","/flutter.svg","/react.svg"], pic:["/dev_owen.webp"]},
                 {id: 6, name: "Darwin Reigh Calub", role: "Front End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/Darwinwinner", "mailto:dlcalub1@up.edu.ph", "https://www.linkedin.com/in/darwin-reigh-calub-b408a5290/"  ],ts:["/svelte.svg","/flutter.svg","/react.svg"], pic:["/dev_darwin.webp"]},
                 ]
-        
+
         },
         {
             title: "Project FACE: CMG Week 2023",
             blurb: "Optimize Your Capabilities to the Fullest with Defragment" ,
-            images: ["/acss_week.webp", "/acss_week02.webp", "/acss_week03.webp", "/acss_week04.webp", "/acss_week05.webp"],
+            images: ["/CMGPicture2.webp", "/CMGPicture2.webp", "/CMGPicture2.webp", "/CMGPicture2.webp", "/CMGPicture2.webp"],
             description: "The CMG Week 2023: Defragment website features three exciting events: The Exhibit, Company Talks, and Sublimed Experience. Together, these events offer a comprehensive experience for computer science enthusiasts to learn about the organization and engage in the activities. The website serves as a portal for visitors to access detailed information about the events, as well as learn about the partners and sponsors who have made it all possible.",
             developers: [
                 {id: 0, name: "Aron Resty Ramillano", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/PERSEUS-1337", "mailto:abramillano@up.edu.ph", "https://www.linkedin.com/in/aron-resty-ramillano-61aa38266/" ], ts:["/svelte.svg","/figma.svg","/docker.svg"], pic:["/dev_resty.webp"]},
                 {id: 1, name: "Renz <br> Tegrado", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/kennethtegrado", "mailto:kentegrado@gmail.com", "https://www.linkedin.com/in/kennethtegrado"  ], ts:["/rust.svg","/express.svg","/next.svg"], pic:["/dev_renz.webp"]},
-              
+
                 ]
-        
+
         },
 
 
         {
             title: "Project TAKS",
             blurb: "Streamlining Real Property and Business Tax Payments ",
-            images: ["/project_taks_01.webp", "/project_taks_02.webp"],
+            images: ["/CMGPicture3.webp", "/CMGPicture3.webp"],
             description: "Project TAKS is a full-stack website development project with the purpose of providing an easier payment method of real property and business taxes in City of Balanga.",
             developers: [
                 {id: 0, name: "Jericho <br> Calibuso", role: "Project Manager", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/", "mailto:jerichocalibuso@gmail.com", "https://www.linkedin.com/in/jerichocalibuso/"  ],  ts:["","",""], pic:["/devpic_jericho.webp"]},
@@ -58,59 +58,59 @@ export const data = {
 
             ]
         },
-        
 
-        
-        
+
+
+
     ],
     "events" : [
         {
             title: "Company Talks",
             blurb: "Guiding to the World of Computer Science Careers",
-            images: ["/acss_uplb_company_talks04.webp", "/acss_uplb_company_talks02.webp", "/acss_uplb_company_talks03.webp", "/acss_uplb_company_talks.webp"],
+            images: ["/CMGPicture3.webp", "/CMGPicture3.webp", "/CMGPicture3.webp", "/CMGPicture3.webp"],
             description : "The Company Talks gathers industry experts to share their unique perspectives about their disciplines and provides students the information to better understand the possible career paths of computer science students."
-        
+
         },
         {
             title: "Orientation",
             blurb: "Delving into the Core of CMG: Connect with CMG Developers",
-            images: ["/acss_uplb_orientation.webp","/acss_uplb_orientation02.webp","/acss_uplb_orientation03.webp","/acss_uplb_orientation04.webp","/acss_uplb_orientation05.webp","/acss_uplb_orientation06.webp"],
+            images: ["/CMGPicutre4.webp","/CMGPicutre4.webp","/CMGPicutre4.webp","/CMGPicutre4.webp","/CMGPicutre4.webp","/CMGPicutre4.webp"],
             description: "The Alliance of Computer Science Students - UPLB holds orientations with the objective of introducing the organization —and more importantly, the people behind the organization— to the UPLB community. In the same way, our orientations provide us the means to get to know and to better serve the needs of the UPLB community."
         },
         {
             title: "Sublimed",
             blurb: "Appreciating Knowledge Beyond the Domain of Computer Science",
-            images: ["/acss_uplb_sublimed03.webp","/acss_uplb_sublimed.webp","/acss_uplb_sublimed04.webp","/acss_uplb_sublimed05.webp","/acss_uplb_sublimed06.webp","/acss_uplb_sublimed07.webp","/acss_uplb_sublimed02.webp","/acss_uplb_sublimed08.webp","/acss_uplb_sublimed09.webp" ],
+            images: ["/CMGPicture6.webp","/CMGPicture6.webp","/CMGPicture6.webp","/CMGPicture6.webp","/CMGPicture6.webp","/CMGPicture6.webp","/CMGPicture6.webp","/CMGPicture6.webp","/CMGPicture6.webp" ],
             description : "Our commitment to service not only encompasses educating the community, but it is to also provide a entertainment to students. Sublimed is our yearly general quiz competition, showing our value for knowledge outside the realm of computer science."
         },
         {
             title: "Game of Codes",
             blurb: "Unleashing Coding Prowess for Tomorrow's Tech World ",
-            images: ["/acss_uplb_game_of_codes.webp", "/acss_uplb_game_of_codes02.webp", "/acss_uplb_game_of_codes03.webp", "/acss_uplb_game_of_codes04.webp", "/acss_uplb_game_of_codes05.webp", "/acss_uplb_game_of_codes06.webp" ],
+            images: ["/CMGPicture7.webp", "/CMGPicture7.webp", "/CMGPicture7.webp", "/CMGPicture7.webp", "/CMGPicture7.webp", "/CMGPicture7.webp" ],
             description : "The Game of Codes allows teams of budding computer scientists and programmers to test their skills in this modified ACM-ICPC style programming competition. Teams compete to solve programming problems in a range of difficulties, ultimately vying for the most points."
         },
         {
             title: "Exhibits",
             blurb: "Sharing Tech Trends, Emerging Concepts, and Organization's Info",
-            images: ["/acss_uplb_exhibit.webp", "/acss_uplb_exhibit02.webp", "/acss_uplb_exhibit03.webp", "/acss_uplb_exhibit04.webp", "/acss_uplb_exhibit05.webp"],
+            images: ["/CMGPicture8.webp", "/CMGPicture8.webp", "/CMGPicture8.webp", "/CMGPicture8.webp", "/CMGPicture8.webp"],
             description: "As an academic organization, our exhibits fulfill the desire to share knowledge, ranging from trends in computer science, emerging technologies, up to already well-known concepts that will pique the interest of the community. Our exhibits also reveal at-a-glance information about our organization, as well as information about our events at the time."
         },
-        
+
     ],
     "activities": [
-        
+
     ],
     "workshops" : [
         {
             title: "External Workshops",
             blurb: "Enhancing Your Grasp of University-Level Computer Science Courses",
-            images: ["/acss_uplb_external_workshop.webp","/acss_uplb_external_workshop02.webp", "/acss_uplb_external_workshop03.webp", "/acss_uplb_external_workshop04.webp", "/acss_uplb_external_workshop05.webp", "/acss_uplb_external_workshop06.webp", "/acss_uplb_external_workshop07.webp", "/acss_uplb_external_workshop08.webp"],
+            images: ["/CMGPicture9.webp","/CMGPicture9.webp", "/CMGPicture9.webp", "/CMGPicture9.webp", "/CMGPicture9.webp", "/CMGPicture9.webp", "/CMGPicture9.webp", "/CMGPicture9.webp"],
             description : "While our external tutorials help in strengthening the understanding of computer science subjects taught in the University, our external workshops answer the need of the community for more knowledge in practical technology— whether be it web development skills or programming techniques."
         },
         {
             title: "External Tutorials",
             blurb: "Sharing Extensive Expertise in Diverse Computer Science Domains",
-            images: ["/acss_uplb_external_tutorial.webp", "/acss_uplb_external_tutorial02.webp", "/acss_uplb_external_tutorial03.webp", "/acss_uplb_external_tutorial04.webp","/acss_uplb_external_tutorial05.webp", "/acss_uplb_external_tutorial06.webp"],
+            images: ["/CMGPicture5.webp", "/CMGPicture5.webp", "/CMGPicture5.webp", "/CMGPicture5.webp","/CMGPicture5.webp", "/CMGPicture5.webp"],
             description: "In our commitment to service, our developers showcase and share the breadth and depth of their knowledge of various aspects of computer science through external tutorials. This equips computer science students the supplementary knowledge to assist them in reviewing for upcoming academic assessments."
         },
     ]
