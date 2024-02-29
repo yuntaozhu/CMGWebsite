@@ -135,8 +135,9 @@
             <EmailInputComponent label="Email" required={true} placeholder="jdelacruz@up.edu.ph"/>
             <DropdownInputComponent label="College" options={colleges} />
             <TextInputComponent label="Degree Program" required={true} placeholder="BSCS"/>
-            <NumberInputComponent label="Batch" required={true} placeholder="2021"/>
-            <TextInputComponent label="Facebook Profile Link" required={true} placeholder=""/>
+            <NumberInputComponent label="Batch" required={true} placeholder="2023"/>
+            <TextInputComponent label="Degree Program" required={true} placeholder="BSCS"/>
+            <TextInputComponent label="Academic Affiliation (if any)" required={false} placeholder=""/>
             <RadioInputComponent
                 label="How did you hear about this event?"
                 options={howYouHear}
