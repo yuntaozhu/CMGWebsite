@@ -137,6 +137,7 @@
             <TextInputComponent label="Degree Program" required={true} placeholder="BSCS"/>
             <NumberInputComponent label="Batch" required={true} placeholder="2021"/>
             <TextInputComponent label="Facebook Profile Link" required={true} placeholder=""/>
+            <TextInputComponent label="Academic Affiliation (if any)" required={false} placeholder=""/>
             <RadioInputComponent
                 label="How did you hear about this event?"
                 options={howYouHear}
