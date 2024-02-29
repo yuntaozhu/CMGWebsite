@@ -7,9 +7,9 @@
     { title: "Home", url: "/" },
     { title: "About Us", url: "/about-us" },
     { title: "Concert", url: "/showcase" },
-    { title: "Video", url: "/developers" },
-    { title: "Donation", url: "/developers" },
-    { title: "Young Musican Console", url: "/developers" },
+    { title: "concerr archive", url: "/developers" },
+    { title: "Donation", url: "/Donation" },
+    { title: "Young Musican Console", url: "/Musican" },
   ];
 
   $: currentPath = $page.url.pathname;
