@@ -4,19 +4,12 @@
 
     // CUSTOMIZE THIS: Add here the URL of logos from static folder ("./home-partnership/<logo>")
     let logos = [
-        [
-            "./home-partnership/Amihan.webp",
-            "Amihan Global Strategies Phils. Inc.",
-        ],
-        ["./home-partnership/Azeus.webp", "Azeus Systems Philippines Limited"],
-        ["./home-partnership/Breta-Consulting.webp", "Breta Consulting"],
-        ["./home-partnership/Coding-Girls-Manila.webp", "Coding Girls Manila"],
-        ["./home-partnership/Cognizant.webp", "Cognizant"],
-        ["./home-partnership/Drupal.webp", "Drupal Pilipinas"],
-        ["./home-partnership/Freelancer.webp", "Freelancer.com Philippines"],
-        ["./home-partnership/Intelimina.webp", "Intelimina System Inc."],
-        ["./home-partnership/OpenText.webp", "OpenText Philippines"],
-        ["./home-partnership/Secret6.webp", "Secret 6"],
+        ["./home-partnership/Picture1.jpg", "Mezzo-soprano Chrystal E. Williams "],
+        ["./home-partnership/Picture2.jpg", " Camille Thomas – Cellist  with Roman Rabinovich – Pianist    "],
+        ["./home-partnership/Picture3.jpg", "Alvin Waddles – Pianist, Singer, Composer and Director and Friends  "],
+        ["./home-partnership/Picture4.jpg", "Dizhou Zhao – Pianist  with musicians from the DSO Wind Section"],
+        ["./home-partnership/Picture5.jpg", "Escher String Quartet   "],
+        ["./home-partnership/Picture6.jpg", "Sergei Babayan – Pianist  "]
     ];
     // END OF CUSTOMIZATION
 
@@ -109,7 +102,7 @@
     class="w-full h-fit flex flex-col items-center gap-5 -mb-48 pl-[10%] pr-[10%] relative overflow-hidden"
 >
     <h6 class="relative text-2xl font-extrabold text-center px-5">
-        We have worked with {logos.length} companies.
+        We have lunched  {logos.length} concert.
     </h6>
     <div class="relative flex justify-center h-[480px]">
         <div
@@ -156,11 +149,6 @@
 
 <style>
     #logos {
-        -webkit-mask-image: radial-gradient(
-            circle,
-            rgba(0, 0, 0, 1) 60%,
-            rgba(0, 0, 0, 0) 70%
-        );
         mask-image: radial-gradient(
             circle,
             rgba(0, 0, 0, 1) 60%,
