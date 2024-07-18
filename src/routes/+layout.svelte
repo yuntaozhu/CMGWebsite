@@ -43,7 +43,7 @@
     });
 </script>
 
-<main id="main" class="overflow-hidden bg-base-black h-fit">
+<main id="main" class="overflow-hidden bg-light-blue h-fit">
     <div id="header-div-for-modal-on">
         <NavBar />
     </div>
