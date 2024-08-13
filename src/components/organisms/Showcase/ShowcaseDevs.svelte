@@ -18,9 +18,9 @@
     <div class="dev-cards-content">
         <div class=" flex flex-col md:items-center ">
             <h4 class="text-4xl lg:text-5xl font-bold text-white">
-                Developers
+                Musican
             </h4>
-            
+
             <div class="lg:w-[1000px]">
                 <div class="flex flex-wrap gap-2 sm:gap-4 md:gap-5 md:justify-center py-10 ">
                     {#each data["projects"] as content}
@@ -32,15 +32,15 @@
                                             <img src="{dev.pic[0]}"  class="h-full w-full rounded-full object-cover" />
                                         </div>
                                     </div>
-        
-                                    
+
+
                                     <div class="absolute bottom-[120px]  sm:bottom-[165px] left-[40px] md:left-[55px] transform -translate-x-1/2  translate-y-1/3 transform transition-transform hover:scale-110">
                                         <div class=" bg-center bg-cover rounded-full absolute bottom-[3px] left-[1px] sm:bottom-[4px] sm:left-[2px]" >
-                                            
+
                                             <img src = "{dev.ts[0]} " class=""/>
-                                            
+
                                         </div>
-                                        
+
                                         <img src="/Hexagon Gradient.svg" class= "w-[20px] sm:w-full" />
                                     </div>
                                     <div class="absolute top-[10px] right-[18px] sm:top-[20px] sm:right-[20px] md:right-[40px] transform -translate-x-1/2  translate-y-1/3 transform transition-transform hover:scale-110">
@@ -55,12 +55,12 @@
                                         </div>
                                         <img src="/Hexagon Gradient.svg" class= "w-[20px] sm:w-full"  />
                                     </div>
-                                    
-        
+
+
                                     <div class="flex flex-col justify-center items-center mt-4 sm:mt-2 gap-2 sm:p-2 sm:gap-2">
                                         <h4 class="text-name font-bold text-sm sm:text-lg text-white justify-center text-center leading-4 sm:leading-5">{@html dev.name}</h4>
                                         <h5 class="text-position font-normal text-xs text-white text-center leading-none">{@html dev.role}</h5>
-                                        
+
                                     </div>
                                     <div class="flex flex-row justify-center space-x-2 sm:space-x-3 items-center mt-2 gap-1 ">
                                         {#each dev.socials as social,i}
@@ -68,20 +68,20 @@
                                                 <a href="{dev.links[i]}">
                                                     <img src="{social}" class="transform transition-transform w-[10px] sm:w-full sm:h-full hover:scale-110">
                                                 </a>
-                        
+
                                             {/if}
                                         {/each}
                                     </div>
-        
+
                                 </div>
                             {/each}
                         {/if}
-                    {/each} 
-                </div>  
+                    {/each}
+                </div>
             </div>
-  
-        
-    
+
+
+
         </div>
 
     </div>
@@ -102,7 +102,7 @@
         rgba(255, 255, 255, 0.2) 100%
         );
         backdrop-filter: blur(21px);
-    
+
     }
 </style>
 

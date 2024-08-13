@@ -9,30 +9,30 @@
 </script>
 
 <head>
-  <title>About Us - The Alliance of Computer Science Students UPLB</title>
+  <title>About Us - The CMG Organization UPLB</title>
   <meta
     name="title"
-    content="About Us - The Alliance of Computer Science Students UPLB"
+    content="About Us - The CMG Organization UPLB"
   />
   <meta
     property="og:title"
-    content="About Us - The Alliance of Computer Science Students UPLB"
+    content="About Us - The CMG Organization UPLB"
   />
   <meta
     property="twitter:title"
-    content="About Us - The Alliance of Computer Science Students UPLB"
+    content="About Us - The CMG Organization UPLB"
   />
   <meta
     name="description"
-    content="Learn about the mission, vision, history, and dedicated team behind The Alliance of Computer Science Students - UPLB. Discover our core values and commitment to academic excellence."
+    content="Learn about the mission, vision, history, and dedicated team behind The CMG Organization - UPLB. Discover our core values and commitment to academic excellence."
   />
   <meta
     property="og:description"
-    content="Learn about the mission, vision, history, and dedicated team behind The Alliance of Computer Science Students - UPLB. Discover our core values and commitment to academic excellence."
+    content="Learn about the mission, vision, history, and dedicated team behind The CMG Organization - UPLB. Discover our core values and commitment to academic excellence."
   />
   <meta
     property="twitter:description"
-    content="Learn about the mission, vision, history, and dedicated team behind The Alliance of Computer Science Students - UPLB. Discover our core values and commitment to academic excellence."
+    content="Learn about the mission, vision, history, and dedicated team behind The CMG Organization - UPLB. Discover our core values and commitment to academic excellence."
   />
 </head>
 

@@ -33,7 +33,7 @@
         class="glassmorphic-rectangle p-10 mt-2 opacity-0 scrollFadeIn"
       >
         <p class="font-light text-justify indent-8">
-          The Alliance of Computer Science Students — UPLB has been in existence
+          The CMG Organization — UPLB has been in existence
           since December 2014 developing students worthy of the title “Iskolar
           ng Bayan para sa Bayan” and assists in building individuals who shall
           lead in solving problems of the community through technology. The

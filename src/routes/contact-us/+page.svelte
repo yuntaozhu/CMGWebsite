@@ -3,24 +3,24 @@
 </script>
 
 <head>
-  <title>Contact Us - The Alliance of Computer Science Students UPLB</title>
-  <meta name="title" content="Contact Us - The Alliance of Computer Science Students UPLB" />
+  <title>Contact Us - The CMG Organization UPLB</title>
+  <meta name="title" content="Contact Us - The CMG Organization UPLB" />
   <meta
   property="og:title"
-  content="Contact Us - The Alliance of Computer Science Students UPLB"
+  content="Contact Us - The CMG Organization UPLB"
   />
   <meta
   property="twitter:title"
-  content="Contact Us - The Alliance of Computer Science Students UPLB"
+  content="Contact Us - The CMG Organization UPLB"
   />
-  <meta name="description" content="Get in touch with The Alliance of Computer Science Students UPLB. We welcome your inquiries, feedback, and collaboration opportunities. Reach out to us today!" />
+  <meta name="description" content="Get in touch with The CMG Organization UPLB. We welcome your inquiries, feedback, and collaboration opportunities. Reach out to us today!" />
   <meta
     property="og:description"
-    content="Get in touch with The Alliance of Computer Science Students UPLB. We welcome your inquiries, feedback, and collaboration opportunities. Reach out to us today!"
+    content="Get in touch with The CMG Organization UPLB. We welcome your inquiries, feedback, and collaboration opportunities. Reach out to us today!"
   />
   <meta
     property="twitter:description"
-    content="Get in touch with The Alliance of Computer Science Students UPLB. We welcome your inquiries, feedback, and collaboration opportunities. Reach out to us today!"
+    content="Get in touch with The CMG Organization UPLB. We welcome your inquiries, feedback, and collaboration opportunities. Reach out to us today!"
   />
 </head>
 

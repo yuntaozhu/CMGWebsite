@@ -1,14 +1,13 @@
 export const data = {
     "projects" : [
         {
-            title: "Project FACE V1",
-            blurb: "First Official Website of Alliance of Computer Science Students" ,
-            images: ["/CMGPicture.png", "/CMGPicture.png", "/CMGPicture.png", "/CMGPicture.png"],
+            title: "ARKAI",
+            blurb: "First Official Website of CMG Organization" ,
+            images: ["/CMGPicture.png", "/ARKAI.png", ],
             description: "We have always wanted to reach more people. Other than our social media handles, our official website is also our official introduction to the World Wide Web. Our website is likewise a convenient way to get the latest information about our developers, our recent events and activities, and our recent projects.",
             developers: [
-                {id: 0, name: "Charles Cyrus Chavez", role: "Project Manager", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/ChaCyChavez","mailto:chacychavez@gmail.com", "https://www.linkedin.com/in/charles-cyrus-chavez-53146013a/"  ],  ts:["","",""], pic:["/dev_charles.webp"]},
-                {id: 1, name: "Jericho <br> Calibuso", role: "Lead Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"],links:["https://github.com/jerichocalibuso","mailto:jerichocalibuso@gmail.com","https://www.linkedin.com/in/jerichocalibuso/" ], ts:["","",""], pic:["/devpic_jericho.webp"] },
-                {id: 2, name: "John Heinrich Austria", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/heynrits","mailto:jbaustria@up.edu.ph","https://www.linkedin.com/in/heynrits" ], ts:["","",""], pic:["/dev_heinrich.webp"]},
+                {id: 0, name: "JONATHAN MIRON", role: "Musican", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/ChaCyChavez","mailto:chacychavez@gmail.com", "https://www.linkedin.com/in/charles-cyrus-chavez-53146013a/"  ],  ts:["","",""], pic:["/dev_charles.webp"]},
+                {id: 1, name: "PHILIP SHEEGOG", role: "Musican", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"],links:["https://github.com/jerichocalibuso","mailto:jerichocalibuso@gmail.com","https://www.linkedin.com/in/jerichocalibuso/" ], ts:["","",""], pic:["/devpic_jericho.webp"] },
 
 
                 ]
@@ -16,9 +15,9 @@ export const data = {
         },
 
         {
-            title: "Project FACE V2",
-            blurb: "Official Website of Alliance of Computer Science Students" ,
-            images: ["/CMGPicture1.webp", "/CMGPicture1.webp", "/CMGPicture1.webp", "/CMGPicture1.webp"],
+            title: "JORDAN BAK",
+            blurb: "THE HERMITAGE PIANO TRIO WITH JORDAN BAK, VIOLA" ,
+            images: ["/CMGPicture11.webp", "/CMGPicture111.webp", "/CMGPicture1111.webp", "/CMGPicture11111.webp"],
             description: "We have always wanted to reach more people. Other than our social media handles, our official website is also our official introduction to the World Wide Web. Our website is likewise a convenient way to get the latest information about our developers, our recent events and activities, and our recent projects.",
             developers: [
                 {id: 0, name: "Michael Jay Makiling", role: "Project Manager", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/iammtmakiling", "malito:mjaymakiling@gmail.com", "https://www.linkedin.com/in/iammtmakiling/"  ],ts:["/angular.svg","/flutter.svg","/react.svg"], pic:["/devpic_kael.webp"]},
@@ -32,7 +31,7 @@ export const data = {
 
         },
         {
-            title: "Project FACE: CMG Week 2023",
+            title: "HANZHI && STEVEN",
             blurb: "Optimize Your Capabilities to the Fullest with Defragment" ,
             images: ["/CMGPicture2.webp", "/CMGPicture2.webp", "/CMGPicture2.webp", "/CMGPicture2.webp", "/CMGPicture2.webp"],
             description: "The CMG Week 2023: Defragment website features three exciting events: The Exhibit, Company Talks, and Sublimed Experience. Together, these events offer a comprehensive experience for computer science enthusiasts to learn about the organization and engage in the activities. The website serves as a portal for visitors to access detailed information about the events, as well as learn about the partners and sponsors who have made it all possible.",
@@ -46,7 +45,7 @@ export const data = {
 
 
         {
-            title: "Project TAKS",
+            title: "Dizhou",
             blurb: "Streamlining Real Property and Business Tax Payments ",
             images: ["/CMGPicture3.webp", "/CMGPicture3.webp"],
             description: "Project TAKS is a full-stack website development project with the purpose of providing an easier payment method of real property and business taxes in City of Balanga.",
@@ -75,7 +74,7 @@ export const data = {
             title: "Orientation",
             blurb: "Delving into the Core of CMG: Connect with CMG Developers",
             images: ["/CMGPicutre4.webp","/CMGPicutre4.webp","/CMGPicutre4.webp","/CMGPicutre4.webp","/CMGPicutre4.webp","/CMGPicutre4.webp"],
-            description: "The Alliance of Computer Science Students - UPLB holds orientations with the objective of introducing the organization —and more importantly, the people behind the organization— to the UPLB community. In the same way, our orientations provide us the means to get to know and to better serve the needs of the UPLB community."
+            description: "The CMG Organization - UPLB holds orientations with the objective of introducing the organization —and more importantly, the people behind the organization— to the UPLB community. In the same way, our orientations provide us the means to get to know and to better serve the needs of the UPLB community."
         },
         {
             title: "Sublimed",

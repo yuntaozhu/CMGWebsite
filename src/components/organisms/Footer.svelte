@@ -8,7 +8,7 @@
     width="1826"
     height="65"
     viewBox="0 0 1826 65"
-    fill="none" 
+    fill="none"
     class="svg"
   >
     <path
@@ -29,8 +29,8 @@
   >
     <div class="flex flex-row align-center justify-start flex-grow">
       <div class="flex flex-col font-thin align-center justify-center">
-        <p class="i-tiny">Alliance of Computer Science Students</p>
-        <p class="i-super-tiny">University of the Philippines Los Banos</p>
+        <p class="i-tiny">CMG Organization</p>
+        <p class="i-super-tiny">CMG Organization</p>
       </div>
     </div>
     <div class="flex font-thin justify-end flex-grow">

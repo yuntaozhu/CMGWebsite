@@ -23,7 +23,7 @@
       >
         <img
           src="/assets/white-logo-no-text.webp"
-          alt="The official seal of The Alliance of Computer Science Students"
+          alt="The official seal of The CMG Organization"
           width="160"
           height="60.67"
           class="max-w-[120px] ss:max-w-[100%] w-40"
@@ -38,7 +38,7 @@
       >
         <p class="font-light text-justify indent-8">
           The <span class="font-bold"
-            >Alliance of Computer Science Students</span
+            >CMG Organization</span
           > (CMG—UPLB) is an established academic and service-oriented organization
           that aims to develop the skills and abilities of its members, and teach
           them to be more worthy of the title Iskolar ng Bayan para sa Bayan. The

@@ -41,7 +41,7 @@
             </div>
             <div class="flex flex-col gap-4">
                 <p class="text-slate-200 font-light max-w-fit">
-                    Alliance of Computer Science Students — <br />University of
+                    CMG Organization — <br />University of
                     the Philippines Los Baños
                 </p>
                 <Statistics />

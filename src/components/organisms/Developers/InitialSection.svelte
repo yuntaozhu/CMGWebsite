@@ -81,7 +81,7 @@
 
         <!-- Description text -->
         <p class="font-light text-slate-200 text-sm 3xl:text-base 3xl:max-w-xl text-justify">
-          Unveiling the Brilliant Minds and Creative Geniuses Who Drive the Vision and Success of Alliance of Computer Science Students - UPLB
+          Unveiling the Brilliant Minds and Creative Geniuses Who Drive the Vision and Success of CMG Organization - UPLB
         </p>
 
         <div class="flex justify-center items-center space-x-4">
