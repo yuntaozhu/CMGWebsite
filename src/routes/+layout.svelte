@@ -61,5 +61,5 @@
             <Footer />
         </div>
     </div>
-    <ChatBot />
+    <!--<ChatBot />-->
 </main>

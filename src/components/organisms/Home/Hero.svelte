@@ -1,6 +1,15 @@
 <!-- Hero Section -->
 <script>
     import { Statistics } from "$components";
+
+    let logos = [
+        ["./home-partnership/Picture1.jpg", "Mezzo-soprano Chrystal E. Williams "],
+        ["./home-partnership/Picture2.jpg", " Camille Thomas – Cellist  with Roman Rabinovich – Pianist    "],
+        ["./home-partnership/Picture3.jpg", "Alvin Waddles – Pianist, Singer, Composer and Director and Friends  "],
+        ["./home-partnership/Picture4.jpg", "Dizhou Zhao – Pianist  with musicians from the DSO Wind Section"],
+        ["./home-partnership/Picture5.jpg", "Escher String Quartet   "],
+        ["./home-partnership/Picture6.jpg", "Sergei Babayan – Pianist  "]
+    ];
 </script>
 
 <section class="tag container mx-auto relative">
@@ -30,7 +39,7 @@
                     CMG Young Musican Console
                 </h1>
                 <p
-                    class="font-thin text-slate-200 md:max-w-sm text-sm 3xl:text-base 3xl:max-w-xl"
+                    class="font-bold text-slate-220 md:max-w-sm text-sm 3xl:text-base 3xl:max-w-xl"
                 >
                     Originally, chamber music referred to a type of classical music that was performed in a small space such as a house or a palace room.
                     There were far fewer instruments then found in an orchestra and no conductor to guide the musicians.

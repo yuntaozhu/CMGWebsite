@@ -62,7 +62,7 @@ export const data = {
 
 
     ],
-    "events" : [
+    "23-24 Season" : [
         {
             title: "Company Talks",
             blurb: "Guiding to the World of Computer Science Careers",
