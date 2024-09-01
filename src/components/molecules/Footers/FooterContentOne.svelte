@@ -9,8 +9,8 @@
   ];
 
   let Showcase = [
-    ["Projects", "/showcase#projects"],
-    ["Events", "/showcase#events"],
+    ["Season2324", "/showcase#Season2324"],
+    ["Season2425", "/showcase#Season2425"],
     ["Workshops", "/showcase#workshops"],
     ["Activities", "/showcase#activities"],
   ];

@@ -1,5 +1,5 @@
 export const data = {
-    "projects" : [
+    "Season2324" : [
         {
             title: "ARKAI",
             blurb: "First Official Website of CMG Organization" ,
@@ -20,13 +20,13 @@ export const data = {
             images: ["/CMGPicture11.webp", "/CMGPicture111.webp", "/CMGPicture1111.webp", "/CMGPicture11111.webp"],
             description: "We have always wanted to reach more people. Other than our social media handles, our official website is also our official introduction to the World Wide Web. Our website is likewise a convenient way to get the latest information about our developers, our recent events and activities, and our recent projects.",
             developers: [
-                {id: 0, name: "Michael Jay Makiling", role: "Project Manager", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/iammtmakiling", "malito:mjaymakiling@gmail.com", "https://www.linkedin.com/in/iammtmakiling/"  ],ts:["/angular.svg","/flutter.svg","/react.svg"], pic:["/devpic_kael.webp"]},
-                {id: 1, name: "Renz <br> Tegrado", role: "Back End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/kennethtegrado", "mailto:kentegrado@gmail.com", "https://www.linkedin.com/in/kennethtegrado"  ],ts:["/rust.svg","/express.svg","/next.svg"], pic:["/dev_renz.webp"]},
-                {id: 2, name: "Sean Joseph <br> Marin", role: "Back End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"],links:["https://github.com/scmarin", "mailto:scmarin@up.edu.ph", "https://www.linkedin.com/in/sean-joseph-marin-bb7466235"  ] ,ts:["/svelte.svg","/express.svg","/mongodb.svg"], pic:["/devpic_sean.webp"]},
-                {id: 3, name: "Danielle Lei <br> Araez", role: "Front End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/Danie-A", "mailto:draraez@up.edu.ph", "https://www.linkedin.com/in/danielle-araez-52b01a1b2/"  ],ts:["/svelte.svg","/flutter.svg","/react.svg"], pic:["/devpic_danie.webp"]},
-                {id: 4, name: "Eirene <br> Lomat", role: "Front End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"],links:["https://github.com/eslomat", "mailto:eslomat@up.edu.ph", ""  ] ,ts:["/svelte.svg","/flutter.svg","/react.svg"], pic:["/devpic_eirene.webp"]},
-                {id: 5, name: "Karl Kenneth Owen Olipas", role: "Front End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["github.com/owen-olipas", "kdolipas@up.edu.ph", "https://www.linkedin.com/in/owen-olipas/"  ],ts:["/svelte.svg","/flutter.svg","/react.svg"], pic:["/dev_owen.webp"]},
-                {id: 6, name: "Darwin Reigh Calub", role: "Front End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/Darwinwinner", "mailto:dlcalub1@up.edu.ph", "https://www.linkedin.com/in/darwin-reigh-calub-b408a5290/"  ],ts:["/svelte.svg","/flutter.svg","/react.svg"], pic:["/dev_darwin.webp"]},
+                //{id: 0, name: "Michael Jay Makiling", role: "Musican", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/iammtmakiling", "malito:mjaymakiling@gmail.com", "https://www.linkedin.com/in/iammtmakiling/"  ],ts:["/angular.svg","/flutter.svg","/react.svg"], pic:["/devpic_kael.webp"]},
+                //{id: 1, name: "Renz <br> Tegrado", role: "Back End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/kennethtegrado", "mailto:kentegrado@gmail.com", "https://www.linkedin.com/in/kennethtegrado"  ],ts:["/rust.svg","/express.svg","/next.svg"], pic:["/dev_renz.webp"]},
+                //{id: 2, name: "Sean Joseph <br> Marin", role: "Back End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"],links:["https://github.com/scmarin", "mailto:scmarin@up.edu.ph", "https://www.linkedin.com/in/sean-joseph-marin-bb7466235"  ] ,ts:["/svelte.svg","/express.svg","/mongodb.svg"], pic:["/devpic_sean.webp"]},
+                //{id: 3, name: "Danielle Lei <br> Araez", role: "Front End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/Danie-A", "mailto:draraez@up.edu.ph", "https://www.linkedin.com/in/danielle-araez-52b01a1b2/"  ],ts:["/svelte.svg","/flutter.svg","/react.svg"], pic:["/devpic_danie.webp"]},
+               // {id: 4, name: "Eirene <br> Lomat", role: "Front End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"],links:["https://github.com/eslomat", "mailto:eslomat@up.edu.ph", ""  ] ,ts:["/svelte.svg","/flutter.svg","/react.svg"], pic:["/devpic_eirene.webp"]},
+               // {id: 5, name: "Karl Kenneth Owen Olipas", role: "Front End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["github.com/owen-olipas", "kdolipas@up.edu.ph", "https://www.linkedin.com/in/owen-olipas/"  ],ts:["/svelte.svg","/flutter.svg","/react.svg"], pic:["/dev_owen.webp"]},
+                //{id: 6, name: "Darwin Reigh Calub", role: "Front End Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/Darwinwinner", "mailto:dlcalub1@up.edu.ph", "https://www.linkedin.com/in/darwin-reigh-calub-b408a5290/"  ],ts:["/svelte.svg","/flutter.svg","/react.svg"], pic:["/dev_darwin.webp"]},
                 ]
 
         },
@@ -36,8 +36,8 @@ export const data = {
             images: ["/CMGPicture2.webp", "/CMGPicture2.webp", "/CMGPicture2.webp", "/CMGPicture2.webp", "/CMGPicture2.webp"],
             description: "The CMG Week 2023: Defragment website features three exciting events: The Exhibit, Company Talks, and Sublimed Experience. Together, these events offer a comprehensive experience for computer science enthusiasts to learn about the organization and engage in the activities. The website serves as a portal for visitors to access detailed information about the events, as well as learn about the partners and sponsors who have made it all possible.",
             developers: [
-                {id: 0, name: "Aron Resty Ramillano", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/PERSEUS-1337", "mailto:abramillano@up.edu.ph", "https://www.linkedin.com/in/aron-resty-ramillano-61aa38266/" ], ts:["/svelte.svg","/figma.svg","/docker.svg"], pic:["/dev_resty.webp"]},
-                {id: 1, name: "Renz <br> Tegrado", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/kennethtegrado", "mailto:kentegrado@gmail.com", "https://www.linkedin.com/in/kennethtegrado"  ], ts:["/rust.svg","/express.svg","/next.svg"], pic:["/dev_renz.webp"]},
+                //{id: 0, name: "Aron Resty Ramillano", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/PERSEUS-1337", "mailto:abramillano@up.edu.ph", "https://www.linkedin.com/in/aron-resty-ramillano-61aa38266/" ], ts:["/svelte.svg","/figma.svg","/docker.svg"], pic:["/dev_resty.webp"]},
+                //{id: 1, name: "Renz <br> Tegrado", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/kennethtegrado", "mailto:kentegrado@gmail.com", "https://www.linkedin.com/in/kennethtegrado"  ], ts:["/rust.svg","/express.svg","/next.svg"], pic:["/dev_renz.webp"]},
 
                 ]
 
@@ -50,19 +50,16 @@ export const data = {
             images: ["/CMGPicture3.webp", "/CMGPicture3.webp"],
             description: "Project TAKS is a full-stack website development project with the purpose of providing an easier payment method of real property and business taxes in City of Balanga.",
             developers: [
-                {id: 0, name: "Jericho <br> Calibuso", role: "Project Manager", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/", "mailto:jerichocalibuso@gmail.com", "https://www.linkedin.com/in/jerichocalibuso/"  ],  ts:["","",""], pic:["/devpic_jericho.webp"]},
-                {id: 1, name: "Jezreel Mae Estares", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/jtestares", "mailto:jtestares@up.edu.ph", "https://www.linkedin.com/in/jezreel-mae-8178121b0" ],   ts:["","",""], pic:["/devpic_jezreel.webp"]},
-                {id: 2, name: "Ethan <br> Paguila", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/ReethP", "mailto:rtpaguila@up.edu.ph", "https://www.linkedin.com/in/EthanPaguila/"  ],  ts:["","",""], pic:["/devpic_ethan.webp"]},
-                {id: 3, name: "John Karl Tumpalan", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/JKBTumpalan", "mailto:jbtumpalan@up.edu.ph", "https://www.linkedin.com/in/karl-tumpalan-ab42b51a2"  ],  ts:["","",""], pic:["/devpic_karl.webp"]},
+               // {id: 0, name: "Jericho <br> Calibuso", role: "Project Manager", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/", "mailto:jerichocalibuso@gmail.com", "https://www.linkedin.com/in/jerichocalibuso/"  ],  ts:["","",""], pic:["/devpic_jericho.webp"]},
+                //{id: 1, name: "Jezreel Mae Estares", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/jtestares", "mailto:jtestares@up.edu.ph", "https://www.linkedin.com/in/jezreel-mae-8178121b0" ],   ts:["","",""], pic:["/devpic_jezreel.webp"]},
+              //  {id: 2, name: "Ethan <br> Paguila", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/ReethP", "mailto:rtpaguila@up.edu.ph", "https://www.linkedin.com/in/EthanPaguila/"  ],  ts:["","",""], pic:["/devpic_ethan.webp"]},
+                //{id: 3, name: "John Karl Tumpalan", role: "Developer", socials: ["/github icon.svg", "/google icon.svg", "/linkedin icon.svg"], links:["https://github.com/JKBTumpalan", "mailto:jbtumpalan@up.edu.ph", "https://www.linkedin.com/in/karl-tumpalan-ab42b51a2"  ],  ts:["","",""], pic:["/devpic_karl.webp"]},
 
             ]
         },
 
-
-
-
     ],
-    "23-24 Season" : [
+    "Season2425" : [
         {
             title: "Company Talks",
             blurb: "Guiding to the World of Computer Science Careers",

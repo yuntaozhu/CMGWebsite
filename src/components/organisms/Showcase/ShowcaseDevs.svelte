@@ -23,7 +23,7 @@
 
             <div class="lg:w-[1000px]">
                 <div class="flex flex-wrap gap-2 sm:gap-4 md:gap-5 md:justify-center py-10 ">
-                    {#each data["projects"] as content}
+                    {#each data["Season2324"] as content}
                         {#if content.title.toLowerCase() === contentTitle }
                             {#each content.developers as dev}
                                 <div class="glassmorphic-rectangle py-4 px-2  sm:py-8 flex flex-col justify-self-center items-center w-[145px] h-[210px] sm:w-[200px] md:w-[232px] sm:h-[300px] rounded-2xl relative">

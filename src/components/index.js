@@ -54,8 +54,8 @@ import ShowcaseHeader from './organisms/Showcase/ShowcaseHeader.svelte'
 import ShowcaseTitle from './organisms/Showcase/ShowcaseTitle.svelte'
 import ShowcaseNavBar from './organisms/Showcase/ShowcaseNavBar.svelte'
 import Activities from './organisms/Showcase/Activities.svelte';
-import Events from './organisms/Showcase/Events.svelte';
-import Projects from './organisms/Showcase/Projects.svelte';
+import Season2425 from './organisms/Showcase/Season2425.svelte';
+import Season2324 from './organisms/Showcase/Season2324.svelte';
 import Workshops from './organisms/Showcase/Workshops.svelte';
 
 
@@ -71,5 +71,5 @@ import Workshops from './organisms/Showcase/Workshops.svelte';
         ContactForm,
         InitialSection, ResidentMembers, MembersRoster,
         BriefShowcase, Contributions, DevStories, Hero, IncomingActivity, Strengths, Summary, Statistics,
-        Activities, Events, Projects, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs
+        Activities, Season2425, Season2324, Workshops, ShowcaseNavBar, ShowcaseTitle, ShowcaseCards, ShowcaseHeader, ShowcaseImage, ShowcaseDescription, ShowcaseGallery, ShowcaseDevs
     };

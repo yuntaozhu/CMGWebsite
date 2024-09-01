@@ -43,7 +43,7 @@
     <ShowcaseImage contents = {contents} contentTitle = {contentTitle}/>
     <ShowcaseDescription contents = {contents} contentTitle = {contentTitle}/>
     <ShowcaseGallery contents = {contents} contentTitle = {contentTitle}/>
-    {#if contents === "projects"}
+    {#if contents === "Season2324"}
         <ShowcaseDevs {contentTitle} />
     {/if}
 </div>

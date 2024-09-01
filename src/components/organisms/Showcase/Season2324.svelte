@@ -1,5 +1,5 @@
 <script>
   import ShowcaseCards from "./ShowcaseCards.svelte";
-  let contents = "projects";
+  let contents = "Season2324";
 </script>
 <ShowcaseCards {contents}/>

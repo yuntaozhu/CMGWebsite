@@ -6,7 +6,7 @@
   import { goto } from "$app/navigation";
 
   // CUSTOMIZE THIS: This is where you can modify the brief showcase ([1] Event Name, [2] URL of the event photo from static folder)
-  let events = [
+  let Season2425 = [
     [
       "CMG Week: Angela Hewitt   Wednesday, October 14, 2015 – 7:30 PM ",
       "../home-briefshowcase/case1.jpg",
@@ -26,7 +26,7 @@
     [
       "CMG Week: Sublimed",
       "../home-briefshowcase/case4.jpg",
-      "One of the highly anticipated events in CMG week. An annual general quiz competition featuring sports, music, food, and more. Beyond education, we offer entertainment for students and to explore knowledge beyond computer science.",
+      "One of the highly anticipated Season2425 in CMG week. An annual general quiz competition featuring sports, music, food, and more. Beyond education, we offer entertainment for students and to explore knowledge beyond computer science.",
     ],
     [
       "CMG Orientation",
@@ -117,7 +117,7 @@
     spotlight = newSpotlight;
     let showcased = document.getElementById("showcased");
     if (showcased) {
-      showcased.style.backgroundImage = `url(${events[spotlight - 1][1]})`;
+      showcased.style.backgroundImage = `url(${Season2425[spotlight - 1][1]})`;
     }
   }
 
@@ -186,7 +186,7 @@
                 }}
               >
                 <HexagonGlass
-                  eventURL={events[index][1]}
+                  eventURL={Season2425[index][1]}
                   id={index + 1}
                   isHighlighted={true}
                 >
@@ -208,7 +208,7 @@
                 }}
               >
                 <HexagonGlass
-                  eventURL={events[index][1]}
+                  eventURL={Season2425[index][1]}
                   id={index + 1}
                   isHighlighted={true}
                 >
@@ -230,7 +230,7 @@
               }}
             >
               <HexagonGlass
-                eventURL={events[index][1]}
+                eventURL={Season2425[index][1]}
                 id={index + 1}
                 isHighlighted={false}
               >
@@ -256,7 +256,7 @@
               }}
             >
               <HexagonGlass
-                eventURL={events[index][1]}
+                eventURL={Season2425[index][1]}
                 id={index + 1}
                 isHighlighted={false}
               >
@@ -301,7 +301,7 @@
         }}
       >
         <UnderlinedText
-          text={events[spotlight - 1][0]}
+          text={Season2425[spotlight - 1][0]}
           isFixed={false}
           width={0}
           textcustomization="text-white text-sm font-bold text-center hover:text-[#00F5F1] transition duration-500 ease"
@@ -330,7 +330,7 @@
                 }}
               >
                 <HexagonGlass
-                  eventURL={events[index + 3][1]}
+                  eventURL={Season2425[index + 3][1]}
                   id={index + 4}
                   isHighlighted={true}
                 >
@@ -352,7 +352,7 @@
                 }}
               >
                 <HexagonGlass
-                  eventURL={events[index + 3][1]}
+                  eventURL={Season2425[index + 3][1]}
                   id={index + 4}
                   isHighlighted={true}
                 >
@@ -374,7 +374,7 @@
               }}
             >
               <HexagonGlass
-                eventURL={events[index + 3][1]}
+                eventURL={Season2425[index + 3][1]}
                 id={index + 4}
                 isHighlighted={false}
               >
@@ -400,7 +400,7 @@
               }}
             >
               <HexagonGlass
-                eventURL={events[index + 3][1]}
+                eventURL={Season2425[index + 3][1]}
                 id={index + 4}
                 isHighlighted={false}
               >
@@ -422,7 +422,7 @@
       id="showcased-description"
       class="max-w-[500px] text-justify h-fit pt-20 pb-20 -mt-20 break-words indent-8 transition duration-700 font-light"
     >
-      {events[spotlight - 1][2]}
+      {Season2425[spotlight - 1][2]}
     </div>
   </div>
 </div>

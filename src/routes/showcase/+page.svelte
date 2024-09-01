@@ -2,8 +2,10 @@
   // @ts-nocheck
 
   import {
-    Events,
-    Projects,
+    Season2425,
+    Season2324,
+    Workshops,
+    Activities,
     ShowcaseNavBar,
     ShowcaseTitle,
     ShowcaseCards,
@@ -12,12 +14,13 @@
   import { page } from "$app/stores";
 
   const showcaseComponents = {
-    Projects,
-    Events,
-
+    Season2324,
+    Season2425,
+    Workshops,
+    Activities,
   };
 
-  let tabs = ["23-24 Season", "24-25 Season"];
+  let tabs = ["Season2324", "Season2425"];
   let activeTab;
   let show = false;
 
@@ -27,7 +30,7 @@
   } catch {
     activeTab =
       $page.url.hash === ""
-        ? "23-24 Season"
+        ? "Season2324"
         : `${$page.url.hash[1].toUpperCase()}${$page.url.hash
             .toLowerCase()
             .substr(2, $page.url.hash.length - 1)}`;
@@ -55,7 +58,7 @@
       );
     }
     if(activeTab === null){
-      activeTab = "23-24 Season";
+      activeTab = "Season2324";
     }
     show = true;
     window.addEventListener("scrollend", scrollTabChange);

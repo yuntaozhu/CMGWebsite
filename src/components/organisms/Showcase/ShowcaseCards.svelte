@@ -7,9 +7,9 @@
     function toDash(title){
        return title = title.replace(/ /g,'-')
     }
-    
+
 </script>
-  
+
 <style>
     /* Define the hover effect for .hover-card */
     .hover-card {
@@ -36,7 +36,7 @@
                                 <h3 class="text-title text-lg lg:text-xl font-bold text-white">{content.title}</h3>
                             </div>
                             <div>
-                                <h4 class="text-blurb font-normal text-sm lg:text-base text-[gray]">{content.blurb}</h4>
+                                <h4 class="text-blurb font-normal text-sm lg:text-base text-base-white">{content.blurb}</h4>
                             </div>
                         </div>
                     </div>
