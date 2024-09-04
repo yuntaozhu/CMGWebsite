@@ -14,16 +14,11 @@
     {#if content.title.toLowerCase() === contentTitle}
       <div class="description-contentborder border-white">
         <div class="description-container " >
-            <div class="description-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center ">
-                <div class="">
-                    <div>
-                        <h4 class="text-4xl lg:text-5xl font-bold text-white">Description</h4>
-                    </div>
-                    
-                </div>
+            <div class="description-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 justify-center ">
 
-                <div class="md:w-[300px] lg:w-[400px] xl:w-[500px]">
-                    <h5 class=" text-sm md:text-base font-normal text-white">{content.description}</h5>
+
+                <div class="md:w-[1000px] lg:w-[100px] xl:w-[1000px]">
+                    <h5 class=" text-2xl lg:text-2xl font-bold text-white">{content.description}</h5>
                 </div>
             </div>
         </div>
@@ -51,7 +46,7 @@
 
   }
 
- 
+
   @media (min-width: 641px) and (max-width: 767px) {
     .description-content {
       padding-top: 2rem;

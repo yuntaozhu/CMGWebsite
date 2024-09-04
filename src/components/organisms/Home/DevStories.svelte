@@ -18,11 +18,7 @@
       "Joining CMG enabled me to gain new friends and made me feel at ease especially in classes as I get to see fellow members during lecture or laboratory sessions. It also helped me tap on to my collaborative and creative skills as a member of the Media and Publicity team. I am profoundly grateful for CMG for letting me shine and boost my capabilities as an aspiring developer.",
       "./home-devstories/musican3.jpg",
     ],
-    "Mark Jay Nicolas": [
-      "Alumnus Developer",
-      "CMG isn't just an organization; it's a family that fosters growth and support. Being a part of CMG has shown me the true essence of unity and collaboration. Just like a family, its members are always ready to lend a helping hand and provide unwavering support. Together, we've grown, learned, and achieved more than I could have imagined. CMG truly embodies the spirit of a family that's there for each other every step of the way.",
-      "./home-devstories/musican1.jpg",
-    ],
+
     "Kenneth Renz Tegrado": [
       "Developer for Academic Affairs",
       "Being a cherished member of this student organization has been an enriching journey that's surpassed all my expectations. It's not just about the skill-building workshops, impactful projects, and leadership opportunities that have given me a new perspective on my potential; it's also about the friendships formed and the sense of belonging that have turned mere colleagues into a close-knit family. This organization has not only enhanced my university experience but also equipped me with invaluable life skills and a network of connections that I'll forever be grateful for, as I confidently stride towards a future shaped by these unforgettable experiences.",

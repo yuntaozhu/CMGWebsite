@@ -1,5 +1,5 @@
 export const teams = [
-    {
+    /*{
       name: 'Executive Team',
       description: 'The Executive Team comprises the Head Developers who serve as the highest governing team of the organization. Headed by the Executive Head Developer, the team serves as the role models of the organization. Furthermore, they are responsible for facilitating events, meetings, and other gatherings, as well as identifying and handling cases that require immediate action concerning the organization.',
       developers: [
@@ -235,7 +235,7 @@ export const teams = [
         },
         // ... other developers for Team1
       ],
-    },
+    }, */
   ];
-  
+
   export const tabs = teams.map(team => team.name);

@@ -1,4 +1,4 @@
-<!-- 
+<!--
   This is the registration form template where you can add different input components (check the list below).
 
   Input Components:
@@ -93,7 +93,7 @@
             Get in <span style="color:var(--color-blue)">Touch!</span>
           </h4>
           <p class="font-base font-lightweight">
-            We will answer as soon as we can!
+            For detailed information, please contact us at P.O. Box 402 Bloomfield Hills, MI 48303
           </p>
         </div>
         <div
