@@ -1,18 +1,28 @@
 <!-- Hero Section -->
 <script>
     import { Statistics } from "$components";
+    import { onMount } from 'svelte';
+    let showPopup = false;
 
-    let logos = [
-        ["./home-partnership/Picture1.jpg", "Mezzo-soprano Chrystal E. Williams "],
-        ["./home-partnership/Picture2.jpg", " Camille Thomas – Cellist  with Roman Rabinovich – Pianist    "],
-        ["./home-partnership/Picture3.jpg", "Alvin Waddles – Pianist, Singer, Composer and Director and Friends  "],
-        ["./home-partnership/Picture4.jpg", "Dizhou Zhao – Pianist  with musicians from the DSO Wind Section"],
-        ["./home-partnership/Picture5.jpg", "Escher String Quartet   "],
-        ["./home-partnership/Picture6.jpg", "Sergei Babayan – Pianist  "]
-    ];
+    onMount(() => {
+        showPopup = true;
+    });
+
+    function closePopup() {
+        showPopup = false;
+    }
 </script>
 
 <section class="tag container mx-auto relative">
+
+    {#if showPopup}
+        <div class="popup">
+            <div class="popup-content">
+                <img src="/assets/popup.png" alt="Popup Image" />
+                <button on:click={closePopup}>Close</button>
+            </div>
+        </div>
+    {/if}
     <div
         class="flex flex-col min-h-[90vh] mx-4 pt-10 gap-5 md:flex-row md:align-center md:justify-evenly md:gap-10 2xl:gap-2 max-[480px]:min-h-[100vh] max-[480px]:mb-20"
     >
@@ -64,3 +74,40 @@
         <div class="w-1 h-3 bg-white rounded-md animate-bounce m-auto" />
     </div>
 </section>
+
+<style>
+    .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .popup-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 80vh;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
