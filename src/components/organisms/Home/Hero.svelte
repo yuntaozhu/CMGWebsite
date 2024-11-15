@@ -33,8 +33,8 @@
             <img
                 src="/assets/hero-banner.webp"
                 alt="The seal of CMG placed on top of a glass object."
-                width="500"
-                height="500"
+                width="650"
+                height="650"
                 class="max-w-xs 2xl:max-w-sm 3xl:max-w-lg m-auto"
             />
         </div>
