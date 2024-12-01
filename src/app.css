@@ -184,7 +184,7 @@ h5 {
     --color-purple: #5E35DA;
     --color-dark-purple: #3D338D;
     --color-blue: #3B7FEF;
-    --color-dark-blue: #efd463;
+    --color-dark-blue: rgba(55, 57, 61, 0.21);
     --color-sky-blue: rgba(10, 5, 20, 0.84);
     --color-dark-sky-blue: #30CAF2;
 
