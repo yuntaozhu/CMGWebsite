@@ -9,9 +9,11 @@
   let pages = [
     { title: "Home", url: "/" },
     { title: "About Us", url: "/about-us" },
-    { title: "Showcase", url: "/showcase" },
+    { title: "Concert", url: "/showcase" },
     { title: "Concerr Archive", url: "/developers" },
-    {title: "CMG Week", url: ""},
+    {title: "Concerr Archive", url: ""},
+    {title: "Donation", url: "/donation" },
+    {title: "Young Musican Console", url: "/console" }
   ];
 
   function handleClick() {
