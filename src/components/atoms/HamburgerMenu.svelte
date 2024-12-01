@@ -11,7 +11,6 @@
     { title: "About Us", url: "/about-us" },
     { title: "Concert", url: "/showcase" },
     { title: "Concerr Archive", url: "/developers" },
-    {title: "Concerr Archive", url: ""},
     {title: "Donation", url: "/donation" },
     {title: "Young Musican Console", url: "/console" }
   ];
